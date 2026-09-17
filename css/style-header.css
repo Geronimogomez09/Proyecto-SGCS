@@ -10,7 +10,7 @@
     font-family: Quicksand, sans-serif;
 }
 
-/* BOTÓN DEL MENÚ */
+//BOTON DEL MENÚ DESPLEGABLE
 
 .nav-container {
     position: relative;
@@ -40,7 +40,7 @@
 }
 
 
-/*MENÚ DESPLEGABLE*/
+//MENÚ DESPLEGABLE
 
 .menu-principal {
     position: absolute;
@@ -76,13 +76,32 @@
     border-radius: 5px;
 }
 
+
+//EFECTO HOVER MENÚ
 .menu-principal a:hover {
-    background-color: #2877cf;
-    color: white;
+    color: #0062cb;
 }
 
+.menu-principal a::after {
+    content: "";
+    position: relative;
+    display: flex;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0062cb;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
 
-/* LOGIN / REGISTRO */
+.menu-principal a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+// LOGIN Y REGISTRO 
 
 .login-container {
     display: flex;
