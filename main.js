@@ -1,0 +1,1 @@
+//Archivo JavaScript principal para la carga de componentes
