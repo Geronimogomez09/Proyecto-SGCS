@@ -10,7 +10,7 @@
     font-family: Quicksand, sans-serif;
 }
 
-//BOTON DEL MENÚ DESPLEGABLE
+/* BOTÓN DEL MENÚ */
 
 .nav-container {
     position: relative;
@@ -40,7 +40,7 @@
 }
 
 
-//MENÚ DESPLEGABLE
+/*MENÚ DESPLEGABLE*/
 
 .menu-principal {
     position: absolute;
@@ -77,7 +77,7 @@
 }
 
 
-//EFECTO HOVER MENÚ
+/* EFECTO HOVER MENÚ */
 .menu-principal a:hover {
     color: #0062cb;
 }
@@ -101,7 +101,7 @@
     transform-origin: bottom left;
 }
 
-// LOGIN Y REGISTRO 
+/* LOGIN / REGISTRO */
 
 .login-container {
     display: flex;
