@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <header>
-    <div class="header-container">
-        <div class="nav-container">
-            <button class="nav-btn">
-                <span>—</span>
-                <span>—</span>
-                <span>—</span>
-            </button>
-            <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="">Procesos de desarrollo</a></li>
-                        <li><a href="">Metodologías</a></li>
-                        <li><a href="">Calidad del Software</a></li>
-                        <li><a href="">Recursos</a></li>
-                        <li><a href="">Nosotros</a></li>
-                    </ul>
-            </nav>
-        </div>
-        <div class="login-container">
-            <a href="#">Iniciar Sesión</a>
-            <a href="#">Registrarse</a>
-        </div>
+    <header class="header-container">
+    <!-- Botón menú -->
+    <div class="nav-container">
+        <button 
+            class="nav-btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!-- Menú desplegable -->
+        <nav id="menuPrincipal" class="collapse menu-principal">
+            <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Procesos de desarrollo</a>
+                </li>
+                <li>
+                    <a href="">Metodologías</a>
+                </li>
+                <li>
+                    <a href="">Calidad del Software</a>
+                </li>
+                <li>
+                    <a href="">Recursos</a>
+                </li>
+                <li>
+                    <a href="">Nosotros</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+    <!-- Login / Registro -->
+    <div class="login-container">
+        <a href="#" class="registrarse-link">
+            REGISTRARSE
+        </a>
+        <a href="#" class="login-link">
+            INICIAR SESIÓN
+        </a>
+    </div>
+</header>
 </header>
 </html>

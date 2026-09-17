@@ -1,0 +1,115 @@
+.header-container {
+    height: 80px;
+    background-color: #fef7e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 17px;
+    position: relative;
+    z-index: 1000;
+    font-family: Quicksand, sans-serif;
+}
+
+/* BOTÓN DEL MENÚ */
+
+.nav-container {
+    position: relative;
+}
+
+.nav-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: #2877cf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-btn span {
+    display: block;
+    width: 13px;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+/*MENÚ DESPLEGABLE*/
+
+.menu-principal {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 230px;
+    background-color: white;
+    border-radius: 9px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu-principal ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal li {
+    margin-bottom: 4px;
+}
+
+.menu-principal li:last-child {
+    margin-bottom: 0;
+}
+
+.menu-principal a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.menu-principal a:hover {
+    background-color: #2877cf;
+    color: white;
+}
+
+
+/* LOGIN / REGISTRO */
+
+.login-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.login-container a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.registrarse-link {
+    color: #555;
+}
+
+.login-link {
+    background-color: #0875d1;
+    color: white;
+    padding: 4px 7px;
+    border-radius: 8px;
+}
+
+.login-link:hover {
+    background-color: #0561ad;
+    color: white;
+}
+
+
