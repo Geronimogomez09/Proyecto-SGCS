@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:  10px;
+    text-align: center;
+}
+
+h1 span{
+    color: #0062cb;
+}
+.hero-btn-text{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 7px;
+    border-radius: 8px;
+    background-color: #0875d1;
+    transition: all 0.3s ease-in-out;
+
+}
+.hero{
+    height:400px;
+    width: 100%;
+    background-image: url('../imgs/heroFondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    padding: 10px 50% 10px 10px;
+}
+
+
