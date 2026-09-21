@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color: #fff8e7;
 }
 
 /* Sección de hero */
@@ -78,6 +78,10 @@
 }
 
 @media (max-width: 850px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
     .hero-text {
         text-align: center;
@@ -106,11 +110,3 @@
     font-size: 20px;
     line-height: 1.5;
 }
-
-.hero {
-    position: relative;
-    background: #fff8e7;
-    height: 400px;
-}
-
-
