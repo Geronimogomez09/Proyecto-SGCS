@@ -432,7 +432,7 @@
 
 .estandares-card {
     padding: 17px 18px;
-    border: 1px solid #e3e9ee;
+    border: 1px solid #b8d9f5;
     border-radius: 15px;
     background: #ffffff;
     display: flex;
@@ -443,6 +443,7 @@
 }
 
 .estandares-card:hover {
+    border-color: #0875d1;
     transform: translateX(5px);
     box-shadow: 0 7px 14px rgba(20, 50, 75, .384);
 }
