@@ -30,11 +30,6 @@
     text-align: left;
 }
 
-.hero-title {
-    font-size: 28px;
-    font-weight: 700;
-}
-
 .hero-description {
     color: #333333;
     font-size: 14px;
@@ -102,6 +97,8 @@
 .title{
     font-size: 40px;
     color: #111111;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .title span{

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
             rel="stylesheet">
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link
@@ -49,148 +51,435 @@
                 </div>
             </div>
         </div>
+
         <main>
             <div class="main-container">
+                <!-- Fundamentos -->
                 <section class="fundamentos">
-                    <div class="fundamentos-container">
-                        <div class="fundamentos-title">
-                            <h2>Fundamentos de Calidad de Software</h2>
+                    <div class="container">
+                        <div class="section-heading">
+                            <span>01</span>
+                            <h2 class="title">Fundamentos de
+                                <span>Calidad</span></h2>
+                            <p class="description">La calidad permite comprobar
+                                que un sistema
+                                cumple con lo esperado y satisface las
+                                necesidades de sus usuarios.</p>
                         </div>
-                        <div class="fundamentos-content">
-                            <div class="fundamentos-card">
-                                <p>La calidad del software se refiere al grado
-                                    en que un sistema cumple con los requisitos
-                                    establecidos y satisface las necesidades de
-                                    sus usuarios.</p>
+                        <div
+                            class="row justify-content-center g-3 fundamentos-cards">
+                            <div class="col-12 col-md-6">
+                                <div class="fundamentos-card">
+                                    <i class="bi bi-check2-circle"></i>
+                                    <p>La calidad del software se refiere al
+                                        grado en que un sistema cumple con los
+                                        requisitos establecidos y satisface las
+                                        necesidades de sus usuarios.</p>
+                                </div>
                             </div>
-                            <div class="fundamentos-card">
-                                <p>No solo implica que el programa funcione
-                                    correctamente, sino también que sea seguro,
-                                    eficiente, fácil de usar y mantener.</p>
+                            <div class="col-12 col-md-6">
+                                <div class="fundamentos-card">
+                                    <i class="bi bi-shield-check"></i>
+                                    <p>No solo implica que el programa funcione
+                                        correctamente, sino también que sea
+                                        seguro, eficiente, fácil de usar y
+                                        mantener.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="fundamentos-img">
-                            <img src alt="Fundamentos">
+                        <div class="fundamentos-diagram">
+                            <div class="diagram-step">
+                                <div class="diagram-icon">
+                                    <i class="bi bi-window-stack"></i>
+                                </div>
+                                <span class="diagram-label">Un sistema</span>
+                            </div>
+                            <div class="diagram-arrow">
+                                <span>cumple</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="diagram-step">
+                                <div class="diagram-icon">
+                                    <i class="bi bi-clipboard2-check"></i>
+                                </div>
+                                <span class="diagram-label">Requisitos
+                                    establecidos</span>
+                            </div>
+                            <div class="diagram-arrow">
+                                <span>satisface</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="diagram-step">
+                                <div class="diagram-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <span class="diagram-label">Necesidades de
+                                    usuarios</span>
+                            </div>
                         </div>
                     </div>
                 </section>
+
+                <!-- Conceptos clave -->
                 <section class="conceptos">
-                    <div class="conceptos-container">
-                        <div class="conceptos-title">
-                            <h2>Conceptos Claves de <span>Calidad de
-                                    Software</span></h2>
+                    <div class="container">
+                        <div class="section-heading">
+                            <span>02</span>
+                            <h2 class="title">Conceptos claves de
+                                <span>Calidad</span></h2>
+                            <p class="description">Algunos conceptos
+                                fundamentales para comprender
+                                cómo se analiza la calidad de un software.</p>
                         </div>
-                        <div class="conceptos-content">
-                            <div class="conceptos-card">
-                                <h2 class="conceptos-card-title">Calidad</h2>
-                                <p>grado en que un software cumple requisitos y
-                                    expectativas.</p>
+                        <div class="row g-3 conceptos-content">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-star"></i></div>
+                                    <h3>Calidad</h3>
+                                    <p>Grado en que un software cumple
+                                        requisitos y expectativas.</p>
+                                </div>
                             </div>
-                            <div class="conceptos-card">
-                                <h2 class="conceptos-card-title">Requisitos</h2>
-                                <p>característica o función que el sistema debe
-                                    cumplir.</p>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-list-check"></i></div>
+                                    <h3>Requisitos</h3>
+                                    <p>Característica o función que el sistema
+                                        debe cumplir.</p>
+                                </div>
                             </div>
-                            <div class="conceptos-card">
-                                <h2 class="conceptos-card-title">Defectos</h2>
-                                <p>error o problema que puede provocar un
-                                    comportamiento incorrecto.</p>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-bug"></i></div>
+                                    <h3>Defectos</h3>
+                                    <p>Error o problema que puede provocar un
+                                        comportamiento incorrecto.</p>
+                                </div>
                             </div>
-                            <div class="conceptos-card">
-                                <h2 class="conceptos-card-title">Procesos</h2>
-                                <p>conjunto de actividades utilizadas para
-                                    desarrollar y mantener el software.</p>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-diagram-3"></i></div>
+                                    <h3>Procesos</h3>
+                                    <p>Actividades utilizadas para desarrollar y
+                                        mantener el software.</p>
+                                </div>
                             </div>
-                            <div class="conceptos-card">
-                                <h2 class="conceptos-card-title">Métricas</h2>
-                                <p>medida utilizada para evaluar una
-                                    característica del software o del
-                                    proceso.</p>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-bar-chart"></i></div>
+                                    <h3>Métricas</h3>
+                                    <p>Medidas utilizadas para evaluar
+                                        características del software o del
+                                        proceso.</p>
+                                </div>
                             </div>
-                            <div class="conceptos-card">
-                                <h2
-                                    class="conceptos-card-title">Indicadores</h2>
-                                <p>información obtenida a partir de métricas que
-                                    permite analizar el estado o evolución de la
-                                    calidad.</p>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-speedometer2"></i></div>
+                                    <h3>Indicadores</h3>
+                                    <p>Información obtenida a partir de métricas
+                                        para analizar el estado de la
+                                        calidad.</p>
+                                </div>
                             </div>
-                            <div class="conceptos-card">
-                                <h2 class="conceptos-card-title">Evaluación</h2>
-                                <p>proceso de medir y analizar si el software
-                                    cumple determinados criterios de
-                                    calidad.</p>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-search"></i></div>
+                                    <h3>Evaluación</h3>
+                                    <p>Proceso de medir y analizar si el
+                                        software cumple determinados
+                                        criterios.</p>
+                                </div>
                             </div>
-                            <div class="conceptos-card">
-                                <h2 class="conceptos-card-title">Mejora
-                                    continua</h2>
-                                <p>búsqueda constante de mejoras en los
-                                    productos y procesos.</p>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="conceptos-card">
+                                    <div class="conceptos-icon"><i
+                                            class="bi bi-arrow-repeat"></i></div>
+                                    <h3>Mejora continua</h3>
+                                    <p>Búsqueda constante de mejoras en los
+                                        productos y procesos.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <!-- Medición -->
                 <section class="medicion">
-                    <div class="medicion-container">
-                        <div class="medicion-title">
-                            <h2>¿Qué se puede medir?</h2>
-                            <p>La calidad del software puede evaluarse mediante
-                                métricas, que permiten obtener datos concretos
-                                sobre diferentes características del sistema.
-                                Estas medidas ayudan a conocer aspectos como
-                            </p>
-                        </div>
-                        <div class="medicion-cards">
-                            <div><p>Cantidad de errores detectados</p></div>
-                            <div><p>Tiempo de respuesta del sistema</p></div>
-                            <div><p>Porcentaje de disponibilidad</p></div>
-                            <div><p>Cobertura de pruebas</p></div>
-                            <div><p>Tiempo necesario para corregir
-                                    errores</p></div>
-                            <div><p>Cantidad de fallos durante un período
-                                    determinado</p></div>
+                    <div class="container">
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-lg-5">
+                                <div class="medicion-title">
+                                    <span>03</span>
+                                    <h2 class="title">¿Qué se puede
+                                        <span>medir?</span></h2>
+                                    <p class="description">La calidad del
+                                        software puede evaluarse
+                                        mediante métricas que permiten obtener
+                                        datos concretos sobre diferentes
+                                        características del sistema.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <div class="row g-2 medicion-cards">
+                                    <div class="col-6">
+                                        <div class="medicion-card">
+                                            <i class="bi bi-bug"></i>
+                                            <p>Cantidad de errores
+                                                detectados</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="medicion-card">
+                                            <i class="bi bi-stopwatch"></i>
+                                            <p>Tiempo de respuesta del
+                                                sistema</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="medicion-card">
+                                            <i class="bi bi-server"></i>
+                                            <p>Porcentaje de disponibilidad</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="medicion-card">
+                                            <i class="bi bi-check2-square"></i>
+                                            <p>Cobertura de pruebas</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="medicion-card">
+                                            <i class="bi bi-wrench"></i>
+                                            <p>Tiempo necesario para corregir
+                                                errores</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="medicion-card">
+                                            <i class="bi bi-graph-down"></i>
+                                            <p>Cantidad de fallos durante un
+                                                período</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
+
+                <!-- Estándares -->
                 <section class="estandares">
-                    <div class="estandates-container">
-                        <div class="estandares-title">
-                            <h2>Estándares de <span>calidad</span></h2>
+                    <div class="container">
+                        <div class="section-heading">
+                            <span>04</span>
+                            <h2 class="title">Estándares de
+                                <span>calidad</span></h2>
+                            <p class="description">Normas y recomendaciones
+                                utilizadas para evaluar
+                                y mejorar productos y procesos de software.</p>
                         </div>
-                        <div class="img-estandares">
-                            <img src alt="Estandares">
-                        </div>
-                        <div class="estandares-cards">
-                            <div class="estandares-card">
-                                <h2 class="estandares-card-title">¿Qué son
-                                    los estándares de calidad?</h2>
-                                <p>Son normas y recomendaciones que ayudan a
-                                    garantizar la calidad de un
-                                    software.</p>
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-lg-5">
+                                <div class="standards-highlight">
+                                    <i class="bi bi-award"></i>
+                                    <h3>Estándares de calidad</h3>
+                                    <p>Permiten establecer criterios comunes
+                                        para analizar diferentes características
+                                        de un software.</p>
+                                </div>
                             </div>
-                            <div class="estandares-card">
-                                <h2 class="estandares-card-title">¿Para qué
-                                    sirven?</h2>
-                                <p>Sirven para establecer criterios que
-                                    permitan evaluar y mejorar un producto o
-                                    proceso.</p>
-                            </div>
-                            <div class="estandares-card">
-                                <h2>¿Cuáles son los más conocidos?</h2>
-                                <p>Algunos ejemplos son ISO 9126, ISO 25000
-                                    e ISO 12207.</p>
+                            <div class="col-12 col-lg-7">
+                                <div class="estandares-cards">
+                                    <div class="estandares-card">
+                                        <div class="estandares-icon"><i
+                                                class="bi bi-question-circle"></i></div>
+                                        <div>
+                                            <h3>¿Qué son?</h3>
+                                            <p>Son normas y recomendaciones que
+                                                ayudan a garantizar la calidad
+                                                de un software.</p>
+                                        </div>
+                                    </div>
+                                    <div class="estandares-card">
+                                        <div class="estandares-icon"><i
+                                                class="bi bi-bullseye"></i></div>
+                                        <div>
+                                            <h3>¿Para qué sirven?</h3>
+                                            <p>Establecen criterios que permiten
+                                                evaluar y mejorar un producto o
+                                                proceso.</p>
+                                        </div>
+                                    </div>
+                                    <div class="estandares-card">
+                                        <div class="estandares-icon"><i
+                                                class="bi bi-journal-text"></i></div>
+                                        <div>
+                                            <h3>¿Cuáles son los más
+                                                conocidos?</h3>
+                                            <p>Algunos ejemplos son ISO 9126,
+                                                ISO 25000 e ISO 12207.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <!-- Tablas comparativas -->
                 <section class="tables">
-                    <div class="tables-container">
-                        <div class="table1">
-                            <img src alt="Table1">
-                            <h2 class="table1-title">Te interesa <span>Saber más sobre ISO</span></h2>
+                    <div class="container">
+                        <div class="section-heading">
+                            <span>05</span>
+                            <h2 class="title">Comparación de <span>estándares
+                                    ISO</span></h2>
+                            <p class="description">Principales diferencias entre
+                                ISO 9126 e ISO
+                                25000.</p>
                         </div>
-                        <div class="table2">
-                            <img src alt="Table2">
-                            <h2 class="table1-title">Te interesa <span>Saber más sobre ISO</span></h2>
+
+                        <div class="table-block">
+                            <div class="table-responsive">
+                                <table class="table iso-table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>ISO 9126</th>
+                                            <th>ISO 25000</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>¿Qué es?</th>
+                                            <td>Una norma para evaluar la
+                                                calidad de un software.</td>
+                                            <td>Una familia de normas para
+                                                evaluar y mejorar la calidad del
+                                                software.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>¿Para qué sirve?</th>
+                                            <td>Indica qué aspectos revisar para
+                                                evaluar un software.</td>
+                                            <td>Amplía y actualiza los criterios
+                                                de evaluación de calidad.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>¿Qué evalúa?</th>
+                                            <td>Facilidad de uso, funcionamiento
+                                                y seguridad.</td>
+                                            <td>Funcionalidad, rendimiento,
+                                                seguridad y facilidad de
+                                                mantenimiento.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Resumen</th>
+                                            <td>Modelo anterior de calidad.</td>
+                                            <td>Modelo más completo y
+                                                actualizado.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-footer">
+                                <h3>Te interesa <span>saber más sobre
+                                        ISO</span></h3>
+                                <a href="#" class="table-btn">CONOCER MÁS <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="table-block">
+                            <div class="table-responsive">
+                                <table class="table iso-table iso-table-check">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>ISO 9126</th>
+                                            <th>ISO 25000</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Evaluación de la calidad del
+                                                software</th>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Funcionalidad y cumplimiento de
+                                                requisitos</th>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Estándar moderno y más
+                                                completo</th>
+                                            <td><i
+                                                    class="bi bi-x-circle"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Usabilidad y facilidad de
+                                                uso</th>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Rendimiento y eficiencia</th>
+                                            <td><i
+                                                    class="bi bi-x-circle"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mantenimiento y facilidad de
+                                                modificación</th>
+                                            <td><i
+                                                    class="bi bi-x-circle"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Seguridad y protección de la
+                                                información</th>
+                                            <td><i
+                                                    class="bi bi-x-circle"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Compatibilidad con otros
+                                                sistemas</th>
+                                            <td><i
+                                                    class="bi bi-x-circle"></i></td>
+                                            <td><i
+                                                    class="bi bi-check-circle-fill"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-footer">
+                                <h3>Te interesa <span>saber más sobre
+                                        ISO</span></h3>
+                                <a href="#" class="table-btn">CONOCER MÁS <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -198,6 +487,6 @@
         </main>
         <script src="main.js" defer></script>
         <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
