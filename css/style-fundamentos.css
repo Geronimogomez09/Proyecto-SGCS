@@ -71,7 +71,7 @@
 .hero-link:hover {
     background-color: #0062cb;
     transform: translateX(5px);
-    box-shadow: 0 4px 10px rgba(8, 117, 209, .25);
+    box-shadow: 0 9px 18px rgba(20, 50, 75, .384);
     color: #ffffff;
     transition: all 0.2s ease;
 }
@@ -187,7 +187,7 @@
     border: 1px solid rgba(8, 117, 209, .1);
     border-radius: 18px;
     background: #ffffff;
-    box-shadow: 0 5px 12px rgba(26, 65, 95, .12);
+    box-shadow: 0 5px 12px rgba(26, 65, 95, .18) ;
     display: flex;
     align-items: flex-start;
     gap: 12px;
@@ -196,7 +196,7 @@
 
 .fundamentos-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 9px 18px rgba(26, 65, 95, .18);
+    box-shadow: 0 9px 18px rgba(26, 65, 95, 0.384);
 }
 
 .fundamentos-card > i {
@@ -245,6 +245,7 @@
 }
 
 .diagram-step:hover .diagram-icon {
+    box-shadow: 0 9px 18px rgba(20, 50, 75, .384);
     background: #ffffff;
     transform: translateY(-5px) scale(1.04);
 }
@@ -273,4 +274,64 @@
 
 .diagram-arrow i {
     font-size: 27px;
+}
+
+/* sección conceptos */
+.conceptos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 0 50px;
+    background: #fff8e7;
+    z-index: 10;
+}
+
+.conceptos-content {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.conceptos-card {
+    height: 100%;
+    min-height: 155px;
+    padding: 17px;
+    border: 1px solid #b8d9f5;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(20, 50, 75, .06);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.conceptos-card:hover {
+    border-color: #0875d1;
+    transform: translateY(-5px);
+    box-shadow: 0 9px 18px rgba(20, 50, 75, .384);
+}
+
+.conceptos-icon {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 11px;
+    border-radius: 10px;
+    background: #e6f3ff;
+    color: #0875d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.conceptos-card h3 {
+    margin: 0 0 6px;
+    color: #172b3a;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.conceptos-card p {
+    margin: 0;
+    color: #596875;
+    font-size: 11px;
+    line-height: 1.45;
 }
