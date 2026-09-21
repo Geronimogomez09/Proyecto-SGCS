@@ -10,7 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff8e7;
+    position: relative;
+    background: #fff8e7;
+    padding: 5%;
 }
 
 /* Sección de hero */
@@ -110,12 +112,6 @@
     line-height: 1.5;
 }
 
-.hero {
-    position: relative;
-    background: #fff8e7;
-    height: 400px;
-}
-
 .hero .wave {
     position: absolute;
     bottom: 0;
@@ -124,3 +120,142 @@
     left: 0;
     right: 0;
 }   
+
+/* sección fundamentos */
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.section-heading > span {
+    display: block;
+    margin-bottom: 3px;
+    color: #0875d1;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #111111;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.section-heading h2 strong {
+    color: #0875d1;
+}
+
+.section-heading p {
+    max-width: 620px;
+    margin: 8px auto 0;
+    color: #52606d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.fundamentos {
+    padding: 45px 0 50px;
+    background: #b9d9f5;
+}
+
+.fundamentos-cards {
+    max-width: 900px;
+    margin: auto;
+}
+
+.fundamentos-card {
+    height: 100%;
+    padding: 18px 20px;
+    border: 1px solid rgba(8, 117, 209, .1);
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 5px 12px rgba(26, 65, 95, .12);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.fundamentos-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 18px rgba(26, 65, 95, .18);
+}
+
+.fundamentos-card > i {
+    flex-shrink: 0;
+    color: #0875d1;
+    font-size: 23px;
+}
+
+.fundamentos-card p {
+    margin: 0;
+    color: #263746;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.fundamentos-diagram {
+    max-width: 850px;
+    margin: 38px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.diagram-step {
+    min-width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.diagram-icon {
+    width: 68px;
+    height: 68px;
+    border: 3px solid #ffffff;
+    border-radius: 18px;
+    background: #eaf5ff;
+    color: #0875d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 31px;
+    box-shadow: 0 5px 12px rgba(26, 65, 95, .12);
+    transition: transform .2s ease, background-color .2s ease;
+}
+
+.diagram-step:hover .diagram-icon {
+    background: #ffffff;
+    transform: translateY(-5px) scale(1.04);
+}
+
+.diagram-label {
+    max-width: 140px;
+    color: #24425a;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.diagram-arrow {
+    min-width: 75px;
+    color: #0875d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.diagram-arrow span {
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.diagram-arrow i {
+    font-size: 27px;
+}
