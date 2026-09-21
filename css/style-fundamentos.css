@@ -1,0 +1,116 @@
+/* Estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+}
+/* Hero de esta página (hero-text + hero-links) */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Sección de hero */
+.hero-container {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  10px;
+    text-align: center;
+}
+
+.hero-text {
+    max-width: 560px;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.hero-description {
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 12px 0 18px;
+    text-align: left;
+}
+
+.hero-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 230px;
+}
+
+.hero-link {
+    background-color: #0875d1;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.hero-link i {
+    font-size: 12px;
+}
+
+.hero-link:hover {
+    background-color: #0062cb;
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(8, 117, 209, .25);
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 850px) {
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-description {
+        text-align: center;
+    }
+
+    .hero-links {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+.title{
+    font-size: 40px;
+    color: #111111;
+}
+
+.title span{
+    color: #0062cb;
+}
+
+.description{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hero {
+    position: relative;
+    background: #fff8e7;
+    height: 400px;
+}
+
+
