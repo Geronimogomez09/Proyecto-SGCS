@@ -516,7 +516,7 @@
 
 .table-block {
     overflow: hidden;
-    border: 1px solid #d7e0e7;
+    border: 1px solid #0875d1;
     border-radius: 16px;
     background: #ffffff;
     box-shadow: 0 5px 12px rgba(20, 50, 75, .10);
@@ -536,7 +536,7 @@
 .iso-table th,
 .iso-table td {
     padding: 6px 9px;
-    border: 1px solid #d4d9dd;
+    border: 1px solid #0877d194;
     vertical-align: middle;
     font-size: 10px;
     line-height: 1.15;
