@@ -500,6 +500,7 @@
                         </div>
                     </div>
                 </section>
+                <!-- Tecnicas -->
                 <section class="seccion-tecnicas">
                     <div class="container">
                         <div class="section-heading">
@@ -515,7 +516,8 @@
                                 cumpla
                                 con los requisitos establecidos.<br> Para eso
                                 tenemos los niveles de prueba, que se enfocan en
-                                dónde se prueba, y los tipos de prueba, que indican
+                                dónde se prueba, y los tipos de prueba, que
+                                indican
                                 cómo se prueba
                             </p>
                         </div>
@@ -665,9 +667,358 @@
                         </div>
                     </div>
                 </section>
-            </main>
-            <script src="main.js" defer></script>
-            <script
-                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        </body>
-    </html>
+                <!-- Herramientas -->
+                <section class="Herramientas">
+                    <div class="container">
+                        <div class="section-heading">
+                            <span>06</span>
+                            <h2 class="title">Herramientas de <span>pruebas
+                                    de
+                                    software</span></h2>
+                            <p class="description">Las herramientas de calidad
+                                ayudan a mejorar el desarrollo del software,
+                                facilitando la gestion de pruebas, el
+                                seguimiento de defectos y el analisis de
+                                codigo</p>
+                        </div>
+                        <div class="tabs container mt-5">
+                            <ul class="nav nav-tabs" id="misPestanas"
+                                role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active"
+                                        id="item1-tab" data-bs-toggle="tab"
+                                        data-bs-target="#item1"
+                                        type="button" role="tab"
+                                        aria-controls="item1"
+                                        aria-selected="true">
+                                        Bug Trackerd
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="item2-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#item2"
+                                        type="button" role="tab"
+                                        aria-controls="item2"
+                                        aria-selected="false">
+                                        Linters
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="item3-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#item3"
+                                        type="button" role="tab"
+                                        aria-controls="item3"
+                                        aria-selected="false">
+                                        Test Management
+                                    </button>
+                                </li>
+                            </ul>
+                            <div
+                                class="tab-content border border-top-0 rounded-bottom"
+                                id="contenidoPestanas">
+                                <div class="tab-pane fade show active p-4"
+                                    id="item1" role="tabpanel"
+                                    aria-labelledby="item1-tab">
+                                    <div class="tabs-heading">
+                                        <h3 class>Bug Trackerd</h3>
+                                        <p>Permiten registrar, priorizar y hacer
+                                            seguimiento de defectos en el
+                                            software,
+                                            facilitando la comunicacion entre el
+                                            equipo de desarrollo y testing</p>
+                                    </div>
+                                    <div class="tabs-content">
+                                        <div class="table-block">
+                                            <div class="table-responsive">
+                                                <table class="table iso-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Jira</th>
+                                                            <th>Buzgzilla</th>
+                                                            <th>Redmine</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <i
+                                                                    class>
+                                                                    (signo de
+                                                                    flecha y
+                                                                    diana)</i>
+                                                                Enfoque
+                                                                principal</th>
+                                                            <td>gestion de
+                                                                proyectos y
+                                                                seguimiento de
+                                                                defectos</td>
+                                                            <td>seguimiento de
+                                                                errores y
+                                                                bug</td>
+                                                            <td>gestion de
+                                                                proyectos,
+                                                                tareas y
+                                                                bugs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th> <i class>
+                                                                    (signo de
+                                                                    persona o
+                                                                    algo que
+                                                                    sirva)</i>
+                                                                Facilidad de
+                                                                uso</th>
+                                                            <td>intuitiva y
+                                                                personalizable
+                                                            </td>
+                                                            <td>simple, pero con
+                                                                interfaz
+                                                                basica</td>
+                                                            <td>moderna,
+                                                                requiere
+                                                                configuracion
+                                                                inicial</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Integraciones</th>
+                                                            <td>amplia (CI/CD,
+                                                                git, etc.)</td>
+                                                            <td>limitadas</td>
+                                                            <td>Buenas (Git, CI,
+                                                                plugins)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>ideal para</th>
+                                                            <td>Equipos grandes
+                                                                y proyectos
+                                                                complejos</td>
+                                                            <td>equipos que
+                                                                buscan
+                                                                simplicidad</td>
+                                                            <td>Equipos que
+                                                                necesitan
+                                                                gestion integral
+                                                                de
+                                                                proyectos</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade p-4" id="item2"
+                                    role="tabpanel"
+                                    aria-labelledby="item2-tab">
+                                    <div class="tabs-heading">
+                                        <h3 class>Linters</h3>
+                                        <p>Analizan el codgio fuente en busca de
+                                            errores de estilo, malas practicas y
+                                            posibles problemas, ayudando a
+                                            mantener
+                                            un codigo mas limpio y
+                                            consistente</p>
+                                    </div>
+                                    <div class="tabs-content">
+                                        <div class="table-block">
+                                            <div class="table-responsive">
+                                                <table class="table iso-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>ESLint</th>
+                                                            <th>Pylint</th>
+                                                            <th>SonarQube</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <i
+                                                                    class>
+                                                                    (signo de
+                                                                    "</>")</i>
+                                                                Enfoque
+                                                                principal</th>
+                                                            <td>JavaScript,
+                                                                TypeScript</td>
+                                                            <td>Python</td>
+                                                            <td>multilenguaje
+                                                                (mas de 20)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th> <i class>
+                                                                    (signo de
+                                                                    lupa)</i>
+                                                                tipo de
+                                                                analisis</th>
+                                                            <td>Estilo y erroes
+                                                                de codigo
+                                                            </td>
+                                                            <td>simple, pero con
+                                                                interfaz
+                                                                basica</td>
+                                                            <td>calidad general
+                                                                del codigo
+                                                                (errores,
+                                                                seguridad,
+                                                                etc)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><i class>
+                                                                    (signo de
+                                                                    algo)</i>Integracion
+                                                                con IDE</th>
+                                                            <td>si (VS code,
+                                                                WerbStorm,
+                                                                etc.)</td>
+                                                            <td>si (VS code,
+                                                                PyCharm,
+                                                                etc.)</td>
+                                                            <td>si (con
+                                                                plugins)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><i class>
+                                                                    (signo
+                                                                    extrella)</i>ideal
+                                                                para</th>
+                                                            <td>mantenerun
+                                                                estilo de codigo
+                                                                consistente en
+                                                                JS</td>
+                                                            <td>mejorar la
+                                                                calidad y
+                                                                mantenibilidad
+                                                                del codigo
+                                                                python</td>
+                                                            <td>Analisis
+                                                                profundo y
+                                                                monitoreo
+                                                                continuo de la
+                                                                calidad</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade p-4" id="item3"
+                                    role="tabpanel"
+                                    aria-labelledby="item3-tab">
+                                    <div class="tabs-heading">
+                                        <h3 class>Test Management</h3>
+                                        <p>Facilitan la planificacion, ejecucion
+                                            y
+                                            seguimiento de prueba, permitiendo
+                                            tener
+                                            una vision clara del progreso y la
+                                            cobertura de pruebas</p>
+                                    </div>
+                                    <div class="tabs-content">
+                                        <div class="table-block">
+                                            <div class="table-responsive">
+                                                <table class="table iso-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>TestRail</th>
+                                                            <th>Zephyr</th>
+                                                            <th>qTest</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <i
+                                                                    class>
+                                                                    (signo de
+                                                                    documento)</i>
+                                                                Gestion de casos
+                                                                de prueba</th>
+                                                            <td>completa y
+                                                                flexible</td>
+                                                            <td>integrada con
+                                                                jira</td>
+                                                            <td>completa y
+                                                                personalizable</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th> <i class>
+                                                                    (signo de
+                                                                    métrica)</i>
+                                                                Reportes y
+                                                                métricas</th>
+                                                            <td>avanzados y
+                                                                detallados
+                                                            </td>
+                                                            <td>buenmas metricas
+                                                                basicas</td>
+                                                            <td>avanzados y
+                                                                personalizables</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Integraciones</th>
+                                                            <td>Jira, CI/CD,
+                                                                etc</td>
+                                                            <td>jira</td>
+                                                            <td>jira, selenium,
+                                                                etc</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>ideal para</th>
+                                                            <td>equipos que
+                                                                necesitan
+                                                                tazabilidad y
+                                                                reportes
+                                                                claros</td>
+                                                            <td>equipos que ya
+                                                                usamn jira</td>
+                                                            <td>organizaciones
+                                                                con procesos QA
+                                                                mas
+                                                                complejos</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-tools">
+                            <h2>Otras herramientas</h2>
+                            <div class="cards-container">
+                                <div class="card">
+                                    <h3>CI/CD</h3>
+                                    <p>Automatiza la integracion y entrga de
+                                        cambios. </p>
+                                </div>
+                                <div class="card">
+                                    <h3>analisis de cobertura</h3>
+                                    <p>mide que parte del codigo estra siendo
+                                        testeada</p>
+                                </div>
+                                <div class="card">
+                                    <h3>gestion de dependencias</h3>
+                                    <p>detecta vulnerabilidades y mantiene las librerias actualizadas</p>
+                                </div>
+                                <div class="card">
+                                    <h3>herramientas de seguridad</h3>
+                                    <p>analizan posibles riesgos en el codigo y dependencias </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script src="main.js" defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
