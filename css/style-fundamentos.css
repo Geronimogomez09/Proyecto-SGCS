@@ -660,3 +660,428 @@
     }
 }
 
+
+/* Sección de técnicas de aseguramiento */
+.seccion-tecnicas {
+    position: relative;
+    padding: 50px 0 65px;
+    background: #b8d9f5;
+    z-index: 10;
+}
+
+.seccion-tecnicas > .container {
+    position: relative;
+}
+/* Mantiene el contenido sobre las waves */
+
+
+/* Encabezado de bloques de pruebas */
+.test-section-heading {
+    max-width: 850px;
+    margin: 38px auto 20px;
+    padding: 16px 20px;
+    border: 1px solid #b8d9f5;
+    border-radius: 18px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 5px 12px rgba(20, 50, 75, .08);
+}
+
+.test-heading-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #e6f3ff;
+    color: #0875d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.test-section-heading > div:last-child {
+    flex: 1;
+}
+
+.test-section-heading > div:last-child > span {
+    color: #0875d1;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.test-section-heading h3 {
+    margin: 2px 0 3px;
+    color: #111111;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.test-section-heading p {
+    margin: 0;
+    color: #111111;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Contenedor de la tabla */
+.test-table-block {
+    max-width: 1050px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #b8d9f5;
+    border-radius: 17px;
+    background: #ffffff;
+    box-shadow: 0 7px 15px rgba(20, 50, 75, .10);
+}
+
+/* Tabla de niveles de prueba */
+.test-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.test-table th,
+.test-table td {
+    padding: 12px 13px;
+    border: 1px solid #111111;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.test-table thead th {
+    border-top: 0;
+    background: #0875d1;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.test-table thead th:first-child {
+    border-left: 0;
+}
+
+.test-table thead th:last-child {
+    border-right: 0;
+}
+
+.test-table tbody tr:last-child th,
+.test-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.test-table tbody th {
+    width: 20%;
+    background: #f4f8fb;
+    color: #0875d1;
+    font-weight: 800;
+}
+
+.test-table tbody th i {
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.test-table tbody td {
+    color: #111111;
+    background: #ffffff;
+    text-align: center;
+}
+
+.test-table tbody tr {
+    transition: background-color .2s ease;
+}
+
+.test-table tbody tr:hover th,
+.test-table tbody tr:hover td {
+    background: #f1f8fe;
+}
+
+/* Espacio entre niveles y tipos de prueba */
+.types-heading {
+    margin-top: 48px;
+}
+
+/* Tarjetas de tipos de prueba */
+.tests-cards {
+    max-width: 950px;
+    margin: auto;
+}
+
+.test-card {
+    position: relative;
+    width: 100%;
+    min-height: 285px;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.test-card-front,
+.test-card-back {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    border: 1px solid #b8d9f5;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 6px 14px rgba(20, 50, 75, .09);
+    backface-visibility: hidden;
+    transition: transform .55s ease, box-shadow .25s ease;
+}
+
+.test-card-front {
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(0);
+}
+
+.test-card-back {
+    overflow-y: auto;
+    transform: rotateY(180deg);
+}
+
+.test-card:hover .test-card-front,
+.test-card:hover .test-card-back {
+    box-shadow: 0 10px 20px rgba(20, 50, 75, .15);
+}
+
+.test-card:focus-visible {
+    outline: 3px solid rgba(8, 117, 209, .3);
+    outline-offset: 4px;
+}
+
+.test-card.is-active .test-card-front {
+    transform: rotateY(-180deg);
+}
+
+.test-card.is-active .test-card-back {
+    transform: rotateY(0);
+}
+
+/* Icono de cada tipo de prueba */
+.test-card-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 14px;
+    border-radius: 13px;
+    background: #e6f3ff;
+    color: #0875d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.test-card-front > span {
+    margin-bottom: 4px;
+    color: #0875d1;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.test-card-front h3 {
+    margin: 0 0 8px;
+    color: #111111;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.test-card-front p {
+    margin: 0;
+    color: #111111;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.test-card-more {
+    margin-top: auto;
+    padding-top: 18px;
+    color: #0875d1;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.test-card-more i {
+    margin-left: 4px;
+    transition: transform .2s ease;
+}
+
+.test-card:hover .test-card-more i {
+    transform: translateX(4px);
+}
+
+/* Contenido de la parte posterior */
+.test-card-back {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.test-card-back h4 {
+    margin: 0 0 6px;
+    color: #0875d1;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.test-card-back h4 i {
+    margin-right: 4px;
+}
+
+.test-card-back ul {
+    margin: 0;
+    padding-left: 17px;
+}
+
+.test-card-back li {
+    margin-bottom: 4px;
+    color: #111111;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.test-card-close {
+    margin-top: auto;
+    color: #0875d1;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* Resumen de la diferencia entre tipos */
+.test-summary {
+    max-width: 850px;
+    margin: 35px auto 0;
+    padding: 18px 20px;
+    border-radius: 17px;
+    background: #b8d9f5;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.test-summary-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #0875d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.test-summary h3 {
+    margin: 0 0 4px;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.test-summary p {
+    margin: 0;
+    color: #111111;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Adaptación para tablets */
+@media (max-width: 992px) {
+    .test-table-block {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .test-table th,
+    .test-table td {
+        font-size: 10px;
+    }
+
+    .test-card {
+        min-height: 270px;
+    }
+}
+
+/* Adaptación para móviles */
+@media (max-width: 576px) {
+    .seccion-tecnicas {
+        padding: 40px 0 50px;
+    }
+
+    .test-section-heading {
+        margin-top: 32px;
+        padding: 14px;
+    }
+
+    .test-heading-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 18px;
+    }
+
+    .test-section-heading h3 {
+        font-size: 15px;
+    }
+
+    .test-section-heading p {
+        font-size: 10px;
+    }
+
+    .test-table-block {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .test-table th,
+    .test-table td {
+        min-width: 150px;
+        padding: 8px 6px;
+        font-size: 9px;
+    }
+
+    .test-table thead th {
+        font-size: 10px;
+    }
+
+    .test-table tbody th {
+        min-width: 125px;
+    }
+
+    .test-card {
+        min-height: 280px;
+    }
+
+    .test-card-front,
+    .test-card-back {
+        padding: 19px;
+    }
+
+    .test-card-front h3 {
+        font-size: 17px;
+    }
+
+    .test-summary {
+        margin-left: 8px;
+        margin-right: 8px;
+        align-items: flex-start;
+    }
+}
