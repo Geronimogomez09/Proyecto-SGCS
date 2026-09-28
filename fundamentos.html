@@ -501,168 +501,231 @@
                     </div>
                 </section>
                 <!-- Tecnicas -->
-                <section class="seccion-tecnicas">
+                <section id="Tecnicas" class="seccion-tecnicas">
+                    <svg class="wave2" viewBox="0 0 1440 200"
+                        preserveAspectRatio="none">
+                        <path fill="#fff8e7"
+                            d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
+                    </svg>
                     <div class="container">
+                        <!-- Encabezado de la sección -->
                         <div class="section-heading">
+
                             <span>05</span>
                             <h2 class="title">¿Técnicas de aseguramiento de
-                                <span>la
-                                    calidad
-                                    del software</span></h2>
-                            <p class="description">Las tecnicas de aseguramiento
-                                de
-                                calidad de software permiten detectar errores,
-                                prevenir problemas y asegurar que el producto
-                                cumpla
-                                con los requisitos establecidos.<br> Para eso
-                                tenemos los niveles de prueba, que se enfocan en
-                                dónde se prueba, y los tipos de prueba, que
-                                indican
-                                cómo se prueba
-                            </p>
+                                <span>la calidad del software?</span></h2>
+                            <p class="description">Las técnicas de aseguramiento
+                                de calidad de software permiten detectar
+                                errores, prevenir problemas y asegurar que el
+                                producto cumpla con los requisitos
+                                establecidos.<br>Para eso tenemos los niveles de
+                                prueba, que indican dónde se prueba, y los tipos
+                                de prueba, que muestran cómo se prueba.</p>
                         </div>
-                        <div class="expand-box">
-                            <h3>Niveles de pruebas</h3>
-                            <details>
-                                <summary></summary>
+
+                        <!-- Introducción a los niveles de prueba -->
+                        <div class="test-section-heading">
+                            <div class="test-heading-icon">
+                                <i class="bi bi-diagram-3"></i>
+                            </div>
+                            <div>
+                                <span>NIVELES DE PRUEBA</span>
+                                <h3>Niveles de pruebas</h3>
                                 <p>Se realizan en diferentes etapas del
                                     desarrollo para validar cada parte del
-                                    sistema</p>
-                            </details>
+                                    sistema.</p>
+                            </div>
                         </div>
-                        <div class="tipes-tests">
-                            <div class="table-block">
-                                <div class="table-responsive">
-                                    <table class="table iso-table">
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>Unitarias</th>
-                                                <th>Integracion</th>
-                                                <th>Sistema</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>¿Qué son?</th>
-                                                <td>Verifican el funcionamiento
-                                                    de la unidad de código más
-                                                    pequeña de forma
-                                                    aislada</td>
-                                                <td>Comprueban cómo interactúan
-                                                    entre sí diferentes módulos,
-                                                    componentes o servicios</td>
-                                                <td> Evalúan el software
-                                                    completo e integrado frente
-                                                    a los requerimientos
-                                                    técnicos y funcionales
-                                                    establecidos</td>
-                                            </tr>
-                                            <tr>
-                                                <th>¿Qué se prueba?</th>
-                                                <td>funciones
-                                                    metodos
-                                                    clases o modulos</td>
-                                                <td>interfaces enetre modulos
-                                                    paso de datos
-                                                    comunicacion entre
-                                                    componentes</td>
-                                                <td>funcionalidad total
-                                                    rendimiento y usabilidad
-                                                    seguridad </td>
-                                            </tr>
-                                            <tr>
-                                                <th>Ejemplos</th>
-                                                <td>pruebas con frameworks
-                                                    verificacion de logica y
-                                                    resultados esperados</td>
-                                                <td>preubas de API
-                                                    preubas de servicios
-                                                    stubs y mocks</td>
-                                                <td>pruebas de end-to-end
-                                                    pruebas de carga
-                                                    pruebas de aceptacion </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+
+                        <!-- Tabla de niveles de prueba -->
+                        <div class="table-block test-table-block">
+                            <div class="table-responsive">
+                                <table class="table test-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Característica</th>
+                                            <th scope="col"><i
+                                                    class="bi bi-box"></i>
+                                                Unitarias</th>
+                                            <th scope="col"><i
+                                                    class="bi bi-diagram-2"></i>
+                                                Integración</th>
+                                            <th scope="col"><i
+                                                    class="bi bi-window-stack"></i>
+                                                Sistema</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><i
+                                                    class="bi bi-question-circle"></i>
+                                                ¿Qué son?</th>
+                                            <td>Verifican el funcionamiento de
+                                                la unidad de código más pequeña
+                                                de forma aislada.</td>
+                                            <td>Comprueban cómo interactúan
+                                                entre sí diferentes módulos,
+                                                componentes o servicios.</td>
+                                            <td>Evalúan el software completo e
+                                                integrado frente a los
+                                                requisitos establecidos.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><i
+                                                    class="bi bi-search"></i>
+                                                ¿Qué se prueba?</th>
+                                            <td>Funciones, métodos, clases o
+                                                módulos.</td>
+                                            <td>Interfaces entre módulos, paso
+                                                de datos y comunicación entre
+                                                componentes.</td>
+                                            <td>Funcionalidad total,
+                                                rendimiento, usabilidad y
+                                                seguridad.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><i
+                                                    class="bi bi-code-square"></i>
+                                                Ejemplos</th>
+                                            <td>Frameworks de pruebas,
+                                                verificación de lógica y
+                                                resultados esperados.</td>
+                                            <td>Pruebas de API, pruebas de
+                                                servicios, stubs y mocks.</td>
+                                            <td>Pruebas end-to-end, pruebas de
+                                                carga y pruebas de
+                                                aceptación.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="expand-box">
+                        </div>
+
+                        <!-- Introducción a los tipos de prueba -->
+                        <div class="test-section-heading types-heading">
+                            <div class="test-heading-icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <div>
+                                <span>TIPOS DE PRUEBA</span>
                                 <h3>Tipos de pruebas</h3>
-                                <details>
-                                    <summary></summary>
-                                    <p>se clasifican segun el conocimiento que
-                                        se tiene del funcionamiento interno del
-                                        sistema</p>
-                                </details>
+                                <p>Se clasifican según el conocimiento que se
+                                    tiene del funcionamiento interno del
+                                    sistema.</p>
                             </div>
-                            <div class="cards-container">
-                                <button class="card">
-                                    <div class="card-front">
-                                        <h2>Pruebas de caja negra</h2>
-                                        <p>Se prueba la funcionalidad sin
-                                            conocer el
-                                            codigo interno</p>
+                        </div>
+
+                        <!-- Tarjetas de tipos de prueba -->
+                        <div class="row justify-content-center g-3 tests-cards">
+                            <div class="col-12 col-lg-6">
+                                <button class="test-card" type="button">
+                                    <div class="test-card-front">
+                                        <div class="test-card-icon">
+                                            <i
+                                                class="bi bi-box-arrow-in-right"></i>
+                                        </div>
+                                        <span>01</span>
+                                        <h3>Pruebas de caja negra</h3>
+                                        <p>Se prueba la funcionalidad del
+                                            sistema sin conocer su código
+                                            interno.</p>
+                                        <div class="test-card-more">
+                                            Ver características <i
+                                                class="bi bi-arrow-right"></i>
+                                        </div>
                                     </div>
-                                    <div class="card-back">
-                                        <div class="carateristics">
-                                            <h3>Características</h3>
+                                    <div class="test-card-back">
+                                        <div>
+                                            <h4><i class="bi bi-check2"></i>
+                                                Características</h4>
                                             <ul>
-                                                <li>se basa en la entrada y
-                                                    salida</li>
-                                                <li>simula el comportamiento del
-                                                    usuario</li>
-                                                <li>no requiere conocer la
-                                                    estructura</li>
-                                                <li>interna del sistema</li>
-                                                <li>se puede realizar en un
-                                                    entorno virtual</li>
+                                                <li>Se basa en las entradas y
+                                                    salidas.</li>
+                                                <li>Simula el comportamiento del
+                                                    usuario.</li>
+                                                <li>No requiere conocer la
+                                                    estructura interna.</li>
+                                                <li>Puede realizarse en un
+                                                    entorno virtual.</li>
                                             </ul>
                                         </div>
-                                        <div class="examples">
-                                            <h3>Ejemplos</h3>
+                                        <div>
+                                            <h4><i class="bi bi-lightbulb"></i>
+                                                Ejemplos</h4>
                                             <ul>
                                                 <li>Pruebas de
-                                                    funcionalidad</li>
-                                                <li>Pruebas de usabilidad</li>
-                                                <li>Pruebas de carga</li>
-                                                <li>Pruebas de aceptación</li>
+                                                    funcionalidad.</li>
+                                                <li>Pruebas de usabilidad.</li>
+                                                <li>Pruebas de carga.</li>
+                                                <li>Pruebas de aceptación.</li>
                                             </ul>
                                         </div>
+                                        <div class="test-card-close">Volver <i
+                                                class="bi bi-arrow-up"></i></div>
                                     </div>
                                 </button>
-                                <button class="card">
-                                    <div class="card-front">
-                                        <h2>Pruebas de caja blanca</h2>
-                                        <p>Se prueba la logica interna del
-                                            codigo</p>
+                            </div>
+
+                            <div class="col-12 col-lg-6">
+                                <button class="test-card" type="button">
+                                    <div class="test-card-front">
+                                        <div class="test-card-icon">
+                                            <i class="bi bi-code-slash"></i>
+                                        </div>
+                                        <span>02</span>
+                                        <h3>Pruebas de caja blanca</h3>
+                                        <p>Se analiza la lógica interna y la
+                                            estructura del código durante la
+                                            prueba.</p>
+                                        <div class="test-card-more">
+                                            Ver características <i
+                                                class="bi bi-arrow-right"></i>
+                                        </div>
                                     </div>
-                                    <div class="card-back">
-                                        <div class="carateristics">
-                                            <h3>Características</h3>
+                                    <div class="test-card-back">
+                                        <div>
+                                            <h4><i class="bi bi-check2"></i>
+                                                Características</h4>
                                             <ul>
                                                 <li>Se analiza la estructura del
-                                                    codigo </li>
+                                                    código.</li>
                                                 <li>Se verifican rutas,
-                                                    condicoines y ciclos</li>
+                                                    condiciones y ciclos.</li>
                                                 <li>Requiere conocimiento del
                                                     lenguaje y la
-                                                    implementacion</li>
+                                                    implementación.</li>
                                             </ul>
                                         </div>
-                                        <div class="examples">
-                                            <h3>Ejemplos</h3>
+                                        <div>
+                                            <h4><i class="bi bi-lightbulb"></i>
+                                                Ejemplos</h4>
                                             <ul>
-                                                <li>pruebas de cobertura de
-                                                    codigo </li>
-                                                <li>pruebas de ruta de
-                                                    ejecucion</li>
-                                                <li>analisis estatico de
-                                                    codigo</li>
+                                                <li>Pruebas de cobertura de
+                                                    código.</li>
+                                                <li>Pruebas de rutas de
+                                                    ejecución.</li>
+                                                <li>Análisis estático de
+                                                    código.</li>
                                             </ul>
                                         </div>
+                                        <div class="test-card-close">Volver <i
+                                                class="bi bi-arrow-up"></i></div>
                                     </div>
                                 </button>
+                            </div>
+                        </div>
+
+                        <!-- Comparación rápida -->
+                        <div class="test-summary">
+                            <div class="test-summary-icon">
+                                <i class="bi bi-arrow-left-right"></i>
+                            </div>
+                            <div>
+                                <h3>¿Cuál es la diferencia?</h3>
+                                <p>La caja negra se concentra en el
+                                    comportamiento observable del software,
+                                    mientras que la caja blanca analiza su
+                                    estructura y lógica interna.</p>
                             </div>
                         </div>
                     </div>
