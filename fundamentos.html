@@ -3,1131 +3,1339 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet">
+        <meta name="description"
+            content="Fundamentos, medición, estándares, técnicas y herramientas de calidad de software.">
+        <!-- Bootstrap proporciona estilos base, componentes y sistema de grilla responsive. -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <!-- Bootstrap Icons contiene los iconos utilizados en las distintas secciones. -->
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Carga la tipografía Quicksand utilizada como fuente principal. -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
             rel="stylesheet">
+        <!-- Hojas de estilo propias para el header y el contenido de calidad de software. -->
         <link rel="stylesheet" href="css/style-header.css">
         <link rel="stylesheet" href="css/style-fundamentos.css">
+        <!-- JavaScript encargado de controlar el giro de las tarjetas de pruebas. -->
         <script src="JavaScript/flipCard-Fundamentos.js" defer></script>
+        <!-- Bootstrap JS permite utilizar tabs y otros componentes interactivos. -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            defer></script>
         <title>Calidad de Software - Proyecto-SGCS</title>
     </head>
     <body>
-        <div id="header-container"></div>
-        <div class="hero">
-            <svg class="wave" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <!-- Contenedor donde se carga el encabezado compartido del sitio. -->
+        <header id="header-container"></header>
+        <!-- Hero principal con introducción y accesos rápidos a las primeras secciones. -->
+        <section class="hero" aria-labelledby="hero-title">
+            <!-- Wave superior utilizada como separación visual entre el header y el hero. -->
+            <svg class="wave" viewBox="0 0 1440 200" preserveAspectRatio="none"
+                aria-hidden="true">
                 <path fill="#bfd8f5"
-                    d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
+                    d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
             </svg>
-            <div class="hero-container">
+            <div class="container hero-container">
+                <!-- Texto principal que presenta el tema de calidad de software. -->
                 <div class="hero-text">
                     <span class="hero-subtitle">CALIDAD DE SOFTWARE</span>
-                    <h1 class="hero-title title">Te interesa <span>Calidad de
-                            Software</span></h1>
-                    <p class="hero-description description">La calidad de
-                        software busca
-                        garantizar que un sistema sea confiable, eficiente y
-                        cumpla con las necesidades de sus usuarios.<br>Conocé
-                        sus fundamentos, técnicas de aseguramiento, pruebas y
-                        herramientas utilizadas para desarrollar software de
-                        calidad.</p>
+                    <h1 id="hero-title" class="hero-title">
+                        Te interesa <span>Calidad de Software</span>
+                    </h1>
+                    <p class="hero-description">
+                        La calidad de software busca garantizar que un sistema
+                        sea confiable, eficiente y cumpla con las necesidades de
+                        sus usuarios.<br>
+                        Conocé sus fundamentos, técnicas de aseguramiento,
+                        pruebas y herramientas utilizadas para desarrollar
+                        software de calidad.
+                    </p>
                 </div>
-                <div class="hero-links">
-                    <a href="#Fundamentos" class="hero-link">Fundamentos <i
-                            class="bi bi-arrow-right"></i></a>
-                    <a href="#Conceptos" class="hero-link">Conceptos<i
-                            class="bi bi-arrow-right"></i></a>
-                    <a href="#Medicion" class="hero-link">Medición <i
-                            class="bi bi-arrow-right"></i></a>
-                    <a href="#Estandares" class="hero-link">Estándares <i
-                            class="bi bi-arrow-right"></i></a>
-                </div>
+                <!-- Enlaces internos que permiten acceder rápidamente a las primeras secciones. -->
+                <nav class="hero-links"
+                    aria-label="Secciones de calidad de software">
+                    <a href="#fundamentos" class="hero-link">Fundamentos <i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"></i></a>
+                    <a href="#conceptos" class="hero-link">Conceptos <i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"></i></a>
+                    <a href="#medicion" class="hero-link">Medición <i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"></i></a>
+                    <a href="#estandares" class="hero-link">Estándares <i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"></i></a>
+                    <a href="#tecnicas" class="hero-link">técnicas de aseguramiento<i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"></i></a>
+                    <a href="#herramientas" class="hero-link">herramientas<i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"></i></a>
+                </nav>
             </div>
-        </div>
-
+        </section>
         <main>
-            <div class="main-container">
-                <!-- Fundamentos -->
-                <section id="Fundamentos" class="fundamentos">
-                    <svg class="wave wave2" viewBox="0 0 1440 200"
-                        preserveAspectRatio="none">
-                        <path fill="#fff8e7"
-                            d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
-                    </svg>
-                    <div class="container">
-                        <div class="section-heading">
-                            <span>01</span>
-                            <h2 class="title">Fundamentos de
-                                <span>Calidad</span></h2>
-                            <p class="description">La calidad permite comprobar
-                                que un sistema
-                                cumple con lo esperado y satisface las
-                                necesidades de sus usuarios.</p>
+            <!-- Sección 01: explica qué es la calidad de software y sus fundamentos. -->
+            <section id="fundamentos" class="fundamentos"
+                aria-labelledby="fundamentos-title">
+                <!-- Wave utilizada para separar visualmente esta sección de la anterior. -->
+                <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#fff8e7"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
+                <div class="container">
+                    <!-- Encabezado reutilizado para identificar y describir la sección. -->
+                    <div class="section-heading">
+                        <span class="section-number">01</span>
+                        <h2 id="fundamentos-title" class="section-title">
+                            Fundamentos de <span>Calidad</span>
+                        </h2>
+                        <p class="section-description">
+                            La calidad permite comprobar que un sistema cumple
+                            con lo esperado y satisface las necesidades de sus
+                            usuarios.
+                        </p>
+                    </div>
+                    <!-- Tarjetas que presentan dos ideas principales sobre la calidad. -->
+                    <div
+                        class="row justify-content-center g-3 fundamentos-cards">
+                        <div class="col-12 col-md-6">
+                            <article class="fundamentos-card">
+                                <i class="bi bi-check2-circle"
+                                    aria-hidden="true"></i>
+                                <p>
+                                    La calidad del software se refiere al grado
+                                    en que un sistema cumple con los requisitos
+                                    establecidos y satisface las necesidades de
+                                    sus usuarios.
+                                </p>
+                            </article>
                         </div>
-                        <div
-                            class="row justify-content-center g-3 fundamentos-cards">
-                            <div class="col-12 col-md-6">
-                                <div class="fundamentos-card">
-                                    <i class="bi bi-check2-circle"></i>
-                                    <p>La calidad del software se refiere al
-                                        grado en que un sistema cumple con los
-                                        requisitos establecidos y satisface las
-                                        necesidades de sus usuarios.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="fundamentos-card">
-                                    <i class="bi bi-shield-check"></i>
-                                    <p>No solo implica que el programa funcione
-                                        correctamente, sino también que sea
-                                        seguro, eficiente, fácil de usar y
-                                        mantener.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fundamentos-diagram">
-                            <div class="diagram-step">
-                                <div class="diagram-icon">
-                                    <i class="bi bi-window-stack"></i>
-                                </div>
-                                <span class="diagram-label">Un sistema</span>
-                            </div>
-                            <div class="diagram-arrow">
-                                <span>cumple</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </div>
-                            <div class="diagram-step">
-                                <div class="diagram-icon">
-                                    <i class="bi bi-clipboard2-check"></i>
-                                </div>
-                                <span class="diagram-label">Requisitos
-                                    establecidos</span>
-                            </div>
-                            <div class="diagram-arrow">
-                                <span>satisface</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </div>
-                            <div class="diagram-step">
-                                <div class="diagram-icon">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <span class="diagram-label">Necesidades de
-                                    usuarios</span>
-                            </div>
+                        <div class="col-12 col-md-6">
+                            <article class="fundamentos-card">
+                                <i class="bi bi-shield-check"
+                                    aria-hidden="true"></i>
+                                <p>
+                                    No solo implica que el programa funcione
+                                    correctamente, sino también que sea seguro,
+                                    eficiente, fácil de usar y mantener.
+                                </p>
+                            </article>
                         </div>
                     </div>
-                </section>
-
-                <!-- Conceptos clave -->
-                <section id="Conceptos" class="conceptos">
-                    <svg class="wave2" viewBox="0 0 1440 200"
-                        preserveAspectRatio="none">
-                        <path fill="#bfd8f5"
-                            d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
-                    </svg>
-                    <div class="container">
-                        <div class="section-heading">
-                            <span>02</span>
-                            <h2 class="title">Conceptos claves de
-                                <span>Calidad</span></h2>
-                            <p class="description">Algunos conceptos
-                                fundamentales para comprender
-                                cómo se analiza la calidad de un software.</p>
+                    <!-- Diagrama que representa la relación entre el sistema, los requisitos y los usuarios. -->
+                    <div class="fundamentos-diagram"
+                        aria-label="Relación entre sistema, requisitos y necesidades de los usuarios">
+                        <!-- Primer paso del diagrama. -->
+                        <div class="diagram-step">
+                            <div class="diagram-icon">
+                                <i class="bi bi-window-stack"
+                                    aria-hidden="true"></i>
+                            </div>
+                            <span class="diagram-label">Un sistema</span>
                         </div>
-                        <div class="row g-3 conceptos-content">
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-star"></i></div>
-                                    <h3>Calidad</h3>
-                                    <p>Grado en que un software cumple
-                                        requisitos y expectativas.</p>
-                                </div>
+                        <!-- Flecha que indica el cumplimiento de requisitos. -->
+                        <div class="diagram-arrow" aria-hidden="true">
+                            <span>cumple</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <!-- Segundo paso del diagrama. -->
+                        <div class="diagram-step">
+                            <div class="diagram-icon">
+                                <i class="bi bi-clipboard2-check"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-list-check"></i></div>
-                                    <h3>Requisitos</h3>
-                                    <p>Característica o función que el sistema
-                                        debe cumplir.</p>
-                                </div>
+                            <span class="diagram-label">Requisitos
+                                establecidos</span>
+                        </div>
+                        <!-- Flecha que relaciona los requisitos con las necesidades. -->
+                        <div class="diagram-arrow" aria-hidden="true">
+                            <span>satisface</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <!-- Último paso del diagrama. -->
+                        <div class="diagram-step">
+                            <div class="diagram-icon">
+                                <i class="bi bi-people" aria-hidden="true"></i>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-bug"></i></div>
-                                    <h3>Defectos</h3>
-                                    <p>Error o problema que puede provocar un
-                                        comportamiento incorrecto.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-diagram-3"></i></div>
-                                    <h3>Procesos</h3>
-                                    <p>Actividades utilizadas para desarrollar y
-                                        mantener el software.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-bar-chart"></i></div>
-                                    <h3>Métricas</h3>
-                                    <p>Medidas utilizadas para evaluar
-                                        características del software o del
-                                        proceso.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-speedometer2"></i></div>
-                                    <h3>Indicadores</h3>
-                                    <p>Información obtenida a partir de métricas
-                                        para analizar el estado de la
-                                        calidad.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-search"></i></div>
-                                    <h3>Evaluación</h3>
-                                    <p>Proceso de medir y analizar si el
-                                        software cumple determinados
-                                        criterios.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="conceptos-card">
-                                    <div class="conceptos-icon"><i
-                                            class="bi bi-arrow-repeat"></i></div>
-                                    <h3>Mejora continua</h3>
-                                    <p>Búsqueda constante de mejoras en los
-                                        productos y procesos.</p>
-                                </div>
-                            </div>
+                            <span class="diagram-label">Necesidades de
+                                usuarios</span>
                         </div>
                     </div>
-                </section>
-
-                <!-- Medición -->
-                <section id="Medicion" class="medicion">
-                    <svg class="wave2" viewBox="0 0 1440 200"
-                        preserveAspectRatio="none">
-                        <path fill="#fff8e7"
-                            d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
-                    </svg>
-                    <div class="container">
-                        <div class="row align-items-center g-4">
-                            <div class="col-12 col-lg-5">
-                                <div class="medicion-title">
-                                    <span>03</span>
-                                    <h2 class="title">¿Qué se puede
-                                        <span>medir?</span></h2>
-                                    <p class="description">La calidad del
-                                        software puede evaluarse
-                                        mediante métricas que permiten obtener
-                                        datos concretos sobre diferentes
-                                        características del sistema.</p>
+                </div>
+            </section>
+            <!-- Sección 02: reúne conceptos utilizados para comprender la calidad. -->
+            <section id="conceptos" class="conceptos"
+                aria-labelledby="conceptos-title">
+                <!-- Wave que separa visualmente esta sección de la anterior. -->
+                <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#bfd8f5"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-number">02</span>
+                        <h2 id="conceptos-title" class="section-title">
+                            Conceptos claves de <span>Calidad</span>
+                        </h2>
+                        <p class="section-description">
+                            Algunos conceptos fundamentales para comprender cómo
+                            se analiza la calidad de un software.
+                        </p>
+                    </div>
+                    <!-- Conjunto de tarjetas que explican conceptos relacionados con la calidad. -->
+                    <div class="row g-3 conceptos-content">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-star"
+                                        aria-hidden="true"></i>
                                 </div>
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="row g-2 medicion-cards">
-                                    <div class="col-6">
-                                        <div class="medicion-card">
-                                            <i class="bi bi-bug"></i>
-                                            <p>Cantidad de errores
-                                                detectados</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="medicion-card">
-                                            <i class="bi bi-stopwatch"></i>
-                                            <p>Tiempo de respuesta del
-                                                sistema</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="medicion-card">
-                                            <i class="bi bi-server"></i>
-                                            <p>Porcentaje de disponibilidad</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="medicion-card">
-                                            <i class="bi bi-check2-square"></i>
-                                            <p>Cobertura de pruebas</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="medicion-card">
-                                            <i class="bi bi-wrench"></i>
-                                            <p>Tiempo necesario para corregir
-                                                errores</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="medicion-card">
-                                            <i class="bi bi-graph-down"></i>
-                                            <p>Cantidad de fallos durante un
-                                                período</p>
-                                        </div>
-                                    </div>
+                                <h3>Calidad</h3>
+                                <p>Grado en que un software cumple requisitos y
+                                    expectativas.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-list-check"
+                                        aria-hidden="true"></i>
                                 </div>
-                            </div>
+                                <h3>Requisitos</h3>
+                                <p>Característica o función que el sistema debe
+                                    cumplir.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-bug" aria-hidden="true"></i>
+                                </div>
+                                <h3>Defectos</h3>
+                                <p>Error o problema que puede provocar un
+                                    comportamiento incorrecto.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-diagram-3"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <h3>Procesos</h3>
+                                <p>Actividades utilizadas para desarrollar y
+                                    mantener el software.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-bar-chart"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <h3>Métricas</h3>
+                                <p>Medidas utilizadas para evaluar
+                                    características del software o del
+                                    proceso.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-speedometer2"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <h3>Indicadores</h3>
+                                <p>Información obtenida a partir de métricas
+                                    para analizar el estado de la calidad.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-search"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <h3>Evaluación</h3>
+                                <p>Proceso de medir y analizar si el software
+                                    cumple determinados criterios.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="conceptos-card">
+                                <div class="conceptos-icon">
+                                    <i class="bi bi-arrow-repeat"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <h3>Mejora continua</h3>
+                                <p>Búsqueda constante de mejoras en los
+                                    productos y procesos.</p>
+                            </article>
                         </div>
                     </div>
-                </section>
-
-                <!-- Estándares -->
-                <section id="Estandares" class="estandares">
-                    <svg class="wave2" viewBox="0 0 1440 200"
-                        preserveAspectRatio="none">
-                        <path fill="#bfd8f5"
-                            d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
-                    </svg>
-                    <div class="container">
-                        <div class="section-heading">
-                            <span>04</span>
-                            <h2 class="title">Estándares de
-                                <span>calidad</span></h2>
-                            <p class="description">Normas y recomendaciones
-                                utilizadas para evaluar
-                                y mejorar productos y procesos de software.</p>
-                        </div>
-                        <div class="row align-items-center g-4">
-                            <div class="col-12 col-lg-5">
-                                <img class="ISO-img" src="imgs/ISO-Logo.png"
-                                    alt="Estándares">
+                </div>
+            </section>
+            <!-- Sección 03: explica qué aspectos del software pueden medirse. -->
+            <section id="medicion" class="medicion"
+                aria-labelledby="medicion-title">
+                <!-- Wave de transición entre la sección de conceptos y la de medición. -->
+                <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#fff8e7"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-12 col-lg-5">
+                            <!-- Encabezado que explica el propósito de las métricas. -->
+                            <div class="medicion-title">
+                                <span class="section-number">03</span>
+                                <h2 id="medicion-title" class="section-title">
+                                    ¿Qué se puede <span>medir?</span>
+                                </h2>
+                                <p class="section-description">
+                                    La calidad del software puede evaluarse
+                                    mediante métricas que permiten obtener datos
+                                    concretos sobre diferentes características
+                                    del sistema.
+                                </p>
                             </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="estandares-cards">
-                                    <div class="estandares-card">
-                                        <div class="estandares-icon"><i
-                                                class="bi bi-question-circle"></i></div>
-                                        <div>
-                                            <h3>¿Qué son?</h3>
-                                            <p>Son normas y recomendaciones que
-                                                ayudan a garantizar la calidad
-                                                de un software.</p>
-                                        </div>
-                                    </div>
-                                    <div class="estandares-card">
-                                        <div class="estandares-icon"><i
-                                                class="bi bi-bullseye"></i></div>
-                                        <div>
-                                            <h3>¿Para qué sirven?</h3>
-                                            <p>Establecen criterios que permiten
-                                                evaluar y mejorar un producto o
-                                                proceso.</p>
-                                        </div>
-                                    </div>
-                                    <div class="estandares-card">
-                                        <div class="estandares-icon"><i
-                                                class="bi bi-journal-text"></i></div>
-                                        <div>
-                                            <h3>¿Cuáles son los más
-                                                conocidos?</h3>
-                                            <p>Algunos ejemplos son ISO 9126,
-                                                ISO 25000 e ISO 12207.</p>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <!-- Tarjetas que muestran ejemplos de aspectos medibles. -->
+                            <div class="row g-2 medicion-cards">
+                                <div class="col-12 col-sm-6">
+                                    <article class="medicion-card">
+                                        <i class="bi bi-bug"
+                                            aria-hidden="true"></i>
+                                        <p>Cantidad de errores detectados</p>
+                                    </article>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <article class="medicion-card">
+                                        <i class="bi bi-stopwatch"
+                                            aria-hidden="true"></i>
+                                        <p>Tiempo de respuesta del sistema</p>
+                                    </article>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <article class="medicion-card">
+                                        <i class="bi bi-server"
+                                            aria-hidden="true"></i>
+                                        <p>Porcentaje de disponibilidad</p>
+                                    </article>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <article class="medicion-card">
+                                        <i class="bi bi-check2-square"
+                                            aria-hidden="true"></i>
+                                        <p>Cobertura de pruebas</p>
+                                    </article>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <article class="medicion-card">
+                                        <i class="bi bi-wrench"
+                                            aria-hidden="true"></i>
+                                        <p>Tiempo necesario para corregir
+                                            errores</p>
+                                    </article>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <article class="medicion-card">
+                                        <i class="bi bi-graph-down"
+                                            aria-hidden="true"></i>
+                                        <p>Cantidad de fallos durante un
+                                            período</p>
+                                    </article>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <!-- Tablas comparativas -->
-                <section class="tables">
-                    <div class="container">
-                        <div class="tables-comparison">
-                            <div class="table-header">
-                                <h3>Te interesa <span>saber más sobre
-                                        ISO</span></h3>
-                                <a href="#" class="table-btn">
-                                    CONOCÉ MÁS <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-
-                            <div class="comparison-row">
-                                <div class="table-block">
-                                    <div class="table-responsive">
-                                        <table class="table iso-table">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th>ISO 9126</th>
-                                                    <th>ISO 25000</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th>¿Qué es?</th>
-                                                    <td>Una norma para evaluar
-                                                        la calidad de un
-                                                        software.</td>
-                                                    <td>Una familia de normas
-                                                        para evaluar y mejorar
-                                                        la calidad del
-                                                        software.</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>¿Para qué sirve?</th>
-                                                    <td>Indica qué aspectos
-                                                        revisar para evaluar un
-                                                        software.</td>
-                                                    <td>Amplía y actualiza los
-                                                        criterios de evaluación
-                                                        de calidad.</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>¿Qué evalúa?</th>
-                                                    <td>Facilidad de uso,
-                                                        funcionamiento y
-                                                        seguridad.</td>
-                                                    <td>Funcionalidad,
-                                                        rendimiento, seguridad y
-                                                        facilidad de
-                                                        mantenimiento.</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Resumen</th>
-                                                    <td>Modelo anterior de
-                                                        calidad.</td>
-                                                    <td>Modelo más completo y
-                                                        actualizado.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                </div>
+            </section>
+            <!-- Sección 04: presenta los estándares relacionados con calidad de software. -->
+            <section id="estandares" class="estandares"
+                aria-labelledby="estandares-title">
+                <!-- Wave que separa la sección de estándares de la sección anterior. -->
+                <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#bfd8f5"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-number">04</span>
+                        <h2 id="estandares-title" class="section-title">
+                            Estándares de <span>calidad</span>
+                        </h2>
+                        <p class="section-description">
+                            Normas y recomendaciones utilizadas para evaluar y
+                            mejorar productos y procesos de software.
+                        </p>
+                    </div>
+                    <div class="row align-items-center g-4">
+                        <div class="col-12 col-lg-5">
+                            <!-- Imagen utilizada para representar los estándares ISO. -->
+                            <img class="iso-img" src="imgs/ISO-Logo.png"
+                                alt="Estándares ISO de calidad de software"
+                                loading="lazy">
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <!-- Tarjetas que explican qué son, para qué sirven y cuáles son algunos estándares conocidos. -->
+                            <div class="estandares-cards">
+                                <article class="estandares-card">
+                                    <div class="estandares-icon">
+                                        <i class="bi bi-question-circle"
+                                            aria-hidden="true"></i>
                                     </div>
-                                </div>
-
-                                <div class="table-block">
-                                    <div class="table-responsive">
-                                        <table
-                                            class="table iso-table iso-table-check">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th>ISO 9126</th>
-                                                    <th>ISO 25000</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th>Evaluación de la calidad
-                                                        del software</th>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Funcionalidad y
-                                                        cumplimiento de
-                                                        requisitos</th>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Estándar moderno y más
-                                                        completo</th>
-                                                    <td><i
-                                                            class="bi bi-x-circle-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Usabilidad y facilidad
-                                                        de uso</th>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Rendimiento y
-                                                        eficiencia</th>
-                                                    <td><i
-                                                            class="bi bi-x-circle-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Mantenimiento y
-                                                        facilidad de
-                                                        modificación</th>
-                                                    <td><i
-                                                            class="bi bi-x-circle-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Seguridad y protección
-                                                        de la información</th>
-                                                    <td><i
-                                                            class="bi bi-x-circle-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Compatibilidad con otros
-                                                        sistemas</th>
-                                                    <td><i
-                                                            class="bi bi-x-circle-fill"></i></td>
-                                                    <td><i
-                                                            class="bi bi-patch-check-fill"></i></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div>
+                                        <h3>¿Qué son?</h3>
+                                        <p>Son normas y recomendaciones que
+                                            ayudan a garantizar la calidad de un
+                                            software.</p>
                                     </div>
-                                </div>
+                                </article>
+                                <article class="estandares-card">
+                                    <div class="estandares-icon">
+                                        <i class="bi bi-bullseye"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h3>¿Para qué sirven?</h3>
+                                        <p>Establecen criterios que permiten
+                                            evaluar y mejorar un producto o
+                                            proceso.</p>
+                                    </div>
+                                </article>
+                                <article class="estandares-card">
+                                    <div class="estandares-icon">
+                                        <i class="bi bi-journal-text"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h3>¿Cuáles son los más conocidos?</h3>
+                                        <p>Algunos ejemplos son ISO 9126, ISO
+                                            25000 e ISO 12207.</p>
+                                    </div>
+                                </article>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- Tecnicas -->
-                <section id="Tecnicas" class="seccion-tecnicas">
-                    <svg class="wave2" viewBox="0 0 1440 200"
-                        preserveAspectRatio="none">
-                        <path fill="#fff8e7"
-                            d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
-                    </svg>
-                    <div class="container">
-                        <!-- Encabezado de la sección -->
-                        <div class="section-heading">
-
-                            <span>05</span>
-                            <h2 class="title">¿Técnicas de aseguramiento de
-                                <span>la calidad del software?</span></h2>
-                            <p class="description">Las técnicas de aseguramiento
-                                de calidad de software permiten detectar
-                                errores, prevenir problemas y asegurar que el
-                                producto cumpla con los requisitos
-                                establecidos.<br>Para eso tenemos los niveles de
-                                prueba, que indican dónde se prueba, y los tipos
-                                de prueba, que muestran cómo se prueba.</p>
+                </div>
+            </section>
+            <!-- Tabla comparativa que relaciona ISO 9126 e ISO 25000. -->
+            <section class="tables" aria-labelledby="iso-title">
+                <div class="container">
+                    <!-- Encabezado de la comparación y acceso de regreso a estándares. -->
+                    <div class="table-header">
+                        <div>
+                            <span class="section-number">COMPARACIÓN</span>
+                            <h2 id="iso-title"
+                                class="section-title table-title">
+                                Te interesa saber más sobre <span>ISO</span>
+                            </h2>
                         </div>
-
-                        <!-- Introducción a los niveles de prueba -->
-                        <div class="test-section-heading">
-                            <div class="test-heading-icon">
-                                <i class="bi bi-diagram-3"></i>
-                            </div>
-                            <div>
-                                <span>NIVELES DE PRUEBA</span>
-                                <h3>Niveles de pruebas</h3>
-                                <p>Se realizan en diferentes etapas del
-                                    desarrollo para validar cada parte del
-                                    sistema.</p>
-                            </div>
-                        </div>
-
-                        <!-- Tabla de niveles de prueba -->
-                        <div class="table-block test-table-block">
+                        <a href="#estandares" class="table-btn">
+                            CONOCÉ MÁS
+                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <!-- Contiene las dos tablas comparativas. -->
+                    <div class="comparison-row">
+                        <div class="table-block">
                             <div class="table-responsive">
-                                <table class="table test-table mb-0">
+                                <table class="table data-table mb-0">
+                                    <caption class="visually-hidden">
+                                        Comparación descriptiva entre ISO 9126 e
+                                        ISO 25000
+                                    </caption>
                                     <thead>
                                         <tr>
                                             <th scope="col">Característica</th>
-                                            <th scope="col"><i
-                                                    class="bi bi-box"></i>
-                                                Unitarias</th>
-                                            <th scope="col"><i
-                                                    class="bi bi-diagram-2"></i>
-                                                Integración</th>
-                                            <th scope="col"><i
-                                                    class="bi bi-window-stack"></i>
-                                                Sistema</th>
+                                            <th scope="col">ISO 9126</th>
+                                            <th scope="col">ISO 25000</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th scope="row"><i
-                                                    class="bi bi-question-circle"></i>
-                                                ¿Qué son?</th>
-                                            <td>Verifican el funcionamiento de
-                                                la unidad de código más pequeña
-                                                de forma aislada.</td>
-                                            <td>Comprueban cómo interactúan
-                                                entre sí diferentes módulos,
-                                                componentes o servicios.</td>
-                                            <td>Evalúan el software completo e
-                                                integrado frente a los
-                                                requisitos establecidos.</td>
+                                            <th scope="row">¿Qué es?</th>
+                                            <td>Una norma para evaluar la
+                                                calidad de un software.</td>
+                                            <td>Una familia de normas para
+                                                evaluar y mejorar la calidad del
+                                                software.</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><i
-                                                    class="bi bi-search"></i>
-                                                ¿Qué se prueba?</th>
-                                            <td>Funciones, métodos, clases o
-                                                módulos.</td>
-                                            <td>Interfaces entre módulos, paso
-                                                de datos y comunicación entre
-                                                componentes.</td>
-                                            <td>Funcionalidad total,
-                                                rendimiento, usabilidad y
-                                                seguridad.</td>
+                                            <th scope="row">¿Para qué
+                                                sirve?</th>
+                                            <td>Indica qué aspectos revisar para
+                                                evaluar un software.</td>
+                                            <td>Amplía y actualiza los criterios
+                                                de evaluación de calidad.</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><i
-                                                    class="bi bi-code-square"></i>
-                                                Ejemplos</th>
-                                            <td>Frameworks de pruebas,
-                                                verificación de lógica y
-                                                resultados esperados.</td>
-                                            <td>Pruebas de API, pruebas de
-                                                servicios, stubs y mocks.</td>
-                                            <td>Pruebas end-to-end, pruebas de
-                                                carga y pruebas de
-                                                aceptación.</td>
+                                            <th scope="row">¿Qué evalúa?</th>
+                                            <td>Facilidad de uso, funcionamiento
+                                                y seguridad.</td>
+                                            <td>Funcionalidad, rendimiento,
+                                                seguridad y facilidad de
+                                                mantenimiento.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Resumen</th>
+                                            <td>Modelo anterior de calidad.</td>
+                                            <td>Modelo más completo y
+                                                actualizado.</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
-                        <!-- Introducción a los tipos de prueba -->
-                        <div class="test-section-heading types-heading">
-                            <div class="test-heading-icon">
-                                <i class="bi bi-search"></i>
-                            </div>
-                            <div>
-                                <span>TIPOS DE PRUEBA</span>
-                                <h3>Tipos de pruebas</h3>
-                                <p>Se clasifican según el conocimiento que se
-                                    tiene del funcionamiento interno del
-                                    sistema.</p>
-                            </div>
-                        </div>
-
-                        <!-- Tarjetas de tipos de prueba -->
-                        <div class="row justify-content-center g-3 tests-cards">
-                            <div class="col-12 col-lg-6">
-                                <button class="test-card" type="button">
-                                    <div class="test-card-front">
-                                        <div class="test-card-icon">
-                                            <i
-                                                class="bi bi-box-arrow-in-right"></i>
-                                        </div>
-                                        <span>01</span>
-                                        <h3>Pruebas de caja negra</h3>
-                                        <p>Se prueba la funcionalidad del
-                                            sistema sin conocer su código
-                                            interno.</p>
-                                        <div class="test-card-more">
-                                            Ver características <i
-                                                class="bi bi-arrow-right"></i>
-                                        </div>
-                                    </div>
-                                    <div class="test-card-back">
-                                        <div>
-                                            <h4><i class="bi bi-check2"></i>
-                                                Características</h4>
-                                            <ul>
-                                                <li>Se basa en las entradas y
-                                                    salidas.</li>
-                                                <li>Simula el comportamiento del
-                                                    usuario.</li>
-                                                <li>No requiere conocer la
-                                                    estructura interna.</li>
-                                                <li>Puede realizarse en un
-                                                    entorno virtual.</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4><i class="bi bi-lightbulb"></i>
-                                                Ejemplos</h4>
-                                            <ul>
-                                                <li>Pruebas de
-                                                    funcionalidad.</li>
-                                                <li>Pruebas de usabilidad.</li>
-                                                <li>Pruebas de carga.</li>
-                                                <li>Pruebas de aceptación.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="test-card-close">Volver <i
-                                                class="bi bi-arrow-up"></i></div>
-                                    </div>
-                                </button>
-                            </div>
-
-                            <div class="col-12 col-lg-6">
-                                <button class="test-card" type="button">
-                                    <div class="test-card-front">
-                                        <div class="test-card-icon">
-                                            <i class="bi bi-code-slash"></i>
-                                        </div>
-                                        <span>02</span>
-                                        <h3>Pruebas de caja blanca</h3>
-                                        <p>Se analiza la lógica interna y la
-                                            estructura del código durante la
-                                            prueba.</p>
-                                        <div class="test-card-more">
-                                            Ver características <i
-                                                class="bi bi-arrow-right"></i>
-                                        </div>
-                                    </div>
-                                    <div class="test-card-back">
-                                        <div>
-                                            <h4><i class="bi bi-check2"></i>
-                                                Características</h4>
-                                            <ul>
-                                                <li>Se analiza la estructura del
-                                                    código.</li>
-                                                <li>Se verifican rutas,
-                                                    condiciones y ciclos.</li>
-                                                <li>Requiere conocimiento del
-                                                    lenguaje y la
-                                                    implementación.</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4><i class="bi bi-lightbulb"></i>
-                                                Ejemplos</h4>
-                                            <ul>
-                                                <li>Pruebas de cobertura de
-                                                    código.</li>
-                                                <li>Pruebas de rutas de
-                                                    ejecución.</li>
-                                                <li>Análisis estático de
-                                                    código.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="test-card-close">Volver <i
-                                                class="bi bi-arrow-up"></i></div>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Comparación rápida -->
-                        <div class="test-summary">
-                            <div class="test-summary-icon">
-                                <i class="bi bi-arrow-left-right"></i>
-                            </div>
-                            <div>
-                                <h3>¿Cuál es la diferencia?</h3>
-                                <p>La caja negra se concentra en el
-                                    comportamiento observable del software,
-                                    mientras que la caja blanca analiza su
-                                    estructura y lógica interna.</p>
+                        <div class="table-block">
+                            <div class="table-responsive">
+                                <table
+                                    class="table data-table iso-table-check mb-0">
+                                    <caption class="visually-hidden">
+                                        Comparación de características entre ISO
+                                        9126 e ISO 25000
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Característica</th>
+                                            <th scope="col">ISO 9126</th>
+                                            <th scope="col">ISO 25000</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Evaluación de la
+                                                calidad del software</th>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Funcionalidad y
+                                                cumplimiento de requisitos</th>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Estándar moderno y
+                                                más completo</th>
+                                            <td><i class="bi bi-x-circle-fill"
+                                                    aria-label="No"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Usabilidad y
+                                                facilidad de uso</th>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Rendimiento y
+                                                eficiencia</th>
+                                            <td><i class="bi bi-x-circle-fill"
+                                                    aria-label="No"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Mantenimiento y
+                                                facilidad de modificación</th>
+                                            <td><i class="bi bi-x-circle-fill"
+                                                    aria-label="No"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Seguridad y
+                                                protección de la
+                                                información</th>
+                                            <td><i class="bi bi-x-circle-fill"
+                                                    aria-label="No"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Compatibilidad con
+                                                otros sistemas</th>
+                                            <td><i class="bi bi-x-circle-fill"
+                                                    aria-label="No"></i></td>
+                                            <td><i
+                                                    class="bi bi-patch-check-fill"
+                                                    aria-label="Sí"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- Herramientas -->
-                <section class="herramientas">
-                    <svg class="wave2" viewBox="0 0 1440 200"
-                        preserveAspectRatio="none">
-                        <path fill="#bfd8f5"
-                            d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z" />
-                    </svg>
-                    <div class="container">
-                        <div class="section-heading">
-                            <span>06</span>
-                            <h2>Herramientas de <strong>pruebas de
-                                    software</strong></h2>
-                            <p>Las herramientas de calidad ayudan a mejorar el
-                                desarrollo del software, facilitando la gestión
-                                de pruebas, el seguimiento de defectos y el
-                                análisis de código.</p>
+                </div>
+            </section>
+            <!-- Sección 05: explica técnicas y niveles utilizados para realizar pruebas. -->
+            <section id="tecnicas" class="seccion-tecnicas"
+                aria-labelledby="tecnicas-title">
+                <!-- Wave de transición visual. -->
+                <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#fff8e7"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-number">05</span>
+                        <h2 id="tecnicas-title" class="section-title">
+                            ¿Técnicas de aseguramiento de <span>la calidad del
+                                software?</span>
+                        </h2>
+                        <p class="section-description">
+                            Las técnicas de aseguramiento de calidad de software
+                            permiten detectar errores, prevenir problemas y
+                            asegurar que el producto cumpla con los requisitos
+                            establecidos.<br>
+                            Para eso tenemos los niveles de prueba, que indican
+                            dónde se prueba, y los tipos de prueba, que muestran
+                            cómo se prueba.
+                        </p>
+                    </div>
+                    <!-- Encabezado que introduce los diferentes niveles de prueba. -->
+                    <div class="test-section-heading">
+                        <div class="test-heading-icon">
+                            <i class="bi bi-diagram-3" aria-hidden="true"></i>
                         </div>
-
-                        <div class="herramientas-tabs">
-                            <!-- Navegación de categorías -->
-                            <ul class="nav nav-tabs justify-content-center"
-                                id="herramientasTabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active"
-                                        id="bugs-tab" data-bs-toggle="tab"
-                                        data-bs-target="#bugs" type="button"
-                                        role="tab" aria-controls="bugs"
-                                        aria-selected="true">
-                                        <i class="bi bi-bug"></i>
-                                        <span>Bug Trackers</span>
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="linters-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#linters" type="button"
-                                        role="tab" aria-controls="linters"
-                                        aria-selected="false">
-                                        <i class="bi bi-code-slash"></i>
-                                        <span>Linters</span>
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="testing-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#testing" type="button"
-                                        role="tab" aria-controls="testing"
-                                        aria-selected="false">
-                                        <i class="bi bi-clipboard2-check"></i>
-                                        <span>Test Management</span>
-                                    </button>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content"
-                                id="herramientasTabsContent">
-                                <!-- Bug Trackers -->
-                                <div class="tab-pane fade show active" id="bugs"
-                                    role="tabpanel" aria-labelledby="bugs-tab"
-                                    tabindex="0">
-                                    <div class="herramientas-tab-heading">
-                                        <div class="herramientas-tab-icon">
-                                            <i class="bi bi-bug"></i>
-                                        </div>
-                                        <div>
-                                            <h3>Bug Trackers</h3>
-                                            <p>Permiten registrar, priorizar y
-                                                hacer seguimiento de defectos en
-                                                el software, facilitando la
-                                                comunicación entre los equipos
-                                                de desarrollo y testing.</p>
-                                        </div>
+                        <div>
+                            <span>NIVELES DE PRUEBA</span>
+                            <h3>Niveles de pruebas</h3>
+                            <p>Se realizan en diferentes etapas del desarrollo
+                                para validar cada parte del sistema.</p>
+                        </div>
+                    </div>
+                    <!-- Tabla que compara las pruebas unitarias, de integración y de sistema. -->
+                    <div class="table-block test-table-block">
+                        <div class="table-responsive">
+                            <table class="table data-table test-table mb-0">
+                                <caption class="visually-hidden">
+                                    Comparación de niveles de prueba
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Característica</th>
+                                        <th scope="col">
+                                            <i class="bi bi-box"
+                                                aria-hidden="true"></i>
+                                            Unitarias
+                                        </th>
+                                        <th scope="col">
+                                            <i class="bi bi-diagram-2"
+                                                aria-hidden="true"></i>
+                                            Integración
+                                        </th>
+                                        <th scope="col">
+                                            <i class="bi bi-window-stack"
+                                                aria-hidden="true"></i>
+                                            Sistema
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <i class="bi bi-question-circle"
+                                                aria-hidden="true"></i>
+                                            ¿Qué son?
+                                        </th>
+                                        <td>Verifican el funcionamiento de la
+                                            unidad de código más pequeña de
+                                            forma aislada.</td>
+                                        <td>Comprueban cómo interactúan entre sí
+                                            diferentes módulos, componentes o
+                                            servicios.</td>
+                                        <td>Evalúan el software completo e
+                                            integrado frente a los requisitos
+                                            establecidos.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <i class="bi bi-search"
+                                                aria-hidden="true"></i>
+                                            ¿Qué se prueba?
+                                        </th>
+                                        <td>Funciones, métodos, clases o
+                                            módulos.</td>
+                                        <td>Interfaces entre módulos, paso de
+                                            datos y comunicación entre
+                                            componentes.</td>
+                                        <td>Funcionalidad total, rendimiento,
+                                            usabilidad y seguridad.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <i class="bi bi-code-square"
+                                                aria-hidden="true"></i>
+                                            Ejemplos
+                                        </th>
+                                        <td>Frameworks de pruebas, verificación
+                                            de lógica y resultados
+                                            esperados.</td>
+                                        <td>Pruebas de API, pruebas de
+                                            servicios, stubs y mocks.</td>
+                                        <td>Pruebas end-to-end, pruebas de carga
+                                            y pruebas de aceptación.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Encabezado que introduce las dos formas principales de clasificar las pruebas. -->
+                    <div class="test-section-heading types-heading">
+                        <div class="test-heading-icon">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <span>TIPOS DE PRUEBA</span>
+                            <h3>Tipos de pruebas</h3>
+                            <p>Se clasifican según el conocimiento que se tiene
+                                del funcionamiento interno del sistema.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjetas interactivas que muestran información adicional mediante JavaScript. -->
+                    <div class="row justify-content-center g-3 tests-cards">
+                        <div class="col-12 col-lg-6">
+                            <button class="test-card" type="button"
+                                aria-label="Mostrar detalles de las pruebas de caja negra">
+                                <!-- Cara frontal con el resumen de la prueba. -->
+                                <span class="test-card-front">
+                                    <span class="test-card-icon">
+                                        <i class="bi bi-box-arrow-in-right"
+                                            aria-hidden="true"></i>
+                                    </span>
+                                    <span class="test-card-number">01</span>
+                                    <span class="test-card-title">
+                                        Pruebas de caja negra
+                                    </span>
+                                    <span class="test-card-text">
+                                        Se prueba la funcionalidad del sistema
+                                        sin conocer su código interno.
+                                    </span>
+                                    <span class="test-card-more">
+                                        Ver características
+                                        <i class="bi bi-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <!-- Cara posterior con características y ejemplos. -->
+                                <span class="test-card-back" aria-hidden="true">
+                                    <span class="test-card-group">
+                                        <span class="test-card-heading">
+                                            <i class="bi bi-check2"
+                                                aria-hidden="true"></i>
+                                            Características
+                                        </span>
+                                        <ul>
+                                            <li>Se basa en las entradas y
+                                                salidas.</li>
+                                            <li>Simula el comportamiento del
+                                                usuario.</li>
+                                            <li>No requiere conocer la
+                                                estructura interna.</li>
+                                            <li>Puede realizarse en un entorno
+                                                virtual.</li>
+                                        </ul>
+                                    </span>
+                                    <span class="test-card-group">
+                                        <span class="test-card-heading">
+                                            <i class="bi bi-lightbulb"
+                                                aria-hidden="true"></i>
+                                            Ejemplos
+                                        </span>
+                                        <ul>
+                                            <li>Pruebas de funcionalidad.</li>
+                                            <li>Pruebas de usabilidad.</li>
+                                            <li>Pruebas de carga.</li>
+                                            <li>Pruebas de aceptación.</li>
+                                        </ul>
+                                    </span>
+                                    <span class="test-card-close">
+                                        Volver
+                                        <i class="bi bi-arrow-up"
+                                            aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <button class="test-card" type="button"
+                                aria-label="Mostrar detalles de las pruebas de caja blanca">
+                                <!-- Cara frontal con el resumen de la prueba. -->
+                                <span class="test-card-front">
+                                    <span class="test-card-icon">
+                                        <i class="bi bi-code-slash"
+                                            aria-hidden="true"></i>
+                                    </span>
+                                    <span class="test-card-number">02</span>
+                                    <span class="test-card-title">
+                                        Pruebas de caja blanca
+                                    </span>
+                                    <span class="test-card-text">
+                                        Se analiza la lógica interna y la
+                                        estructura del código durante la prueba.
+                                    </span>
+                                    <span class="test-card-more">
+                                        Ver características
+                                        <i class="bi bi-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <!-- Cara posterior con características y ejemplos. -->
+                                <span class="test-card-back" aria-hidden="true">
+                                    <span class="test-card-group">
+                                        <span class="test-card-heading">
+                                            <i class="bi bi-check2"
+                                                aria-hidden="true"></i>
+                                            Características
+                                        </span>
+                                        <ul>
+                                            <li>Se analiza la estructura del
+                                                código.</li>
+                                            <li>Se verifican rutas, condiciones
+                                                y ciclos.</li>
+                                            <li>Requiere conocimiento del
+                                                lenguaje y la
+                                                implementación.</li>
+                                        </ul>
+                                    </span>
+                                    <span class="test-card-group">
+                                        <span class="test-card-heading">
+                                            <i class="bi bi-lightbulb"
+                                                aria-hidden="true"></i>
+                                            Ejemplos
+                                        </span>
+                                        <ul>
+                                            <li>Pruebas de cobertura de
+                                                código.</li>
+                                            <li>Pruebas de rutas de
+                                                ejecución.</li>
+                                            <li>Análisis estático de
+                                                código.</li>
+                                        </ul>
+                                    </span>
+                                    <span class="test-card-close">
+                                        Volver
+                                        <i class="bi bi-arrow-up"
+                                            aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Resumen que diferencia las pruebas de caja negra y caja blanca. -->
+                    <aside class="test-summary">
+                        <div class="test-summary-icon">
+                            <i class="bi bi-arrow-left-right"
+                                aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3>¿Cuál es la diferencia?</h3>
+                            <p>
+                                La caja negra se concentra en el comportamiento
+                                observable del software, mientras que la caja
+                                blanca analiza su estructura y lógica interna.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+            <!-- Sección 06: presenta herramientas utilizadas durante el proceso de calidad. -->
+            <section id="herramientas" class="herramientas"
+                aria-labelledby="herramientas-title">
+                <!-- Wave utilizada para separar la sección visualmente. -->
+                <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#bfd8f5"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-number">06</span>
+                        <h2 id="herramientas-title" class="section-title">
+                            Herramientas de <span>pruebas de software</span>
+                        </h2>
+                        <p class="section-description">
+                            Las herramientas de calidad ayudan a mejorar el
+                            desarrollo del software, facilitando la gestión de
+                            pruebas, el seguimiento de defectos y el análisis de
+                            código.
+                        </p>
+                    </div>
+                    <!-- Tabs de Bootstrap que permiten cambiar entre categorías de herramientas. -->
+                    <div class="herramientas-tabs">
+                        <ul class="nav nav-tabs justify-content-center"
+                            id="herramientasTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link active"
+                                    id="bugs-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#bugs"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="bugs"
+                                    aria-selected="true">
+                                    <i class="bi bi-bug" aria-hidden="true"></i>
+                                    <span>Bug Trackers</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    id="linters-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#linters"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="linters"
+                                    aria-selected="false">
+                                    <i class="bi bi-code-slash"
+                                        aria-hidden="true"></i>
+                                    <span>Linters</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    id="testing-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#testing"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="testing"
+                                    aria-selected="false">
+                                    <i class="bi bi-clipboard2-check"
+                                        aria-hidden="true"></i>
+                                    <span>Test Management</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="herramientasTabsContent">
+                            <!-- Panel de herramientas con tabs -->
+                            <div class="tab-pane fade show active" id="bugs"
+                                role="tabpanel" aria-labelledby="bugs-tab"
+                                tabindex="0">
+                                <div class="herramientas-tab-heading">
+                                    <div class="herramientas-tab-icon">
+                                        <i class="bi bi-bug"
+                                            aria-hidden="true"></i>
                                     </div>
-
-                                    <div class="herramientas-table-card">
-                                        <div class="table-responsive">
-                                            <table
-                                                class="table herramientas-table mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th
-                                                            scope="col">Característica</th>
-                                                        <th
-                                                            scope="col">Jira</th>
-                                                        <th
-                                                            scope="col">Bugzilla</th>
-                                                        <th
-                                                            scope="col">Redmine</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-bullseye"></i>Enfoque
-                                                            principal</th>
-                                                        <td>Gestión de proyectos
-                                                            y seguimiento de
-                                                            defectos</td>
-                                                        <td>Seguimiento de
-                                                            errores y bugs</td>
-                                                        <td>Gestión de
-                                                            proyectos, tareas y
-                                                            bugs</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-person-check"></i>Facilidad
-                                                            de uso</th>
-                                                        <td>Intuitiva y
-                                                            personalizable</td>
-                                                        <td>Simple, pero con
-                                                            interfaz básica</td>
-                                                        <td>Moderna, requiere
-                                                            configuración
-                                                            inicial</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-puzzle"></i>Integraciones</th>
-                                                        <td>Amplias, como CI/CD
-                                                            y Git</td>
-                                                        <td>Limitadas</td>
-                                                        <td>Buenas, con Git y
-                                                            plugins</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-star"></i>Ideal
-                                                            para</th>
-                                                        <td>Equipos grandes y
-                                                            proyectos
-                                                            complejos</td>
-                                                        <td>Equipos que buscan
-                                                            simplicidad</td>
-                                                        <td>Equipos que
-                                                            necesitan gestión
-                                                            integral de
-                                                            proyectos</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    <div>
+                                        <h3>Bug Trackers</h3>
+                                        <p>
+                                            Permiten registrar, priorizar y
+                                            hacer seguimiento de defectos en el
+                                            software, facilitando la
+                                            comunicación entre los equipos de
+                                            desarrollo y testing.
+                                        </p>
                                     </div>
                                 </div>
-
-                                <!-- Linters -->
-                                <div class="tab-pane fade" id="linters"
-                                    role="tabpanel"
-                                    aria-labelledby="linters-tab" tabindex="0">
-                                    <div class="herramientas-tab-heading">
-                                        <div class="herramientas-tab-icon">
-                                            <i class="bi bi-code-slash"></i>
-                                        </div>
-                                        <div>
-                                            <h3>Linters</h3>
-                                            <p>Analizan el código fuente en
-                                                busca de errores de estilo,
-                                                malas prácticas y posibles
-                                                problemas, ayudando a mantener
-                                                un código más limpio y
-                                                consistente.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="herramientas-table-card">
-                                        <div class="table-responsive">
-                                            <table
-                                                class="table herramientas-table mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th
-                                                            scope="col">Característica</th>
-                                                        <th
-                                                            scope="col">ESLint</th>
-                                                        <th
-                                                            scope="col">Pylint</th>
-                                                        <th
-                                                            scope="col">SonarQube</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-code"></i>Enfoque
-                                                            principal</th>
-                                                        <td>JavaScript y
-                                                            TypeScript</td>
-                                                        <td>Python</td>
-                                                        <td>Multilenguaje</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-search"></i>Tipo
-                                                            de análisis</th>
-                                                        <td>Estilo y errores de
-                                                            código</td>
-                                                        <td>Análisis de código
-                                                            Python</td>
-                                                        <td>Calidad general del
-                                                            código, errores y
-                                                            seguridad</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-window"></i>Integración
-                                                            con IDE</th>
-                                                        <td>VS Code, WebStorm,
-                                                            etc.</td>
-                                                        <td>VS Code, PyCharm,
-                                                            etc.</td>
-                                                        <td>Sí, mediante
-                                                            plugins</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-star"></i>Ideal
-                                                            para</th>
-                                                        <td>Mantener un estilo
-                                                            de código
-                                                            consistente en
-                                                            JavaScript</td>
-                                                        <td>Mejorar la calidad y
-                                                            mantenibilidad del
-                                                            código Python</td>
-                                                        <td>Análisis profundo y
-                                                            monitoreo continuo
-                                                            de la calidad</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Test Management -->
-                                <div class="tab-pane fade" id="testing"
-                                    role="tabpanel"
-                                    aria-labelledby="testing-tab" tabindex="0">
-                                    <div class="herramientas-tab-heading">
-                                        <div class="herramientas-tab-icon">
-                                            <i
-                                                class="bi bi-clipboard2-check"></i>
-                                        </div>
-                                        <div>
-                                            <h3>Test Management</h3>
-                                            <p>Facilitan la planificación,
-                                                ejecución y seguimiento de
-                                                pruebas, permitiendo tener una
-                                                visión clara del progreso y la
-                                                cobertura de testing.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="herramientas-table-card">
-                                        <div class="table-responsive">
-                                            <table
-                                                class="table herramientas-table mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th
-                                                            scope="col">Característica</th>
-                                                        <th
-                                                            scope="col">TestRail</th>
-                                                        <th
-                                                            scope="col">Zephyr</th>
-                                                        <th
-                                                            scope="col">qTest</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-file-earmark-check"></i>Gestión
-                                                            de casos de
-                                                            prueba</th>
-                                                        <td>Completa y
-                                                            flexible</td>
-                                                        <td>Integrada con
-                                                            Jira</td>
-                                                        <td>Completa y
-                                                            personalizable</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-bar-chart"></i>Reportes
-                                                            y métricas</th>
-                                                        <td>Avanzados y
-                                                            detallados</td>
-                                                        <td>Buenas métricas
-                                                            básicas</td>
-                                                        <td>Avanzados y
-                                                            personalizables</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-puzzle"></i>Integraciones</th>
-                                                        <td>Jira, CI/CD,
-                                                            etc.</td>
-                                                        <td>Jira</td>
-                                                        <td>Jira, Selenium,
-                                                            etc.</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"><i
-                                                                class="bi bi-star"></i>Ideal
-                                                            para</th>
-                                                        <td>Equipos que
-                                                            necesitan
-                                                            trazabilidad y
-                                                            reportes claros</td>
-                                                        <td>Equipos que ya
-                                                            utilizan Jira</td>
-                                                        <td>Organizaciones con
-                                                            procesos de QA más
-                                                            complejos</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                <!-- Tabla comparativa de herramientas para gestionar errores. -->
+                                <div class="herramientas-table-card">
+                                    <div class="table-responsive">
+                                        <table
+                                            class="table data-table herramientas-table mb-0">
+                                            <caption class="visually-hidden">
+                                                Comparación de herramientas Bug
+                                                Trackers
+                                            </caption>
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        scope="col">Característica</th>
+                                                    <th scope="col">Jira</th>
+                                                    <th
+                                                        scope="col">Bugzilla</th>
+                                                    <th scope="col">Redmine</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i
+                                                            class="bi bi-bullseye"
+                                                            aria-hidden="true"></i>
+                                                        Enfoque principal
+                                                    </th>
+                                                    <td>Gestión de proyectos y
+                                                        seguimiento de
+                                                        defectos</td>
+                                                    <td>Seguimiento de errores y
+                                                        bugs</td>
+                                                    <td>Gestión de proyectos,
+                                                        tareas y bugs</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i
+                                                            class="bi bi-person-check"
+                                                            aria-hidden="true"></i>
+                                                        Facilidad de uso
+                                                    </th>
+                                                    <td>Intuitiva y
+                                                        personalizable</td>
+                                                    <td>Simple, pero con
+                                                        interfaz básica</td>
+                                                    <td>Moderna, requiere
+                                                        configuración
+                                                        inicial</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i class="bi bi-puzzle"
+                                                            aria-hidden="true"></i>
+                                                        Integraciones
+                                                    </th>
+                                                    <td>Amplias, como CI/CD y
+                                                        Git</td>
+                                                    <td>Limitadas</td>
+                                                    <td>Buenas, con Git y
+                                                        plugins</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i class="bi bi-star"
+                                                            aria-hidden="true"></i>
+                                                        Ideal para
+                                                    </th>
+                                                    <td>Equipos grandes y
+                                                        proyectos complejos</td>
+                                                    <td>Equipos que buscan
+                                                        simplicidad</td>
+                                                    <td>Equipos que necesitan
+                                                        gestión integral de
+                                                        proyectos</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Otras herramientas -->
-                        <div class="otras-herramientas">
-                            <div class="otras-heading">
-                                <h2>Otras <strong>herramientas</strong></h2>
-                                <p>Además de las herramientas principales,
-                                    existen soluciones que complementan el
-                                    proceso de calidad y automatización.</p>
+                            <!-- Panel de herramientas utilizadas para analizar el código fuente. -->
+                            <div class="tab-pane fade" id="linters"
+                                role="tabpanel" aria-labelledby="linters-tab"
+                                tabindex="0">
+                                <div class="herramientas-tab-heading">
+                                    <div class="herramientas-tab-icon">
+                                        <i class="bi bi-code-slash"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h3>Linters</h3>
+                                        <p>
+                                            Analizan el código fuente en busca
+                                            de errores de estilo, malas
+                                            prácticas y posibles problemas,
+                                            ayudando a mantener un código más
+                                            limpio y consistente.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Tabla comparativa de diferentes herramientas de análisis de código. -->
+                                <div class="herramientas-table-card">
+                                    <div class="table-responsive">
+                                        <table
+                                            class="table data-table herramientas-table mb-0">
+                                            <caption class="visually-hidden">
+                                                Comparación de herramientas
+                                                Linters
+                                            </caption>
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        scope="col">Característica</th>
+                                                    <th scope="col">ESLint</th>
+                                                    <th scope="col">Pylint</th>
+                                                    <th
+                                                        scope="col">SonarQube</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i
+                                                            class="bi bi-bullseye"
+                                                            aria-hidden="true"></i>
+                                                        Enfoque principal
+                                                    </th>
+                                                    <td>JavaScript y
+                                                        TypeScript</td>
+                                                    <td>Python</td>
+                                                    <td>Multilenguaje</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i class="bi bi-search"
+                                                            aria-hidden="true"></i>
+                                                        Tipo de análisis
+                                                    </th>
+                                                    <td>Estilo y errores de
+                                                        código</td>
+                                                    <td>Análisis de código
+                                                        Python</td>
+                                                    <td>Calidad general del
+                                                        código, errores y
+                                                        seguridad</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i class="bi bi-window"
+                                                            aria-hidden="true"></i>
+                                                        Integración con IDE
+                                                    </th>
+                                                    <td>VS Code, WebStorm,
+                                                        etc.</td>
+                                                    <td>VS Code, PyCharm,
+                                                        etc.</td>
+                                                    <td>Sí, mediante
+                                                        plugins</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i class="bi bi-star"
+                                                            aria-hidden="true"></i>
+                                                        Ideal para
+                                                    </th>
+                                                    <td>Mantener un estilo de
+                                                        código consistente en
+                                                        JavaScript</td>
+                                                    <td>Mejorar la calidad y
+                                                        mantenibilidad del
+                                                        código Python</td>
+                                                    <td>Análisis profundo y
+                                                        monitoreo continuo de la
+                                                        calidad</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <div class="otra-herramienta">
-                                        <div class="otra-icon">
-                                            <i class="bi bi-arrow-repeat"></i>
-                                        </div>
-                                        <h3>CI/CD</h3>
-                                        <p>Automatiza la integración y entrega
-                                            de cambios durante el
-                                            desarrollo.</p>
-                                        <a href="#">Ver más <i
-                                                class="bi bi-arrow-right"></i></a>
+                            <!-- Panel de herramientas utilizadas para planificar y controlar pruebas. -->
+                            <div class="tab-pane fade" id="testing"
+                                role="tabpanel" aria-labelledby="testing-tab"
+                                tabindex="0">
+                                <div class="herramientas-tab-heading">
+                                    <div class="herramientas-tab-icon">
+                                        <i class="bi bi-clipboard2-check"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h3>Test Management</h3>
+                                        <p>
+                                            Facilitan la planificación,
+                                            ejecución y seguimiento de pruebas,
+                                            permitiendo tener una visión clara
+                                            del progreso y la cobertura de
+                                            testing.
+                                        </p>
                                     </div>
                                 </div>
-
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <div class="otra-herramienta">
-                                        <div class="otra-icon">
-                                            <i class="bi bi-bar-chart-line"></i>
-                                        </div>
-                                        <h3>Análisis de cobertura</h3>
-                                        <p>Mide qué parte del código está siendo
-                                            evaluada mediante pruebas.</p>
-                                        <a href="#">Ver más <i
-                                                class="bi bi-arrow-right"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <div class="otra-herramienta">
-                                        <div class="otra-icon">
-                                            <i class="bi bi-box-seam"></i>
-                                        </div>
-                                        <h3>Gestión de dependencias</h3>
-                                        <p>Ayuda a mantener librerías
-                                            actualizadas y detectar posibles
-                                            vulnerabilidades.</p>
-                                        <a href="#">Ver más <i
-                                                class="bi bi-arrow-right"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <div class="otra-herramienta">
-                                        <div class="otra-icon">
-                                            <i class="bi bi-shield-lock"></i>
-                                        </div>
-                                        <h3>Herramientas de seguridad</h3>
-                                        <p>Analizan posibles riesgos
-                                            relacionados con el código y sus
-                                            dependencias.</p>
-                                        <a href="#">Ver más <i
-                                                class="bi bi-arrow-right"></i></a>
+                                <!-- Tabla comparativa de herramientas para administrar casos y procesos de prueba. -->
+                                <div class="herramientas-table-card">
+                                    <div class="table-responsive">
+                                        <table
+                                            class="table data-table herramientas-table mb-0">
+                                            <caption class="visually-hidden">
+                                                Comparación de herramientas Test
+                                                Management
+                                            </caption>
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        scope="col">Característica</th>
+                                                    <th
+                                                        scope="col">TestRail</th>
+                                                    <th scope="col">Zephyr</th>
+                                                    <th scope="col">qTest</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i
+                                                            class="bi bi-file-earmark-check"
+                                                            aria-hidden="true"></i>
+                                                        Gestión de casos de
+                                                        prueba
+                                                    </th>
+                                                    <td>Completa y flexible</td>
+                                                    <td>Integrada con Jira</td>
+                                                    <td>Completa y
+                                                        personalizable</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i
+                                                            class="bi bi-bar-chart"
+                                                            aria-hidden="true"></i>
+                                                        Reportes y métricas
+                                                    </th>
+                                                    <td>Avanzados y
+                                                        detallados</td>
+                                                    <td>Buenas métricas
+                                                        básicas</td>
+                                                    <td>Avanzados y
+                                                        personalizables</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i class="bi bi-puzzle"
+                                                            aria-hidden="true"></i>
+                                                        Integraciones
+                                                    </th>
+                                                    <td>Jira, CI/CD, etc.</td>
+                                                    <td>Jira</td>
+                                                    <td>Jira, Selenium,
+                                                        etc.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <i class="bi bi-star"
+                                                            aria-hidden="true"></i>
+                                                        Ideal para
+                                                    </th>
+                                                    <td>Equipos que necesitan
+                                                        trazabilidad y reportes
+                                                        claros</td>
+                                                    <td>Equipos que ya utilizan
+                                                        Jira</td>
+                                                    <td>Organizaciones con
+                                                        procesos de QA más
+                                                        complejos</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </section>
-            </div>
+                    <!-- Herramientas adicionales que complementan las herramientas principales. -->
+                    <div class="otras-herramientas">
+                        <div class="otras-heading">
+                            <span class="section-number">COMPLEMENTARIAS</span>
+                            <h2 class="section-title">
+                                Otras <span>herramientas</span>
+                            </h2>
+                            <p>
+                                Además de las herramientas principales, existen
+                                soluciones que complementan el proceso de
+                                calidad y automatización.
+                            </p>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <article class="otra-herramienta">
+                                    <div class="otra-icon">
+                                        <i class="bi bi-arrow-repeat"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <h3>CI/CD</h3>
+                                    <p>
+                                        Automatiza la integración y entrega de
+                                        cambios durante el desarrollo.
+                                    </p>
+                                    <a href="#herramientas">
+                                        Ver más
+                                        <i class="bi bi-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <article class="otra-herramienta">
+                                    <div class="otra-icon">
+                                        <i class="bi bi-bar-chart-line"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Análisis de cobertura</h3>
+                                    <p>
+                                        Mide qué parte del código está siendo
+                                        evaluada mediante pruebas.
+                                    </p>
+                                    <a href="#herramientas">
+                                        Ver más
+                                        <i class="bi bi-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <article class="otra-herramienta">
+                                    <div class="otra-icon">
+                                        <i class="bi bi-box-seam"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Gestión de dependencias</h3>
+                                    <p>
+                                        Ayuda a mantener librerías actualizadas
+                                        y detectar posibles vulnerabilidades.
+                                    </p>
+                                    <a href="#herramientas">
+                                        Ver más
+                                        <i class="bi bi-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <article class="otra-herramienta">
+                                    <div class="otra-icon">
+                                        <i class="bi bi-shield-lock"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Herramientas de seguridad</h3>
+                                    <p>
+                                        Analizan posibles riesgos relacionados
+                                        con el código y sus dependencias.
+                                    </p>
+                                    <a href="#herramientas">
+                                        Ver más
+                                        <i class="bi bi-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+        <!-- JavaScript propio para cargar componentes  -->
         <script src="main.js" defer></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
