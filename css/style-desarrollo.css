@@ -254,7 +254,7 @@ a {
 
 /* Contenedor principal de la sección. */
 .ciclo{
-  padding: clamp(5rem, 6vw, 3rem) 0 clamp(4rem, 3vw, 2rem);
+  padding: clamp(3rem, 4vw, 3rem) 0 clamp(2rem, 3vw, 2rem);
   background: var(--color-cream);
   isolation: isolate;
 }
@@ -780,12 +780,17 @@ a {
 
 .modelo-info-title h4 {
     margin: 0;
-    color: var(--color-primary);
     font-size: 1rem;
     font-weight: 800;
     text-transform: uppercase;
 }
+.alert-success{
+    color: rgb(0, 143, 0);
+}
 
+.alert-danger{
+    color: rgb(196, 3, 3);
+}
 .modelo-info-card ul {
     margin: 0;
     padding-left: 1.1rem;
@@ -1186,3 +1191,11 @@ a {
         padding: .9rem;
     }
 }
+
+.curva{
+    position: relative;
+    overflow: hidden;
+    padding: 50px;
+    background: var(--color-border);
+}
+

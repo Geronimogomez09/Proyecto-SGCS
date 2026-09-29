@@ -70,7 +70,8 @@
                     <a href="#estandares" class="hero-link">Estándares <i
                             class="bi bi-arrow-right"
                             aria-hidden="true"></i></a>
-                    <a href="#tecnicas" class="hero-link">técnicas de aseguramiento<i
+                    <a href="#tecnicas" class="hero-link">técnicas de
+                        aseguramiento<i
                             class="bi bi-arrow-right"
                             aria-hidden="true"></i></a>
                     <a href="#herramientas" class="hero-link">herramientas<i
@@ -432,167 +433,395 @@
                 </div>
             </section>
             <!-- Tabla comparativa que relaciona ISO 9126 e ISO 25000. -->
-            <section class="tables" aria-labelledby="iso-title">
+            <!-- Comparación de estándares ISO -->
+            <section class="tables iso-section" aria-labelledby="iso-title">
                 <div class="container">
-                    <!-- Encabezado de la comparación y acceso de regreso a estándares. -->
+                    <!-- Encabezado de la sección ISO -->
                     <div class="table-header">
                         <div>
                             <span class="section-number">COMPARACIÓN</span>
                             <h2 id="iso-title"
-                                class="section-title table-title">
-                                Te interesa saber más sobre <span>ISO</span>
-                            </h2>
+                                class="section-title table-title">Te interesa
+                                saber más sobre <span>ISO</span></h2>
                         </div>
-                        <a href="#estandares" class="table-btn">
+                        <a href="https://www.iso.org/es/home" class="table-btn">
                             CONOCÉ MÁS
                             <i class="bi bi-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
-                    <!-- Contiene las dos tablas comparativas. -->
-                    <div class="comparison-row">
-                        <div class="table-block">
-                            <div class="table-responsive">
-                                <table class="table data-table mb-0">
-                                    <caption class="visually-hidden">
-                                        Comparación descriptiva entre ISO 9126 e
-                                        ISO 25000
-                                    </caption>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Característica</th>
-                                            <th scope="col">ISO 9126</th>
-                                            <th scope="col">ISO 25000</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">¿Qué es?</th>
-                                            <td>Una norma para evaluar la
-                                                calidad de un software.</td>
-                                            <td>Una familia de normas para
-                                                evaluar y mejorar la calidad del
-                                                software.</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">¿Para qué
-                                                sirve?</th>
-                                            <td>Indica qué aspectos revisar para
-                                                evaluar un software.</td>
-                                            <td>Amplía y actualiza los criterios
-                                                de evaluación de calidad.</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">¿Qué evalúa?</th>
-                                            <td>Facilidad de uso, funcionamiento
-                                                y seguridad.</td>
-                                            <td>Funcionalidad, rendimiento,
-                                                seguridad y facilidad de
-                                                mantenimiento.</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Resumen</th>
-                                            <td>Modelo anterior de calidad.</td>
-                                            <td>Modelo más completo y
-                                                actualizado.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                    <!-- Tabs de Bootstrap para consultar cada estándar -->
+                    <div class="iso-tabs">
+                        <ul class="nav nav-tabs justify-content-center"
+                            id="isoTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="iso9126-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#iso9126" type="button"
+                                    role="tab" aria-controls="iso9126"
+                                    aria-selected="true">
+                                    <i class="bi bi-file-earmark-text"
+                                        aria-hidden="true"></i>
+                                    <span>ISO 9126</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="iso25000-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#iso25000" type="button"
+                                    role="tab" aria-controls="iso25000"
+                                    aria-selected="false">
+                                    <i class="bi bi-file-earmark-check"
+                                        aria-hidden="true"></i>
+                                    <span>ISO 25000</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link"
+                                    id="iso-comparacion-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#iso-comparacion"
+                                    type="button" role="tab"
+                                    aria-controls="iso-comparacion"
+                                    aria-selected="false">
+                                    <i class="bi bi-arrow-left-right"
+                                        aria-hidden="true"></i>
+                                    <span>Comparación</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="isoTabsContent">
+                            <!-- Información de ISO 9126 -->
+                            <div class="tab-pane fade show active" id="iso9126"
+                                role="tabpanel" aria-labelledby="iso9126-tab"
+                                tabindex="0">
+                                <div class="iso-tab-header">
+                                    <div class="iso-tab-icon">
+                                        <i class="bi bi-file-earmark-text"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <span>ESTÁNDAR DE CALIDAD</span>
+                                        <h3>ISO 9126</h3>
+                                        <p>Norma utilizada como modelo para
+                                            evaluar diferentes características
+                                            de calidad de un software.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 iso-info-grid">
+                                    <div class="col-12 col-md-6">
+                                        <article class="iso-info-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-question-circle"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>¿Qué es?</h4>
+                                                <p>Una norma para evaluar la
+                                                    calidad de un software.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <article class="iso-info-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-bullseye"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>¿Para qué sirve?</h4>
+                                                <p>Indica qué aspectos se pueden
+                                                    revisar para evaluar si un
+                                                    software cumple determinados
+                                                    criterios de calidad.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <article class="iso-info-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-search"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>¿Qué evalúa?</h4>
+                                                <p>Entre sus características se
+                                                    encuentran la facilidad de
+                                                    uso, el funcionamiento y la
+                                                    seguridad.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <article
+                                            class="iso-info-card iso-summary-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-info-circle"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Resumen</h4>
+                                                <p>Es un modelo anterior
+                                                    utilizado para organizar y
+                                                    evaluar características de
+                                                    calidad del software.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="iso-highlight">
+                                    <i class="bi bi-lightbulb"
+                                        aria-hidden="true"></i>
+                                    <div>
+                                        <h4>Idea principal</h4>
+                                        <p>ISO 9126 organiza la calidad del
+                                            software en diferentes
+                                            características que pueden
+                                            analizarse durante la
+                                            evaluación.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="table-block">
-                            <div class="table-responsive">
-                                <table
-                                    class="table data-table iso-table-check mb-0">
-                                    <caption class="visually-hidden">
-                                        Comparación de características entre ISO
-                                        9126 e ISO 25000
-                                    </caption>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Característica</th>
-                                            <th scope="col">ISO 9126</th>
-                                            <th scope="col">ISO 25000</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Evaluación de la
-                                                calidad del software</th>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Funcionalidad y
-                                                cumplimiento de requisitos</th>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Estándar moderno y
-                                                más completo</th>
-                                            <td><i class="bi bi-x-circle-fill"
-                                                    aria-label="No"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Usabilidad y
-                                                facilidad de uso</th>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Rendimiento y
-                                                eficiencia</th>
-                                            <td><i class="bi bi-x-circle-fill"
-                                                    aria-label="No"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Mantenimiento y
-                                                facilidad de modificación</th>
-                                            <td><i class="bi bi-x-circle-fill"
-                                                    aria-label="No"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Seguridad y
-                                                protección de la
-                                                información</th>
-                                            <td><i class="bi bi-x-circle-fill"
-                                                    aria-label="No"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Compatibilidad con
-                                                otros sistemas</th>
-                                            <td><i class="bi bi-x-circle-fill"
-                                                    aria-label="No"></i></td>
-                                            <td><i
-                                                    class="bi bi-patch-check-fill"
-                                                    aria-label="Sí"></i></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                            <!-- Información de ISO 25000 -->
+                            <div class="tab-pane fade" id="iso25000"
+                                role="tabpanel" aria-labelledby="iso25000-tab"
+                                tabindex="0">
+                                <div class="iso-tab-header">
+                                    <div class="iso-tab-icon">
+                                        <i class="bi bi-file-earmark-check"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <span>FAMILIA DE NORMAS</span>
+                                        <h3>ISO 25000</h3>
+                                        <p>Familia de normas orientada a la
+                                            evaluación y mejora de la calidad
+                                            del software y sus procesos
+                                            relacionados.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 iso-info-grid">
+                                    <div class="col-12 col-md-6">
+                                        <article class="iso-info-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-question-circle"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>¿Qué es?</h4>
+                                                <p>Una familia de normas para
+                                                    evaluar y mejorar la calidad
+                                                    del software.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <article class="iso-info-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-bullseye"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>¿Para qué sirve?</h4>
+                                                <p>Amplía y actualiza los
+                                                    criterios utilizados para
+                                                    evaluar diferentes aspectos
+                                                    de la calidad.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <article class="iso-info-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-search"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>¿Qué evalúa?</h4>
+                                                <p>Incluye aspectos como
+                                                    funcionalidad, rendimiento,
+                                                    seguridad, usabilidad y
+                                                    facilidad de
+                                                    mantenimiento.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <article
+                                            class="iso-info-card iso-summary-card">
+                                            <div class="iso-info-icon">
+                                                <i class="bi bi-info-circle"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Resumen</h4>
+                                                <p>Es una familia de normas más
+                                                    amplia que permite abordar
+                                                    diferentes aspectos
+                                                    relacionados con la calidad
+                                                    del software.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="iso-highlight">
+                                    <i class="bi bi-lightbulb"
+                                        aria-hidden="true"></i>
+                                    <div>
+                                        <h4>Idea principal</h4>
+                                        <p>ISO 25000 proporciona un marco más
+                                            amplio para organizar y evaluar la
+                                            calidad de los productos de
+                                            software.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Comparación de características -->
+                            <div class="tab-pane fade" id="iso-comparacion"
+                                role="tabpanel"
+                                aria-labelledby="iso-comparacion-tab"
+                                tabindex="0">
+                                <div class="iso-tab-header">
+                                    <div class="iso-tab-icon">
+                                        <i class="bi bi-arrow-left-right"
+                                            aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <span>COMPARACIÓN</span>
+                                        <h3>ISO 9126 vs ISO 25000</h3>
+                                        <p>Consulta algunas diferencias entre
+                                            ambos estándares y los aspectos que
+                                            contempla cada uno.</p>
+                                    </div>
+                                </div>
+
+                                <div class="iso-comparison-list">
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-check-circle"
+                                                aria-hidden="true"></i>
+                                            <h4>Evaluación de la calidad del
+                                                software</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-list-check"
+                                                aria-hidden="true"></i>
+                                            <h4>Funcionalidad y cumplimiento de
+                                                requisitos</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-arrow-up-circle"
+                                                aria-hidden="true"></i>
+                                            <h4>Estándar moderno y más
+                                                completo</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-x-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-person-check"
+                                                aria-hidden="true"></i>
+                                            <h4>Usabilidad y facilidad de
+                                                uso</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-speedometer2"
+                                                aria-hidden="true"></i>
+                                            <h4>Rendimiento y eficiencia</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-x-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-tools"
+                                                aria-hidden="true"></i>
+                                            <h4>Mantenimiento y facilidad de
+                                                modificación</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-x-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-shield-lock"
+                                                aria-hidden="true"></i>
+                                            <h4>Seguridad y protección de la
+                                                información</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-x-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+
+                                    <article class="iso-comparison-item">
+                                        <div class="iso-comparison-title">
+                                            <i class="bi bi-diagram-3"
+                                                aria-hidden="true"></i>
+                                            <h4>Compatibilidad con otros
+                                                sistemas</h4>
+                                        </div>
+                                        <div class="iso-status">
+                                            <span><strong>ISO 9126</strong><i
+                                                    class="bi bi-x-circle-fill"></i></span>
+                                            <span><strong>ISO 25000</strong><i
+                                                    class="bi bi-check-circle-fill"></i></span>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -855,20 +1084,25 @@
                         </div>
                     </div>
                     <!-- Resumen que diferencia las pruebas de caja negra y caja blanca. -->
-                    <aside class="test-summary">
-                        <div class="test-summary-icon">
-                            <i class="bi bi-arrow-left-right"
-                                aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h3>¿Cuál es la diferencia?</h3>
-                            <p>
-                                La caja negra se concentra en el comportamiento
-                                observable del software, mientras que la caja
-                                blanca analiza su estructura y lógica interna.
-                            </p>
-                        </div>
-                    </aside>
+                    <div>
+                        <aside class="test-summary">
+                            <div class="test-summary-icon">
+                                <i class="bi bi-arrow-left-right"
+                                    aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>¿Cuál es la diferencia?</h3>
+                                <p>
+                                    La caja negra se concentra en el
+                                    comportamiento
+                                    observable del software, mientras que la
+                                    caja
+                                    blanca analiza su estructura y lógica
+                                    interna.
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
             </section>
             <!-- Sección 06: presenta herramientas utilizadas durante el proceso de calidad. -->
@@ -897,6 +1131,21 @@
                     <div class="herramientas-tabs">
                         <ul class="nav nav-tabs justify-content-center"
                             id="herramientasTabs" role="tablist">
+                            <!-- Botón para mostrar todas las categorías -->
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    id="todos-tab"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="bugs linters testing"
+                                    aria-selected="false"
+                                    data-show-all>
+                                    <i class="bi bi-grid"
+                                        aria-hidden="false"></i>
+                                    <span>Todos</span>
+                                </button>
+                            </li>
                             <li class="nav-item" role="presentation">
                                 <button
                                     class="nav-link active"
@@ -907,7 +1156,8 @@
                                     role="tab"
                                     aria-controls="bugs"
                                     aria-selected="true">
-                                    <i class="bi bi-bug" aria-hidden="true"></i>
+                                    <i class="bi bi-bug"
+                                        aria-hidden="true"></i>
                                     <span>Bug Trackers</span>
                                 </button>
                             </li>
@@ -1337,5 +1587,6 @@
         </main>
         <!-- JavaScript propio para cargar componentes  -->
         <script src="main.js" defer></script>
+        <script src="JavaScript/tabs-fundamentos.js" defer></script>
     </body>
 </html>

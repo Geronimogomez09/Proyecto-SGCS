@@ -615,7 +615,6 @@ a {
 /* Estilo base compartido por las tablas de ISO, pruebas y herramientas. */
 .data-table {
   width: 100%;
-  margin: 0;
   border-collapse: collapse;
   table-layout: fixed;
   --bs-table-bg: var(--color-white);
@@ -1045,7 +1044,7 @@ a {
   align-items: center;
   gap: 1rem;
   max-width: 900px;
-  margin: 0 auto 1.2rem;
+  margin: 1.5rem auto 1.2rem;
   padding: 1.1rem 1.2rem;
   border-radius: var(--radius-md);
 }
@@ -1155,162 +1154,162 @@ a {
 /* Ajustes para tablets y pantallas medianas.
    Reorganiza elementos que necesitan más espacio horizontal. */
 @media (max-width: 992px) {
-.hero {
+  .hero {
     min-height: auto;
     padding-top: 6.5rem;
-}
+  }
 
-.hero-container {
+  .hero-container {
     align-items: stretch;
-}
+  }
 
-.hero-text {
+  .hero-text {
     max-width: none;
-}
+  }
 
-.medicion-title {
+  .medicion-title {
     max-width: 760px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-}
+  }
 
-.medicion-title .section-description {
+  .medicion-title .section-description {
     margin-right: auto;
     margin-left: auto;
-}
+  }
 
-.table-header {
+  .table-header {
     align-items: center;
     flex-direction: column;
     text-align: center;
-}
+  }
 
-.table-btn:hover,
-.table-btn:focus-visible {
+  .table-btn:hover,
+  .table-btn:focus-visible {
     transform: translateY(-2px);
-}
+  }
 
-.test-table-block,
-.herramientas-table-card,
-.herramientas-tab-heading {
+  .test-table-block,
+  .herramientas-table-card,
+  .herramientas-tab-heading {
     width: calc(100% - 1rem);
-}
+  }
 }
 
 /* Ajustes para tablets pequeñas y celulares.
    Cambia el hero a una columna y adapta diagramas y tablas. */
 @media (max-width: 768px) {
-.hero-container {
+  .hero-container {
     flex-direction: column;
     text-align: center;
-}
+  }
 
-.hero-text {
+  .hero-text {
     text-align: center;
-}
+  }
 
-.hero-description {
+  .hero-description {
     margin-right: auto;
     margin-left: auto;
-}
+  }
 
-.hero-links {
+  .hero-links {
     width: min(100%, 360px);
     flex: 0 1 auto;
     margin: 0 auto;
-}
+  }
 
   /* El diagrama conserva su recorrido horizontal hasta donde entra y puede saltar de línea. */
-.fundamentos-diagram {
+  .fundamentos-diagram {
     flex-wrap: wrap;
     gap: 0.9rem;
-}
+  }
 
-.diagram-step {
+  .diagram-step {
     min-width: 82px;
-}
+  }
 
-.diagram-icon {
+  .diagram-icon {
     width: 62px;
     height: 62px;
     font-size: 1.5rem;
-}
+  }
 
-.diagram-label {
+  .diagram-label {
     font-size: 0.78rem;
-}
+  }
 
-.diagram-arrow {
+  .diagram-arrow {
     min-width: 48px;
-}
+  }
 
-.diagram-arrow i {
+  .diagram-arrow i {
     font-size: 1.35rem;
-}
+  }
 
   /* Las tablas se adaptan al ancho disponible y el contenido puede ocupar varias líneas. */
-.data-table {
+  .data-table {
     width: 100%;
     table-layout: fixed;
-}
+  }
 
-.data-table th,
-.data-table td {
+  .data-table th,
+  .data-table td {
     padding: 0.65rem 0.55rem;
     font-size: 0.83rem;
     line-height: 1.35;
-}
+  }
 
-.data-table thead th {
+  .data-table thead th {
     font-size: 0.84rem;
     line-height: 1.25;
-}
+  }
 
-.data-table th i {
+  .data-table th i {
     margin-right: 0.2rem;
     font-size: 0.9rem;
-}
+  }
 
-.test-table tbody th {
+  .test-table tbody th {
     width: 21%;
-}
+  }
 
-.test-table thead th {
+  .test-table thead th {
     font-size: 0.8rem;
-}
+  }
 
-.test-table thead th i {
+  .test-table thead th i {
     display: block;
     margin: 0 0 0.2rem;
     font-size: 1rem;
-}
+  }
 
-.herramientas-table tbody th {
+  .herramientas-table tbody th {
     width: 24%;
-}
+  }
 
   /* Las pestañas se distribuyen en varias columnas para aprovechar el ancho disponible. */
-.herramientas-tabs .nav-tabs {
+  .herramientas-tabs .nav-tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem;
     border-bottom: 2px solid var(--color-border);
-}
+  }
 
-.herramientas-tabs .nav-item {
+  .herramientas-tabs .nav-item {
     flex: 1 1 calc(33.333% - 0.35rem);
     min-width: 0;
-}
+  }
 
-.herramientas-tabs .nav-link {
+  .herramientas-tabs .nav-link {
     width: 100%;
     min-width: 0;
     min-height: 44px;
     padding: 0.6rem 0.45rem;
     font-size: 0.78rem;
     line-height: 1.2;
-}
+  }
 }
 
 /* Ajustes específicos para celulares pequeños.
@@ -1318,168 +1317,168 @@ a {
 @media (max-width: 576px) {
   :root {
     --section-padding: 3.75rem;
-}
+  }
 
-.hero {
+  .hero {
     padding: 6rem 0 3.5rem;
-}
+  }
 
-.hero-subtitle,
-.section-number {
+  .hero-subtitle,
+  .section-number {
     font-size: 0.68rem;
-}
+  }
 
-.hero-description,
-.section-description,
-.section-heading p,
-.medicion-title p,
-.otras-heading p {
+  .hero-description,
+  .section-description,
+  .section-heading p,
+  .medicion-title p,
+  .otras-heading p {
     font-size: 0.9rem;
-}
+  }
 
-.fundamentos-card,
-.conceptos-card,
-.medicion-card,
-.estandares-card,
-.otra-herramienta {
+  .fundamentos-card,
+  .conceptos-card,
+  .medicion-card,
+  .estandares-card,
+  .otra-herramienta {
     padding: 1rem;
-}
+  }
 
   /* En pantallas pequeñas el diagrama sigue siendo visualmente horizontal. */
-.fundamentos-diagram {
+  .fundamentos-diagram {
     gap: 0.55rem;
-}
+  }
 
-.diagram-step {
+  .diagram-step {
     min-width: 70px;
-}
+  }
 
-.diagram-icon {
+  .diagram-icon {
     width: 56px;
     height: 56px;
     font-size: 1.35rem;
-}
+  }
 
-.diagram-label {
+  .diagram-label {
     max-width: 92px;
     font-size: 0.72rem;
-}
+  }
 
-.diagram-arrow {
+  .diagram-arrow {
     min-width: 42px;
-}
+  }
 
-.diagram-arrow i {
+  .diagram-arrow i {
     font-size: 1.1rem;
-}
+  }
 
   /* Compactamos las tablas, pero permitimos que el texto ocupe varias líneas. */
-.table-responsive {
+  .table-responsive {
     overflow: visible;
-}
+  }
 
-.data-table th,
-.data-table td {
+  .data-table th,
+  .data-table td {
     padding: 0.52rem 0.4rem;
     font-size: 0.76rem;
     line-height: 1.3;
-}
+  }
 
-.data-table thead th {
+  .data-table thead th {
     padding: 0.55rem 0.35rem;
     font-size: 0.78rem;
-}
+  }
 
-.data-table tbody th {
+  .data-table tbody th {
     font-size: 0.76rem;
-}
+  }
 
-.iso-table-check tbody th {
+  .iso-table-check tbody th {
     width: 46%;
-}
+  }
 
-.iso-table-check tbody td {
+  .iso-table-check tbody td {
     width: 27%;
-}
+  }
 
-.iso-table-check td i {
+  .iso-table-check td i {
     font-size: 1rem;
-}
+  }
 
-.test-table tbody th {
+  .test-table tbody th {
     width: 22%;
-}
+  }
 
-.test-table thead th {
+  .test-table thead th {
     font-size: 0.74rem;
-}
+  }
 
-.test-table thead th i {
+  .test-table thead th i {
     font-size: 0.88rem;
-}
+  }
 
-.test-section-heading,
-.herramientas-tab-heading,
-.test-summary {
+  .test-section-heading,
+  .herramientas-tab-heading,
+  .test-summary {
     align-items: flex-start;
     padding: 1rem;
-}
+  }
 
-.test-section-heading p,
-.herramientas-tab-heading p,
-.test-summary p {
+  .test-section-heading p,
+  .herramientas-tab-heading p,
+  .test-summary p {
     font-size: 0.86rem;
-}
+  }
 
   /* Altura suficiente para la tarjeta flip sin scrollbar interno. */
-.test-card {
+  .test-card {
     min-height: 360px;
-}
+  }
 
-.test-card-front,
-.test-card-back {
+  .test-card-front,
+  .test-card-back {
     padding: 1.15rem;
     overflow: hidden;
-}
+  }
 
-.test-card-title {
+  .test-card-title {
     font-size: 1.22rem;
-}
+  }
 
-.test-card-text,
-.test-card-back li {
+  .test-card-text,
+  .test-card-back li {
     font-size: 0.88rem;
-}
+  }
 
-.herramientas-tabs .nav-tabs {
+  .herramientas-tabs .nav-tabs {
     gap: 0.3rem;
-}
+  }
 
-.herramientas-tabs .nav-item {
+  .herramientas-tabs .nav-item {
     flex-basis: calc(33.333% - 0.3rem);
-}
+  }
 
-.herramientas-tabs .nav-link {
+  .herramientas-tabs .nav-link {
     min-height: 42px;
     padding: 0.55rem 0.3rem;
     font-size: 0.72rem;
-}
+  }
 
-.herramientas-tabs .nav-link i {
+  .herramientas-tabs .nav-link i {
     font-size: 0.9rem;
-}
+  }
 
-.test-table-block,
-.herramientas-table-card,
-.herramientas-tab-heading {
+  .test-table-block,
+  .herramientas-table-card,
+  .herramientas-tab-heading {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-}
+  }
 
-.test-summary {
+  .test-summary {
     flex-direction: row;
-}
+  }
 }
 
 /* Reduce las animaciones cuando el usuario tiene activada la preferencia
@@ -1487,7 +1486,7 @@ a {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-}
+  }
 
   *,
   *::before,
@@ -1496,5 +1495,381 @@ a {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
 }
+
+/* Contenedor principal de las tabs de ISO */
+.iso-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navegación de los estándares ISO */
+.iso-tabs {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.iso-tabs .nav-tabs {
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.iso-tabs .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 155px;
+  padding: 0.75rem 1.1rem;
+  border: 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: var(--color-blue-bg-light);
+  color: var(--color-text-soft);
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    color var(--transition),
+    box-shadow var(--transition);
+}
+
+.iso-tabs .nav-link i {
+  font-size: 1rem;
+}
+
+.iso-tabs .nav-link:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.iso-tabs .nav-link.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Contenido de cada pestaña ISO */
+.iso-tabs .tab-content {
+  padding-top: 1.5rem;
+}
+
+.iso-tab-header {
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  padding: 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.iso-tab-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  flex: 0 0 auto;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+}
+
+.iso-tab-header > div:last-child {
+  flex: 1;
+}
+
+.iso-tab-header > div:last-child > span {
+  color: var(--color-primary);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.iso-tab-header h3 {
+  margin: 0.15rem 0 0.25rem;
+  color: var(--color-text);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.iso-tab-header p {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Tarjetas de información de cada estándar */
+.iso-info-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.iso-info-card {
+  height: 100%;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.iso-info-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.iso-info-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  border-radius: 0.75rem;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.iso-info-card h4 {
+  margin: 0 0 0.3rem;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.iso-info-card p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Destaca la idea principal de cada estándar */
+.iso-highlight {
+  max-width: 900px;
+  margin: 1.25rem auto 0;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-md);
+  background: var(--color-blue-bg);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.iso-highlight > i {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  border-radius: 0.75rem;
+  background: var(--color-white);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.iso-highlight h4 {
+  margin: 0 0 0.2rem;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.iso-highlight p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* Lista de características comparadas */
+.iso-comparison-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.iso-comparison-item {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.iso-comparison-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.iso-comparison-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.iso-comparison-title > i {
+  color: var(--color-primary);
+  font-size: 1.15rem;
+}
+
+.iso-comparison-title h4 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.iso-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iso-status span {
+  min-width: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+  color: var(--color-text-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.iso-status i {
+  font-size: 1rem;
+}
+
+.iso-status .bi-check-circle-fill {
+  color: var(--color-success);
+}
+
+.iso-status .bi-x-circle-fill {
+  color: var(--color-muted);
+}
+
+/* Adapta las tabs para tablets */
+@media (max-width: 768px) {
+  .iso-tabs .nav-tabs {
+    flex-wrap: wrap;
+    border-bottom: 0;
+  }
+
+  .iso-tabs .nav-item {
+    flex: 1 1 calc(33.333% - 0.5rem);
+  }
+
+  .iso-tabs .nav-link {
+    width: 100%;
+    min-width: 0;
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+  }
+
+  .iso-tab-header {
+    align-items: flex-start;
+  }
+
+  .iso-comparison-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .iso-status {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Compacta la sección en celulares */
+@media (max-width: 576px) {
+  .iso-tabs .nav-item {
+    flex: 1 1 100%;
+  }
+
+  .iso-tab-header {
+    padding: 1rem;
+  }
+
+  .iso-tab-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+    font-size: 1.2rem;
+  }
+
+  .iso-tab-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .iso-tab-header p {
+    font-size: 0.74rem;
+  }
+
+  .iso-info-card {
+    padding: 0.9rem;
+  }
+
+  .iso-info-card h4 {
+    font-size: 0.88rem;
+  }
+
+  .iso-info-card p {
+    font-size: 0.72rem;
+  }
+
+  .iso-highlight {
+    align-items: flex-start;
+  }
+
+  .iso-comparison-item {
+    padding: 0.8rem;
+  }
+
+  .iso-comparison-title h4 {
+    font-size: 0.74rem;
+  }
+
+  .iso-status {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .iso-status span {
+    min-width: 0;
+  }
 }
