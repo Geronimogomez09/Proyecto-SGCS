@@ -253,10 +253,8 @@ a {
 }
 
 /* Contenedor principal de la sección. */
-.ciclo {
-  position: relative;
-  overflow: hidden;
-  padding: clamp(5rem, 8vw, 7rem) 0 clamp(4rem, 7vw, 6rem);
+.ciclo{
+  padding: clamp(5rem, 6vw, 3rem) 0 clamp(4rem, 3vw, 2rem);
   background: var(--color-cream);
   isolation: isolate;
 }
@@ -323,7 +321,7 @@ a {
   justify-content: center;
   gap: 0.4rem;
   font-size: clamp(0.76rem, 1.05vw, 0.94rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
   text-align: center;
   cursor: pointer;
@@ -574,4 +572,617 @@ a {
   .timeline-info {
     transition: none;
   }
+}
+
+.ciclo,
+.modelos {
+  position: relative;
+  overflow: hidden;
+}
+
+.modelos{
+  background: var(--color-cream);
+}
+
+/* Sección de modelos tradicionales */
+.modelos {
+    position: relative;
+    overflow: hidden;
+    padding: var(--section-padding) 0;
+    background: var(--color-cream);
+}
+
+/* Contenedor principal de las pestañas */
+.modelos-tabs {
+    width: min(100%, var(--content-width));
+    margin: 0 auto;
+}
+
+/* Pestañas de navegación */
+.modelos-tabs .nav-tabs {
+    gap: .5rem;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.modelos-tabs .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .75rem 1.1rem;
+    border: 0;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    background: var(--color-blue-bg-light);
+    color: var(--color-text-soft);
+    font-size: .88rem;
+    font-weight: 800;
+    transition: transform var(--transition), background-color var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.modelos-tabs .nav-link i {
+    font-size: 1rem;
+}
+
+.modelos-tabs .nav-link:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+}
+
+.modelos-tabs .nav-link.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Encabezado de cada modelo */
+.modelo-header {
+    max-width: 950px;
+    margin: 2rem auto 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+.modelo-header-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex: 0 0 auto;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+}
+
+.modelo-header-text {
+    min-width: 0;
+}
+
+.modelo-header-text > span {
+    color: var(--color-primary);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.modelo-header-text h3 {
+    margin: .15rem 0 .25rem;
+    color: var(--color-text);
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.modelo-header-text p {
+    margin: 0;
+    color: var(--color-text-soft);
+    font-size: .82rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Flujo de etapas del modelo */
+.modelo-flow {
+    max-width: 1050px;
+    margin: 0 auto 1.75rem;
+    padding: 1.3rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-blue-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.modelo-flow-step {
+    min-width: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .45rem;
+    text-align: center;
+}
+
+.modelo-flow-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    background: var(--color-white);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.modelo-flow-step strong {
+    color: var(--color-text);
+    font-size: .72rem;
+    line-height: 1.2;
+}
+
+.modelo-flow-arrow {
+    flex: 0 0 auto;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+/* Tarjetas de ventajas y desventajas */
+.modelo-info {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.modelo-info-card {
+    height: 100%;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.modelo-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.modelo-info-title {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    margin-bottom: .8rem;
+}
+
+.modelo-info-icon {
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: .7rem;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modelo-info-title h4 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.modelo-info-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.modelo-info-card li {
+    margin-bottom: .35rem;
+    color: var(--color-text);
+    font-size: .78rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.modelo-info-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* Bloque de recomendación de uso */
+.modelo-use {
+    max-width: 950px;
+    margin: 1.5rem auto 0;
+    padding: 1rem 1.2rem;
+    border-radius: var(--radius-md);
+    background: var(--color-blue-bg);
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.modelo-use-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    flex: 0 0 auto;
+    border-radius: .75rem;
+    background: var(--color-white);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.modelo-use h4 {
+    margin: 0 0 .2rem;
+    color: var(--color-text);
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.modelo-use p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Diagrama específico del modelo en V */
+.modelo-v-flow {
+    max-width: 850px;
+    margin: 0 auto 1.75rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-blue-bg-light);
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.modelo-v-column {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.modelo-v-title {
+    margin-bottom: .25rem;
+    padding: .65rem .8rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: .78rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.modelo-v-title i {
+    margin-right: .3rem;
+}
+
+.modelo-v-step {
+    padding: .6rem .7rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+    color: var(--color-text);
+    font-size: .72rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.modelo-v-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.modelo-v-center i {
+    font-size: 2rem;
+}
+
+.modelo-v-center span {
+    font-size: .68rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+/* Flujo del modelo iterativo */
+.iterativo-flow {
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-blue-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.iterativo-step {
+    position: relative;
+    min-width: 110px;
+    padding: .8rem .65rem;
+    border:1px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.iterativo-step span {
+    position: absolute;
+    top: .35rem;
+    right: .5rem;
+    color: var(--color-primary);
+    font-size: .58rem;
+    font-weight: 800;
+}
+
+.iterativo-step i {
+    color: var(--color-primary);
+    font-size: 1.35rem;
+}
+
+.iterativo-step strong {
+    font-size: .72rem;
+}
+
+.iterativo-arrow {
+    color: var(--color-primary);
+}
+
+.iterativo-loop {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+/* Explicación del incremento */
+.incremental-info {
+    max-width: 950px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.incremental-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    flex: 0 0 auto;
+    border-radius: .75rem;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.incremental-info h4 {
+    margin: 0 0 .2rem;
+    color: var(--color-primary);
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.incremental-info p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Comparación resumida de los modelos */
+.modelos-comparison {
+    max-width: 950px;
+    margin: 3rem auto 0;
+}
+
+.comparison-heading {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.comparison-heading span {
+    color: var(--color-primary);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.comparison-heading h3 {
+    margin: .15rem 0 0;
+    color: var(--color-text);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.comparison-card {
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.comparison-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.comparison-card > i {
+    display: block;
+    margin-bottom: .55rem;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.comparison-card h4 {
+    margin: 0 0 .35rem;
+    color: var(--color-primary);
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.comparison-card p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: .72rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Ajustes para tablets */
+@media (max-width: 992px) {
+    .modelo-flow {
+        flex-wrap: wrap;
+    }
+
+    .modelo-flow-arrow {
+        transform: rotate(0);
+    }
+
+    .modelo-v-flow {
+        max-width: 750px;
+    }
+
+    .iterativo-flow {
+        flex-wrap: wrap;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 767px) {
+
+    .modelos-tabs .nav-link {
+        border-radius: var(--radius-sm);
+    }
+
+    .modelo-header {
+        align-items: flex-start;
+    }
+
+    .modelo-header-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .modelo-header-text p {
+        font-size: .75rem;
+    }
+
+    .modelo-flow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .45rem;
+    }
+
+    .modelo-flow-step {
+        min-width: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .modelo-flow-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .modelo-flow-arrow {
+        justify-self: center;
+        transform: rotate(90deg);
+    }
+
+    .modelo-v-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .modelo-v-center {
+        flex-direction: row;
+    }
+
+    .iterativo-flow {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .iterativo-arrow {
+        justify-self: center;
+        transform: rotate(90deg);
+    }
+
+    .iterativo-loop {
+        justify-self: center;
+    }
+
+    .modelo-use,
+    .incremental-info {
+        align-items: flex-start;
+    }
+}
+
+/* Ajustes para celulares pequeños */
+@media (max-width: 420px) {
+    .modelo-header {
+        padding: .9rem;
+    }
+
+    .modelo-header-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+
+    .modelo-info-card {
+        padding: 1rem;
+    }
+
+    .modelo-info-card li {
+        font-size: .72rem;
+    }
+
+    .comparison-card {
+        padding: .9rem;
+    }
 }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
-            content="Fundamentos, medición, estándares, técnicas y herramientas de calidad de software.">
+            content="Fundamentos, medición, estándares, técnicas y modelos de calidad de software.">
         <!-- Bootstrap proporciona estilos base, componentes y sistema de grilla responsive. -->
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -225,6 +225,462 @@
                                     actualizaciones del sistema.</p>
                             </div>
                         </article>
+                    </div>
+                </div>
+            </section>
+            <!-- sección 02: modelos de desarrollo -->
+            <!-- Modelos tradicionales -->
+            <section id="modelos" class="modelos"
+                aria-labelledby="modelos-title">
+                <div class="container">
+                    <!-- Encabezado de la sección -->
+                    <div class="section-heading">
+                        <span class="section-number">02</span>
+                        <h2 id="modelos-title" class="section-title">Modelos
+                            tradicionales <span>del desarrollo de
+                                software</span></h2>
+                        <p class="section-description">Los modelos tradicionales
+                            son diferentes formas de organizar y planificar las
+                            etapas del desarrollo de software. Entre los
+                            principales se encuentran el modelo en Cascada, el
+                            modelo en V y los modelos Iterativos e
+                            Incrementales.</p>
+                    </div>
+
+                    <!-- Navegación entre los modelos -->
+                    <div class="modelos-tabs">
+                        <ul class="nav nav-tabs justify-content-center"
+                            id="modelosTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="cascada-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#modelo-cascada"
+                                    type="button" role="tab"
+                                    aria-controls="modelo-cascada"
+                                    aria-selected="true">
+                                    <i class="bi bi-water"></i>
+                                    <span>Modelo en Cascada</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="modelo-v-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#modelo-v" type="button"
+                                    role="tab" aria-controls="modelo-v"
+                                    aria-selected="false">
+                                    <i class="bi bi-signpost-split"></i>
+                                    <span>Modelo en V</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="iterativo-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#modelo-iterativo"
+                                    type="button" role="tab"
+                                    aria-controls="modelo-iterativo"
+                                    aria-selected="false">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <span>Iterativo e Incremental</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="modelosTabsContent">
+                            <!-- Modelo en Cascada -->
+                            <div class="tab-pane fade show active"
+                                id="modelo-cascada" role="tabpanel"
+                                aria-labelledby="cascada-tab" tabindex="0">
+                                <div class="modelo-header">
+                                    <div class="modelo-header-icon">
+                                        <i class="bi bi-water"></i>
+                                    </div>
+                                    <div class="modelo-header-text">
+                                        <span>MODELO 01</span>
+                                        <h3>Modelo en Cascada</h3>
+                                        <p>Organiza el desarrollo en etapas
+                                            secuenciales. Generalmente, una fase
+                                            se completa antes de comenzar la
+                                            siguiente.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Etapas del modelo -->
+                                <div class="modelo-flow">
+                                    <div class="modelo-flow-step">
+                                        <div class="modelo-flow-icon"><i
+                                                class="bi bi-card-checklist"></i></div>
+                                        <strong>Requisitos</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-right modelo-flow-arrow"></i>
+                                    <div class="modelo-flow-step">
+                                        <div class="modelo-flow-icon"><i
+                                                class="bi bi-pencil-square"></i></div>
+                                        <strong>Diseño</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-right modelo-flow-arrow"></i>
+                                    <div class="modelo-flow-step">
+                                        <div class="modelo-flow-icon"><i
+                                                class="bi bi-code-slash"></i></div>
+                                        <strong>Implementación</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-right modelo-flow-arrow"></i>
+                                    <div class="modelo-flow-step">
+                                        <div class="modelo-flow-icon"><i
+                                                class="bi bi-bug"></i></div>
+                                        <strong>Pruebas</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-right modelo-flow-arrow"></i>
+                                    <div class="modelo-flow-step">
+                                        <div class="modelo-flow-icon"><i
+                                                class="bi bi-tools"></i></div>
+                                        <strong>Mantenimiento</strong>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 modelo-info">
+                                    <div class="col-12 col-lg-6">
+                                        <article
+                                            class="modelo-info-card ventajas">
+                                            <div class="modelo-info-title">
+                                                <div class="modelo-info-icon"><i
+                                                        class="bi bi-check-circle"></i></div>
+                                                <h4>Ventajas</h4>
+                                            </div>
+                                            <ul>
+                                                <li>Es simple y fácil de
+                                                    entender.</li>
+                                                <li>Sus etapas y objetivos están
+                                                    bien definidos.</li>
+                                                <li>Facilita la planificación y
+                                                    documentación.</li>
+                                                <li>Es útil cuando los
+                                                    requisitos son claros y
+                                                    estables.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <article
+                                            class="modelo-info-card desventajas">
+                                            <div class="modelo-info-title">
+                                                <div class="modelo-info-icon"><i
+                                                        class="bi bi-exclamation-circle"></i></div>
+                                                <h4>Desventajas</h4>
+                                            </div>
+                                            <ul>
+                                                <li>Es difícil volver atrás para
+                                                    modificar una etapa.</li>
+                                                <li>Los cambios pueden resultar
+                                                    costosos.</li>
+                                                <li>El usuario observa el
+                                                    producto principalmente al
+                                                    final.</li>
+                                                <li>No se adapta bien a
+                                                    requisitos cambiantes.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="modelo-use">
+                                    <div class="modelo-use-icon"><i
+                                            class="bi bi-lightbulb"></i></div>
+                                    <div>
+                                        <h4>¿Cuándo utilizarlo?</h4>
+                                        <p>Puede utilizarse cuando los
+                                            requisitos están claramente
+                                            definidos, existe poca probabilidad
+                                            de cambios y se necesita una
+                                            planificación y documentación
+                                            detalladas.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modelo en V -->
+                            <div class="tab-pane fade" id="modelo-v"
+                                role="tabpanel" aria-labelledby="modelo-v-tab"
+                                tabindex="0">
+                                <div class="modelo-header">
+                                    <div class="modelo-header-icon">
+                                        <i class="bi bi-signpost-split"></i>
+                                    </div>
+                                    <div class="modelo-header-text">
+                                        <span>MODELO 02</span>
+                                        <h3>Modelo en V</h3>
+                                        <p>Es una evolución del modelo
+                                            secuencial que relaciona cada etapa
+                                            de desarrollo con una etapa
+                                            correspondiente de pruebas.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Relación entre desarrollo y pruebas -->
+                                <div class="modelo-v-flow">
+                                    <div class="modelo-v-column">
+                                        <div class="modelo-v-title"><i
+                                                class="bi bi-code-square"></i>
+                                            Desarrollo</div>
+                                        <div
+                                            class="modelo-v-step">Requisitos</div>
+                                        <div class="modelo-v-step">Diseño del
+                                            sistema</div>
+                                        <div class="modelo-v-step">Diseño
+                                            detallado</div>
+                                        <div
+                                            class="modelo-v-step">Implementación</div>
+                                    </div>
+                                    <div class="modelo-v-center">
+                                        <i class="bi bi-arrow-down-up"></i>
+                                        <span>Verificación<br>y
+                                            validación</span>
+                                    </div>
+                                    <div class="modelo-v-column">
+                                        <div class="modelo-v-title"><i
+                                                class="bi bi-check2-circle"></i>
+                                            Pruebas</div>
+                                        <div class="modelo-v-step">Pruebas de
+                                            aceptación</div>
+                                        <div class="modelo-v-step">Pruebas de
+                                            sistema</div>
+                                        <div class="modelo-v-step">Pruebas de
+                                            integración</div>
+                                        <div class="modelo-v-step">Pruebas
+                                            unitarias</div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 modelo-info">
+                                    <div class="col-12 col-lg-6">
+                                        <article
+                                            class="modelo-info-card ventajas">
+                                            <div class="modelo-info-title">
+                                                <div class="modelo-info-icon"><i
+                                                        class="bi bi-check-circle"></i></div>
+                                                <h4>Ventajas</h4>
+                                            </div>
+                                            <ul>
+                                                <li>Relaciona las actividades de
+                                                    desarrollo con las
+                                                    pruebas.</li>
+                                                <li>Permite planificar las
+                                                    pruebas desde etapas
+                                                    tempranas.</li>
+                                                <li>Facilita la documentación y
+                                                    el seguimiento.</li>
+                                                <li>Es útil cuando se requieren
+                                                    procesos controlados.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <article
+                                            class="modelo-info-card desventajas">
+                                            <div class="modelo-info-title">
+                                                <div class="modelo-info-icon"><i
+                                                        class="bi bi-exclamation-circle"></i></div>
+                                                <h4>Desventajas</h4>
+                                            </div>
+                                            <ul>
+                                                <li>Los cambios tardíos pueden
+                                                    ser difíciles de
+                                                    gestionar.</li>
+                                                <li>Requiere una planificación
+                                                    detallada.</li>
+                                                <li>Puede resultar rígido frente
+                                                    a requisitos
+                                                    cambiantes.</li>
+                                                <li>No está pensado para
+                                                    modificaciones
+                                                    constantes.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="modelo-use">
+                                    <div class="modelo-use-icon"><i
+                                            class="bi bi-lightbulb"></i></div>
+                                    <div>
+                                        <h4>¿Cuándo utilizarlo?</h4>
+                                        <p>Es útil en proyectos donde la
+                                            verificación y validación son
+                                            especialmente importantes y los
+                                            requisitos pueden definirse desde el
+                                            comienzo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modelo Iterativo e Incremental -->
+                            <div class="tab-pane fade" id="modelo-iterativo"
+                                role="tabpanel" aria-labelledby="iterativo-tab"
+                                tabindex="0">
+                                <div class="modelo-header">
+                                    <div class="modelo-header-icon">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+                                    <div class="modelo-header-text">
+                                        <span>MODELO 03</span>
+                                        <h3>Modelos Iterativos e
+                                            Incrementales</h3>
+                                        <p>El desarrollo se divide en ciclos o
+                                            iteraciones, donde el sistema
+                                            evoluciona mediante pequeñas
+                                            entregas que incorporan nuevas
+                                            funcionalidades.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Ciclo de desarrollo iterativo -->
+                                <div class="iterativo-flow">
+                                    <div class="iterativo-step">
+                                        <span>01</span>
+                                        <i class="bi bi-list-task"></i>
+                                        <strong>Planificación</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-right iterativo-arrow"></i>
+                                    <div class="iterativo-step">
+                                        <span>02</span>
+                                        <i class="bi bi-code-square"></i>
+                                        <strong>Desarrollo</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-right iterativo-arrow"></i>
+                                    <div class="iterativo-step">
+                                        <span>03</span>
+                                        <i class="bi bi-check2-square"></i>
+                                        <strong>Pruebas</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-right iterativo-arrow"></i>
+                                    <div class="iterativo-step">
+                                        <span>04</span>
+                                        <i class="bi bi-box-arrow-up"></i>
+                                        <strong>Entrega</strong>
+                                    </div>
+                                    <i
+                                        class="bi bi-arrow-repeat iterativo-loop"></i>
+                                </div>
+
+                                <div class="incremental-info">
+                                    <div class="incremental-icon"><i
+                                            class="bi bi-layers"></i></div>
+                                    <div>
+                                        <h4>¿Cómo funciona?</h4>
+                                        <p>Cada iteración produce una versión
+                                            funcional del sistema. Los
+                                            incrementos posteriores agregan
+                                            nuevas funciones o mejoras,
+                                            permitiendo obtener resultados de
+                                            manera progresiva.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 modelo-info">
+                                    <div class="col-12 col-lg-6">
+                                        <article
+                                            class="modelo-info-card ventajas">
+                                            <div class="modelo-info-title">
+                                                <div class="modelo-info-icon"><i
+                                                        class="bi bi-check-circle"></i></div>
+                                                <h4>Ventajas</h4>
+                                            </div>
+                                            <ul>
+                                                <li>Permite obtener resultados
+                                                    funcionales antes de
+                                                    finalizar el proyecto.</li>
+                                                <li>Facilita incorporar cambios
+                                                    y nuevas necesidades.</li>
+                                                <li>Permite recibir
+                                                    retroalimentación durante el
+                                                    desarrollo.</li>
+                                                <li>Los riesgos pueden
+                                                    detectarse de forma
+                                                    progresiva.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <article
+                                            class="modelo-info-card desventajas">
+                                            <div class="modelo-info-title">
+                                                <div class="modelo-info-icon"><i
+                                                        class="bi bi-exclamation-circle"></i></div>
+                                                <h4>Desventajas</h4>
+                                            </div>
+                                            <ul>
+                                                <li>Requiere una buena
+                                                    organización de las
+                                                    iteraciones.</li>
+                                                <li>Puede aumentar la
+                                                    complejidad de la
+                                                    planificación.</li>
+                                                <li>Las modificaciones
+                                                    frecuentes deben gestionarse
+                                                    correctamente.</li>
+                                                <li>El sistema necesita una
+                                                    arquitectura que permita
+                                                    crecer progresivamente.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="modelo-use">
+                                    <div class="modelo-use-icon"><i
+                                            class="bi bi-lightbulb"></i></div>
+                                    <div>
+                                        <h4>¿Cuándo utilizarlo?</h4>
+                                        <p>Puede utilizarse cuando se espera
+                                            obtener versiones progresivas del
+                                            producto, recibir retroalimentación
+                                            durante el desarrollo o incorporar
+                                            nuevas funcionalidades de forma
+                                            gradual.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comparación general de los modelos -->
+                    <div class="modelos-comparison">
+                        <div class="comparison-heading">
+                            <span>COMPARACIÓN</span>
+                            <h3>¿Cómo se diferencian?</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-4">
+                                <div class="comparison-card">
+                                    <i class="bi bi-water"></i>
+                                    <h4>Cascada</h4>
+                                    <p>Avanza de forma secuencial y ordenada
+                                        entre sus etapas.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="comparison-card">
+                                    <i class="bi bi-signpost-split"></i>
+                                    <h4>Modelo en V</h4>
+                                    <p>Relaciona cada etapa de desarrollo con
+                                        una etapa de pruebas.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="comparison-card">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <h4>Iterativo e Incremental</h4>
+                                    <p>Construye el sistema progresivamente
+                                        mediante ciclos y entregas.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
