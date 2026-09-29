@@ -84,7 +84,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 0;
+  padding: 5rem;
 }
 
 /* Organiza verticalmente el contenido del hero y sus enlaces. */
@@ -172,8 +172,16 @@ a {
   box-shadow: var(--shadow-lg);
 }
 @media (max-width: 992px) {
+.hero {
+    min-height: auto;
+    padding: 5rem;
+}
   .hero-container {
     text-align: center;
-    padding: 5rem 1rem 5rem;
+    padding: 2rem;
+    background-color: #c9e1f87c;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
   }
 }
