@@ -31,11 +31,12 @@
         <header id="header-container"></header>
         <!-- Hero principal con introducción y accesos rápidos a las primeras secciones. -->
         <section class="hero" aria-labelledby="hero-title">
-            <div class="container hero-container">
+            <div class="hero-container">
                 <!-- Texto principal que presenta el tema de calidad de software. -->
                 <div class="hero-text">
                     <h1 id="hero-title" class="hero-title">
-                        ¿Porque es importante el <span>desarrollo de software ?</span>
+                        ¿Porque es importante el <span>desarrollo de software
+                            ?</span>
                     </h1>
                 </div>
                 <!-- Enlaces internos que permiten acceder rápidamente a las primeras secciones. -->
@@ -54,9 +55,182 @@
             </div>
         </section>
         <main>
+            <!-- Sección 01: línea de tiempo del ciclo de vida del software. -->
+            <section id="ciclo" class="ciclo" aria-labelledby="ciclo-title">
+                <!-- Wave decorativa de separación entre secciones. -->
+                <svg class="wave" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#bfd8f5"
+                        d="M0,10 C240,25 480,20 720,10 C960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
 
+                <div class="container">
+                    <!-- Encabezado de la sección. -->
+                    <div class="section-heading">
+                        <span class="section-number">01</span>
+                        <h2 id="ciclo-title" class="section-title">Ciclo de vida
+                            de un <span>software</span></h2>
+                        <p class="section-description">
+                            El ciclo de vida de un software es el conjunto de
+                            procesos que se siguen
+                            para desarrollarlo y mantenerlo.
+                        </p>
+                    </div>
+
+                    <!-- Línea de tiempo interactiva. -->
+                    <div class="ciclo-timeline" data-timeline>
+                        <!-- Línea visual de conexión entre las etapas. -->
+                        <div class="timeline-track" aria-hidden="true"></div>
+
+                        <!-- Etapa 01: Análisis. -->
+                        <article class="timeline-step">
+                            <button class="timeline-button" type="button"
+                                id="timeline-button-1"
+                                aria-expanded="false"
+                                aria-controls="timeline-info-1">
+                                <span class="timeline-index">01</span>
+                                <span class="timeline-label">Análisis</span>
+                            </button>
+                            <!-- Información de la etapa. -->
+                            <div class="timeline-info" id="timeline-info-1"
+                                role="region"
+                                aria-labelledby="timeline-button-1"
+                                aria-hidden="true">
+                                <div class="timeline-info-header">
+                                    <span>Análisis</span>
+                                    <i class="bi bi-search"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <p>Se identifican las necesidades del usuario y
+                                    se define qué debe hacer el sistema.</p>
+                            </div>
+                        </article>
+
+                        <!-- Etapa 02: Diseño. -->
+                        <article class="timeline-step">
+                            <button class="timeline-button" type="button"
+                                id="timeline-button-2"
+                                aria-expanded="false"
+                                aria-controls="timeline-info-2">
+                                <span class="timeline-index">02</span>
+                                <span class="timeline-label">Diseño</span>
+                            </button>
+                            <!-- Información de la etapa. -->
+                            <div class="timeline-info" id="timeline-info-2"
+                                role="region"
+                                aria-labelledby="timeline-button-2"
+                                aria-hidden="true">
+                                <div class="timeline-info-header">
+                                    <span>Diseño</span>
+                                    <i class="bi bi-palette"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <p>Se define cómo será el sistema, su
+                                    estructura, interfaz y funcionamiento.</p>
+                            </div>
+                        </article>
+
+                        <!-- Etapa 03: Desarrollo. -->
+                        <article class="timeline-step">
+                            <button class="timeline-button" type="button"
+                                id="timeline-button-3"
+                                aria-expanded="false"
+                                aria-controls="timeline-info-3">
+                                <span class="timeline-index">03</span>
+                                <span class="timeline-label">Desarrollo</span>
+                            </button>
+                            <!-- Información de la etapa. -->
+                            <div class="timeline-info" id="timeline-info-3"
+                                role="region"
+                                aria-labelledby="timeline-button-3"
+                                aria-hidden="true">
+                                <div class="timeline-info-header">
+                                    <span>Desarrollo</span>
+                                    <i class="bi bi-code-slash"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <p>Se programa el sistema siguiendo lo definido
+                                    en las etapas anteriores.</p>
+                            </div>
+                        </article>
+
+                        <!-- Etapa 04: Pruebas. -->
+                        <article class="timeline-step">
+                            <button class="timeline-button" type="button"
+                                id="timeline-button-4"
+                                aria-expanded="false"
+                                aria-controls="timeline-info-4">
+                                <span class="timeline-index">04</span>
+                                <span class="timeline-label">Pruebas</span>
+                            </button>
+                            <!-- Información de la etapa. -->
+                            <div class="timeline-info" id="timeline-info-4"
+                                role="region"
+                                aria-labelledby="timeline-button-4"
+                                aria-hidden="true">
+                                <div class="timeline-info-header">
+                                    <span>Pruebas</span>
+                                    <i class="bi bi-bug" aria-hidden="true"></i>
+                                </div>
+                                <p>Se verifica que el sistema funcione
+                                    correctamente y se buscan errores.</p>
+                            </div>
+                        </article>
+
+                        <!-- Etapa 05: Despliegue. -->
+                        <article class="timeline-step">
+                            <button class="timeline-button" type="button"
+                                id="timeline-button-5"
+                                aria-expanded="false"
+                                aria-controls="timeline-info-5">
+                                <span class="timeline-index">05</span>
+                                <span class="timeline-label">Despliegue</span>
+                            </button>
+                            <!-- Información de la etapa. -->
+                            <div class="timeline-info" id="timeline-info-5"
+                                role="region"
+                                aria-labelledby="timeline-button-5"
+                                aria-hidden="true">
+                                <div class="timeline-info-header">
+                                    <span>Despliegue</span>
+                                    <i class="bi bi-cloud-arrow-up"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <p>El sistema se instala y se pone a disposición
+                                    de los usuarios.</p>
+                            </div>
+                        </article>
+
+                        <!-- Etapa 06: Mantenimiento. -->
+                        <article class="timeline-step">
+                            <button class="timeline-button" type="button"
+                                id="timeline-button-6"
+                                aria-expanded="false"
+                                aria-controls="timeline-info-6">
+                                <span class="timeline-index">06</span>
+                                <span
+                                    class="timeline-label">Mantenimiento</span>
+                            </button>
+                            <!-- Información de la etapa. -->
+                            <div class="timeline-info" id="timeline-info-6"
+                                role="region"
+                                aria-labelledby="timeline-button-6"
+                                aria-hidden="true">
+                                <div class="timeline-info-header">
+                                    <span>Mantenimiento</span>
+                                    <i class="bi bi-tools"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <p>Se realizan correcciones, mejoras y
+                                    actualizaciones del sistema.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
         </main>
-    </body>
+        <!-- JavaScript de la linea de tiempo   -->
+        <script src="JavaScript/ciclo-timeline.js" defer></script>
         <!-- JavaScript propio para cargar componentes  -->
         <script src="main.js" defer></script>
     </body>
