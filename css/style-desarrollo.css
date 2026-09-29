@@ -1,0 +1,179 @@
+/* Variables generales utilizadas en toda la página.
+   Centralizan colores, sombras, bordes, tamaños y transiciones para mantener un diseño consistente. */
+:root {
+  --color-primary: #0875d1;
+  --color-primary-dark: #0062cb;
+  --color-primary-soft: #e6f3ff;
+  --color-blue-bg: #b8d9f5;
+  --color-blue-bg-light: #f1f8fe;
+  --color-cream: #fff8e7;
+  --color-white: #ffffff;
+  --color-text: #111111;
+  --color-text-soft: #35566f;
+  --color-border: #b8d9f5;
+  --color-border-light: #d8e7f1;
+  --color-success: #0875d1;
+  --color-muted: #9ca7ae;
+  --shadow-sm: 0 4px 10px rgba(20, 50, 75, 0.07);
+  --shadow-md: 0 7px 16px rgba(20, 50, 75, 0.1);
+  --shadow-lg: 0 10px 22px rgba(20, 50, 75, 0.16);
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --section-padding: clamp(4rem, 7vw, 6rem);
+  --content-width: 1100px;
+  --transition: 0.22s ease;
+}
+
+/* Ajuste global del modelo de caja.
+   Hace que padding y bordes queden incluidos dentro del ancho y alto definidos. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Configuración general del desplazamiento de la página.
+   Permite desplazamiento suave y deja espacio superior al saltar hacia una sección. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+/* Estilos base de toda la página.
+   Define fondo, tipografía, color de texto y separación general entre líneas. */
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-text);
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* Ajusta las imágenes para que nunca superen el ancho de su contenedor. */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Elimina el resaltado táctil predeterminado en enlaces y botones. */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hace que enlaces y botones respeten la tipografía definida por la página. */
+button,
+a {
+  font: inherit;
+}
+
+/* Elementos reutilizados por distintas secciones.
+   Mantienen el contenido por encima de elementos decorativos como las waves. */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero principal de la página.
+   Contiene el título y enlaces de navegación. */
+.hero {
+  min-height: 200px;
+  background-image: url(../imgs/hero-desa.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+}
+
+/* Organiza verticalmente el contenido del hero y sus enlaces. */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 5rem 30vw 5rem 2rem;
+  gap: clamp(2rem, 2vw, 5rem);
+}
+
+/* Título principal del hero.
+   Utiliza un tamaño adaptable para diferentes resoluciones. */
+.hero-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(2.25rem, 4vw, 4rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+/* Resalta una parte del título principal. */
+.hero-title span {
+  color: var(--color-primary);
+}
+
+.hero-links {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.65rem;
+}
+
+/* Estilo de loos enlaces del hero */
+.hero-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px;
+  gap: 0.7rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 800;
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    box-shadow var(--transition);
+}
+
+/* Ajusta el tamaño y espaciado de los enlaces del hero. */
+.hero-link {
+  font-size: 0.9rem;
+}
+
+/* Estado al pasar el mouse o navegar con teclado.
+   Cambia el color, desplaza ligeramente el elemento y aumenta la sombra. */
+.hero-link:hover,
+.hero-link:focus-visible {
+  background: var(--color-cream);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.white-link {
+  border: 1px solid var(--color-primary);
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-weight: 800;
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.white-link:hover,
+.white-link:focus-visible {
+  background: var(--color-primary);
+  color: var(--color-cream);
+  border: 1px solid var(--color-primary);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-lg);
+}
+@media (max-width: 992px) {
+  .hero-container {
+    text-align: center;
+    padding: 5rem 1rem 5rem;
+  }
+}
