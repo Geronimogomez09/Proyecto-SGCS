@@ -19,6 +19,7 @@
             rel="stylesheet">
         <!-- Hojas de estilo propias para el header y el contenido de calidad de software. -->
         <link rel="stylesheet" href="css/style-header.css">
+        <link rel="stylesheet" href="css/style-comparador.css">
         <!-- Bootstrap JS permite utilizar tabs y otros componentes interactivos. -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -28,21 +29,17 @@
     <body>
         <!-- Contenedor donde se carga el encabezado compartido del sitio. -->
         <header id="header-container"></header>
-        <!-- Hero principal con introducción y accesos rápidos a las primeras secciones. -->
-        <section class="hero" aria-labelledby="hero-title">
-            <!-- Wave superior utilizada como separación visual entre el header y el hero. -->
-            <svg class="wave" viewBox="0 0 1440 200" preserveAspectRatio="none"
-                aria-hidden="true">
-                <path fill="#bfd8f5"
-                    d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
-            </svg>
-        </section>
-        <!-- Contenedor donde main.js carga el encabezado compartido del proyecto. -->
-        <div id="header-container"></div>
         <!-- Contenido principal de la página de comparación. -->
         <main class="metodologias-page">
-            <section class="metodologias-section"
+
+            <section class="metodologias-section container"
                 aria-labelledby="metodologias-title">
+                <svg class="wave" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none"
+                    aria-hidden="true">
+                    <path fill="#bfd8f5"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+                </svg>
                 <div class="container">
                     <!-- Encabezado con número, título y explicación de la sección. -->
                     <div class="section-heading metodologias-heading">
@@ -245,6 +242,6 @@
         <!-- Carga el componente header compartido del proyecto. -->
         <script src="main.js" defer></script>
         <!-- Controla la selección, la tabla comparativa y el guardado local. -->
-        <script src="js/comparador.js" defer></script>
+        <script src="JavaScript/comparador.js" defer></script>
     </body>
 </html>
