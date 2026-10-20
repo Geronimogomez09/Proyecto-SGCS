@@ -36,12 +36,215 @@
                 <path fill="#bfd8f5"
                     d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
             </svg>
-            
         </section>
-        <main>
-            
+        <!-- Contenedor donde main.js carga el encabezado compartido del proyecto. -->
+        <div id="header-container"></div>
+        <!-- Contenido principal de la página de comparación. -->
+        <main class="metodologias-page">
+            <section class="metodologias-section"
+                aria-labelledby="metodologias-title">
+                <div class="container">
+                    <!-- Encabezado con número, título y explicación de la sección. -->
+                    <div class="section-heading metodologias-heading">
+                        <span>01</span>
+                        <h1 id="metodologias-title" class="title">Comparador
+                            interactivo de <span>modelos y
+                                metodologías</span></h1>
+                        <p class="description">Seleccioná dos o más opciones
+                            para comparar su enfoque, planificación,
+                            flexibilidad, ventajas y limitaciones.</p>
+                    </div>
+                    <!-- Panel interactivo con las opciones que se pueden comparar. -->
+                    <section class="method-panel"
+                        aria-labelledby="selection-heading">
+                        <div class="row align-items-start g-3">
+                            <div class="col-12 col-lg-9">
+                                <h2 id="selection-heading"
+                                    class="method-panel-title">Elegí qué querés
+                                    comparar</h2>
+                                <p class="method-panel-description">La tabla se
+                                    actualiza automáticamente al seleccionar las
+                                    tarjetas. Podés comparar varias opciones y
+                                    guardar tu selección en este navegador.</p>
+                            </div>
+                            <div class="col-12 col-lg-3 text-lg-end">
+                                <span id="selection-count"
+                                    class="selection-count" aria-live="polite">0
+                                    seleccionadas</span>
+                            </div>
+                        </div>
+                        <!-- Grupo accesible de tarjetas seleccionables para cada metodología. -->
+                        <fieldset class="method-fieldset">
+                            <legend class="method-legend">Modelos y metodologías
+                                disponibles</legend>
+                            <!-- Bootstrap distribuye las tarjetas en una grilla adaptable. -->
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <input class="method-check visually-hidden"
+                                        id="scrum" type="checkbox"
+                                        value="Scrum">
+                                    <label for="scrum" class="method-option">
+                                        <span class="method-option-main"><span
+                                                class="method-icon"><i
+                                                    class="bi bi-people-fill"
+                                                    aria-hidden="true"></i></span><span><strong>Scrum</strong><small>Trabajo
+                                                    iterativo en
+                                                    sprints.</small></span></span>
+                                        <i
+                                            class="bi bi-check-circle-fill method-selected-icon"
+                                            aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <input class="method-check visually-hidden"
+                                        id="kanban" type="checkbox"
+                                        value="Kanban">
+                                    <label for="kanban" class="method-option">
+                                        <span class="method-option-main"><span
+                                                class="method-icon"><i
+                                                    class="bi bi-kanban-fill"
+                                                    aria-hidden="true"></i></span><span><strong>Kanban</strong><small>Flujo
+                                                    continuo de
+                                                    trabajo.</small></span></span>
+                                        <i
+                                            class="bi bi-check-circle-fill method-selected-icon"
+                                            aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <input class="method-check visually-hidden"
+                                        id="cascada" type="checkbox"
+                                        value="Cascada">
+                                    <label for="cascada" class="method-option">
+                                        <span class="method-option-main"><span
+                                                class="method-icon"><i
+                                                    class="bi bi-arrow-down-square-fill"
+                                                    aria-hidden="true"></i></span><span><strong>Cascada</strong><small>Fases
+                                                    secuenciales
+                                                    definidas.</small></span></span>
+                                        <i
+                                            class="bi bi-check-circle-fill method-selected-icon"
+                                            aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <input class="method-check visually-hidden"
+                                        id="xp" type="checkbox" value="XP">
+                                    <label for="xp" class="method-option">
+                                        <span class="method-option-main"><span
+                                                class="method-icon"><i
+                                                    class="bi bi-code-slash"
+                                                    aria-hidden="true"></i></span><span><strong>XP
+                                                    (Extreme
+                                                    Programming)</strong><small>Prácticas
+                                                    técnicas y feedback
+                                                    frecuente.</small></span></span>
+                                        <i
+                                            class="bi bi-check-circle-fill method-selected-icon"
+                                            aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <input class="method-check visually-hidden"
+                                        id="modelo-v" type="checkbox"
+                                        value="Modelo en V">
+                                    <label for="modelo-v" class="method-option">
+                                        <span class="method-option-main"><span
+                                                class="method-icon"><i
+                                                    class="bi bi-check2-square"
+                                                    aria-hidden="true"></i></span><span><strong>Modelo
+                                                    en
+                                                    V</strong><small>Desarrollo
+                                                    y pruebas
+                                                    vinculados.</small></span></span>
+                                        <i
+                                            class="bi bi-check-circle-fill method-selected-icon"
+                                            aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <input class="method-check visually-hidden"
+                                        id="incremental" type="checkbox"
+                                        value="Incremental">
+                                    <label for="incremental"
+                                        class="method-option">
+                                        <span class="method-option-main"><span
+                                                class="method-icon"><i
+                                                    class="bi bi-layers-fill"
+                                                    aria-hidden="true"></i></span><span><strong>Modelo
+                                                    incremental</strong><small>Entregas
+                                                    por partes
+                                                    funcionales.</small></span></span>
+                                        <i
+                                            class="bi bi-check-circle-fill method-selected-icon"
+                                            aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- Resumen dinámico de las opciones marcadas por el usuario. -->
+                        <aside class="selection-summary"
+                            aria-labelledby="selected-heading">
+                            <h3 id="selected-heading">Tu selección</h3>
+                            <div id="selected-legend" class="selected-legend"
+                                aria-live="polite"><span
+                                    class="selection-empty">Todavía no
+                                    seleccionaste opciones.</span></div>
+                        </aside>
+                        <!-- Acciones para guardar la comparación o limpiar la selección. -->
+                        <div class="method-actions">
+                            <button id="compare-button" class="btn method-btn"
+                                type="button"><i class="bi bi-columns-gap"
+                                    aria-hidden="true"></i> Comparar y
+                                guardar</button>
+                            <button id="clear-button"
+                                class="btn method-btn-outline" type="button"><i
+                                    class="bi bi-arrow-counterclockwise"
+                                    aria-hidden="true"></i> Limpiar
+                                selección</button>
+                            <p id="status-message" class="status-live"
+                                role="status" aria-live="polite"></p>
+                        </div>
+                    </section>
+                    <!-- La tabla se muestra cuando hay al menos dos metodologías seleccionadas. -->
+                    <section id="comparison-section"
+                        class="comparison-shell d-none"
+                        aria-labelledby="comparison-heading">
+                        <div class="comparison-banner">
+                            <div class="comparison-banner-icon"><i
+                                    class="bi bi-arrow-left-right"
+                                    aria-hidden="true"></i></div>
+                            <div>
+                                <h2 id="comparison-heading">Comparación lado a
+                                    lado</h2>
+                                <p>Revisá las diferencias para identificar qué
+                                    opción se adapta mejor al proyecto.</p>
+                            </div>
+                        </div>
+                        <!-- Contenedor accesible de la tabla que JavaScript genera dinámicamente. -->
+                        <div class="comparison-table-wrap" tabindex="0"
+                            aria-label="Tabla comparativa de modelos y metodologías">
+                            <table
+                                class="table comparison-table align-middle mb-0">
+                                <thead id="comparison-head"></thead>
+                                <tbody id="comparison-body"></tbody>
+                            </table>
+                        </div>
+                        <p class="comparison-note"><i class="bi bi-info-circle"
+                                aria-hidden="true"></i> Las características son
+                            orientativas: la elección depende del alcance, los
+                            requisitos, el equipo y los riesgos del
+                            proyecto.</p>
+                    </section>
+                </div>
+            </section>
         </main>
-        <!-- JavaScript propio para cargar componentes  -->
+        <!-- Bootstrap aporta los componentes y utilidades de interfaz utilizados por la página. -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Carga el componente header compartido del proyecto. -->
         <script src="main.js" defer></script>
+        <!-- Controla la selección, la tabla comparativa y el guardado local. -->
+        <script src="js/comparador.js" defer></script>
     </body>
 </html>
