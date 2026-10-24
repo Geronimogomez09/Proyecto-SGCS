@@ -369,6 +369,16 @@
                         <!-- JavaScript escribe aquí el mensaje si se intenta avanzar con preguntas sin responder. role=alert anuncia el error. -->
                         <p id="validation-message" class="encuesta-validation mb-0" role="alert" aria-live="assertive"></p>
                     </div>
+
+                    <!-- JavaScript controla el avance y la visibilidad del botón de fase anterior. -->
+                    <nav class="encuesta-navigation" aria-label="Navegación de la encuesta">
+                        <button id="previous-button" class="btn encuesta-btn-secondary d-none" type="button">
+                            <i class="bi bi-arrow-left"></i> Fase anterior
+                        </button>
+                        <button id="next-button" class="btn encuesta-btn-primary" type="button">
+                            Siguiente fase <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </nav>
                 </div>
             </section>
             </div>
