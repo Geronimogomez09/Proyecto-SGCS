@@ -1,0 +1,654 @@
+.encuesta-page {
+    /* Variables reutilizables: cambiar estos valores permite ajustar la paleta
+       o la forma de las tarjetas sin tener que editar cada selector. */
+    --encuesta-primary: #0875d1;
+    --encuesta-primary-dark: #0062cb;
+    --encuesta-primary-soft: #e6f3ff;
+    --encuesta-blue-bg: #b8d9f5;
+    --encuesta-cream: #fff8e7;
+    --encuesta-white: #ffffff;
+    --encuesta-text: #111111;
+    --encuesta-text-soft: #07253b;
+    --encuesta-border: #269aff;
+    --encuesta-border-light: #9fc5e8;
+    --encuesta-error: #a32929;
+    --encuesta-shadow-sm: 0 4px 10px rgba(20, 50, 75, .07);
+    --encuesta-shadow-md: 0 7px 16px rgba(20, 50, 75, .10);
+    --encuesta-radius-sm: 12px;
+    --encuesta-radius-md: 16px;
+    --encuesta-radius-lg: 20px;
+    --encuesta-transition: .22s ease;
+
+    position: relative;
+    isolation: isolate; /* Crea un contexto de apilamiento para que los efectos de esta página no interfieran con otras zonas. */
+    width: 100%;
+    min-height: 75vh; /* Da altura suficiente al contenido incluso si la pantalla tiene pocas preguntas visibles. */
+    padding: clamp(2rem, 5vw, 4rem) 0; /* El espacio vertical se adapta al ancho de la pantalla. */
+    overflow: hidden; /* Evita que los fondos decorativos o animaciones sobresalgan del área de la encuesta. */
+    background:
+        radial-gradient(circle at 5% 10%, rgba(184, 217, 245, .4), transparent 28%),
+        var(--encuesta-cream); /* Combina un brillo azul suave con el fondo crema principal. */
+    color: var(--encuesta-text);
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    line-height: 1.55; /* Mejora la legibilidad de los textos largos. */
+}
+
+/* Centra el contenido y evita que la encuesta se extienda demasiado en monitores grandes. */
+.encuesta-page .encuesta-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Las tres pantallas principales se alternan con la clase active desde JavaScript:
+   bienvenida, preguntas y resultados. Por defecto solo se ve la que esté activa. */
+.encuesta-page .encuesta-view {
+    display: none;
+    animation: encuesta-entrada .3s ease both;
+}
+
+.encuesta-page .encuesta-view.active {
+    display: block;
+}
+
+/* Animación breve: la pantalla aparece gradualmente y se desplaza unos píxeles hacia arriba. */
+@keyframes encuesta-entrada {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Las tres tarjetas principales comparten borde, esquinas, fondo y sombra para mantener una apariencia consistente. */
+.encuesta-page .encuesta-hero-card,
+.encuesta-page .encuesta-card,
+.encuesta-page .encuesta-result-card {
+    overflow: hidden;
+    border: 1px solid var(--encuesta-border);
+    border-radius: var(--encuesta-radius-lg);
+    background: var(--encuesta-white);
+    box-shadow: var(--encuesta-shadow-md);
+}
+
+/* TARJETA DE BIENVENIDA: se mantiene más angosta y centra su contenido para destacar la invitación a comenzar. */
+.encuesta-page .encuesta-hero-card {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: clamp(1.75rem, 5vw, 3.75rem);
+    text-align: center;
+}
+
+/* Cuadro del ícono principal. grid + place-items lo centra horizontal y verticalmente. */
+.encuesta-page .encuesta-icon {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.25rem;
+    border-radius: var(--encuesta-radius-md);
+    background: var(--encuesta-primary);
+    color: var(--encuesta-white);
+    font-size: 2rem;
+}
+
+/* Texto pequeño en mayúsculas que funciona como etiqueta previa al título. */
+.encuesta-page .encuesta-kicker {
+    display: inline-block;
+    margin-bottom: .6rem;
+    color: var(--encuesta-primary);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+/* clamp() achica o agranda el título según el ancho de pantalla sin pasar los límites definidos. */
+.encuesta-page .encuesta-title {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--encuesta-text);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.encuesta-page .encuesta-description {
+    max-width: 680px; /* Evita renglones excesivamente largos. */
+    margin: 1rem auto 0;
+    color: var(--encuesta-text-soft);
+    font-size: clamp(.95rem, 1.6vw, 1.08rem);
+    line-height: 1.7;
+}
+
+/* Lista flexible de datos rápidos. flex-wrap permite que las etiquetas bajen a otra línea si falta espacio. */
+.encuesta-page .encuesta-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--encuesta-text-soft);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.encuesta-page .encuesta-features span {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.encuesta-page .encuesta-features i {
+    color: var(--encuesta-primary); /* Hace que los íconos coincidan con el color principal. */
+}
+
+.encuesta-page .encuesta-note {
+    margin: 1rem 0 0;
+    color: var(--encuesta-text-soft);
+    font-size: .82rem;
+}
+
+/* BOTONES PRINCIPAL Y SECUNDARIO: comparten alineación, tamaño, tipografía y transición. */
+.encuesta-page .encuesta-btn-primary,
+.encuesta-page .encuesta-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    min-height: 46px;
+    padding: .7rem 1.2rem;
+    border: 1px solid var(--encuesta-primary);
+    border-radius: var(--encuesta-radius-sm);
+    font-family: inherit;
+    font-size: .95rem;
+    font-weight: 800;
+    line-height: 1.4;
+    white-space: normal;
+    transition: transform var(--encuesta-transition), box-shadow var(--encuesta-transition), background var(--encuesta-transition);
+}
+
+/* Acción principal: color fuerte para señalar la opción de continuar. */
+.encuesta-page .encuesta-btn-primary {
+    background: var(--encuesta-primary);
+    color: var(--encuesta-white);
+    box-shadow: var(--encuesta-shadow-sm);
+}
+
+/* Al pasar el cursor, oscurece el botón y lo eleva ligeramente para indicar que es interactivo. */
+.encuesta-page .encuesta-btn-primary:hover {
+    border-color: var(--encuesta-primary-dark);
+    background: var(--encuesta-primary-dark);
+    color: var(--encuesta-white);
+    transform: translateY(-2px);
+}
+
+/* Acción secundaria: fondo más claro para distinguirla de la acción principal. */
+.encuesta-page .encuesta-btn-secondary {
+    border-color: var(--encuesta-border);
+    background: var(--encuesta-primary-soft);
+    color: var(--encuesta-primary-dark);
+}
+
+.encuesta-page .encuesta-btn-secondary:hover {
+    background: var(--encuesta-blue-bg);
+    color: var(--encuesta-text);
+    transform: translateY(-2px);
+}
+
+/* Contorno de foco visible al navegar con teclado; mejora la accesibilidad y permite localizar el control activo. */
+.encuesta-page .encuesta-btn-primary:focus-visible,
+.encuesta-page .encuesta-btn-secondary:focus-visible,
+.encuesta-page .answer-option:focus-visible {
+    outline: 3px solid var(--encuesta-primary);
+    outline-offset: 3px;
+}
+
+/* ENCABEZADO DEL ASISTENTE: contiene el título de la encuesta, contador de fase y barra de progreso. */
+.encuesta-page .encuesta-card-header {
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border-bottom: 1px solid var(--encuesta-border);
+    background: var(--encuesta-blue-bg);
+}
+
+.encuesta-page .encuesta-header-title {
+    margin: 0;
+    color: var(--encuesta-text);
+    font-size: clamp(1.25rem, 2.6vw, 1.65rem);
+    font-weight: 800;
+}
+
+/* Alinea la información de fase a la derecha en escritorio; en móvil se alinea a la izquierda más abajo. */
+.encuesta-page .encuesta-step-counter {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    text-align: right;
+}
+
+.encuesta-page .encuesta-step-counter span {
+    color: var(--encuesta-primary-dark);
+    font-size: .95rem;
+    font-weight: 800;
+}
+
+.encuesta-page .encuesta-step-counter small {
+    color: var(--encuesta-text-soft);
+    font-size: .75rem;
+}
+
+/* Fondo claro y extremos redondeados de la barra de progreso de Bootstrap. */
+.encuesta-page .encuesta-progress.progress {
+    height: 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--encuesta-white);
+}
+
+/* JavaScript modifica el ancho de esta barra conforme cambia la fase. */
+.encuesta-page .encuesta-progress .progress-bar {
+    width: 0;
+    background: var(--encuesta-primary);
+    transition: width .35s ease;
+}
+
+/* Estilos disponibles para una navegación por fases con enlaces/chips, aunque el HTML actual usa los botones anterior/siguiente. */
+.encuesta-page .encuesta-phase-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 1rem clamp(1.25rem, 4vw, 2rem) 0;
+}
+
+.encuesta-page .encuesta-phase-link {
+    padding: .45rem .8rem;
+    border: 1px solid var(--encuesta-border);
+    border-radius: 999px;
+    background: var(--encuesta-white);
+    color: var(--encuesta-text-soft);
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.encuesta-page .encuesta-phase-link.active {
+    border-color: var(--encuesta-primary);
+    background: var(--encuesta-primary);
+    color: var(--encuesta-white);
+}
+
+.encuesta-page .encuesta-phase-link.completed {
+    border-color: var(--encuesta-border);
+    background: var(--encuesta-primary-soft);
+    color: var(--encuesta-primary-dark);
+}
+
+/* Espacio alrededor de las preguntas para separarlas del encabezado y los controles inferiores. */
+.encuesta-page .encuesta-question-wrap {
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* Las cinco fases están ocultas salvo la que JavaScript marca como active. */
+.encuesta-page .preguntas-tema {
+    display: none;
+}
+
+.encuesta-page .preguntas-tema.active {
+    display: block;
+    animation: encuesta-entrada .25s ease both;
+}
+
+.encuesta-page .fase-heading {
+    margin-bottom: 1.5rem;
+}
+
+.encuesta-page .fase-heading h3 {
+    margin: 0;
+    color: var(--encuesta-text);
+    font-size: clamp(1.3rem, 2.7vw, 1.8rem);
+    font-weight: 800;
+}
+
+.encuesta-page .fase-heading p {
+    margin: .5rem 0 0;
+    color: var(--encuesta-text-soft);
+    line-height: 1.65;
+}
+
+/* TARJETAS DE PREGUNTAS: dos columnas en pantallas grandes. minmax(0, 1fr) permite que las columnas se encojan sin desbordarse. */
+.encuesta-page .container-preguntas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.encuesta-page .pregunta-card {
+    min-width: 0;
+    padding: 1.15rem;
+    border: 2px solid var(--encuesta-border);
+    border-radius: var(--encuesta-radius-md);
+    background: var(--encuesta-white);
+    box-shadow: var(--encuesta-shadow-sm);
+}
+
+/* Número/etiqueta de pregunta; uppercase transforma el texto visualmente a mayúsculas. */
+.encuesta-page .pregunta-numero {
+    display: block;
+    margin-bottom: .5rem;
+    color: var(--encuesta-primary);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.encuesta-page .pregunta-card h4 {
+    margin: 0;
+    color: var(--encuesta-text);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.encuesta-page .pregunta-descripcion {
+    margin: .5rem 0 0;
+    color: var(--encuesta-text-soft);
+    font-size: .85rem;
+    line-height: 1.55;
+}
+
+/* Cada alternativa es un botón independiente. JavaScript le agrega o quita .selected al marcar una respuesta. */
+.encuesta-page .pregunta-opciones {
+    display: grid;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.encuesta-page .answer-option.btn {
+    width: 100%; /* Todas las alternativas ocupan el ancho disponible de la tarjeta. */
+    min-height: 44px;
+    padding: .65rem .75rem;
+    border: 1px solid var(--encuesta-border-light);
+    border-radius: var(--encuesta-radius-sm);
+    background: var(--encuesta-white);
+    color: var(--encuesta-text);
+    font-family: inherit;
+    font-size: .84rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: left;
+    white-space: normal; /* Permite que una alternativa larga ocupe más de un renglón. */
+    transition: background var(--encuesta-transition), border-color var(--encuesta-transition);
+}
+
+/* Estado hover: destaca una alternativa cuando el puntero pasa por encima. */
+.encuesta-page .answer-option.btn:hover {
+    border-color: var(--encuesta-primary);
+    background: var(--encuesta-primary-soft);
+    color: var(--encuesta-text);
+}
+
+/* Estado seleccionado: el contraste permite identificar qué opción guardó JavaScript. */
+.encuesta-page .answer-option.btn.selected {
+    border: 2px solid var(--encuesta-primary);
+    background: var(--encuesta-primary);
+    color: var(--encuesta-white);
+    font-weight: 800;
+}
+
+/* Área reservada para que los mensajes de validación no desplacen bruscamente el resto del contenido. */
+.encuesta-page .encuesta-validation {
+    min-height: 1.5rem;
+    margin-top: 1rem;
+    color: var(--encuesta-error);
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+/* Barra inferior con las acciones de navegación. space-between separa anterior y siguiente. */
+.encuesta-page .encuesta-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: 1.1rem clamp(1.25rem, 4vw, 2rem);
+    border-top: 1px solid var(--encuesta-border-light);
+    background: var(--encuesta-white);
+}
+
+/* TARJETA DE RESULTADOS: usa el mismo sistema de bordes y espacios que el resto de la encuesta. */
+.encuesta-page .encuesta-result-card {
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+/* Bloque destacado que contiene el modelo recomendado, la puntuación y su explicación. */
+.encuesta-page .recommendation-block {
+    margin-top: 1.5rem;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border: 1px solid var(--encuesta-border);
+    border-radius: var(--encuesta-radius-md);
+    background: var(--encuesta-primary-soft);
+}
+
+.encuesta-page .recommendation-label {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: var(--encuesta-primary-dark);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.encuesta-page .result-method {
+    margin: .75rem 0;
+    color: var(--encuesta-primary-dark);
+    font-size: clamp(1.5rem, 3.5vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.25;
+    overflow-wrap: anywhere; /* Si el nombre fuera largo, permite cortar para no romper el diseño. */
+}
+
+.encuesta-page .result-score {
+    display: inline-block;
+    margin: .25rem 0 1rem;
+    padding: .5rem .8rem;
+    border: 1px solid var(--encuesta-border);
+    border-radius: var(--encuesta-radius-sm);
+    background: var(--encuesta-white);
+    color: var(--encuesta-primary-dark);
+    font-size: .88rem;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.encuesta-page .result-explanation,
+.encuesta-page .result-runner-up {
+    color: var(--encuesta-text);
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
+/* Separa visualmente la información de la segunda opción de la explicación principal. */
+.encuesta-page .result-runner-up {
+    padding-top: .9rem;
+    border-top: 1px solid var(--encuesta-border);
+    color: var(--encuesta-text-soft);
+}
+
+/* Títulos y párrafos descriptivos que se reutilizan en distintas secciones de resultados. */
+.encuesta-page .result-section-title {
+    margin: 0;
+    color: var(--encuesta-text);
+    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+    font-weight: 800;
+}
+
+.encuesta-page .result-section-description {
+    margin: .5rem 0 0;
+    color: var(--encuesta-text-soft);
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+/* TABLERO DE AFINIDAD: filas estáticas del HTML que JavaScript rellena con porcentajes. */
+.encuesta-page .score-board {
+    display: grid;
+    gap: .8rem;
+    margin-top: 1.4rem;
+}
+
+/* Cada fila alinea nombre del modelo, barra y valor. La clase is-leading destaca al ganador. */
+.encuesta-page .score-row {
+    display: grid;
+    grid-template-columns: minmax(95px, 140px) minmax(0, 1fr) 48px;
+    align-items: center;
+    gap: .8rem;
+    padding: .45rem;
+    border-radius: var(--encuesta-radius-sm);
+}
+
+.encuesta-page .score-row.is-leading {
+    border: 1px solid var(--encuesta-border);
+    background: var(--encuesta-primary-soft);
+}
+
+.encuesta-page .score-label {
+    color: var(--encuesta-text);
+    font-size: .85rem;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+/* Barra del porcentaje: el ancho de su elemento interno cambia desde JavaScript. */
+.encuesta-page .score-track.progress {
+    height: 14px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--encuesta-primary-soft);
+}
+
+.encuesta-page .score-fill.progress-bar {
+    background: var(--encuesta-primary);
+    transition: width .5s ease;
+}
+
+.encuesta-page .score-value {
+    color: var(--encuesta-primary-dark);
+    font-size: .85rem;
+    font-weight: 800;
+    text-align: right;
+}
+
+/* Lista de evidencias que justifican la recomendación. Su contenido se completa con JavaScript. */
+.encuesta-page .evidence-list {
+    display: grid;
+    gap: .75rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none; /* Quita las viñetas por defecto para aplicar tarjetas personalizadas. */
+}
+
+.encuesta-page .evidence-item {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    padding: 1rem;
+    border: 1px solid var(--encuesta-border-light);
+    border-left: 4px solid var(--encuesta-primary); /* La línea izquierda identifica visualmente cada evidencia. */
+    border-radius: var(--encuesta-radius-sm);
+    background: var(--encuesta-white);
+}
+
+.encuesta-page .evidence-item strong {
+    color: var(--encuesta-primary-dark);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.encuesta-page .evidence-item span {
+    color: var(--encuesta-text-soft);
+    font-size: .88rem;
+    line-height: 1.6;
+}
+
+/* Caja donde se reúnen las preguntas y respuestas seleccionadas. */
+.encuesta-page .summary-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--encuesta-border-light);
+    border-radius: var(--encuesta-radius-sm);
+    background: var(--encuesta-white);
+    color: var(--encuesta-text-soft);
+    font-size: .9rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Tres bloques complementarios: fortalezas, riesgos y próximos pasos. height:100% ayuda a igualar sus alturas dentro de la fila. */
+.encuesta-page .insight-box {
+    height: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--encuesta-border);
+    border-radius: var(--encuesta-radius-md);
+    background: var(--encuesta-primary-soft);
+}
+
+.encuesta-page .insight-box h2 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0 0 .75rem;
+    color: var(--encuesta-primary-dark);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.encuesta-page .insight-box p {
+    margin: 0;
+    color: var(--encuesta-text);
+    font-size: .9rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* RESPONSIVE: en pantallas chicas las preguntas pasan a una columna y los botones ocupan todo el ancho. */
+@media (max-width: 767.98px) {
+    .encuesta-page .container-preguntas {
+        grid-template-columns: 1fr; /* Una tarjeta por fila para facilitar la lectura en móvil. */
+    }
+
+    .encuesta-page .encuesta-step-counter {
+        text-align: left;
+    }
+
+    .encuesta-page .encuesta-navigation {
+        flex-direction: column-reverse; /* Invierte el orden visual y deja la acción principal abajo. */
+    }
+
+    .encuesta-page .encuesta-navigation .btn {
+        width: 100%;
+    }
+
+    .encuesta-page .score-row {
+        grid-template-columns: minmax(82px, 105px) minmax(0, 1fr) 42px; /* Reduce las columnas para que la barra siga visible. */
+        gap: .45rem;
+    }
+
+    .encuesta-page .score-label,
+    .encuesta-page .score-value {
+        font-size: .77rem;
+    }
+}
+
+/* Respeta la configuración del sistema para reducir animaciones; útil para personas sensibles al movimiento. */
+@media (prefers-reduced-motion: reduce) {
+    .encuesta-page .encuesta-view,
+    .encuesta-page .preguntas-tema.active {
+        animation: none;
+    }
+
+    .encuesta-page .encuesta-btn-primary,
+    .encuesta-page .encuesta-btn-secondary,
+    .encuesta-page .answer-option.btn,
+    .encuesta-page .encuesta-progress .progress-bar,
+    .encuesta-page .score-fill.progress-bar {
+        transition: none;
+    }
+}
