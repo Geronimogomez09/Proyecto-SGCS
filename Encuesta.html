@@ -223,11 +223,63 @@
                             </div>
                         </section>
 
-                        
+                        <!-- FASE 3: construcción, arquitectura e integración. -->
+                        <section id="fase-3" class="preguntas-tema" data-phase="2" aria-labelledby="fase-3-title">
+                            <div class="fase-heading">
+                                <span class="question-chip">Fase 3 de 5 · Desarrollo</span>
+                                <h3 id="fase-3-title">Entregas, tecnología e integración</h3>
+                                <p>Definí cómo se construirá el producto, con qué incertidumbre técnica y cómo se integrarán los cambios.</p>
+                            </div>
+                            <div class="container-preguntas container-preguntas-3">
+                                <article class="pregunta-card" data-question="delivery">
+                                    <span class="pregunta-numero">Pregunta 8</span>
+                                    <h4>¿Cuándo necesitás disponer de funcionalidades utilizables?</h4>
+                                    <p class="pregunta-descripcion">Pensá si el producto puede entregarse por partes o necesita una entrega principal.</p>
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Frecuencia de entrega">
+                                        <button class="btn answer-option" type="button" data-question="delivery" data-value="frequent" role="radio" aria-checked="false">Necesitamos mejoras pequeñas y frecuentes.</button>
+                                        <button class="btn answer-option" type="button" data-question="delivery" data-value="sprints" role="radio" aria-checked="false">Preferimos ciclos con revisiones programadas.</button>
+                                        <button class="btn answer-option" type="button" data-question="delivery" data-value="final" role="radio" aria-checked="false">La entrega principal puede realizarse al final.</button>
+                                        <button class="btn answer-option" type="button" data-question="delivery" data-value="milestones" role="radio" aria-checked="false">Necesitamos hitos y entregables definidos de antemano.</button>
+                                    </div>
+                                </article>
+                                <article class="pregunta-card" data-question="uncertainty">
+                                    <span class="pregunta-numero">Pregunta 9</span>
+                                    <h4>¿Qué tan conocida es la solución técnica?</h4>
+                                    <p class="pregunta-descripcion">Considerá si habrá tecnologías nuevas, integraciones difíciles o soluciones por explorar.</p>
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Incertidumbre técnica">
+                                        <button class="btn answer-option" type="button" data-question="uncertainty" data-value="high" role="radio" aria-checked="false">Hay riesgos técnicos importantes y debemos experimentar.</button>
+                                        <button class="btn answer-option" type="button" data-question="uncertainty" data-value="medium" role="radio" aria-checked="false">Conocemos buena parte de la tecnología, pero quedan incógnitas.</button>
+                                        <button class="btn answer-option" type="button" data-question="uncertainty" data-value="low" role="radio" aria-checked="false">La solución y la tecnología son conocidas.</button>
+                                        <button class="btn answer-option" type="button" data-question="uncertainty" data-value="unknown" role="radio" aria-checked="false">Todavía no podemos estimar bien la viabilidad técnica.</button>
+                                    </div>
+                                </article>
+                                <article class="pregunta-card" data-question="architecture">
+                                    <span class="pregunta-numero">Pregunta 10</span>
+                                    <h4>¿Cómo puede organizarse la arquitectura del producto?</h4>
+                                    <p class="pregunta-descripcion">Considerá las dependencias y la posibilidad de dividir el sistema en componentes.</p>
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Arquitectura del producto">
+                                        <button class="btn answer-option" type="button" data-question="architecture" data-value="modular" role="radio" aria-checked="false">Podemos dividirlo en módulos que se integren progresivamente.</button>
+                                        <button class="btn answer-option" type="button" data-question="architecture" data-value="fixed" role="radio" aria-checked="false">La arquitectura puede definirse con detalle antes de construir.</button>
+                                        <button class="btn answer-option" type="button" data-question="architecture" data-value="evolving" role="radio" aria-checked="false">La arquitectura debe evolucionar con el feedback.</button>
+                                        <button class="btn answer-option" type="button" data-question="architecture" data-value="legacy" role="radio" aria-checked="false">Debemos mantener o mejorar un sistema existente.</button>
+                                    </div>
+                                </article>
+                                <article class="pregunta-card" data-question="integration">
+                                    <span class="pregunta-numero">Pregunta 11</span>
+                                    <h4>¿Cómo se integrarán y publicarán los cambios?</h4>
+                                    <p class="pregunta-descripcion">Pensá en las dependencias entre componentes y en las condiciones de publicación.</p>
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Integración y despliegue">
+                                        <button class="btn answer-option" type="button" data-question="integration" data-value="continuous" role="radio" aria-checked="false">Queremos integrar y publicar cambios frecuentemente.</button>
+                                        <button class="btn answer-option" type="button" data-question="integration" data-value="milestones" role="radio" aria-checked="false">La integración estará organizada alrededor de hitos.</button>
+                                        <button class="btn answer-option" type="button" data-question="integration" data-value="formal" role="radio" aria-checked="false">Hace falta una aceptación formal antes de la entrega principal.</button>
+                                        <button class="btn answer-option" type="button" data-question="integration" data-value="modules" role="radio" aria-checked="false">Cada componente puede integrarse y verificarse por separado.</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
 
-                        
 
-                        
+
 
                         <!-- JavaScript escribe aquí el mensaje si se intenta avanzar con preguntas sin responder. role=alert anuncia el error. -->
                         <p id="validation-message" class="encuesta-validation mb-0" role="alert" aria-live="assertive"></p>
