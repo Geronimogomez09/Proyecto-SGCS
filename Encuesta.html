@@ -476,6 +476,41 @@
                             </li>
                         </ul>
                     </section>
+
+                    <!-- Las clases de columnas de Bootstrap hacen que estos tres bloques se apilen en móvil y se distribuyan en escritorio. -->
+                    <div class="row row-cols-1 row-cols-md-3 g-3 mt-3">
+                        <div class="col">
+                            <section class="insight-box">
+                                <h2><i class="bi bi-check2-circle"></i> Fortalezas</h2>
+                                <p id="result-strengths"></p>
+                            </section>
+                        </div>
+                        <div class="col">
+                            <section class="insight-box">
+                                <h2><i class="bi bi-shield-exclamation"></i> Riesgos a vigilar</h2>
+                                <p id="result-risks"></p>
+                            </section>
+                        </div>
+                        <div class="col">
+                            <section class="insight-box">
+                                <h2><i class="bi bi-list-check"></i> Próximos pasos</h2>
+                                <p id="result-recommendations"></p>
+                            </section>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript construye un resumen de todas las preguntas y respuestas seleccionadas. -->
+                    <section class="mt-4" aria-labelledby="summary-title">
+                        <h2 id="summary-title" class="result-section-title">Resumen de tus respuestas</h2>
+                        <p id="answer-summary-text" class="summary-box mb-0"></p>
+                    </section>
+
+                    <!-- Reinicia el estado y permite volver a responder las 17 preguntas. -->
+                    <div class="text-center mt-4">
+                        <button id="restart-button" class="btn encuesta-btn-primary" type="button">
+                            <i class="bi bi-arrow-counterclockwise"></i> Realizar otro diagnóstico
+                        </button>
+                    </div>
                 </article>
             </section>
             </div>
