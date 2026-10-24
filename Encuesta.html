@@ -381,6 +381,26 @@
                     </nav>
                 </div>
             </section>
+            <!-- PANTALLA 3: resultados. Los elementos están predefinidos en el HTML y JavaScript actualiza su contenido. -->
+            <section id="result-view" class="encuesta-view" aria-labelledby="result-title">
+                <article class="encuesta-result-card">
+                    <span class="encuesta-kicker">ANÁLISIS COMPLETADO</span>
+                    <h1 id="result-title" class="encuesta-title">
+                        El modelo que mejor encaja con tu proyecto
+                    </h1>
+
+                    <!-- Recomendación principal: estos espacios de texto se rellenan con los resultados calculados. -->
+                    <div class="recommendation-block">
+                        <span class="recommendation-label">
+                            <i class="bi bi-stars"></i> MEJOR AJUSTE ESTIMADO
+                        </span>
+                        <h2 id="result-method" class="result-method"></h2>
+                        <p id="result-score" class="result-score"></p>
+                        <p id="result-explanation" class="result-explanation mb-0"></p>
+                        <p id="result-runner-up" class="result-runner-up mb-0 mt-3"></p>
+                    </div>
+                </article>
+            </section>
             </div>
         </main>
     </body>
