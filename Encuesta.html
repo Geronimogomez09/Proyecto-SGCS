@@ -452,6 +452,30 @@
                             </div>
                         </div>
                     </section>
+
+                    <!-- Evidencias: el JS puede mostrar hasta tres respuestas que favorecieron al modelo ganador. -->
+                    <section class="evidence-section mt-4" aria-labelledby="evidence-title">
+                        <h2 id="evidence-title" class="result-section-title">¿Qué respuestas influyeron más?</h2>
+                        <p class="result-section-description">
+                            Se presentan las respuestas que más favorecieron al modelo recomendado
+                            frente a los otros cinco.
+                        </p>
+                        <ul class="evidence-list">
+                            <!-- hidden oculta los elementos hasta que JavaScript encuentra evidencia para mostrarlos. -->
+                            <li id="evidence-1" class="evidence-item" hidden>
+                                <strong id="evidence-title-1"></strong>
+                                <span id="evidence-answer-1"></span>
+                            </li>
+                            <li id="evidence-2" class="evidence-item" hidden>
+                                <strong id="evidence-title-2"></strong>
+                                <span id="evidence-answer-2"></span>
+                            </li>
+                            <li id="evidence-3" class="evidence-item" hidden>
+                                <strong id="evidence-title-3"></strong>
+                                <span id="evidence-answer-3"></span>
+                            </li>
+                        </ul>
+                    </section>
                 </article>
             </section>
             </div>
