@@ -399,6 +399,59 @@
                         <p id="result-explanation" class="result-explanation mb-0"></p>
                         <p id="result-runner-up" class="result-runner-up mb-0 mt-3"></p>
                     </div>
+
+                    <!-- Las seis filas existen desde el principio; JavaScript cambia el ancho de cada barra y su porcentaje. -->
+                    <section class="mt-4" aria-labelledby="score-title">
+                        <h2 id="score-title" class="result-section-title">Comparación de los seis modelos</h2>
+                        <p class="result-section-description">
+                            El índice de afinidad indica cuánto coincide cada modelo con las
+                            condiciones que seleccionaste. Los porcentajes no tienen que sumar 100 %.
+                        </p>
+                        <div id="score-board" class="score-board">
+                            <div id="score-row-scrum" class="score-row">
+                                <span class="score-label">Scrum</span>
+                                <div id="score-track-scrum" class="progress score-track" role="progressbar" aria-label="Afinidad con Scrum" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div id="score-bar-scrum" class="progress-bar score-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="score-value-scrum" class="score-value">0%</span>
+                            </div>
+                            <div id="score-row-kanban" class="score-row">
+                                <span class="score-label">Kanban</span>
+                                <div id="score-track-kanban" class="progress score-track" role="progressbar" aria-label="Afinidad con Kanban" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div id="score-bar-kanban" class="progress-bar score-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="score-value-kanban" class="score-value">0%</span>
+                            </div>
+                            <div id="score-row-cascada" class="score-row">
+                                <span class="score-label">Cascada</span>
+                                <div id="score-track-cascada" class="progress score-track" role="progressbar" aria-label="Afinidad con Cascada" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div id="score-bar-cascada" class="progress-bar score-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="score-value-cascada" class="score-value">0%</span>
+                            </div>
+                            <div id="score-row-xp" class="score-row">
+                                <span class="score-label">XP</span>
+                                <div id="score-track-xp" class="progress score-track" role="progressbar" aria-label="Afinidad con XP" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div id="score-bar-xp" class="progress-bar score-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="score-value-xp" class="score-value">0%</span>
+                            </div>
+                            <div id="score-row-modelo-v" class="score-row">
+                                <span class="score-label">Modelo en V</span>
+                                <div id="score-track-modelo-v" class="progress score-track" role="progressbar" aria-label="Afinidad con Modelo en V" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div id="score-bar-modelo-v" class="progress-bar score-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="score-value-modelo-v" class="score-value">0%</span>
+                            </div>
+                            <div id="score-row-incremental" class="score-row">
+                                <span class="score-label">Incremental</span>
+                                <div id="score-track-incremental" class="progress score-track" role="progressbar" aria-label="Afinidad con Incremental" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div id="score-bar-incremental" class="progress-bar score-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="score-value-incremental" class="score-value">0%</span>
+                            </div>
+                        </div>
+                    </section>
                 </article>
             </section>
             </div>
