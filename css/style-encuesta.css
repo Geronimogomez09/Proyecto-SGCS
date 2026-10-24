@@ -26,7 +26,7 @@
     padding: clamp(2rem, 5vw, 4rem) 0; /* El espacio vertical se adapta al ancho de la pantalla. */
     overflow: hidden; /* Evita que los fondos decorativos o animaciones sobresalgan del área de la encuesta. */
     background:
-        radial-gradient(circle at 5% 10%, rgba(184, 217, 245, .4), transparent 28%),
+        radial-gradient(circle at 10% 15%, rgb(170, 208, 241), transparent 88%),
         var(--encuesta-cream); /* Combina un brillo azul suave con el fondo crema principal. */
     color: var(--encuesta-text);
     font-family: "Quicksand", sans-serif;
