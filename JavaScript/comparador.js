@@ -1,3 +1,7 @@
+// Lista de metodologías permitidas para validar las opciones recuperadas del navegador.
+const allowedMethods = ["Scrum", "Kanban", "Cascada", "XP", "Modelo en V", "Incremental"];
+// Clave utilizada para guardar y recuperar la selección en localStorage.
+const storageKey = "sgcs-comparador-metodologias";
 
 // Datos que se muestran en la tabla para cada metodología y característica.
 const methodologyData = {
@@ -64,12 +68,22 @@ const checks = [...document.querySelectorAll(".method-check")];
 const section = document.getElementById("comparison-section");
 const legend = document.getElementById("selected-legend");
 const count = document.getElementById("selection-count");
+const status = document.getElementById("status-message");
 const compareButton = document.getElementById("compare-button");
 const clearButton = document.getElementById("clear-button");
 
 // Devuelve los valores de los checkbox que están marcados.
 function selectedMethods() {
     return checks.filter((check) => check.checked).map((check) => check.value);
+}
+
+// Muestra un mensaje de estado y aplica una clase según sea informativo, éxito o error.
+function setStatus(message, type = "neutral") {
+    // Inserta el mensaje como texto plano para no interpretar contenido HTML.
+    status.textContent = message;
+    status.classList.remove("is-success", "is-error");
+    if (type === "success") status.classList.add("is-success");
+    if (type === "error") status.classList.add("is-error");
 }
 
 // Actualiza el contador y las etiquetas que resumen las metodologías seleccionadas.
@@ -216,3 +230,5 @@ checks.forEach((check) => {
 // Conecta los botones con las funciones de guardar y limpiar.
 compareButton.addEventListener("click", persistSelection);
 clearButton.addEventListener("click", clearSelection);
+// Al iniciar la página, intenta recuperar la última selección guardada.
+loadSavedSelection();
