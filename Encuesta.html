@@ -88,6 +88,102 @@
                         </p>
                     </div>
                 </section>
+                <!-- PANTALLA 2: asistente con cinco fases. Cada fase tiene data-phase para identificar su posición desde JavaScript. -->
+            <section id="wizard-view" class="encuesta-view" aria-label="Diagnóstico del proyecto">
+                <div class="encuesta-card">
+
+                    <!-- Encabezado fijo del asistente con el número de fase y el progreso general. -->
+                    <header class="encuesta-card-header">
+                        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3">
+                            <div>
+                                <span class="encuesta-kicker">ANÁLISIS DEL PROYECTO</span>
+                                <h2 class="encuesta-header-title">Conozcamos tus necesidades</h2>
+                            </div>
+
+                            <div class="encuesta-step-counter">
+                                <!-- JavaScript cambia este texto cuando se avanza o retrocede de fase. aria-live avisa el cambio a tecnologías de asistencia. -->
+                                <span id="step-count" aria-live="polite">Fase 1 de 5</span>
+                                <small>Completá las preguntas de cada fase</small>
+                            </div>
+                        </div>
+
+                        <!-- Barra de progreso: progress-fill cambia de ancho desde JavaScript. Los atributos ARIA informan el porcentaje accesible. -->
+                        <div id="progress-track"
+                            class="progress encuesta-progress mt-3"
+                            role="progressbar" aria-label="Progreso del diagnóstico"
+                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div id="progress-fill" class="progress-bar"></div>
+                        </div>
+                    </header>
+
+                    <div class="encuesta-question-wrap">
+
+                        <!-- FASE 1: estas secciones comparten la clase preguntas-tema; la clase active indica cuál se muestra. -->
+                        <section id="fase-1" class="preguntas-tema active" data-phase="0" aria-labelledby="fase-1-title">
+                            <div class="fase-heading">
+                                <span class="question-chip">Fase 1 de 5 · Planificación</span>
+                                <h3 id="fase-1-title">Definición y evolución del producto</h3>
+                                <p>Analizá qué se quiere construir, cuánta incertidumbre existe sobre los requisitos y qué restricciones hay.</p>
+                            </div>
+
+                            <!-- Cada article representa una pregunta. data-question es la clave que debe coincidir con answers, weights y scores del JS. -->
+                            <div class="container-preguntas container-preguntas-1">
+                                <article class="pregunta-card" data-question="clarity">
+                                    <span class="pregunta-numero">Pregunta 1</span>
+                                    <h4>¿Qué tan definidos están los requisitos?</h4>
+                                    <p class="pregunta-descripcion">Considerá cuánto se conoce sobre las funcionalidades y las decisiones pendientes.</p>
+                                    <!-- El grupo indica que las opciones responden una misma pregunta; data-value es el valor que se guarda. -->
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Claridad de los requisitos">
+                                        <button class="btn answer-option" type="button" data-question="clarity" data-value="low" role="radio" aria-checked="false">La idea está en exploración; necesitamos descubrir qué construir.</button>
+                                        <button class="btn answer-option" type="button" data-question="clarity" data-value="medium" role="radio" aria-checked="false">Tenemos una base, pero revisaremos algunos requisitos.</button>
+                                        <button class="btn answer-option" type="button" data-question="clarity" data-value="high" role="radio" aria-checked="false">Los requisitos están definidos, validados y acordados.</button>
+                                        <button class="btn answer-option" type="button" data-question="clarity" data-value="unclear" role="radio" aria-checked="false">Falta información para definir el alcance con seguridad.</button>
+                                    </div>
+                                </article>
+
+                                <article class="pregunta-card" data-question="stability">
+                                    <span class="pregunta-numero">Pregunta 2</span>
+                                    <h4>¿Con qué frecuencia cambiarán los requisitos?</h4>
+                                    <p class="pregunta-descripcion">Pensá en cambios de alcance, prioridades y necesidades de los usuarios.</p>
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Estabilidad de los requisitos">
+                                        <button class="btn answer-option" type="button" data-question="stability" data-value="changing" role="radio" aria-checked="false">Cambiarán con frecuencia.</button>
+                                        <button class="btn answer-option" type="button" data-question="stability" data-value="mixed" role="radio" aria-checked="false">Habrá cambios puntuales, pero el objetivo se mantiene.</button>
+                                        <button class="btn answer-option" type="button" data-question="stability" data-value="stable" role="radio" aria-checked="false">Se espera que permanezcan estables.</button>
+                                        <button class="btn answer-option" type="button" data-question="stability" data-value="volatile" role="radio" aria-checked="false">Las prioridades serán impredecibles.</button>
+                                    </div>
+                                </article>
+
+                                <article class="pregunta-card" data-question="productGoal">
+                                    <span class="pregunta-numero">Pregunta 3</span>
+                                    <h4>¿Qué tipo de producto o trabajo van a desarrollar?</h4>
+                                    <p class="pregunta-descripcion">Elegí la descripción más cercana al objetivo principal del proyecto.</p>
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Tipo de producto">
+                                        <button class="btn answer-option" type="button" data-question="productGoal" data-value="discovery" role="radio" aria-checked="false">Un producto nuevo que requiere descubrir y validar funcionalidades.</button>
+                                        <button class="btn answer-option" type="button" data-question="productGoal" data-value="flow" role="radio" aria-checked="false">Un servicio que recibe solicitudes de forma continua.</button>
+                                        <button class="btn answer-option" type="button" data-question="productGoal" data-value="fixed" role="radio" aria-checked="false">Un sistema con requisitos formales y alcance definido.</button>
+                                        <button class="btn answer-option" type="button" data-question="productGoal" data-value="modules" role="radio" aria-checked="false">Un producto que puede dividirse en módulos funcionales.</button>
+                                    </div>
+                                </article>
+
+                                <article class="pregunta-card" data-question="constraints">
+                                    <span class="pregunta-numero">Pregunta 4</span>
+                                    <h4>¿Qué restricción es menos flexible?</h4>
+                                    <p class="pregunta-descripcion">Elegí qué debe respetarse con mayor firmeza al tomar decisiones.</p>
+                                    <div class="pregunta-opciones" role="radiogroup" aria-label="Restricciones del proyecto">
+                                        <button class="btn answer-option" type="button" data-question="constraints" data-value="fixedDeadline" role="radio" aria-checked="false">La fecha de entrega; podemos ajustar las funcionalidades.</button>
+                                        <button class="btn answer-option" type="button" data-question="constraints" data-value="fixedScope" role="radio" aria-checked="false">El alcance; el calendario puede adaptarse.</button>
+                                        <button class="btn answer-option" type="button" data-question="constraints" data-value="variablePriority" role="radio" aria-checked="false">Las prioridades cambian según la demanda.</button>
+                                        <button class="btn answer-option" type="button" data-question="constraints" data-value="strictBaseline" role="radio" aria-checked="false">Hay compromisos formales de alcance, presupuesto y aprobación.</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- JavaScript escribe aquí el mensaje si se intenta avanzar con preguntas sin responder. role=alert anuncia el error. -->
+                        <p id="validation-message" class="encuesta-validation mb-0" role="alert" aria-live="assertive"></p>
+                    </div>
+                </div>
+            </section>
             </div>
         </main>
     </body>
