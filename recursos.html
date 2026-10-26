@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <!-- Glosario con búsqueda sobre términos y definiciones, más índice alfabético. -->
+        <!-- US-12: Glosario con búsqueda sobre términos y definiciones, más índice alfabético. -->
         <section id="panel-glosario" class="recursos-panel active" role="tabpanel" aria-labelledby="tab-glosario" data-panel="glosario">
             <div class="panel-band">
                 <div class="container recursos-container text-center">
@@ -254,6 +254,115 @@
                 </section>
             </div>
         </section>
+
+        <!-- : preguntas frecuentes, agrupadas por tema y con un solo acordeón abierto. -->
+        <section id="panel-faq" class="recursos-panel" role="tabpanel" aria-labelledby="tab-faq" data-panel="faq" hidden>
+            <div class="panel-band">
+                <div class="container recursos-container text-center">
+                    <span class="panel-kicker"> RESPUESTAS Y ORIENTACIÓN</span>
+                    <h2>Preguntas frecuentes</h2>
+                    <p class="panel-subtitle">Resolvé tus dudas</p>
+                    <p class="panel-intro">Encontrá explicaciones sobre calidad, aseguramiento, pruebas y buenas prácticas de desarrollo.</p>
+                </div>
+            </div>
+
+            <div class="container recursos-container panel-content faq-content">
+                <p class="faq-help"><i class="bi bi-info-circle" aria-hidden="true"></i> Abrí un tema y seleccioná una pregunta. Se mantiene abierto un solo tema y una sola respuesta a la vez.</p>
+
+                <div class="faq-topics">
+                    <!-- Tema 1: calidad de software. -->
+                    <section class="faq-topic">
+                        <button class="faq-topic-toggle" type="button" aria-expanded="false" aria-controls="faq-tema-calidad">
+                            <span class="faq-topic-icon"><i class="bi bi-award" aria-hidden="true"></i></span>
+                            <span class="faq-topic-text"><strong>Calidad de software</strong><small>Características, métricas y estándares de calidad.</small></span>
+                            <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq-tema-calidad" class="faq-topic-panel" aria-hidden="true">
+                            <div class="faq-topic-inner">
+                                <article class="faq-item">
+                                    <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a1">¿Qué características debe tener un software de calidad?</button></h3>
+                                    <div id="faq-a1" class="faq-answer" aria-hidden="true"><div><p>Debe cumplir sus requisitos y satisfacer las necesidades de sus usuarios. Según el contexto, se evalúan características como adecuación funcional, rendimiento, compatibilidad, facilidad de uso, fiabilidad, seguridad, mantenibilidad y flexibilidad para adaptarse.</p></div></div>
+                                </article>
+                                <article class="faq-item">
+                                    <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a2">¿Cómo se mide la calidad de un software?</button></h3>
+                                    <div id="faq-a2" class="faq-answer" aria-hidden="true"><div><p>Se define qué atributos importan y se seleccionan medidas verificables. Por ejemplo: porcentaje de pruebas superadas, defectos detectados, tiempos de respuesta, disponibilidad, incidencias en producción y resultados de pruebas de usabilidad. Una métrica aislada no representa toda la calidad.</p></div></div>
+                                </article>
+                                <article class="faq-item">
+                                    <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a3">¿Qué diferencia hay entre calidad del producto y calidad del proceso?</button></h3>
+                                    <div id="faq-a3" class="faq-answer" aria-hidden="true"><div><p>La calidad del producto se refiere a las propiedades del software entregado y a cómo cumple las necesidades. La calidad del proceso se refiere a las actividades y prácticas usadas para construirlo, revisarlo, probarlo y mantenerlo. Un proceso sólido ayuda, pero no garantiza por sí solo un buen producto.</p></div></div>
+                                </article>
+                                <article class="faq-item">
+                                    <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a4">¿Para qué sirve ISO/IEC 25010?</button></h3>
+                                    <div id="faq-a4" class="faq-answer" aria-hidden="true"><div><p>Proporciona un modelo de calidad de producto que permite describir, especificar y evaluar propiedades del software y de sistemas TIC. Ayuda a elegir características y subcaracterísticas pertinentes para los objetivos del proyecto.</p><a href="https://www.iso.org/standard/78176.html" target="_blank" rel="noopener noreferrer">Consultar ISO/IEC 25010 en ISO <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div></div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tema 2: aseguramiento, control y pruebas. -->
+                    <section class="faq-topic">
+                        <button class="faq-topic-toggle" type="button" aria-expanded="false" aria-controls="faq-tema-pruebas">
+                            <span class="faq-topic-icon"><i class="bi bi-clipboard2-check" aria-hidden="true"></i></span>
+                            <span class="faq-topic-text"><strong>Aseguramiento y pruebas</strong><small>QA, testing, revisiones y automatización.</small></span>
+                            <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq-tema-pruebas" class="faq-topic-panel" aria-hidden="true"><div class="faq-topic-inner">
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a5">¿Qué diferencia hay entre aseguramiento y control de calidad?</button></h3><div id="faq-a5" class="faq-answer" aria-hidden="true"><div><p>El aseguramiento de calidad (QA) se centra en los procesos y en prevenir defectos; el control de calidad evalúa los productos o entregables para identificar problemas. Las pruebas son una de las actividades que pueden formar parte del control de calidad.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a6">¿Por qué es importante la revisión de código?</button></h3><div id="faq-a6" class="faq-answer" aria-hidden="true"><div><p>Ayuda a detectar defectos antes de integrar cambios, mejora la legibilidad, facilita compartir conocimiento y permite revisar seguridad y mantenibilidad. No reemplaza las pruebas: ambas prácticas se complementan.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a7">¿Qué tipos de pruebas se utilizan con más frecuencia?</button></h3><div id="faq-a7" class="faq-answer" aria-hidden="true"><div><p>Entre otras, pruebas unitarias, de integración, de sistema y de aceptación. También pueden ser necesarias pruebas no funcionales, como rendimiento, seguridad, accesibilidad y usabilidad. La selección depende de los riesgos y requisitos del producto.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a8">¿Cuándo conviene automatizar las pruebas?</button></h3><div id="faq-a8" class="faq-answer" aria-hidden="true"><div><p>Conviene considerar la automatización cuando una prueba se repite, tiene resultados comprobables y aporta valor en cada cambio, como las pruebas de regresión. Las comprobaciones exploratorias o muy subjetivas pueden requerir intervención humana.</p></div></div></article>
+                        </div></div>
+                    </section>
+
+                    <!-- Tema 3: metodología y ciclo de vida. -->
+                    <section class="faq-topic">
+                        <button class="faq-topic-toggle" type="button" aria-expanded="false" aria-controls="faq-tema-modelos">
+                            <span class="faq-topic-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
+                            <span class="faq-topic-text"><strong>Desarrollo y metodologías</strong><small>Modelos, planificación y adaptación al cambio.</small></span>
+                            <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq-tema-modelos" class="faq-topic-panel" aria-hidden="true"><div class="faq-topic-inner">
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a9">¿Cómo elijo un modelo de desarrollo para mi proyecto?</button></h3><div id="faq-a9" class="faq-answer" aria-hidden="true"><div><p>Evaluá la estabilidad de requisitos, el riesgo, el tamaño y la experiencia del equipo, la disponibilidad de usuarios, la necesidad de entregas, la trazabilidad y las obligaciones de calidad. No existe un modelo universalmente mejor: la elección depende de las restricciones del contexto.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a10">¿Qué diferencia hay entre Scrum y Kanban?</button></h3><div id="faq-a10" class="faq-answer" aria-hidden="true"><div><p>Scrum organiza el trabajo en sprints y define responsabilidades, eventos y artefactos. Kanban se centra en visualizar y gestionar el flujo continuo, limitar el trabajo en curso y mejorar el tiempo de entrega. Pueden compartir algunas prácticas, pero no son lo mismo.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a11">¿Cuándo puede convenir un modelo secuencial como Cascada?</button></h3><div id="faq-a11" class="faq-answer" aria-hidden="true"><div><p>Puede encajar cuando los requisitos son relativamente estables, las etapas y entregables pueden definirse con anticipación y existen aprobaciones formales. Si los cambios son frecuentes o la solución todavía es incierta, conviene revisar los riesgos de una secuencia rígida.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a12">¿Es posible combinar prácticas de diferentes modelos?</button></h3><div id="faq-a12" class="faq-answer" aria-hidden="true"><div><p>Sí. Un equipo puede adaptar prácticas para responder a sus necesidades, siempre que defina responsabilidades, criterios de aceptación y una forma clara de decidir. Mezclar prácticas sin propósito ni acuerdos puede crear confusión y trabajo innecesario.</p></div></div></article>
+                        </div></div>
+                    </section>
+
+                    <!-- Tema 4: arquitectura y mantenimiento. -->
+                    <section class="faq-topic">
+                        <button class="faq-topic-toggle" type="button" aria-expanded="false" aria-controls="faq-tema-mantenimiento">
+                            <span class="faq-topic-icon"><i class="bi bi-wrench-adjustable-circle" aria-hidden="true"></i></span>
+                            <span class="faq-topic-text"><strong>Arquitectura y mantenimiento</strong><small>Deuda técnica, documentación y evolución del software.</small></span>
+                            <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq-tema-mantenimiento" class="faq-topic-panel" aria-hidden="true"><div class="faq-topic-inner">
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a13">¿Qué significa que un software sea mantenible?</button></h3><div id="faq-a13" class="faq-answer" aria-hidden="true"><div><p>Significa que se puede comprender, corregir, adaptar y ampliar con un esfuerzo razonable. Un diseño claro, pruebas confiables, documentación útil y componentes bien separados ayudan a mantenerlo.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a14">¿Por qué es importante documentar un proyecto?</button></h3><div id="faq-a14" class="faq-answer" aria-hidden="true"><div><p>La documentación útil explica decisiones, requisitos, instalación, arquitectura, interfaces y procedimientos que no resultan evidentes al leer el código. Debe mantenerse actualizada y enfocarse en lo que realmente necesitan los usuarios y el equipo.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a15">¿Qué es la deuda técnica?</button></h3><div id="faq-a15" class="faq-answer" aria-hidden="true"><div><p>Es el costo futuro asociado a decisiones técnicas que facilitan avanzar ahora pero complican cambios posteriores. No toda deuda es necesariamente mala; conviene hacerla visible, comprender sus consecuencias y decidir cuándo reducirla.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a16">¿Para qué sirve el control de versiones?</button></h3><div id="faq-a16" class="faq-answer" aria-hidden="true"><div><p>Permite registrar cambios, comparar versiones, colaborar, revisar propuestas y recuperar estados anteriores. Herramientas como Git ayudan a mantener un historial y a organizar el trabajo entre ramas.</p><a href="https://docs.github.com/es/get-started" target="_blank" rel="noopener noreferrer">Ver la documentación de GitHub <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div></div></article>
+                        </div></div>
+                    </section>
+
+                    <!-- Tema 5: herramientas, métricas y seguridad. -->
+                    <section class="faq-topic">
+                        <button class="faq-topic-toggle" type="button" aria-expanded="false" aria-controls="faq-tema-herramientas">
+                            <span class="faq-topic-icon"><i class="bi bi-tools" aria-hidden="true"></i></span>
+                            <span class="faq-topic-text"><strong>Herramientas y buenas prácticas</strong><small>Integración continua, seguridad y métricas.</small></span>
+                            <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq-tema-herramientas" class="faq-topic-panel" aria-hidden="true"><div class="faq-topic-inner">
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a17">¿Qué es la integración continua?</button></h3><div id="faq-a17" class="faq-answer" aria-hidden="true"><div><p>Es la práctica de integrar cambios pequeños con frecuencia y ejecutar comprobaciones automatizadas para detectar problemas temprano. Funciona mejor con pruebas confiables, revisiones y un proceso de construcción reproducible.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a18">¿Qué métricas ayudan a seguir la calidad?</button></h3><div id="faq-a18" class="faq-answer" aria-hidden="true"><div><p>Depende del contexto: defectos por versión, pruebas superadas, tiempos de resolución, disponibilidad, tiempos de respuesta, incidencias posteriores a la entrega o resultados de usabilidad. Las métricas deben ayudar a decidir y no convertirse en objetivos aislados que se puedan manipular.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a19">¿Qué herramientas ayudan a revisar el código?</button></h3><div id="faq-a19" class="faq-answer" aria-hidden="true"><div><p>Se pueden combinar revisiones entre personas, analizadores estáticos, linters, pruebas automatizadas y escáneres de seguridad. Ninguna herramienta detecta todos los problemas; conviene elegirlas según el lenguaje, el riesgo y el flujo del equipo.</p></div></div></article>
+                            <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a20">¿Cuándo hay que considerar la seguridad del software?</button></h3><div id="faq-a20" class="faq-answer" aria-hidden="true"><div><p>Desde el análisis de requisitos y el diseño hasta el desarrollo, las pruebas, el despliegue y el mantenimiento. Identificar amenazas temprano y revisar dependencias, permisos, datos y configuración reduce el riesgo de descubrir vulnerabilidades cuando el sistema ya está en producción.</p><a href="https://owasp.org/projects/top-ten?lang=en" target="_blank" rel="noopener noreferrer">Consultar OWASP Top 10 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div></div></article>
+                        </div></div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 </body>
 </html>
