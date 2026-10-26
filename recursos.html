@@ -59,11 +59,11 @@
             </div>
         </section>
 
-        <!-- US-12: Glosario con búsqueda sobre términos y definiciones, más índice alfabético. -->
+        <!-- Glosario con búsqueda sobre términos y definiciones, más índice alfabético. -->
         <section id="panel-glosario" class="recursos-panel active" role="tabpanel" aria-labelledby="tab-glosario" data-panel="glosario">
             <div class="panel-band">
                 <div class="container recursos-container text-center">
-                    <span class="panel-kicker">US-12 · CONSULTA DE CONCEPTOS</span>
+                    <span class="panel-kicker">CONSULTA DE CONCEPTOS</span>
                     <h2>Glosario</h2>
                     <p class="panel-subtitle">Explorá el glosario</p>
                     <p class="panel-intro">Encontrá definiciones sencillas de los términos más utilizados en el desarrollo y la calidad del software.</p>
@@ -259,7 +259,7 @@
         <section id="panel-faq" class="recursos-panel" role="tabpanel" aria-labelledby="tab-faq" data-panel="faq" hidden>
             <div class="panel-band">
                 <div class="container recursos-container text-center">
-                    <span class="panel-kicker"> RESPUESTAS Y ORIENTACIÓN</span>
+                    <span class="panel-kicker">US-13 · RESPUESTAS Y ORIENTACIÓN</span>
                     <h2>Preguntas frecuentes</h2>
                     <p class="panel-subtitle">Resolvé tus dudas</p>
                     <p class="panel-intro">Encontrá explicaciones sobre calidad, aseguramiento, pruebas y buenas prácticas de desarrollo.</p>
@@ -359,6 +359,145 @@
                         </div></div>
                     </section>
                 </div>
+            </div>
+        </section>
+
+        <!-- : enlaces externos por categoría con apertura segura en una pestaña nueva. -->
+        <section id="panel-enlaces" class="recursos-panel" role="tabpanel" aria-labelledby="tab-enlaces" data-panel="enlaces" hidden>
+            <div class="panel-band">
+                <div class="container recursos-container text-center">
+                    <span class="panel-kicker">FUENTES Y BIBLIOGRAFÍA</span>
+                    <h2>Enlaces de interés</h2>
+                    <p class="panel-subtitle">Aprendé con fuentes confiables</p>
+                    <p class="panel-intro">Explorá documentación, libros digitales y organizaciones relacionadas con la ingeniería y la calidad del software.</p>
+                </div>
+            </div>
+
+            <div class="container recursos-container panel-content">
+                <div class="recursos-categories" role="group" aria-label="Filtrar recursos por categoría">
+                    <button class="categoria-btn active" type="button" data-category-filter="todas" aria-pressed="true">Todas</button>
+                    <button class="categoria-btn" type="button" data-category-filter="pagina" aria-pressed="false"><i class="bi bi-globe2" aria-hidden="true"></i> Páginas</button>
+                    <button class="categoria-btn" type="button" data-category-filter="libro" aria-pressed="false"><i class="bi bi-journal-bookmark" aria-hidden="true"></i> Libros / PDF</button>
+                    <button class="categoria-btn" type="button" data-category-filter="organizacion" aria-pressed="false"><i class="bi bi-building" aria-hidden="true"></i> Organizaciones</button>
+                </div>
+                <p id="contador-recursos" class="glosario-count" aria-live="polite">Se muestran todos los recursos.</p>
+
+                <div id="recursos-listado" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                    <!-- Páginas web. -->
+                    <div class="col recurso-item" data-category="pagina">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-globe2" aria-hidden="true"></i> Página web</span>
+                            <div class="recurso-card-icon"><i class="bi bi-kanban" aria-hidden="true"></i></div>
+                            <h3>Atlassian · Desarrollo ágil</h3>
+                            <p>Introducción a los principios ágiles y prácticas para planificar, construir, revisar y entregar software.</p>
+                            <a class="btn recurso-link" href="https://www.atlassian.com/agile/software-development" target="_blank" rel="noopener noreferrer">Visitar recurso <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="pagina">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-globe2" aria-hidden="true"></i> Página web</span>
+                            <div class="recurso-card-icon"><i class="bi bi-github" aria-hidden="true"></i></div>
+                            <h3>GitHub Docs</h3>
+                            <p>Documentación para trabajar con repositorios, Git, ramas, revisiones de cambios y colaboración.</p>
+                            <a class="btn recurso-link" href="https://docs.github.com/es/get-started" target="_blank" rel="noopener noreferrer">Visitar recurso <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="pagina">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-globe2" aria-hidden="true"></i> Página web</span>
+                            <div class="recurso-card-icon"><i class="bi bi-bug" aria-hidden="true"></i></div>
+                            <h3>Google Testing Blog</h3>
+                            <p>Artículos sobre pruebas, automatización, diseño de pruebas y prácticas de ingeniería.</p>
+                            <a class="btn recurso-link" href="https://testing.googleblog.com/" target="_blank" rel="noopener noreferrer">Visitar recurso <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="pagina">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-globe2" aria-hidden="true"></i> Página web</span>
+                            <div class="recurso-card-icon"><i class="bi bi-journal-code" aria-hidden="true"></i></div>
+                            <h3>Martin Fowler</h3>
+                            <p>Artículos y explicaciones sobre refactorización, arquitectura, patrones y prácticas de desarrollo.</p>
+                            <a class="btn recurso-link" href="https://martinfowler.com/" target="_blank" rel="noopener noreferrer">Visitar recurso <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+
+                    <!-- Libros digitales, guías y documentos. -->
+                    <div class="col recurso-item" data-category="libro">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-journal-bookmark" aria-hidden="true"></i> Libro digital</span>
+                            <div class="recurso-card-icon"><i class="bi bi-book-half" aria-hidden="true"></i></div>
+                            <h3>Software Engineering at Google</h3>
+                            <p>Libro digital gratuito en inglés sobre cultura, procesos y herramientas para mantener software sostenible.</p>
+                            <a class="btn recurso-link" href="https://abseil.io/resources/swe-book/html/toc" target="_blank" rel="noopener noreferrer">Leer libro <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="libro">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Guía / PDF</span>
+                            <div class="recurso-card-icon"><i class="bi bi-journal-text" aria-hidden="true"></i></div>
+                            <h3>ISTQB · Syllabus Foundation</h3>
+                            <p>Temario oficial de nivel Foundation para estudiar conceptos, técnicas y fundamentos de pruebas de software.</p>
+                            <a class="btn recurso-link" href="https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/" target="_blank" rel="noopener noreferrer">Consultar materiales <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="libro">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Guía / PDF</span>
+                            <div class="recurso-card-icon"><i class="bi bi-journal-richtext" aria-hidden="true"></i></div>
+                            <h3>SWEBOK Guide</h3>
+                            <p>Guía de conocimiento de ingeniería de software publicada por IEEE Computer Society, con áreas y referencias de la disciplina.</p>
+                            <a class="btn recurso-link" href="https://www.computer.org/education/bodies-of-knowledge/software-engineering" target="_blank" rel="noopener noreferrer">Ver la guía <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="libro">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-journal-bookmark" aria-hidden="true"></i> Guía de referencia</span>
+                            <div class="recurso-card-icon"><i class="bi bi-list-check" aria-hidden="true"></i></div>
+                            <h3>La Guía Scrum</h3>
+                            <p>Guía de referencia para comprender los fundamentos, responsabilidades, eventos y artefactos de Scrum.</p>
+                            <a class="btn recurso-link" href="https://www.scrum.org/resources/scrum-guide" target="_blank" rel="noopener noreferrer">Consultar guía <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+
+                    <!-- Organizaciones y estándares. -->
+                    <div class="col recurso-item" data-category="organizacion">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-building" aria-hidden="true"></i> Organización / estándar</span>
+                            <div class="recurso-card-icon"><i class="bi bi-patch-check" aria-hidden="true"></i></div>
+                            <h3>ISO · Calidad de producto</h3>
+                            <p>Ficha oficial de ISO/IEC 25010:2023 y su modelo de calidad para productos de software y sistemas TIC.</p>
+                            <a class="btn recurso-link" href="https://www.iso.org/standard/78176.html" target="_blank" rel="noopener noreferrer">Consultar estándar <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="organizacion">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-building" aria-hidden="true"></i> Organización</span>
+                            <div class="recurso-card-icon"><i class="bi bi-patch-check-fill" aria-hidden="true"></i></div>
+                            <h3>ISTQB</h3>
+                            <p>Organización internacional que publica el esquema de certificación y los contenidos de referencia para testers.</p>
+                            <a class="btn recurso-link" href="https://istqb.org/help/certifications-2/" target="_blank" rel="noopener noreferrer">Conocer ISTQB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="organizacion">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-building" aria-hidden="true"></i> Organización</span>
+                            <div class="recurso-card-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+                            <h3>OWASP</h3>
+                            <p>Fundación y comunidad que publica recursos abiertos para mejorar la seguridad de las aplicaciones.</p>
+                            <a class="btn recurso-link" href="https://owasp.org/projects/top-ten?lang=en" target="_blank" rel="noopener noreferrer">Explorar OWASP Top 10 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                    <div class="col recurso-item" data-category="organizacion">
+                        <article class="recurso-card h-100">
+                            <span class="recurso-tipo"><i class="bi bi-building" aria-hidden="true"></i> Organización</span>
+                            <div class="recurso-card-icon"><i class="bi bi-people" aria-hidden="true"></i></div>
+                            <h3>Agile Alliance</h3>
+                            <p>Comunidad dedicada a compartir conocimiento, prácticas y experiencias de desarrollo ágil.</p>
+                            <a class="btn recurso-link" href="https://www.agilealliance.org/agile101/" target="_blank" rel="noopener noreferrer">Conocer Agile Alliance <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
+                </div>
+                <p id="sin-recursos" class="sin-resultados" role="status" hidden>No hay recursos en esta categoría.</p>
             </div>
         </section>
 
