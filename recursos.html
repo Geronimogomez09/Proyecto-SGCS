@@ -18,7 +18,7 @@
     <!-- Scripts compartidos y específicos de esta página. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="main.js" defer></script>
-    <script src="javascript/.js" defer></script>
+    <script src="javascript/recursos.js" defer></script>
 </head>
 <body>
     <!-- El menú compartido se inserta desde main.js. -->
@@ -56,6 +56,202 @@
                         <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
                     </button>
                 </nav>
+            </div>
+        </section>
+
+        <!-- Glosario con búsqueda sobre términos y definiciones, más índice alfabético. -->
+        <section id="panel-glosario" class="recursos-panel active" role="tabpanel" aria-labelledby="tab-glosario" data-panel="glosario">
+            <div class="panel-band">
+                <div class="container recursos-container text-center">
+                    <span class="panel-kicker">US-12 · CONSULTA DE CONCEPTOS</span>
+                    <h2>Glosario</h2>
+                    <p class="panel-subtitle">Explorá el glosario</p>
+                    <p class="panel-intro">Encontrá definiciones sencillas de los términos más utilizados en el desarrollo y la calidad del software.</p>
+                </div>
+            </div>
+
+            <div class="container recursos-container panel-content">
+                <div class="glosario-tools">
+                    <div class="glosario-search">
+                        <label for="buscar-glosario" class="form-label">Buscar un término o una definición</label>
+                        <div class="input-group">
+                            <span class="input-group-text" aria-hidden="true"><i class="bi bi-search"></i></span>
+                            <input class="form-control" type="search" id="buscar-glosario" placeholder="Ejemplo: testing, calidad, requisitos..." autocomplete="off" aria-describedby="glosario-ayuda">
+                            <button id="limpiar-glosario" class="btn btn-outline-primary" type="button">Limpiar</button>
+                        </div>
+                        <p id="glosario-ayuda" class="glosario-help">La búsqueda no distingue mayúsculas, minúsculas ni tildes, y también revisa las definiciones.</p>
+                    </div>
+
+                    <nav class="glosario-index" aria-label="Índice alfabético">
+                        <div class="index-heading"><h3>Índice alfabético</h3><span>Elegí una letra para filtrar</span></div>
+                        <div id="letras-glosario" class="letras-grid">
+                            <button class="letra active" type="button" data-letter="" aria-pressed="true" aria-label="Mostrar todas las letras">Todas</button>
+                            <button class="letra" type="button" data-letter="A" aria-pressed="false">A</button>
+                            <button class="letra" type="button" data-letter="B" aria-pressed="false">B</button>
+                            <button class="letra" type="button" data-letter="C" aria-pressed="false">C</button>
+                            <button class="letra" type="button" data-letter="D" aria-pressed="false">D</button>
+                            <button class="letra" type="button" data-letter="E" aria-pressed="false">E</button>
+                            <button class="letra" type="button" data-letter="F" aria-pressed="false">F</button>
+                            <button class="letra" type="button" data-letter="G" aria-pressed="false">G</button>
+                            <button class="letra" type="button" data-letter="H" aria-pressed="false">H</button>
+                            <button class="letra" type="button" data-letter="I" aria-pressed="false">I</button>
+                            <button class="letra" type="button" data-letter="J" aria-pressed="false">J</button>
+                            <button class="letra" type="button" data-letter="K" aria-pressed="false">K</button>
+                            <button class="letra" type="button" data-letter="L" aria-pressed="false">L</button>
+                            <button class="letra" type="button" data-letter="M" aria-pressed="false">M</button>
+                            <button class="letra" type="button" data-letter="N" aria-pressed="false">N</button>
+                            <button class="letra" type="button" data-letter="O" aria-pressed="false">O</button>
+                            <button class="letra" type="button" data-letter="P" aria-pressed="false">P</button>
+                            <button class="letra" type="button" data-letter="Q" aria-pressed="false">Q</button>
+                            <button class="letra" type="button" data-letter="R" aria-pressed="false">R</button>
+                            <button class="letra" type="button" data-letter="S" aria-pressed="false">S</button>
+                            <button class="letra" type="button" data-letter="T" aria-pressed="false">T</button>
+                            <button class="letra" type="button" data-letter="U" aria-pressed="false">U</button>
+                            <button class="letra" type="button" data-letter="V" aria-pressed="false">V</button>
+                            <button class="letra" type="button" data-letter="W" aria-pressed="false">W</button>
+                            <button class="letra" type="button" data-letter="X" aria-pressed="false">X</button>
+                            <button class="letra" type="button" data-letter="Y" aria-pressed="false">Y</button>
+                            <button class="letra" type="button" data-letter="Z" aria-pressed="false">Z</button>
+                        </div>
+                    </nav>
+                </div>
+
+                <p id="contador-glosario" class="glosario-count" aria-live="polite">Se muestran todos los términos.</p>
+
+                <!-- Los términos se encuentran en el HTML; JavaScript solo filtra su visibilidad. -->
+                <div id="glosario-listado" class="glosario-listado">
+                    <section class="grupo-letra" id="grupo-A" data-letter-group="A" aria-labelledby="letra-A">
+                        <h3 id="letra-A">A</h3>
+                        <article class="termino"><h4>Agilidad</h4><p>Capacidad de adaptarse a cambios durante el desarrollo de software.</p></article>
+                        <article class="termino"><h4>Algoritmo</h4><p>Conjunto ordenado de pasos que permiten resolver un problema o realizar una tarea.</p></article>
+                        <article class="termino"><h4>Análisis de requisitos</h4><p>Proceso de identificar y comprender qué necesita el usuario del sistema.</p></article>
+                        <article class="termino"><h4>Automatización de pruebas</h4><p>Uso de herramientas y scripts para ejecutar pruebas de software automáticamente.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-B" data-letter-group="B" aria-labelledby="letra-B">
+                        <h3 id="letra-B">B</h3>
+                        <article class="termino"><h4>Backlog</h4><p>Lista priorizada de funcionalidades, tareas o mejoras que el equipo puede desarrollar.</p></article>
+                        <article class="termino"><h4>Bug</h4><p>Error que provoca que un programa funcione de manera incorrecta.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-C" data-letter-group="C" aria-labelledby="letra-C">
+                        <h3 id="letra-C">C</h3>
+                        <article class="termino"><h4>Calidad de software</h4><p>Grado en que un programa cumple los requisitos y satisface las necesidades de los usuarios.</p></article>
+                        <article class="termino"><h4>Caso de prueba</h4><p>Conjunto de condiciones, datos y pasos utilizados para comprobar una funcionalidad.</p></article>
+                        <article class="termino"><h4>Ciclo de vida del software</h4><p>Conjunto de etapas por las que pasa un producto desde la concepción hasta su mantenimiento.</p></article>
+                        <article class="termino"><h4>Código fuente</h4><p>Instrucciones escritas por desarrolladores mediante un lenguaje de programación.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-D" data-letter-group="D" aria-labelledby="letra-D">
+                        <h3 id="letra-D">D</h3>
+                        <article class="termino"><h4>Depuración</h4><p>Proceso de encontrar, analizar y corregir errores en el código.</p></article>
+                        <article class="termino"><h4>Desarrollo de software</h4><p>Proceso de diseñar, construir, probar, entregar y mantener aplicaciones informáticas.</p></article>
+                        <article class="termino"><h4>Diseño de software</h4><p>Planificación de la estructura, los componentes y el comportamiento de un sistema.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-E" data-letter-group="E" aria-labelledby="letra-E">
+                        <h3 id="letra-E">E</h3>
+                        <article class="termino"><h4>Error</h4><p>Equivocación humana que puede introducir un defecto y provocar un funcionamiento incorrecto.</p></article>
+                        <article class="termino"><h4>Especificación</h4><p>Descripción de los requisitos, las restricciones y las características que debe cumplir un sistema.</p></article>
+                        <article class="termino"><h4>Estándar</h4><p>Documento de referencia con criterios, requisitos o recomendaciones acordados para un ámbito determinado.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-F" data-letter-group="F" aria-labelledby="letra-F">
+                        <h3 id="letra-F">F</h3>
+                        <article class="termino"><h4>Framework</h4><p>Estructura de herramientas, bibliotecas y convenciones que facilita la construcción de aplicaciones.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-G" data-letter-group="G" aria-labelledby="letra-G">
+                        <h3 id="letra-G">G</h3>
+                        <article class="termino"><h4>Gestión de calidad</h4><p>Actividades coordinadas para planificar, controlar, asegurar y mejorar la calidad del software.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-H" data-letter-group="H" aria-labelledby="letra-H">
+                        <h3 id="letra-H">H</h3>
+                        <article class="termino"><h4>Historia de usuario</h4><p>Descripción breve de una necesidad desde el punto de vista de quien utilizará el producto.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-I" data-letter-group="I" aria-labelledby="letra-I">
+                        <h3 id="letra-I">I</h3>
+                        <article class="termino"><h4>Incidencia</h4><p>Situación detectada que requiere análisis, seguimiento o una acción correctiva.</p></article>
+                        <article class="termino"><h4>Integración continua</h4><p>Práctica de incorporar cambios al código frecuentemente y comprobarlos mediante pruebas automatizadas.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-J" data-letter-group="J" aria-labelledby="letra-J">
+                        <h3 id="letra-J">J</h3>
+                        <article class="termino"><h4>JavaScript</h4><p>Lenguaje de programación utilizado para añadir comportamiento e interactividad a páginas web.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-K" data-letter-group="K" aria-labelledby="letra-K">
+                        <h3 id="letra-K">K</h3>
+                        <article class="termino"><h4>Kanban</h4><p>Método visual para organizar tareas, limitar el trabajo en curso y observar el flujo de un equipo.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-L" data-letter-group="L" aria-labelledby="letra-L">
+                        <h3 id="letra-L">L</h3>
+                        <article class="termino"><h4>Lean Software Development</h4><p>Enfoque que busca reducir actividades que no aportan valor y mejorar el flujo de entrega.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-M" data-letter-group="M" aria-labelledby="letra-M">
+                        <h3 id="letra-M">M</h3>
+                        <article class="termino"><h4>Mantenimiento</h4><p>Modificación del software para corregir defectos, mejorar su funcionamiento o adaptarlo a nuevas necesidades.</p></article>
+                        <article class="termino"><h4>Modelo XP</h4><p>Extreme Programming, enfoque ágil que promueve programación en parejas, pruebas frecuentes y mejora continua.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-N" data-letter-group="N" aria-labelledby="letra-N">
+                        <h3 id="letra-N">N</h3>
+                        <article class="termino"><h4>Normalización</h4><p>Proceso de organizar datos para reducir redundancias y mejorar su consistencia, especialmente en bases de datos.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-O" data-letter-group="O" aria-labelledby="letra-O">
+                        <h3 id="letra-O">O</h3>
+                        <article class="termino"><h4>Open Source</h4><p>Software cuyo código fuente está disponible para consultar y, según su licencia, modificar y distribuir.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-P" data-letter-group="P" aria-labelledby="letra-P">
+                        <h3 id="letra-P">P</h3>
+                        <article class="termino"><h4>Prueba de software</h4><p>Evaluación de un sistema para comprobar su comportamiento y detectar defectos.</p></article>
+                        <article class="termino"><h4>Prueba de regresión</h4><p>Prueba que verifica que los cambios recientes no hayan afectado funcionalidades existentes.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-Q" data-letter-group="Q" aria-labelledby="letra-Q">
+                        <h3 id="letra-Q">Q</h3>
+                        <article class="termino"><h4>QA (Quality Assurance)</h4><p>Aseguramiento de la calidad mediante procesos y actividades dirigidos a prevenir problemas y mejorar el trabajo.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-R" data-letter-group="R" aria-labelledby="letra-R">
+                        <h3 id="letra-R">R</h3>
+                        <article class="termino"><h4>Requisito</h4><p>Necesidad, capacidad o condición que un sistema debe cumplir.</p></article>
+                        <article class="termino"><h4>Revisión de código</h4><p>Examen del código por otra persona o mediante herramientas para detectar problemas y mejorar su claridad.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-S" data-letter-group="S" aria-labelledby="letra-S">
+                        <h3 id="letra-S">S</h3>
+                        <article class="termino"><h4>Scrum</h4><p>Marco de trabajo que organiza el desarrollo en ciclos llamados sprints y promueve la inspección y adaptación.</p></article>
+                        <article class="termino"><h4>Seguridad del software</h4><p>Capacidad de proteger la información y el funcionamiento del sistema frente a amenazas y usos indebidos.</p></article>
+                        <article class="termino"><h4>Software</h4><p>Programas, datos y elementos relacionados que permiten a un sistema informático realizar tareas.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-T" data-letter-group="T" aria-labelledby="letra-T">
+                        <h3 id="letra-T">T</h3>
+                        <article class="termino"><h4>Testing</h4><p>Actividad de probar un programa para comprobar su comportamiento y encontrar defectos.</p></article>
+                        <article class="termino"><h4>Trazabilidad</h4><p>Capacidad de relacionar requisitos con diseños, código, pruebas y resultados para seguir su cumplimiento.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-U" data-letter-group="U" aria-labelledby="letra-U">
+                        <h3 id="letra-U">U</h3>
+                        <article class="termino"><h4>Usabilidad</h4><p>Grado en que las personas pueden utilizar un sistema con eficacia, eficiencia y satisfacción.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-V" data-letter-group="V" aria-labelledby="letra-V">
+                        <h3 id="letra-V">V</h3>
+                        <article class="termino"><h4>Validación</h4><p>Comprobación de que el software satisface las necesidades y el uso esperado por las personas usuarias.</p></article>
+                        <article class="termino"><h4>Verificación</h4><p>Comprobación de que el producto cumple las especificaciones y requisitos establecidos.</p></article>
+                        <article class="termino"><h4>Versión</h4><p>Estado identificable de un software que corresponde a una entrega o conjunto de cambios.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-W" data-letter-group="W" aria-labelledby="letra-W">
+                        <h3 id="letra-W">W</h3>
+                        <article class="termino"><h4>Waterfall</h4><p>Modelo de desarrollo secuencial en el que las etapas se realizan principalmente una después de otra.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-X" data-letter-group="X" aria-labelledby="letra-X">
+                        <h3 id="letra-X">X</h3>
+                        <article class="termino"><h4>XP (Extreme Programming)</h4><p>Enfoque ágil que prioriza la calidad del código, la colaboración, las pruebas y las entregas frecuentes.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-Y" data-letter-group="Y" aria-labelledby="letra-Y">
+                        <h3 id="letra-Y">Y</h3>
+                        <article class="termino"><h4>YAGNI</h4><p>Principio que propone no implementar una funcionalidad hasta que realmente sea necesaria.</p></article>
+                    </section>
+                    <section class="grupo-letra" id="grupo-Z" data-letter-group="Z" aria-labelledby="letra-Z">
+                        <h3 id="letra-Z">Z</h3>
+                        <article class="termino"><h4>Zero-day</h4><p>Vulnerabilidad que se conoce cuando todavía no existe una corrección ampliamente disponible o que puede explotarse antes de que haya un parche.</p></article>
+                    </section>
+                </div>
+
+                <section id="sin-resultados-glosario" class="sin-resultados" role="status" aria-live="polite" hidden>
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <h3>Sin resultados</h3>
+                    <p>No encontramos términos que coincidan con tu búsqueda. Probá con otra palabra o limpiá los filtros.</p>
+                    <button id="restablecer-glosario" class="btn encuesta-btn-secondary" type="button">Mostrar todo el glosario</button>
+                </section>
             </div>
         </section>
     </main>
