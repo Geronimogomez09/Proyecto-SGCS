@@ -255,11 +255,11 @@
             </div>
         </section>
 
-        <!-- : preguntas frecuentes, agrupadas por tema y con un solo acordeón abierto. -->
+        <!--preguntas frecuentes, agrupadas por tema y con un solo acordeón abierto. -->
         <section id="panel-faq" class="recursos-panel" role="tabpanel" aria-labelledby="tab-faq" data-panel="faq" hidden>
             <div class="panel-band">
                 <div class="container recursos-container text-center">
-                    <span class="panel-kicker">US-13 · RESPUESTAS Y ORIENTACIÓN</span>
+                    <span class="panel-kicker">RESPUESTAS Y ORIENTACIÓN</span>
                     <h2>Preguntas frecuentes</h2>
                     <p class="panel-subtitle">Resolvé tus dudas</p>
                     <p class="panel-intro">Encontrá explicaciones sobre calidad, aseguramiento, pruebas y buenas prácticas de desarrollo.</p>
@@ -362,11 +362,11 @@
             </div>
         </section>
 
-        <!-- : enlaces externos por categoría con apertura segura en una pestaña nueva. -->
+        <!-- enlaces externos por categoría con apertura segura en una pestaña nueva. -->
         <section id="panel-enlaces" class="recursos-panel" role="tabpanel" aria-labelledby="tab-enlaces" data-panel="enlaces" hidden>
             <div class="panel-band">
                 <div class="container recursos-container text-center">
-                    <span class="panel-kicker">FUENTES Y BIBLIOGRAFÍA</span>
+                    <span class="panel-kicker"> FUENTES Y BIBLIOGRAFÍA</span>
                     <h2>Enlaces de interés</h2>
                     <p class="panel-subtitle">Aprendé con fuentes confiables</p>
                     <p class="panel-intro">Explorá documentación, libros digitales y organizaciones relacionadas con la ingeniería y la calidad del software.</p>
@@ -501,7 +501,72 @@
             </div>
         </section>
 
+        <!-- Material visual construido con HTML y CSS, sin imágenes externas obligatorias. -->
+        <section id="panel-visual" class="recursos-panel" role="tabpanel" aria-labelledby="tab-visual" data-panel="visual" hidden>
+            <div class="panel-band">
+                <div class="container recursos-container text-center">
+                    <span class="panel-kicker">REPASO VISUAL</span>
+                    <h2>Material visual</h2>
+                    <p class="panel-subtitle">Comprendé los conceptos de un vistazo</p>
+                    <p class="panel-intro">Esquemas simples para repasar el ciclo de desarrollo, los niveles de pruebas y las dimensiones de calidad.</p>
+                </div>
+            </div>
 
+            <div class="container recursos-container panel-content">
+                <div class="row row-cols-1 row-cols-lg-2 g-3">
+                    <div class="col">
+                        <article class="visual-card h-100">
+                            <span class="recurso-tipo">CICLO DE VIDA</span>
+                            <h3>Del requisito al mantenimiento</h3>
+                            <p>El ciclo puede repetirse o adaptarse según el modelo y las necesidades del proyecto.</p>
+                            <div class="ciclo-visual" aria-label="Análisis, diseño, desarrollo, pruebas, despliegue y mantenimiento">
+                                <span>Análisis</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Diseño</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Desarrollo</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Pruebas</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Despliegue</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Mantenimiento</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="visual-card h-100">
+                            <span class="recurso-tipo">NIVELES DE PRUEBA</span>
+                            <h3>Comprobaciones en diferentes escalas</h3>
+                            <p>Las pruebas se complementan para encontrar fallos desde componentes hasta el producto validado.</p>
+                            <div class="testing-visual" aria-label="Pruebas unitarias, de integración, de sistema y de aceptación">
+                                <div class="test-level test-level-1"><strong>Unitarias</strong><span>Un componente</span></div>
+                                <div class="test-level test-level-2"><strong>Integración</strong><span>Interacciones</span></div>
+                                <div class="test-level test-level-3"><strong>Sistema</strong><span>Producto completo</span></div>
+                                <div class="test-level test-level-4"><strong>Aceptación</strong><span>Necesidad del usuario</span></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="visual-card h-100">
+                            <span class="recurso-tipo">CALIDAD DEL SOFTWARE</span>
+                            <h3>Una visión con varias dimensiones</h3>
+                            <p>La calidad no depende de una sola medida. Los atributos importantes deben seleccionarse según el contexto.</p>
+                            <div class="quality-visual">
+                                <span><i class="bi bi-check2-circle" aria-hidden="true"></i> Funcionalidad</span>
+                                <span><i class="bi bi-speedometer2" aria-hidden="true"></i> Rendimiento</span>
+                                <span><i class="bi bi-shield-lock" aria-hidden="true"></i> Seguridad</span>
+                                <span><i class="bi bi-person-check" aria-hidden="true"></i> Usabilidad</span>
+                                <span><i class="bi bi-wrench-adjustable" aria-hidden="true"></i> Mantenibilidad</span>
+                                <span><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Flexibilidad</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="visual-card h-100">
+                            <span class="recurso-tipo">QA Y CONTROL DE CALIDAD</span>
+                            <h3>Prevenir y detectar</h3>
+                            <p>El aseguramiento se orienta a procesos y prevención; las actividades de control evalúan el producto y detectan defectos.</p>
+                            <div class="qa-visual">
+                                <div><i class="bi bi-shield-check" aria-hidden="true"></i><strong>Aseguramiento</strong><span>Procesos, estándares y prevención.</span></div>
+                                <div class="qa-divider" aria-hidden="true"><i class="bi bi-plus-lg"></i></div>
+                                <div><i class="bi bi-search" aria-hidden="true"></i><strong>Control y pruebas</strong><span>Verificación, evaluación y detección.</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
