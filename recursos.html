@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Glosario, preguntas frecuentes, bibliografía y recursos para aprender sobre calidad y desarrollo de software.">
+    <title>Recursos y aprendizaje - Proyecto-SGCS</title>
+
+    <!-- Bootstrap y Bootstrap Icons utilizados por el proyecto. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Encabezado compartido y estilos independientes de Recursos. -->
+    <link rel="stylesheet" href="css/style-header.css">
+    <link rel="stylesheet" href="css/style-recursos.css">
+
+    <!-- Scripts compartidos y específicos de esta página. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="javascript/.js" defer></script>
+</head>
+<body>
+    <!-- El menú compartido se inserta desde main.js. -->
+    <header id="header-container"></header>
+
+    <main class="recursos-page">
+        <!-- Presentación y cuatro accesos que funcionan como pestañas. -->
+        <section class="recursos-hero" aria-labelledby="recursos-title">
+            <div class="container recursos-container">
+                <div class="recursos-heading">
+                    <span class="recursos-kicker">RECURSOS Y APRENDIZAJE</span>
+                    <h1 id="recursos-title">Recursos</h1>
+                    <p>Explorá materiales que te ayudarán a profundizar en la calidad y el desarrollo de software.</p>
+                </div>
+
+                <nav class="recursos-tabs" role="tablist" aria-label="Secciones de recursos">
+                    <button class="recurso-tab active" id="tab-glosario" type="button" role="tab" aria-selected="true" aria-controls="panel-glosario" data-tab="glosario">
+                        <i class="bi bi-book" aria-hidden="true"></i>
+                        <span class="recurso-tab-text"><strong>Glosario</strong><small>Encontrá definiciones de términos clave relacionados con la calidad y el desarrollo del software.</small></span>
+                        <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
+                    </button>
+                    <button class="recurso-tab" id="tab-faq" type="button" role="tab" aria-selected="false" aria-controls="panel-faq" data-tab="faq" tabindex="-1">
+                        <i class="bi bi-patch-question" aria-hidden="true"></i>
+                        <span class="recurso-tab-text"><strong>Preguntas frecuentes</strong><small>Consultá respuestas a dudas habituales sobre calidad, pruebas y desarrollo.</small></span>
+                        <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
+                    </button>
+                    <button class="recurso-tab" id="tab-enlaces" type="button" role="tab" aria-selected="false" aria-controls="panel-enlaces" data-tab="enlaces" tabindex="-1">
+                        <i class="bi bi-link-45deg" aria-hidden="true"></i>
+                        <span class="recurso-tab-text"><strong>Enlaces de interés</strong><small>Accedé a documentación, libros, guías y organizaciones de referencia.</small></span>
+                        <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
+                    </button>
+                    <button class="recurso-tab" id="tab-visual" type="button" role="tab" aria-selected="false" aria-controls="panel-visual" data-tab="visual" tabindex="-1">
+                        <i class="bi bi-images" aria-hidden="true"></i>
+                        <span class="recurso-tab-text"><strong>Material visual</strong><small>Repasá ciclos, pruebas y atributos de calidad con esquemas sencillos.</small></span>
+                        <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
+                    </button>
+                </nav>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
