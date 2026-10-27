@@ -405,3 +405,212 @@
   color: var(--nos-muted);
   line-height: 1.8;
 }
+
+
+/* Contacto: formulario elegante y panel informativo. */
+.nosotros-page .contacto-section {
+  background: var(--nos-blue-bg);
+}
+
+.nosotros-page .contacto-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: stretch;
+}
+
+.nosotros-page .contacto-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid rgba(8, 117, 209, 0.2);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-primary);
+  color: var(--nos-white);
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .contacto-aside-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--nos-radius-md);
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1.8rem;
+}
+
+.nosotros-page .contacto-aside h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.nosotros-page .contacto-aside p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.8;
+}
+
+.nosotros-page .contacto-aside-note {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 2rem;
+  font-size: 0.83rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+.nosotros-page .contacto-aside-note i {
+  font-size: 1.1rem;
+}
+
+.nosotros-page .contact-form {
+  padding: clamp(1.3rem, 4vw, 2.5rem);
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .contact-form-heading {
+  margin-bottom: 1.5rem;
+}
+.nosotros-page .contact-form-heading h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  font-weight: 800;
+}
+.nosotros-page .contact-form-heading p {
+  margin: 0.4rem 0 0;
+  color: var(--nos-muted);
+  font-size: 0.88rem;
+}
+
+.nosotros-page .contact-form .form-label {
+  margin-bottom: 0.4rem;
+  color: var(--nos-text);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+.nosotros-page .contact-form .form-label span {
+  color: var(--nos-primary);
+}
+
+.nosotros-page .contact-form .form-control,
+.nosotros-page .contact-form .form-select {
+  min-height: 46px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #c9d5df;
+  border-radius: var(--nos-radius-sm);
+  background-color: #fff;
+  color: var(--nos-text);
+  font-size: 0.9rem;
+  box-shadow: none;
+  transition:
+    border-color var(--nos-transition),
+    box-shadow var(--nos-transition);
+}
+
+.nosotros-page .contact-form textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+.nosotros-page .contact-form .form-control::placeholder {
+  color: #9aa6b1;
+}
+
+.nosotros-page .contact-form .form-control:focus,
+.nosotros-page .contact-form .form-select:focus {
+  border-color: var(--nos-primary);
+  box-shadow: 0 0 0 3px rgba(8, 117, 209, 0.14);
+}
+
+.nosotros-page .contact-form .form-control.is-invalid,
+.nosotros-page .contact-form .form-select.is-invalid {
+  border-color: #c62828;
+  background-image: none;
+}
+.nosotros-page .contact-form .form-control.is-valid,
+.nosotros-page .contact-form .form-select.is-valid {
+  border-color: var(--nos-primary);
+  background-image: none;
+}
+
+.nosotros-page .field-error {
+  display: block;
+  min-height: 0;
+  margin-top: 0.3rem;
+  color: #b42318;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.nosotros-page .message-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.nosotros-page #message-counter {
+  margin-top: 0.3rem;
+  color: var(--nos-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+.nosotros-page .contacto-submit {
+  width: 100%;
+  margin-top: 0.4rem;
+  background: var(--nos-blue-bg);
+  border: 1px solid var(--nos-muted);
+  border-radius: 15px;
+}
+
+.nosotros-page .contact-feedback {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-sm);
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.nosotros-page .contact-feedback.error {
+  border-color: #edc2c2;
+  background: #fff4f4;
+  color: #a32929;
+}
+
+/* Ajustes para dispositivos pequeños. */
+@media (max-width: 767.98px) {
+  .nosotros-page .intro-card,
+  .nosotros-page .motivation-card {
+    grid-template-columns: 1fr;
+  }
+  .nosotros-page .intro-icon,
+  .nosotros-page .motivation-mark {
+    width: 46px;
+    height: 46px;
+  }
+  .nosotros-page .contacto-layout {
+    grid-template-columns: 1fr;
+  }
+  .nosotros-page .contacto-aside-note {
+    margin-top: 1.4rem;
+    padding-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nosotros-page *,
+  .nosotros-page *::before,
+  .nosotros-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
