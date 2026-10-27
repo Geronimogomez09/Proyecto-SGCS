@@ -156,3 +156,222 @@
   font-size: 0.98rem;
   line-height: 1.75;
 }
+
+/* Encabezados compartidos entre secciones. */
+.nosotros-page .section-heading-nosotros {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.nosotros-page .section-heading-nosotros h2,
+.nosotros-page .cierre-card h2 {
+  margin: 0;
+  color: var(--nos-text);
+  font-size: clamp(1.7rem, 3.4vw, 2.45rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.nosotros-page .section-heading-nosotros p {
+  margin: 0.75rem auto 0;
+  color: var(--nos-muted);
+  line-height: 1.7;
+}
+
+.nosotros-page .equipo-section {
+  background: var(--nos-blue-bg);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Tarjetas interactivas de perfiles. */
+.nosotros-page .perfiles-grid {
+  align-items: stretch;
+}
+.nosotros-page .perfiles-grid > .col {
+  display: flex;
+}
+
+.nosotros-page .perfil-card {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  padding: 1.4rem;
+  border: 1px solid rgba(8, 117, 209, 0.22);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  color: var(--nos-text);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--nos-shadow-md);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.nosotros-page .perfil-card:hover,
+.nosotros-page .perfil-card.is-hovered,
+.nosotros-page .perfil-card:focus-visible {
+  border-color: var(--nos-primary);
+  transform: translateY(-7px);
+  box-shadow: var(--nos-shadow-lg);
+}
+
+.nosotros-page .perfil-card:focus-visible {
+  outline: 3px solid var(--nos-primary);
+  outline-offset: 3px;
+}
+
+.nosotros-page .perfil-name {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.nosotros-page .perfil-role {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--nos-blue-bg);
+  color: var(--nos-primary-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.nosotros-page .perfil-specialty {
+  margin-bottom: 0.6rem;
+  color: var(--nos-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.nosotros-page .perfil-short {
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--nos-muted);
+  font-size: 0.87rem;
+  line-height: 1.65;
+}
+
+.nosotros-page .perfil-open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--nos-border-light);
+  color: var(--nos-primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+/* Perfil ampliado: los detalles completos siguen declarados en HTML. */
+.nosotros-page .perfil-dialog {
+  width: min(720px, calc(100% - 2rem));
+  max-width: 720px;
+  max-height: min(88vh, 850px);
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  overflow-y: auto;
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  color: var(--nos-text);
+  box-shadow: var(--nos-shadow-lg);
+}
+
+.nosotros-page .perfil-dialog::backdrop {
+  background: rgba(12, 36, 58, 0.62);
+  backdrop-filter: blur(4px);
+}
+.nosotros-page .perfil-dialog[open] {
+  animation: perfil-dialog-in 0.25s ease both;
+}
+
+@keyframes perfil-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.nosotros-page .perfil-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.nosotros-page .perfil-dialog .perfil-avatar {
+  width: 92px;
+  height: 92px;
+  font-size: 2.2rem;
+}
+.nosotros-page .perfil-close {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--nos-border);
+  border-radius: 50%;
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  cursor: pointer;
+  transition:
+    background var(--nos-transition),
+    transform var(--nos-transition);
+}
+
+.nosotros-page .perfil-close:hover {
+  background: var(--nos-blue-bg);
+  transform: rotate(90deg);
+}
+.nosotros-page .perfil-dialog h2 {
+  margin: 0.6rem 0;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+}
+.nosotros-page .perfil-dialog h3 {
+  margin: 0 0 1rem;
+  color: var(--nos-primary-dark);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.nosotros-page .perfil-dialog p {
+  color: var(--nos-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.nosotros-page .perfil-detail-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--nos-radius-sm);
+  background: var(--nos-primary-soft);
+  color: var(--nos-text-soft);
+  font-size: 0.88rem;
+}
+
+.nosotros-page .perfil-detail-line i {
+  color: var(--nos-primary-dark);
+  font-size: 1.1rem;
+}
+
