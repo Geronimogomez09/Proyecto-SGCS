@@ -1,0 +1,158 @@
+/* Estilos exclusivos de la página Sobre Nosotros. */
+.nosotros-page {
+  --nos-primary: #0875d1;
+  --nos-primary-dark: #0062cb;
+  --nos-primary-soft: #e6f3ff;
+  --nos-blue-bg: #b8d9f5;
+  --nos-cream: #fff8e7;
+  --nos-white: #ffffff;
+  --nos-text: #111111;
+  --nos-muted: #35566f;
+  --nos-border: #b8d9f5;
+  --nos-border-light: #d8e7f1;
+  --nos-shadow-sm: 0 4px 10px rgba(20, 50, 75, 0.07);
+  --nos-shadow-md: 0 7px 16px rgba(20, 50, 75, 0.1);
+  --nos-shadow-lg: 0 12px 28px rgba(20, 50, 75, 0.17);
+  --nos-radius-sm: 12px;
+  --nos-radius-md: 16px;
+  --nos-radius-lg: 22px;
+  --nos-transition: 0.22s ease;
+
+  color: var(--nos-text);
+  background: var(--nos-cream);
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.6;
+}
+
+.nosotros-page * {
+  box-sizing: border-box;
+}
+.nosotros-page button,
+.nosotros-page input,
+.nosotros-page select,
+.nosotros-page textarea {
+  font: inherit;
+}
+.nosotros-page .nosotros-container {
+  max-width: 1120px;
+}
+.container{
+    position: relative;
+    z-index: 2;
+}
+.nosotros-page .section-spacing {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+}
+
+/* Hero con la curva azul de la identidad visual del proyecto. */
+.nosotros-page .nosotros-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 4.5rem);
+  padding-top: 0px;
+  text-align: center;
+  background: var(--nos-cream);
+}
+
+.nosotros-page .nosotros-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--nos-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.nosotros-page .nosotros-title {
+  margin: 0;
+  color: var(--nos-text);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.nosotros-page .nosotros-title span,
+.nosotros-page .section-heading-nosotros h2 span,
+.nosotros-page .intro-card h2 span,
+.nosotros-page .motivation-card h2 span,
+.nosotros-page .cierre-card h2 span {
+  color: var(--nos-primary);
+}
+
+.nosotros-page .nosotros-lead {
+  max-width: 760px;
+  margin: 1.2rem auto 1.5rem;
+  color: var(--nos-muted);
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.8;
+}
+
+.nosotros-page .nosotros-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--nos-border);
+  border-radius: 999px;
+  background: var(--nos-white);
+  color: var(--nos-primary-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    gap var(--nos-transition),
+    transform var(--nos-transition),
+    box-shadow var(--nos-transition);
+}
+
+.nosotros-page .nosotros-scroll-link:hover {
+  gap: 0.8rem;
+  transform: translateY(-2px);
+  box-shadow: var(--nos-shadow-sm);
+}
+
+/* Tarjetas introductorias y motivación. */
+.nosotros-page .intro-card,
+.nosotros-page .motivation-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.1rem;
+  padding: clamp(1.3rem, 3vw, 2rem);
+  border: 1px solid var(--nos-border-light);
+  border-left: 7px solid var(--nos-primary);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .intro-card {
+  margin-bottom: 1.25rem;
+}
+.nosotros-page .intro-icon,
+.nosotros-page .motivation-mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--nos-radius-md);
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 1.55rem;
+}
+
+.nosotros-page .intro-card h2,
+.nosotros-page .motivation-card h2 {
+  margin: 0 0 0.65rem;
+  color: var(--nos-text);
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.nosotros-page .intro-card p,
+.nosotros-page .motivation-card p {
+  margin: 0;
+  color: var(--nos-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
