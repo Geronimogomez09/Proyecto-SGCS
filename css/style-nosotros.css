@@ -375,3 +375,33 @@
   font-size: 1.1rem;
 }
 
+/* Cierre del equipo. */
+.nosotros-page .cierre-card {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  text-align: center;
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .cierre-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 1.5rem;
+}
+
+.nosotros-page .cierre-card p {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  color: var(--nos-muted);
+  line-height: 1.8;
+}
