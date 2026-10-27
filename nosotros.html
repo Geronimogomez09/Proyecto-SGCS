@@ -169,6 +169,86 @@
             </div>
         </section>
 
+        <!-- Mensaje de cierre del equipo. -->
+        <section class="cierre-equipo section-spacing" aria-labelledby="cierre-title">
+            <div class="container nosotros-container">
+                <article class="cierre-card">
+                    <span class="cierre-icon" aria-hidden="true"><i class="bi bi-stars"></i></span>
+                    <span class="nosotros-eyebrow">UN MISMO OBJETIVO</span>
+                    <h2 id="cierre-title">Juntos construimos <span>calidad</span></h2>
+                    <p>En Los Croods sabemos que cada rol aporta algo diferente, pero que los mejores resultados se consiguen trabajando unidos. Nuestro compromiso es aprender, colaborar y aplicar las mejores prácticas para crear software cada vez mejor.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Formulario visual de contacto con validación de demostración. -->
+        <section id="contacto" class="contacto-section section-spacing" aria-labelledby="contacto-title">
+            <div class="container nosotros-container">
+                <div class="section-heading-nosotros">
+                    <span class="nosotros-eyebrow">HABLEMOS</span>
+                    <h2 id="contacto-title">Estamos para <span>escucharte</span></h2>
+                    <p>¿Tenés alguna consulta, sugerencia o comentario? Completá el formulario de demostración.</p>
+                </div>
+
+                <div class="contacto-layout">
+                    <aside class="contacto-aside">
+                        <span class="contacto-aside-icon" aria-hidden="true"><i class="bi bi-chat-square-heart"></i></span>
+                        <h3>Tu opinión suma</h3>
+                        <p>Las preguntas y sugerencias nos ayudan a reflexionar sobre el proyecto y mejorar el contenido que compartimos.</p>
+                        <div class="contacto-aside-note"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Este formulario es una demostración visual. No envía mensajes ni almacena datos.</span></div>
+                    </aside>
+
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="contact-form-heading">
+                            <span class="nosotros-eyebrow">FORMULARIO DE CONTACTO</span>
+                            <h3>¿En qué podemos ayudarte?</h3>
+                            <p>Los campos marcados con * son obligatorios.</p>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="contact-name">Nombre y apellido <span>*</span></label>
+                                <input class="form-control" type="text" id="contact-name" name="name" placeholder="Ingresá tu nombre completo" autocomplete="name" minlength="3" maxlength="100" required>
+                                <small class="field-error" id="name-error"></small>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="contact-email">Correo electrónico <span>*</span></label>
+                                <input class="form-control" type="email" id="contact-email" name="email" placeholder="ejemplo@correo.com" autocomplete="email" maxlength="150" required>
+                                <small class="field-error" id="email-error"></small>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="contact-subject">Asunto <span>*</span></label>
+                                <input class="form-control" type="text" id="contact-subject" name="subject" placeholder="¿Sobre qué trata tu consulta?" minlength="3" maxlength="120" required>
+                                <small class="field-error" id="subject-error"></small>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="contact-type">Tipo de consulta <span>*</span></label>
+                                <select class="form-select" id="contact-type" name="type" required>
+                                    <option value="">Seleccioná una opción</option>
+                                    <option value="general">Consulta general</option>
+                                    <option value="suggestion">Sugerencia</option>
+                                    <option value="problem">Reportar un problema</option>
+                                    <option value="feedback">Feedback sobre la página</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                                <small class="field-error" id="type-error"></small>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="contact-message">Mensaje <span>*</span></label>
+                                <textarea class="form-control" id="contact-message" name="message" rows="5" placeholder="Escribí tu consulta o mensaje..." minlength="10" maxlength="1500" required></textarea>
+                                <div class="message-footer"><small class="field-error" id="message-error"></small><small id="message-counter">0 / 1500</small></div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn encuesta-btn-primary contacto-submit" type="sumit">
+                                    Enviar Formulario <i class="bi bi-arrow-right-circle" aria-hidden="true"></i>
+                                </button>
+                                <div id="contact-feedback" class="contact-feedback" role="status" aria-live="polite" hidden></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
