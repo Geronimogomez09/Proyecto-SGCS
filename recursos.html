@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="es">
 <head>
+    <!-- Define la codificación para que se muestren correctamente las tildes y otros caracteres. -->
     <meta charset="UTF-8">
+    <!-- Permite que la página adapte su tamaño a celulares, tablets y computadoras. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descripción que pueden utilizar los buscadores para resumir el contenido de la página. -->
     <meta name="description" content="Glosario, preguntas frecuentes, bibliografía y recursos para aprender sobre calidad y desarrollo de software.">
     <title>Recursos y aprendizaje - Proyecto-SGCS</title>
 
     <!-- Bootstrap y Bootstrap Icons utilizados por el proyecto. -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons proporciona los símbolos usados en botones y tarjetas. -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -28,12 +32,14 @@
         <!-- Presentación y cuatro accesos que funcionan como pestañas. -->
         <section class="recursos-hero" aria-labelledby="recursos-title">
             <div class="container recursos-container">
+                <!-- Título principal y texto que explican el objetivo general de esta página. -->
                 <div class="recursos-heading">
                     <span class="recursos-kicker">RECURSOS Y APRENDIZAJE</span>
                     <h1 id="recursos-title">Recursos</h1>
                     <p>Explorá materiales que te ayudarán a profundizar en la calidad y el desarrollo de software.</p>
                 </div>
 
+                <!-- Cada botón activa un panel distinto. data-tab identifica qué sección debe mostrarse en recursos.js. -->
                 <nav class="recursos-tabs" role="tablist" aria-label="Secciones de recursos">
                     <button class="recurso-tab active" id="tab-glosario" type="button" role="tab" aria-selected="true" aria-controls="panel-glosario" data-tab="glosario">
                         <i class="bi bi-book" aria-hidden="true"></i>
@@ -60,6 +66,7 @@
         </section>
 
         <!-- Glosario con búsqueda sobre términos y definiciones, más índice alfabético. -->
+        <!-- Panel inicial: permite buscar conceptos por texto o recorrerlos por su primera letra. -->
         <section id="panel-glosario" class="recursos-panel active" role="tabpanel" aria-labelledby="tab-glosario" data-panel="glosario">
             <div class="panel-band">
                 <div class="container recursos-container text-center">
@@ -71,17 +78,21 @@
             </div>
 
             <div class="container recursos-container panel-content">
+                <!-- Reúne los dos controles del glosario: el buscador y el índice de letras. -->
                 <div class="glosario-tools">
+                    <!-- El campo permite buscar tanto en el nombre de cada término como en su definición. -->
                     <div class="glosario-search">
                         <label for="buscar-glosario" class="form-label">Buscar un término o una definición</label>
                         <div class="input-group">
                             <span class="input-group-text" aria-hidden="true"><i class="bi bi-search"></i></span>
+                            <!-- recursos.js lee este campo para filtrar los términos mientras se escribe. -->
                             <input class="form-control" type="search" id="buscar-glosario" placeholder="Ejemplo: testing, calidad, requisitos..." autocomplete="off" aria-describedby="glosario-ayuda">
                             <button id="limpiar-glosario" class="btn btn-outline-primary" type="button">Limpiar</button>
                         </div>
                         <p id="glosario-ayuda" class="glosario-help">La búsqueda no distingue mayúsculas, minúsculas ni tildes, y también revisa las definiciones.</p>
                     </div>
 
+                    <!-- Los botones de letras filtran los grupos del glosario por inicial. -->
                     <nav class="glosario-index" aria-label="Índice alfabético">
                         <div class="index-heading"><h3>Índice alfabético</h3><span>Elegí una letra para filtrar</span></div>
                         <div id="letras-glosario" class="letras-grid">
@@ -116,10 +127,12 @@
                     </nav>
                 </div>
 
+                <!-- JavaScript actualiza este mensaje para indicar cuántos términos se muestran. -->
                 <p id="contador-glosario" class="glosario-count" aria-live="polite">Se muestran todos los términos.</p>
 
                 <!-- Los términos se encuentran en el HTML; JavaScript solo filtra su visibilidad. -->
                 <div id="glosario-listado" class="glosario-listado">
+                    <!-- Cada grupo contiene los términos que comienzan con una letra. Se conserva esta estructura para que el filtro pueda ocultar grupos completos. -->
                     <section class="grupo-letra" id="grupo-A" data-letter-group="A" aria-labelledby="letra-A">
                         <h3 id="letra-A">A</h3>
                         <article class="termino"><h4>Agilidad</h4><p>Capacidad de adaptarse a cambios durante el desarrollo de software.</p></article>
@@ -246,6 +259,7 @@
                     </section>
                 </div>
 
+                <!-- Este mensaje permanece oculto mientras haya coincidencias; se muestra cuando los filtros no encuentran términos. -->
                 <section id="sin-resultados-glosario" class="sin-resultados" role="status" aria-live="polite" hidden>
                     <i class="bi bi-search" aria-hidden="true"></i>
                     <h3>Sin resultados</h3>
@@ -256,6 +270,7 @@
         </section>
 
         <!--preguntas frecuentes, agrupadas por tema y con un solo acordeón abierto. -->
+        <!-- Panel de preguntas frecuentes. Los botones abren y cierran temas y respuestas mediante recursos.js. -->
         <section id="panel-faq" class="recursos-panel" role="tabpanel" aria-labelledby="tab-faq" data-panel="faq" hidden>
             <div class="panel-band">
                 <div class="container recursos-container text-center">
@@ -267,11 +282,14 @@
             </div>
 
             <div class="container recursos-container panel-content faq-content">
+                <!-- Instrucción para que el usuario sepa cómo interactuar con el acordeón. -->
                 <p class="faq-help"><i class="bi bi-info-circle" aria-hidden="true"></i> Abrí un tema y seleccioná una pregunta. Se mantiene abierto un solo tema y una sola respuesta a la vez.</p>
 
+                <!-- Los temas agrupan preguntas relacionadas. Los atributos aria-expanded y aria-hidden se actualizan al abrir o cerrar cada panel. -->
                 <div class="faq-topics">
                     <!-- Tema 1: calidad de software. -->
                     <section class="faq-topic">
+                        <!-- Este botón abre o cierra todas las preguntas del tema correspondiente. aria-controls apunta al panel que controla. -->
                         <button class="faq-topic-toggle" type="button" aria-expanded="false" aria-controls="faq-tema-calidad">
                             <span class="faq-topic-icon"><i class="bi bi-award" aria-hidden="true"></i></span>
                             <span class="faq-topic-text"><strong>Calidad de software</strong><small>Características, métricas y estándares de calidad.</small></span>
@@ -280,6 +298,7 @@
                         <div id="faq-tema-calidad" class="faq-topic-panel" aria-hidden="true">
                             <div class="faq-topic-inner">
                                 <article class="faq-item">
+                                    <!-- Al pulsar la pregunta se muestra u oculta su respuesta. El ID de aria-controls debe coincidir con el ID de la respuesta. -->
                                     <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a1">¿Qué características debe tener un software de calidad?</button></h3>
                                     <div id="faq-a1" class="faq-answer" aria-hidden="true"><div><p>Debe cumplir sus requisitos y satisfacer las necesidades de sus usuarios. Según el contexto, se evalúan características como adecuación funcional, rendimiento, compatibilidad, facilidad de uso, fiabilidad, seguridad, mantenibilidad y flexibilidad para adaptarse.</p></div></div>
                                 </article>
@@ -363,6 +382,7 @@
         </section>
 
         <!-- enlaces externos por categoría con apertura segura en una pestaña nueva. -->
+        <!-- Panel de enlaces externos. Cada tarjeta presenta un recurso y su enlace original. -->
         <section id="panel-enlaces" class="recursos-panel" role="tabpanel" aria-labelledby="tab-enlaces" data-panel="enlaces" hidden>
             <div class="panel-band">
                 <div class="container recursos-container text-center">
@@ -374,6 +394,7 @@
             </div>
 
             <div class="container recursos-container panel-content">
+                <!-- Estos botones filtran las tarjetas por el valor de data-category. La lógica está en recursos.js. -->
                 <div class="recursos-categories" role="group" aria-label="Filtrar recursos por categoría">
                     <button class="categoria-btn active" type="button" data-category-filter="todas" aria-pressed="true">Todas</button>
                     <button class="categoria-btn" type="button" data-category-filter="pagina" aria-pressed="false"><i class="bi bi-globe2" aria-hidden="true"></i> Páginas</button>
@@ -384,12 +405,14 @@
 
                 <div id="recursos-listado" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                     <!-- Páginas web. -->
+                    <!-- Cada tarjeta está dentro de un elemento con data-category para poder mostrarla u ocultarla según el filtro. -->
                     <div class="col recurso-item" data-category="pagina">
                         <article class="recurso-card h-100">
                             <span class="recurso-tipo"><i class="bi bi-globe2" aria-hidden="true"></i> Página web</span>
                             <div class="recurso-card-icon"><i class="bi bi-kanban" aria-hidden="true"></i></div>
                             <h3>Atlassian · Desarrollo ágil</h3>
                             <p>Introducción a los principios ágiles y prácticas para planificar, construir, revisar y entregar software.</p>
+                            <!-- target="_blank" abre el recurso en otra pestaña; rel evita que la nueva página controle la original. -->
                             <a class="btn recurso-link" href="https://www.atlassian.com/agile/software-development" target="_blank" rel="noopener noreferrer">Visitar recurso <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
                         </article>
                     </div>
@@ -497,11 +520,13 @@
                         </article>
                     </div>
                 </div>
+                <!-- Aviso que se muestra si la categoría elegida no contiene recursos visibles. -->
                 <p id="sin-recursos" class="sin-resultados" role="status" hidden>No hay recursos en esta categoría.</p>
             </div>
         </section>
 
         <!-- Material visual construido con HTML y CSS, sin imágenes externas obligatorias. -->
+        <!-- Panel de esquemas visuales hechos con elementos HTML; el CSS se encarga de su apariencia. -->
         <section id="panel-visual" class="recursos-panel" role="tabpanel" aria-labelledby="tab-visual" data-panel="visual" hidden>
             <div class="panel-band">
                 <div class="container recursos-container text-center">
@@ -513,12 +538,15 @@
             </div>
 
             <div class="container recursos-container panel-content">
+                <!-- Las tarjetas se muestran en una columna en pantallas pequeñas y en dos columnas en pantallas grandes. -->
                 <div class="row row-cols-1 row-cols-lg-2 g-3">
                     <div class="col">
+                        <!-- Cada tarjeta resume visualmente un tema distinto de calidad y desarrollo de software. -->
                         <article class="visual-card h-100">
                             <span class="recurso-tipo">CICLO DE VIDA</span>
                             <h3>Del requisito al mantenimiento</h3>
                             <p>El ciclo puede repetirse o adaptarse según el modelo y las necesidades del proyecto.</p>
+                            <!-- Secuencia de etapas del ciclo de vida; las flechas indican el orden habitual. -->
                             <div class="ciclo-visual" aria-label="Análisis, diseño, desarrollo, pruebas, despliegue y mantenimiento">
                                 <span>Análisis</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Diseño</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Desarrollo</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Pruebas</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Despliegue</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Mantenimiento</span>
                             </div>
@@ -529,6 +557,7 @@
                             <span class="recurso-tipo">NIVELES DE PRUEBA</span>
                             <h3>Comprobaciones en diferentes escalas</h3>
                             <p>Las pruebas se complementan para encontrar fallos desde componentes hasta el producto validado.</p>
+                            <!-- Representa niveles de prueba, desde componentes individuales hasta la aceptación del producto. -->
                             <div class="testing-visual" aria-label="Pruebas unitarias, de integración, de sistema y de aceptación">
                                 <div class="test-level test-level-1"><strong>Unitarias</strong><span>Un componente</span></div>
                                 <div class="test-level test-level-2"><strong>Integración</strong><span>Interacciones</span></div>
@@ -542,6 +571,7 @@
                             <span class="recurso-tipo">CALIDAD DEL SOFTWARE</span>
                             <h3>Una visión con varias dimensiones</h3>
                             <p>La calidad no depende de una sola medida. Los atributos importantes deben seleccionarse según el contexto.</p>
+                            <!-- Lista atributos que pueden evaluarse al analizar la calidad del software. -->
                             <div class="quality-visual">
                                 <span><i class="bi bi-check2-circle" aria-hidden="true"></i> Funcionalidad</span>
                                 <span><i class="bi bi-speedometer2" aria-hidden="true"></i> Rendimiento</span>
@@ -557,6 +587,7 @@
                             <span class="recurso-tipo">QA Y CONTROL DE CALIDAD</span>
                             <h3>Prevenir y detectar</h3>
                             <p>El aseguramiento se orienta a procesos y prevención; las actividades de control evalúan el producto y detectan defectos.</p>
+                            <!-- Compara el objetivo del aseguramiento de calidad con el del control y las pruebas. -->
                             <div class="qa-visual">
                                 <div><i class="bi bi-shield-check" aria-hidden="true"></i><strong>Aseguramiento</strong><span>Procesos, estándares y prevención.</span></div>
                                 <div class="qa-divider" aria-hidden="true"><i class="bi bi-plus-lg"></i></div>
