@@ -1,8 +1,8 @@
 // ENCUESTA POR FASES PARA RECOMENDAR UN MODELO DE DESARROLLO.
 // Este archivo controla la navegación, guarda las respuestas durante la sesión, calcula
 // las puntuaciones y escribe los resultados dentro de los elementos que ya existen en el HTML.
-document.addEventListener("DOMContentLoaded", () => {
 
+document.addEventListener("DOMContentLoaded", () => {
     // Lista central de modelos. El orden importa: cada array de scores debe usar exactamente
     // este mismo orden para que cada puntuación se asigne al modelo correcto.
     // Si agregás un modelo, también tendrás que agregar sus datos, explicación, consejos e IDs del HTML.
@@ -86,112 +86,96 @@ document.addEventListener("DOMContentLoaded", () => {
             high: [1, 1, 4, 1, 4, 3],
             unclear: [3, 3, 1, 3, 2, 3]
         },
-
         stability: {
             changing: [3, 4, 0, 4, 0, 4],
             mixed: [4, 3, 2, 4, 2, 4],
             stable: [1, 1, 4, 1, 4, 2],
             volatile: [3, 4, 0, 4, 0, 4]
         },
-
         productGoal: {
             discovery: [4, 2, 0, 4, 1, 3],
             flow: [2, 4, 1, 3, 1, 2],
             fixed: [1, 1, 4, 1, 4, 2],
             modules: [2, 2, 1, 2, 2, 4]
         },
-
         constraints: {
             fixedDeadline: [4, 3, 2, 3, 2, 4],
             fixedScope: [2, 2, 4, 2, 4, 3],
             variablePriority: [2, 4, 2, 3, 1, 2],
             strictBaseline: [1, 1, 4, 1, 4, 2]
         },
-
         stakeholders: {
             daily: [4, 2, 1, 4, 1, 3],
             periodic: [4, 2, 2, 3, 3, 4],
             limited: [2, 3, 3, 2, 4, 3],
             rare: [1, 3, 4, 1, 4, 2]
         },
-
         team: {
             small: [4, 2, 1, 4, 1, 3],
             medium: [3, 3, 2, 3, 3, 4],
             large: [2, 3, 4, 1, 4, 3],
             distributed: [2, 4, 3, 1, 4, 2]
         },
-
         workPattern: {
             backlog: [4, 2, 1, 3, 1, 4],
             continuous: [2, 4, 2, 3, 1, 2],
             sequential: [1, 1, 4, 1, 4, 2],
             independent: [3, 2, 1, 3, 2, 4]
         },
-
         delivery: {
             frequent: [3, 4, 0, 4, 1, 4],
             sprints: [4, 2, 2, 3, 3, 4],
             final: [0, 1, 4, 0, 4, 1],
             milestones: [3, 2, 4, 2, 4, 3]
         },
-
         uncertainty: {
             high: [4, 3, 0, 4, 1, 3],
             medium: [3, 3, 2, 3, 3, 4],
             low: [1, 2, 4, 2, 4, 3],
             unknown: [3, 3, 1, 3, 2, 3]
         },
-
         architecture: {
             modular: [2, 2, 1, 2, 2, 4],
             fixed: [1, 1, 4, 1, 4, 2],
             evolving: [3, 2, 1, 4, 2, 3],
             legacy: [2, 4, 2, 3, 2, 3]
         },
-
         integration: {
             continuous: [3, 4, 0, 4, 1, 4],
             milestones: [3, 2, 3, 2, 4, 3],
             formal: [1, 1, 4, 1, 4, 2],
             modules: [2, 3, 1, 3, 2, 4]
         },
-
         criticality: {
             regulated: [1, 1, 4, 2, 4, 2],
             highImpact: [2, 2, 3, 2, 4, 3],
             ordinary: [3, 3, 2, 3, 2, 4],
             adaptive: [3, 3, 2, 4, 3, 4]
         },
-
         testing: {
             automated: [2, 2, 1, 4, 3, 3],
             traceable: [1, 1, 3, 2, 4, 2],
             iterative: [4, 3, 2, 3, 3, 4],
             final: [1, 1, 4, 1, 4, 2]
         },
-
         governance: {
             high: [1, 1, 4, 1, 4, 2],
             balanced: [3, 3, 3, 3, 3, 4],
             light: [3, 4, 0, 4, 1, 3],
             lean: [3, 3, 1, 3, 2, 3]
         },
-
         maintenance: {
             incoming: [2, 4, 2, 3, 1, 2],
             roadmap: [4, 2, 2, 2, 3, 4],
             controlled: [1, 1, 4, 2, 4, 2],
             refactoring: [2, 3, 1, 4, 2, 3]
         },
-
         success: {
             userValue: [4, 2, 1, 3, 2, 4],
             flow: [2, 4, 2, 3, 1, 3],
             compliance: [1, 1, 4, 2, 4, 2],
             quality: [2, 2, 2, 4, 3, 3]
         },
-
         stage: {
             discovery: [3, 2, 0, 4, 1, 3],
             newDefined: [2, 2, 4, 2, 4, 3],
@@ -204,15 +188,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // exactamente con los nombres incluidos en models para que se encuentre el texto correcto.
     const explanations = {
         Scrum: "El proyecto puede beneficiarse de objetivos por ciclos, revisiones periódicas y ajustes de prioridades a partir del feedback.",
-
         Kanban: "El proyecto parece necesitar visibilidad del trabajo, gestión del flujo y capacidad para responder a cambios de prioridad.",
-
         Cascada: "El proyecto parece beneficiarse de etapas definidas, planificación previa, entregables y criterios formales de aceptación.",
-
         XP: "El proyecto puede beneficiarse de ciclos cortos, pruebas frecuentes, integración continua y especial atención a la calidad técnica.",
-
         "Modelo en V": "El proyecto da importancia a la trazabilidad entre requisitos, diseño y pruebas, además de la verificación y validación planificadas.",
-
         Incremental: "El proyecto puede dividirse en entregas funcionales que se integran y validan progresivamente."
     };
 
@@ -224,31 +203,26 @@ document.addEventListener("DOMContentLoaded", () => {
             risks: "Las interrupciones frecuentes durante un sprint dificultan el foco. El equipo también necesita priorización y revisión periódicas.",
             next: "Prepará un backlog inicial, definí objetivos de sprint y acordá reuniones de revisión y retrospectiva."
         },
-
         Kanban: {
             strengths: "Hace visible el trabajo, permite reorganizar prioridades y ayuda a descubrir bloqueos y excesos de tareas abiertas.",
             risks: "Sin límites de trabajo en curso y políticas claras, el tablero puede convertirse en una lista de tareas sin foco.",
             next: "Creá un tablero con estados claros, limitá las tareas simultáneas y revisá el tiempo de entrega."
         },
-
         Cascada: {
             strengths: "Facilita planificar etapas, definir entregables y documentar las decisiones y aprobaciones necesarias.",
             risks: "Los cambios importantes después de aprobar los requisitos pueden generar retrabajo y retrasos.",
             next: "Documentá requisitos, entregables, responsables y criterios de aprobación antes de avanzar por las fases."
         },
-
         XP: {
             strengths: "Prioriza la calidad técnica, las pruebas frecuentes, la integración continua y la retroalimentación temprana.",
             risks: "Necesita disciplina técnica y colaboración sostenida. Sus beneficios disminuyen si se omiten las pruebas o la integración frecuente.",
             next: "Definí criterios de aceptación, incorporá pruebas automatizadas y establecé revisiones de código e integración frecuente."
         },
-
         "Modelo en V": {
             strengths: "Relaciona las actividades de desarrollo con la verificación y validación, y facilita la trazabilidad entre requisitos y pruebas.",
             risks: "Los cambios en requisitos o diseño pueden obligar a revisar documentación, trazabilidad y pruebas asociadas.",
             next: "Relacioná cada requisito con sus pruebas, definí responsables y planificá la verificación desde el comienzo."
         },
-
         Incremental: {
             strengths: "Permite entregar funcionalidades por partes, validar cada incremento y ajustar las entregas siguientes.",
             risks: "Necesita una arquitectura que permita integrar las partes y evitar inconsistencias entre incrementos.",
@@ -300,7 +274,6 @@ document.addEventListener("DOMContentLoaded", () => {
         answerButtons.forEach((option) => {
             if (option.dataset.question === question) {
                 const selected = option === button;
-
                 option.classList.toggle("selected", selected);
                 option.setAttribute("aria-checked", String(selected));
             }
@@ -449,8 +422,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (importantEvidence.length === 0) {
             const container = document.getElementById("evidence-1");
             container.hidden = false;
+
             document.getElementById("evidence-title-1").textContent =
                 "Evaluación conjunta del proyecto";
+
             document.getElementById("evidence-answer-1").textContent =
                 "La recomendación surge del balance conjunto de las respuestas, no de un único factor.";
         }
@@ -545,6 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resultStrengths.textContent = adviceForWinner.strengths;
         resultRisks.textContent = adviceForWinner.risks
             + (warnings.length ? ` ${warnings.join(" ")}` : "");
+
         resultRecommendations.textContent = adviceForWinner.next;
 
         renderScores(results);
