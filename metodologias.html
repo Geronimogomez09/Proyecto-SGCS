@@ -80,17 +80,169 @@
 
                         <!-- Panel que explica los roles de Scrum. -->
                         <div class="accordion-item" id="scrum-roles" data-toc-label="Roles">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#scrum-roles-body"
+                                    aria-expanded="true"
+                                    aria-controls="scrum-roles-body">
+                                    <span class="acc-icon"><i class="bi bi-people-fill"></i></span>
+                                    Roles
+                                </button>
+                            </h3>
 
+                            <!-- collapse show indica que este panel comienza abierto. -->
+                            <div id="scrum-roles-body" class="accordion-collapse collapse show"
+                                data-bs-parent="#acordeon-scrum">
+                                <div class="accordion-body">
+
+                                    <!-- Bootstrap divide los tres roles en columnas que se adaptan al tamaño de pantalla. -->
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-4">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-bullseye"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Product Owner</h4>
+                                                    <p>Representa las necesidades del cliente y prioriza el trabajo.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-compass"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Scrum Master</h4>
+                                                    <p>Facilita el proceso y ayuda a eliminar obstáculos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-code-slash"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Developers</h4>
+                                                    <p>Desarrollan el producto.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Panel con las ceremonias o eventos principales de Scrum. -->
                         <div class="accordion-item" id="scrum-ceremonias" data-toc-label="Ceremonias">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#scrum-ceremonias-body"
+                                    aria-expanded="false"
+                                    aria-controls="scrum-ceremonias-body">
+                                    <span class="acc-icon"><i class="bi bi-calendar-check"></i></span>
+                                    Ceremonias
+                                </button>
+                            </h3>
 
+                            <!-- Este panel empieza cerrado porque no tiene la clase show. -->
+                            <div id="scrum-ceremonias-body" class="accordion-collapse collapse"
+                                data-bs-parent="#acordeon-scrum">
+                                <div class="accordion-body">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-calendar-check"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Sprint Planning</h4>
+                                                    <p>Planificación del Sprint.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-chat-dots"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Daily Scrum</h4>
+                                                    <p>Reunión diaria breve.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-eye"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Sprint Review</h4>
+                                                    <p>Revisión del trabajo realizado.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-arrow-repeat"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Sprint Retrospective</h4>
+                                                    <p>Análisis de cómo mejorar.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Panel que muestra los artefactos de Scrum y la función de cada uno. -->
                         <div class="accordion-item" id="scrum-artefactos" data-toc-label="Artefactos">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#scrum-artefactos-body"
+                                    aria-expanded="false"
+                                    aria-controls="scrum-artefactos-body">
+                                    <span class="acc-icon"><i class="bi bi-box-seam"></i></span>
+                                    Artefactos
+                                </button>
+                            </h3>
 
+                            <div id="scrum-artefactos-body" class="accordion-collapse collapse"
+                                data-bs-parent="#acordeon-scrum">
+                                <div class="accordion-body">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-4">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-list-task"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Product Backlog</h4>
+                                                    <p>Lista de necesidades y funcionalidades.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-card-checklist"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Sprint Backlog</h4>
+                                                    <p>Trabajo seleccionado para el Sprint.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-box-seam"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Increment</h4>
+                                                    <p>Resultado funcional obtenido.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
