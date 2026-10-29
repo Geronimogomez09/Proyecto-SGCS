@@ -49,14 +49,32 @@
         </div>
 
         <!-- Zona visual de la presentación. La imagen se establece mediante CSS.
-             aria-label describe su contenido para las tecnologías de asistencia. -->
+            aria-label describe su contenido para las tecnologías de asistencia. -->
         <div class="hero-agiles-img" role="img"
             aria-label="Equipo de trabajo reunido alrededor de una mesa con documentos y café"></div>
     </div>
 
+    <!-- Contiene las secciones principales del contenido de la página. -->
+    <main>
+
+        <!-- Sección dedicada a Scrum. Su id permite acceder a ella desde los enlaces internos. -->
+        <section class="metodologia metodologia-crema" id="scrum" data-toc-title="Scrum">
+            <div class="container">
+                <div class="metodologia-wrap">
+
+                    <!-- Título de la metodología. -->
+                    <div class="metodologia-title">
+                        <h2>Metodología <span>Scrum</span></h2>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <!-- Carga el JavaScript general del sitio. defer hace que se ejecute después de analizar el HTML. -->
     <script src="main.js" defer></script>
-
 
     <!-- Carga Bootstrap JavaScript para habilitar acordeones, paneles laterales y demás componentes interactivos. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
