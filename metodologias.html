@@ -846,6 +846,31 @@
 
     </main>
 
+    <!-- Botón flotante que abre el menú de contenidos desde cualquier parte de la página. -->
+    <button class="toc-fab" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#toc-offcanvas" aria-controls="toc-offcanvas">
+        <i class="bi bi-list-ul"></i> Contenido
+    </button>
+
+    <!-- Panel lateral de Bootstrap que muestra la tabla de contenidos. -->
+    <div class="offcanvas offcanvas-end toc-offcanvas" tabindex="-1"
+        id="toc-offcanvas" aria-labelledby="toc-title">
+
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="toc-title">Contenido</h2>
+
+            <!-- Botón que cierra el panel lateral. -->
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- agiles.js genera los enlaces de navegación usando los atributos data-toc-title y data-toc-label.
+                 El nav comienza vacío porque sus enlaces se crean dinámicamente al cargar JavaScript. -->
+            <nav id="toc-nav" aria-label="Tabla de contenidos"></nav>
+        </div>
+    </div>
+
     <!-- Carga el JavaScript general del sitio. defer hace que se ejecute después de analizar el HTML. -->
     <script src="main.js" defer></script>
 
