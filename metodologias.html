@@ -410,6 +410,154 @@
             </div>
         </section>
 
+        <!-- Sección dedicada a XP (Extreme Programming), con sus roles y prácticas. -->
+        <section class="metodologia metodologia-crema" id="xp" data-toc-title="XP">
+            <div class="container">
+                <div class="metodologia-wrap">
+
+                    <div class="metodologia-title">
+                        <h2>Metodología <span>XP</span></h2>
+                        <span class="metodologia-subtitle">Extreme Programming</span>
+                    </div>
+
+                    <!-- Presentación breve del objetivo principal de XP. -->
+                    <div class="metodologia-intro">
+                        <span class="metodologia-icon"><i class="bi bi-lightning-charge"></i></span>
+                        <p>XP se enfoca principalmente en la calidad del código y la adaptación rápida a los cambios.</p>
+                    </div>
+
+                    <!-- Acordeón que separa la información de XP en roles y prácticas. -->
+                    <div class="accordion agiles-accordion" id="acordeon-xp">
+
+                        <!-- Panel con los principales participantes y sus responsabilidades en XP. -->
+                        <div class="accordion-item" id="xp-roles" data-toc-label="Roles y cargos">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#xp-roles-body"
+                                    aria-expanded="true"
+                                    aria-controls="xp-roles-body">
+                                    <span class="acc-icon"><i class="bi bi-people-fill"></i></span>
+                                    Roles y cargos
+                                </button>
+                            </h3>
+
+                            <div id="xp-roles-body" class="accordion-collapse collapse show"
+                                data-bs-parent="#acordeon-xp">
+                                <div class="accordion-body">
+
+                                    <!-- Nota que explica que XP no establece una estructura de roles tan rígida como Scrum. -->
+                                    <p class="agiles-note">
+                                        En XP no hay un conjunto de roles tan rígido como en Scrum.
+                                        Pero sí se pueden separar en cargos aunque no sean tan independientes.
+                                    </p>
+
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-code-slash"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Programadores</h4>
+                                                    <p>Escriben y mejoran el código. Trabajan en parejas y realizan pruebas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-person-badge"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Cliente</h4>
+                                                    <p>Define qué necesita el sistema, prioriza las funcionalidades y da su opinión sobre lo desarrollado.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-bug"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Tester</h4>
+                                                    <p>Ayuda a crear y ejecutar pruebas para comprobar que el software funciona correctamente.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card">
+                                                <span class="agiles-card-icon"><i class="bi bi-person-video3"></i></span>
+                                                <div>
+                                                    <h4 class="agiles-card-title">Coach</h4>
+                                                    <p>Guía al equipo para que siga correctamente las prácticas de XP y ayuda a resolver problemas del proceso.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel con prácticas de programación utilizadas por XP para mejorar el desarrollo. -->
+                        <div class="accordion-item" id="xp-practicas" data-toc-label="Prácticas">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#xp-practicas-body"
+                                    aria-expanded="false"
+                                    aria-controls="xp-practicas-body">
+                                    <span class="acc-icon"><i class="bi bi-check2-square"></i></span>
+                                    Prácticas
+                                </button>
+                            </h3>
+
+                            <div id="xp-practicas-body" class="accordion-collapse collapse"
+                                data-bs-parent="#acordeon-xp">
+                                <div class="accordion-body">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-people"></i></span>
+                                                <h4 class="agiles-card-title">Programación en parejas</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-check2-square"></i></span>
+                                                <h4 class="agiles-card-title">Desarrollo guiado por pruebas (TDD)</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-arrow-repeat"></i></span>
+                                                <h4 class="agiles-card-title">Integración continua</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-recycle"></i></span>
+                                                <h4 class="agiles-card-title">Refactorización</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-send"></i></span>
+                                                <h4 class="agiles-card-title">Entregas frecuentes</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Carga el JavaScript general del sitio. defer hace que se ejecute después de analizar el HTML. -->
