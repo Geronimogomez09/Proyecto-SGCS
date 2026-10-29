@@ -72,12 +72,12 @@
         </section>
 
         <!-- Tarjetas interactivas de los cuatro integrantes. -->
-        <section id="equipo" class="equipo-section section-spacing" aria-labelledby="equipo-title">
+        <section id="equipo" class=" container equipo-section section-spacing" aria-labelledby="equipo-title">
             <svg class="wave2" viewBox="0 0 1440 200"
                     preserveAspectRatio="none" aria-hidden="true">
                     <path fill="#fff8e7"
                         d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
-                </svg>
+            </svg>
             <div class="container nosotros-container">
                 <div class="section-heading-nosotros">
                     <span class="nosotros-eyebrow">PERSONAS Y ROLES</span>
@@ -85,10 +85,13 @@
                     <p>Seleccioná una tarjeta para conocer más sobre el rol, la motivación y los aportes de cada integrante.</p>
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 perfiles-grid">
+                <div class="row row-cols-1 row-cols-lg-2 g-4 perfiles-grid">
                     <div class="col">
                         <button class="perfil-card" type="button" data-profile="geronimo" aria-haspopup="dialog" aria-controls="perfil-dialog-geronimo">
-                            <span class="perfil-avatar avatar-geronimo" aria-hidden="true"><i class="bi bi-people"></i></span>
+                            <span class="perfil-avatar avatar-geronimo" aria-hidden="true">
+                                <img class="perfil-avatar-img" src="imgs/equipo/gero.jpeg" alt="" decoding="async">
+                                <i class="bi bi-people"></i>
+                            </span>
                             <span class="perfil-name">Geronimo Gomez Tapia</span>
                             <span class="perfil-role">Scrum Master</span>
                             <span class="perfil-specialty">Organización y colaboración</span>
@@ -98,7 +101,10 @@
                     </div>
                     <div class="col">
                         <button class="perfil-card" type="button" data-profile="juan" aria-haspopup="dialog" aria-controls="perfil-dialog-juan">
-                            <span class="perfil-avatar avatar-juan" aria-hidden="true"><i class="bi bi-palette"></i></span>
+                            <span class="perfil-avatar avatar-juan" aria-hidden="true">
+                                <img class="perfil-avatar-img" src="imgs/equipo/juani.jpeg" alt="" decoding="async">
+                                <i class="bi bi-palette"></i>
+                            </span>
                             <span class="perfil-name">Juan Ignacio Sada</span>
                             <span class="perfil-role">Diseñador</span>
                             <span class="perfil-specialty">Diseño y experiencia de usuario</span>
@@ -108,7 +114,10 @@
                     </div>
                     <div class="col">
                         <button class="perfil-card" type="button" data-profile="ivan" aria-haspopup="dialog" aria-controls="perfil-dialog-ivan">
-                            <span class="perfil-avatar avatar-ivan" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
+                            <span class="perfil-avatar avatar-ivan" aria-hidden="true">
+                                <img class="perfil-avatar-img" src="imgs/equipo/ivan.jpeg" alt="" decoding="async">
+                                <i class="bi bi-code-slash"></i>
+                            </span>
                             <span class="perfil-name">Ivan Barrera</span>
                             <span class="perfil-role">Programador</span>
                             <span class="perfil-specialty">Desarrollo y soluciones</span>
@@ -118,7 +127,10 @@
                     </div>
                     <div class="col">
                         <button class="perfil-card" type="button" data-profile="ana" aria-haspopup="dialog" aria-controls="perfil-dialog-ana">
-                            <span class="perfil-avatar avatar-ana" aria-hidden="true"><i class="bi bi-clipboard2-check"></i></span>
+                            <span class="perfil-avatar avatar-ana" aria-hidden="true">
+                                <img class="perfil-avatar-img" src="imgs/equipo/Ana.jpeg" alt="" decoding="async">
+                                <i class="bi bi-clipboard2-check"></i>
+                            </span>
                             <span class="perfil-name">Ana Vera Paula</span>
                             <span class="perfil-role">Tester / QA</span>
                             <span class="perfil-specialty">Pruebas y control de calidad</span>
@@ -131,7 +143,10 @@
                 <!-- Diálogos ampliados: el contenido completo está escrito en HTML. -->
                 <dialog id="perfil-dialog-geronimo" class="perfil-dialog" aria-labelledby="perfil-title-geronimo">
                     <div class="perfil-dialog-header">
-                        <span class="perfil-avatar avatar-geronimo" aria-hidden="true"><i class="bi bi-people"></i></span>
+                        <span class="perfil-avatar avatar-geronimo" aria-hidden="true">
+                            <img class="perfil-avatar-img" src="imgs/equipo/gero.jpeg" alt="" decoding="async">
+                            <i class="bi bi-people"></i>
+                        </span>
                         <button class="perfil-close" type="button" data-close-profile aria-label="Cerrar perfil de Geronimo"><i class="bi bi-x-lg"></i></button>
                     </div>
                     <span class="perfil-role">Scrum Master</span>
@@ -143,7 +158,10 @@
 
                 <dialog id="perfil-dialog-juan" class="perfil-dialog" aria-labelledby="perfil-title-juan">
                     <div class="perfil-dialog-header">
-                        <span class="perfil-avatar avatar-juan" aria-hidden="true"><i class="bi bi-palette"></i></span>
+                        <span class="perfil-avatar avatar-juan" aria-hidden="true">
+                            <img class="perfil-avatar-img" src="imgs/equipo/juani.jpeg" alt="" decoding="async">
+                            <i class="bi bi-palette"></i>
+                        </span>
                         <button class="perfil-close" type="button" data-close-profile aria-label="Cerrar perfil de Juan"><i class="bi bi-x-lg"></i></button>
                     </div>
                     <span class="perfil-role">Diseñador</span>
@@ -155,7 +173,10 @@
 
                 <dialog id="perfil-dialog-ivan" class="perfil-dialog" aria-labelledby="perfil-title-ivan">
                     <div class="perfil-dialog-header">
-                        <span class="perfil-avatar avatar-ivan" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
+                        <span class="perfil-avatar avatar-ivan" aria-hidden="true">
+                            <img class="perfil-avatar-img" src="imgs/equipo/ivan.jpeg" alt="" decoding="async">
+                            <i class="bi bi-code-slash"></i>
+                        </span>
                         <button class="perfil-close" type="button" data-close-profile aria-label="Cerrar perfil de Ivan"><i class="bi bi-x-lg"></i></button>
                     </div>
                     <span class="perfil-role">Programador</span>
@@ -167,7 +188,10 @@
 
                 <dialog id="perfil-dialog-ana" class="perfil-dialog" aria-labelledby="perfil-title-ana">
                     <div class="perfil-dialog-header">
-                        <span class="perfil-avatar avatar-ana" aria-hidden="true"><i class="bi bi-clipboard2-check"></i></span>
+                        <span class="perfil-avatar avatar-ana" aria-hidden="true">
+                            <img class="perfil-avatar-img" src="imgs/equipo/Ana.jpeg" alt="" decoding="async">
+                            <i class="bi bi-clipboard2-check"></i>
+                        </span>
                         <button class="perfil-close" type="button" data-close-profile aria-label="Cerrar perfil de Ana"><i class="bi bi-x-lg"></i></button>
                     </div>
                     <span class="perfil-role">Tester / QA</span>
@@ -180,7 +204,12 @@
         </section>
 
         <!-- Mensaje de cierre del equipo. -->
-        <section class="cierre-equipo section-spacing" aria-labelledby="cierre-title">
+        <section class="cierre-equipo section-spacing container " aria-labelledby="cierre-title">
+            <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#bfd8f5"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+            </svg>
             <div class="container nosotros-container">
                 <article class="cierre-card">
                     <span class="cierre-icon" aria-hidden="true"><i class="bi bi-stars"></i></span>
@@ -192,7 +221,12 @@
         </section>
 
         <!-- Formulario visual de contacto con validación de demostración. -->
-        <section id="contacto" class="contacto-section section-spacing" aria-labelledby="contacto-title">
+        <section id="contacto" class="container contacto-section section-spacing" aria-labelledby="contacto-title">
+            <svg class="wave2" viewBox="0 0 1440 200"
+                    preserveAspectRatio="none" aria-hidden="true">
+                    <path fill="#fff8e7"
+                        d="M0,10 C 240,25 480,20 720,10 C 960,0 1200,25 1440,20 L1440,0 L0,0 Z"></path>
+            </svg>
             <div class="container nosotros-container">
                 <div class="section-heading-nosotros">
                     <span class="nosotros-eyebrow">HABLEMOS</span>
@@ -249,7 +283,7 @@
                                 <div class="message-footer"><small class="field-error" id="message-error"></small><small id="message-counter">0 / 1500</small></div>
                             </div>
                             <div class="col-12">
-                                <button class="btn encuesta-btn-primary contacto-submit" type="sumit">
+                                <button class="btn encuesta-btn-primary contacto-submit" type="submit">
                                     Enviar Formulario <i class="bi bi-arrow-right-circle" aria-hidden="true"></i>
                                 </button>
                                 <div id="contact-feedback" class="contact-feedback" role="status" aria-live="polite" hidden></div>

@@ -36,9 +36,9 @@
 .nosotros-page .nosotros-container {
   max-width: 1120px;
 }
-.container{
-    position: relative;
-    z-index: 2;
+.container {
+  position: relative;
+  z-index: 2;
 }
 .nosotros-page .section-spacing {
   padding: clamp(2.5rem, 5vw, 4.5rem) 0;
@@ -185,7 +185,36 @@
   padding-top: 0;
 }
 
-/* Tarjetas interactivas de perfiles. */
+/* ===== AVATAR: la foto se ve completa, sin recortes ===== */
+.nosotros-page .perfil-avatar {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: var(--nos-radius-md);
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 3rem; /* tamaño del ícono de respaldo */
+}
+
+.nosotros-page .perfil-avatar-img {
+  display: block;
+  width: 100%;
+  height: auto;          /* respeta la proporción real de la foto */
+  max-height: 300px;
+  object-fit: contain;   /* nunca recorta */
+}
+
+/* Con foto, el ícono se oculta. Sin foto, el ícono queda en un recuadro 3:4. */
+.nosotros-page .perfil-avatar:has(.perfil-avatar-img) > i {
+  display: none;
+}
+.nosotros-page .perfil-avatar:not(:has(.perfil-avatar-img)) {
+  aspect-ratio: 3 / 4;
+}
+
+/* ===== TARJETA: foto a la izquierda, datos a la derecha ===== */
 .nosotros-page .perfiles-grid {
   align-items: stretch;
 }
@@ -194,11 +223,13 @@
 }
 
 .nosotros-page .perfil-card {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: clamp(110px, 38%, 170px) minmax(0, 1fr);
+  column-gap: 1.1rem;
+  align-items: start;
+  align-content: start;
   width: 100%;
   min-height: 100%;
-  flex-direction: column;
   padding: 1.4rem;
   border: 1px solid rgba(8, 117, 209, 0.22);
   border-radius: var(--nos-radius-lg);
@@ -224,6 +255,17 @@
 .nosotros-page .perfil-card:focus-visible {
   outline: 3px solid var(--nos-primary);
   outline-offset: 3px;
+}
+
+.nosotros-page .perfil-card .perfil-avatar {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  width: 100%;
+}
+
+.nosotros-page .perfil-card > :not(.perfil-avatar):not(.perfil-open) {
+  grid-column: 2;
+  justify-self: start;
 }
 
 .nosotros-page .perfil-name {
@@ -267,8 +309,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  grid-column: 1 / -1;
   width: 100%;
-  margin-top: auto;
+  margin-top: 1rem;
   padding-top: 0.85rem;
   border-top: 1px solid var(--nos-border-light);
   color: var(--nos-primary-dark);
@@ -276,10 +319,10 @@
   font-weight: 800;
 }
 
-/* Perfil ampliado: los detalles completos siguen declarados en HTML. */
+/* ===== PERFIL AMPLIADO: foto grande a la izquierda, texto a la derecha ===== */
 .nosotros-page .perfil-dialog {
-  width: min(720px, calc(100% - 2rem));
-  max-width: 720px;
+  width: min(860px, calc(100% - 2rem));
+  max-width: 860px;
   max-height: min(88vh, 850px);
   padding: clamp(1.4rem, 4vw, 2.5rem);
   overflow-y: auto;
@@ -294,7 +337,13 @@
   background: rgba(12, 36, 58, 0.62);
   backdrop-filter: blur(4px);
 }
+
 .nosotros-page .perfil-dialog[open] {
+  display: grid;
+  grid-template-columns: minmax(180px, 38%) minmax(0, 1fr);
+  grid-template-rows: repeat(4, auto) 1fr; /* la fila 5 absorbe el alto extra de la foto */
+  column-gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
   animation: perfil-dialog-in 0.25s ease both;
 }
 
@@ -310,18 +359,37 @@
 }
 
 .nosotros-page .perfil-dialog-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
+  display: contents; /* avatar y botón pasan a ser items de la grilla */
 }
 
 .nosotros-page .perfil-dialog .perfil-avatar {
-  width: 92px;
-  height: 92px;
-  font-size: 2.2rem;
+  grid-column: 1;
+  grid-row: 1 / span 5;
+  width: 100%;
 }
+
+.nosotros-page .perfil-dialog .perfil-avatar-img {
+  max-height: 440px;
+}
+
+.nosotros-page .perfil-dialog > :not(.perfil-dialog-header) {
+  grid-column: 2;
+}
+
+.nosotros-page .perfil-dialog .perfil-close {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.nosotros-page .perfil-dialog .perfil-role {
+  justify-self: start;
+}
+
+.nosotros-page .perfil-dialog .perfil-detail-line {
+  grid-column: 1 / -1;
+}
+
 .nosotros-page .perfil-close {
   display: grid;
   place-items: center;
@@ -366,7 +434,7 @@
   padding: 0.9rem 1rem;
   border-radius: var(--nos-radius-sm);
   background: var(--nos-primary-soft);
-  color: var(--nos-text-soft);
+  color: var(--nos-muted);
   font-size: 0.88rem;
 }
 
@@ -405,7 +473,6 @@
   color: var(--nos-muted);
   line-height: 1.8;
 }
-
 
 /* Contacto: formulario elegante y panel informativo. */
 .nosotros-page .contacto-section {
@@ -585,6 +652,49 @@
   color: #a32929;
 }
 
+/* ===== RESPONSIVE ===== */
+
+/* Celular: el perfil ampliado apila la foto arriba. */
+@media (max-width: 640px) {
+  .nosotros-page .perfil-dialog[open] {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .nosotros-page .perfil-dialog .perfil-avatar,
+  .nosotros-page .perfil-dialog > :not(.perfil-dialog-header),
+  .nosotros-page .perfil-dialog .perfil-close {
+    grid-column: 1;
+  }
+
+  .nosotros-page .perfil-dialog .perfil-avatar {
+    grid-row: auto;
+    width: min(100%, 280px);
+    justify-self: center;
+  }
+
+  .nosotros-page .perfil-dialog .perfil-close {
+    grid-row: 1;
+  }
+}
+
+/* Celulares muy angostos: la tarjeta también apila la foto. */
+@media (max-width: 420px) {
+  .nosotros-page .perfil-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-page .perfil-card .perfil-avatar,
+  .nosotros-page .perfil-card > :not(.perfil-avatar):not(.perfil-open) {
+    grid-column: 1;
+  }
+
+  .nosotros-page .perfil-card .perfil-avatar {
+    grid-row: auto;
+    margin-bottom: 0.9rem;
+  }
+}
+
 /* Ajustes para dispositivos pequeños. */
 @media (max-width: 767.98px) {
   .nosotros-page .intro-card,
@@ -613,4 +723,18 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+
+/* Waves decorativas utilizadas para separar visualmente las secciones.
+   Ocupan todo el ancho y no interfieren con clics ni elementos interactivos. */
+.wave,
+.wave2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 340px;
+  pointer-events: none;
+  z-index: 0;
 }

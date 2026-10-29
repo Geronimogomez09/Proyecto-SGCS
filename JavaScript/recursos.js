@@ -7,7 +7,17 @@
 // que necesita para agregarles interactividad.
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Si una foto de avatar no carga, se quita para que se vea el ícono de respaldo.
+    document.querySelectorAll(".perfil-avatar-img").forEach((img) => {
+        const quitar = () => img.remove();
 
+        // Cubre el caso en que la imagen ya falló antes de agregar el evento.
+        if (img.complete && img.naturalWidth === 0) {
+            quitar();
+        } else {
+            img.addEventListener("error", quitar, { once: true });
+        }
+    });
     // 1. PESTAÑAS DE LA PÁGINA
 
 

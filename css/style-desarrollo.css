@@ -79,37 +79,32 @@ a {
 /* Hero principal de la página.
    Contiene el título y enlaces de navegación. */
 .hero {
-  display: flex;
-  align-items: center;
-  min-height: clamp(320px, 55vh, 560px);
-  padding: clamp(1.5rem, 6vw, 5rem);
+  min-height: 200px;
   background-image: url(../imgs/Hero-desarrollo.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 5rem;
 }
 
-/* Organiza verticalmente el contenido del hero y sus enlaces.
-   El ancho máximo deja libre el lado derecho de la imagen en escritorio. */
+/* Organiza verticalmente el contenido del hero y sus enlaces. */
 .hero-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: left;
   justify-content: center;
-  gap: clamp(1.25rem, 3vw, 2.5rem);
-  width: 100%;
-  max-width: min(62%, 44rem);
-  padding: 0;
+  padding: 2rem 35vw 5rem 2rem;
+  gap: clamp(2rem, 2vw, 5rem);
 }
 
-/* Título principal del hero. */
+/* Título principal del hero.
+   Utiliza un tamaño adaptable para diferentes resoluciones. */
 .hero-title {
   margin: 0;
   color: var(--color-text);
-  font-size: clamp(2rem, 1.2rem + 3vw, 4rem);
+  font-size: clamp(2.25rem, 4vw, 4rem);
   font-weight: 700;
-  line-height: 1.1;
-  text-wrap: balance;
+  line-height: 1.08;
 }
 
 /* Resalta una parte del título principal. */
@@ -117,112 +112,77 @@ a {
   color: var(--color-primary);
 }
 
-/* Contenedor de enlaces: permite que bajen de línea si no caben. */
 .hero-links {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
   gap: 0.65rem;
 }
 
-/* Estilo base de los enlaces del hero. */
+/* Estilo de loos enlaces del hero */
 .hero-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2px 10px;
   gap: 0.7rem;
-  min-height: 2.25rem;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid transparent; /* evita el salto de tamaño en hover */
   border-radius: 999px;
   background: var(--color-primary);
   color: var(--color-white);
-  font-size: 0.9rem;
-  font-weight: 800;
   text-decoration: none;
+  font-weight: 800;
   transition:
     transform var(--transition),
     background-color var(--transition),
     box-shadow var(--transition);
 }
 
-/* Hover y foco por teclado. */
+/* Ajusta el tamaño y espaciado de los enlaces del hero. */
+.hero-link {
+  font-size: 0.9rem;
+}
+
+/* Estado al pasar el mouse o navegar con teclado.
+   Cambia el color, desplaza ligeramente el elemento y aumenta la sombra. */
 .hero-link:hover,
 .hero-link:focus-visible {
   background: var(--color-cream);
   color: var(--color-primary);
-  border-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   transform: translateX(4px);
   box-shadow: var(--shadow-lg);
 }
 
-/* Variante blanca. */
 .white-link {
-  border-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   background: var(--color-white);
   color: var(--color-primary);
+  font-weight: 800;
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .white-link:hover,
 .white-link:focus-visible {
   background: var(--color-primary);
   color: var(--color-cream);
+  border: 1px solid var(--color-primary);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-lg);
 }
-
-/* TABLET: el contenido pasa a una tarjeta centrada con efecto vidrio. */
 @media (max-width: 992px) {
   .hero {
     min-height: auto;
+    padding: 5rem;
   }
-
   .hero-container {
-    align-items: center;
-    max-width: 100%;
-    padding: clamp(1.5rem, 5vw, 2.5rem);
     text-align: center;
+    padding: 2rem;
     background-color: #c9e1f87c;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-  }
-
-  .hero-links {
-    justify-content: center;
-  }
-}
-
-/* CELULAR: enlaces apilados y a todo el ancho, más fáciles de tocar. */
-@media (max-width: 576px) {
-  .hero {
-    padding: 1rem;
-  }
-
-  .hero-container {
-    border-radius: 16px;
-  }
-
-  .hero-links {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .hero-link {
-    min-height: 2.75rem;
-    padding: 0.5rem 1.1rem;
-  }
-}
-
-/* Respeta la preferencia de menos movimiento. */
-@media (prefers-reduced-motion: reduce) {
-  .hero-link {
-    transition: none;
-  }
-
-  .hero-link:hover,
-  .hero-link:focus-visible {
-    transform: none;
   }
 }
 
