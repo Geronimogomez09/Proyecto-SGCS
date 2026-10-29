@@ -618,6 +618,228 @@
                         </p>
                     </div>
 
+                    <!-- Bloque que contiene los doce principios en un acordeón. -->
+                    <div class="manifiesto-block" id="manifiesto-principios" data-toc-label="Principios">
+                        <div class="manifiesto-head">
+                            <h3 class="manifiesto-subtitle"><span>12</span> principios</h3>
+
+                            <!-- Botón controlado por agiles.js para abrir o cerrar todos los principios a la vez. -->
+                            <button type="button" class="btn-toggle-all" id="toggle-principios">
+                                <i class="bi bi-arrows-expand"></i>
+                                <span class="toggle-label">Abrir todos</span>
+                            </button>
+                        </div>
+
+                        <!-- Acordeón de principios. Cada botón apunta al panel correspondiente mediante data-bs-target. -->
+                        <div class="accordion agiles-accordion" id="acordeon-principios">
+
+                            <!-- Principio 1: entregar valor al cliente desde etapas tempranas. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-1"
+                                        aria-expanded="false" aria-controls="principio-1">
+                                        <span class="principio-num">1</span>
+                                        Satisfacer al cliente mediante entregas tempranas y continuas
+                                    </button>
+                                </h4>
+                                <div id="principio-1" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">La idea es entregar partes del software desde temprano, en lugar de esperar hasta el final del proyecto. Así, el cliente puede ver los avances, probarlos y dar su opinión.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 2: permitir que el proyecto se adapte a nuevos requisitos. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-2"
+                                        aria-expanded="false" aria-controls="principio-2">
+                                        <span class="principio-num">2</span>
+                                        Aceptar cambios en los requisitos, incluso en etapas avanzadas
+                                    </button>
+                                </h4>
+                                <div id="principio-2" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">Los cambios son normales durante un proyecto. Si el cliente necesita modificar algo, el equipo debe poder adaptarse aunque el desarrollo ya esté avanzado.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 3: entregar versiones funcionales con frecuencia. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-3"
+                                        aria-expanded="false" aria-controls="principio-3">
+                                        <span class="principio-num">3</span>
+                                        Entregar software funcional frecuentemente
+                                    </button>
+                                </h4>
+                                <div id="principio-3" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">Se busca entregar versiones que realmente funcionen de manera regular. De esta forma, el cliente puede probar el producto y detectar problemas antes de que el proyecto termine.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 4: mantener una colaboración continua entre cliente y desarrolladores. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-4"
+                                        aria-expanded="false" aria-controls="principio-4">
+                                        <span class="principio-num">4</span>
+                                        Cliente y desarrolladores deben trabajar juntos
+                                    </button>
+                                </h4>
+                                <div id="principio-4" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">El cliente y el equipo de desarrollo deben mantenerse en contacto durante todo el proyecto. Esto ayuda a entender mejor lo que se necesita y evita hacer un producto diferente al esperado.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 5: dar al equipo un entorno adecuado para realizar su trabajo. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-5"
+                                        aria-expanded="false" aria-controls="principio-5">
+                                        <span class="principio-num">5</span>
+                                        Construir proyectos alrededor de personas motivadas
+                                    </button>
+                                </h4>
+                                <div id="principio-5" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">El equipo debe estar formado por personas comprometidas y motivadas. Se les debe dar confianza, herramientas y un ambiente adecuado para que puedan realizar bien su trabajo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 6: facilitar la comunicación directa para resolver dudas y problemas. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-6"
+                                        aria-expanded="false" aria-controls="principio-6">
+                                        <span class="principio-num">6</span>
+                                        Favorecer la comunicación directa
+                                    </button>
+                                </h4>
+                                <div id="principio-6" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">La comunicación cara a cara o directa permite resolver dudas y problemas más rápidamente. Es más fácil entenderse hablando directamente que mediante mensajes o documentos demasiado extensos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 7: medir el avance por el software que realmente funciona. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-7"
+                                        aria-expanded="false" aria-controls="principio-7">
+                                        <span class="principio-num">7</span>
+                                        El software funcionando es la principal medida de progreso
+                                    </button>
+                                </h4>
+                                <div id="principio-7" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">El avance del proyecto se mide principalmente por las funciones que ya están funcionando. No alcanza con tener documentos o diseños; lo importante es que el software pueda utilizarse.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 8: evitar un ritmo de trabajo que provoque agotamiento. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-8"
+                                        aria-expanded="false" aria-controls="principio-8">
+                                        <span class="principio-num">8</span>
+                                        Mantener un ritmo de trabajo sostenible
+                                    </button>
+                                </h4>
+                                <div id="principio-8" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">El equipo debe trabajar a un ritmo que pueda mantener durante todo el proyecto. Se deben evitar jornadas excesivas y el agotamiento, porque pueden afectar la calidad del software.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 9: cuidar la calidad técnica y el diseño para facilitar el mantenimiento. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-9"
+                                        aria-expanded="false" aria-controls="principio-9">
+                                        <span class="principio-num">9</span>
+                                        Buscar continuamente la calidad técnica y buen diseño
+                                    </button>
+                                </h4>
+                                <div id="principio-9" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">No solo importa que el programa funcione, también debe estar bien desarrollado. Un buen diseño y código de calidad facilitan las futuras modificaciones y reducen los problemas.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 10: evitar complejidad y trabajo que no aporten valor. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-10"
+                                        aria-expanded="false" aria-controls="principio-10">
+                                        <span class="principio-num">10</span>
+                                        Buscar la simplicidad
+                                    </button>
+                                </h4>
+                                <div id="principio-10" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">Se debe hacer solo lo necesario, evitando agregar funciones o elementos que no aporten valor. Un sistema más simple suele ser más fácil de entender, mantener y modificar.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 11: permitir que el equipo participe en la organización del trabajo. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-11"
+                                        aria-expanded="false" aria-controls="principio-11">
+                                        <span class="principio-num">11</span>
+                                        Los equipos autoorganizados generan mejores soluciones
+                                    </button>
+                                </h4>
+                                <div id="principio-11" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">El equipo tiene cierta libertad para organizar su trabajo y decidir cómo realizar las tareas. Esto permite que quienes conocen el proyecto puedan tomar decisiones y encontrar mejores formas de resolver los problemas.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Principio 12: revisar el proceso y buscar mejoras para las siguientes etapas. -->
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#principio-12"
+                                        aria-expanded="false" aria-controls="principio-12">
+                                        <span class="principio-num">12</span>
+                                        Reflexionar periódicamente para mejorar el trabajo
+                                    </button>
+                                </h4>
+                                <div id="principio-12" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p class="principio-body">Al finalizar cada etapa, el equipo analiza qué salió bien y qué podría hacerse mejor. Con esa información, puede cambiar su forma de trabajar para mejorar continuamente en los siguientes ciclos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
