@@ -1,0 +1,689 @@
+/* Archivo: style-agiles.css
+   Contiene los estilos de la página "Metodologías Ágiles".
+   Utiliza Bootstrap 5.3, clases propias y la tipografía Quicksand.
+   Mantiene la misma paleta de colores que style-index.css y style-calidad.css.
+*/
+
+/* Activa el desplazamiento suave solamente si el usuario no tiene
+   configurada la preferencia de reducir las animaciones. */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Agrega un margen superior al desplazarse hasta una sección o elemento
+   de la tabla de contenidos, evitando que quede demasiado pegado al borde. */
+section[id],
+[data-toc-label] {
+    scroll-margin-top: 16px;
+}
+
+/* Hero: sección principal que aparece al comienzo de la página.
+   Divide el contenido en dos columnas: texto e imagen. */
+.hero-agiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 340px;
+    background-color: #bfe0fb;
+    overflow: hidden;
+}
+
+/* Organiza el contenido textual del hero en una columna
+   y lo centra verticalmente dentro de su espacio. */
+.hero-agiles-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 6% 40px 8%;
+}
+
+/* Limita el ancho del texto y centra su contenido. */
+.hero-agiles-copy {
+    max-width: 430px;
+    text-align: center;
+}
+
+/* Define el tamaño, el grosor, el color y el margen del título principal.
+   clamp permite que el tamaño se adapte al ancho de la pantalla. */
+.hero-agiles-title {
+    font-size: clamp(28px, 3.4vw, 40px);
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 14px;
+}
+
+/* Resalta una parte del título utilizando el azul principal de la página. */
+.hero-agiles-title span {
+    color: #0062cb;
+}
+
+/* Define la apariencia del texto descriptivo del hero. */
+.hero-agiles-description {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #222222;
+    margin: 0;
+}
+
+/* Coloca los enlaces uno debajo del otro y establece
+   la separación entre ellos y el contenido anterior. */
+.hero-agiles-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+/* Da formato a los enlaces del hero para que parezcan botones.
+   También reserva espacio a la derecha para el icono. */
+.hero-agiles-link {
+    position: relative;
+    width: 165px;
+    padding: 8px 34px 8px 16px;
+    border-radius: 999px;
+    background-color: #0875d1;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Posiciona el icono dentro del botón, alineado verticalmente
+   y separado del borde derecho. */
+.hero-agiles-link i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+/* Cambia el color y desplaza ligeramente el botón cuando
+   el cursor pasa por encima. */
+.hero-agiles-link:hover {
+    background-color: #0561ad;
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* Muestra un contorno visible cuando el botón recibe el foco
+   mediante el teclado, mejorando la accesibilidad. */
+.hero-agiles-link:focus-visible {
+    outline: 3px solid #0d3a66;
+    outline-offset: 2px;
+}
+
+/* Configura la imagen ubicada a la derecha del hero.
+   La imagen se adapta al espacio disponible y tiene un borde curvo.
+   El archivo utilizado debe estar en imgs/hero-agiles.jpg,
+   teniendo en cuenta la ubicación de este CSS. */
+.hero-agiles-img {
+    min-height: 300px;
+    background-image: url('../imgs/hero-agiles.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: ellipse(100% 140% at 100% 100%);
+}
+
+/* Adaptaciones del hero para pantallas de celulares y otros dispositivos
+   con un ancho máximo de 767 píxeles. */
+@media (max-width: 767px) {
+    .hero-agiles {
+        /* Coloca el texto y la imagen uno debajo del otro. */
+        grid-template-columns: 1fr;
+    }
+
+    .hero-agiles-text {
+        /* Centra el contenido y reduce los espacios laterales. */
+        align-items: center;
+        padding: 36px 20px 30px;
+    }
+
+    .hero-agiles-links {
+        /* Centra los botones debajo del texto. */
+        align-items: center;
+    }
+
+    .hero-agiles-img {
+        /* Reduce la altura de la imagen y elimina el borde curvo. */
+        min-height: 220px;
+        clip-path: none;
+    }
+}
+
+/* Bloques de contenido de cada metodología.
+   Agrega espacio vertical para separar las distintas secciones. */
+.metodologia {
+    padding: 55px 0;
+}
+
+/* Fondo crema para alternar visualmente entre secciones. */
+.metodologia-crema {
+    background-color: #fff8e7;
+}
+
+/* Fondo celeste para alternar visualmente entre secciones. */
+.metodologia-celeste {
+    background-color: #bfe0fb;
+}
+
+/* Limita el ancho del contenido y lo centra horizontalmente. */
+.metodologia-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Centra el título de cada metodología y deja espacio debajo. */
+.metodologia-title {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+/* Define el estilo de los títulos principales de cada metodología. */
+.metodologia-title h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+/* Resalta una parte del título con el azul principal. */
+.metodologia-title h2 span {
+    color: #0062cb;
+}
+
+/* Muestra un subtítulo debajo del título principal. */
+.metodologia-subtitle {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d3a52;
+}
+
+/* Tarjeta introductoria de cada metodología.
+   Coloca el icono y el texto en una misma fila. */
+.metodologia-intro {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 18px 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Ajusta el texto de la tarjeta introductoria. */
+.metodologia-intro p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #222222;
+}
+
+/* Da forma circular al icono de la introducción
+   y centra su contenido horizontal y verticalmente. */
+.metodologia-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #c9e1f8;
+    color: #1d4d79;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* Acordeón de Bootstrap con estilos personalizados.
+   Las variables --bs-accordion-* permiten modificar
+   los colores, bordes, espacios y estados del acordeón. */
+.agiles-accordion {
+    --bs-accordion-bg: #ffffff;
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-radius: 20px;
+    --bs-accordion-inner-border-radius: 20px;
+    --bs-accordion-btn-padding-x: 18px;
+    --bs-accordion-btn-padding-y: 14px;
+    --bs-accordion-body-padding-x: 18px;
+    --bs-accordion-body-padding-y: 18px;
+    --bs-accordion-btn-color: #0062cb;
+    --bs-accordion-active-color: #0062cb;
+    --bs-accordion-active-bg: #eef6fe;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(8, 117, 209, 0.3);
+}
+
+/* Da apariencia de tarjeta a cada elemento del acordeón,
+   separándolos entre sí y agregando sombra. */
+.agiles-accordion .accordion-item {
+    margin-bottom: 14px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Elimina el margen inferior del último elemento del acordeón. */
+.agiles-accordion .accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Ajusta el espacio entre el icono y el texto de cada encabezado,
+   además de definir el tamaño y el grosor de la letra. */
+.agiles-accordion .accordion-button {
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Da formato circular a los iconos de los encabezados del acordeón. */
+.acc-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #c9e1f8;
+    color: #1d4d79;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Tarjetas pequeñas que se utilizan dentro del contenido del acordeón.
+   El icono y el texto se colocan uno al lado del otro. */
+.agiles-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    height: 100%;
+    background-color: #fff8e7;
+    border-radius: 16px;
+    padding: 14px 16px;
+}
+
+/* Crea un círculo de fondo blanco para los iconos de las tarjetas. */
+.agiles-card-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #0875d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Define la apariencia de los títulos de las tarjetas pequeñas. */
+.agiles-card-title {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0062cb;
+}
+
+/* Ajusta el texto descriptivo de las tarjetas pequeñas. */
+.agiles-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #333333;
+}
+
+/* Variante de tarjeta que centra verticalmente el contenido,
+   útil cuando solo se muestra un título junto al icono. */
+.agiles-card-simple {
+    align-items: center;
+}
+
+/* Elimina el margen del título en las tarjetas simples. */
+.agiles-card-simple .agiles-card-title {
+    margin: 0;
+}
+
+/* Estilo para notas o textos explicativos dentro del acordeón. */
+.agiles-note {
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+/* Tablero Kanban: organiza las columnas del flujo de trabajo
+   horizontalmente y con una separación uniforme. */
+.kanban-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cada columna del tablero ocupa una parte del espacio disponible.
+   min-width: 0 permite que se reduzca sin desbordar el contenedor. */
+.kanban-col {
+    flex: 1;
+    min-width: 0;
+    background-color: #fff8e7;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+/* Da formato al título de cada columna Kanban. */
+.kanban-col-title {
+    margin: 0 0 10px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    background-color: #0875d1;
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Representa las tareas del tablero mediante rectángulos blancos.
+   El borde izquierdo celeste ayuda a distinguir cada tarea. */
+.kanban-ticket {
+    height: 26px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 4px solid #c9e1f8;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Elimina el margen inferior de la última tarea de cada columna. */
+.kanban-ticket:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilo y alineación de las flechas que indican el flujo
+   entre las columnas del tablero. */
+.kanban-arrow {
+    align-self: center;
+    color: #0062cb;
+    font-size: 20px;
+}
+
+/* En pantallas pequeñas, las columnas Kanban se muestran en vertical
+   y las flechas giran para seguir indicando el sentido del flujo. */
+@media (max-width: 767px) {
+    .kanban-flow {
+        flex-direction: column;
+    }
+
+    .kanban-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+/* Introducción al Manifiesto Ágil.
+   Limita el ancho del párrafo y centra el texto. */
+.manifiesto-intro {
+    max-width: 640px;
+    margin: 0 auto 28px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #1d3a52;
+}
+
+/* Estilo de los subtítulos que separan las partes del manifiesto. */
+.manifiesto-subtitle {
+    margin: 0 0 14px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Resalta en azul una parte del subtítulo. */
+.manifiesto-subtitle span {
+    color: #0062cb;
+}
+
+/* Agrega espacio entre bloques consecutivos del manifiesto,
+   excepto antes del primero. */
+.manifiesto-block + .manifiesto-block {
+    margin-top: 34px;
+}
+
+/* Organiza el encabezado de cada bloque del manifiesto.
+   Permite que sus elementos pasen a otra línea si falta espacio. */
+.manifiesto-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+/* Quita el margen del subtítulo cuando está dentro del encabezado. */
+.manifiesto-head .manifiesto-subtitle {
+    margin: 0;
+}
+
+/* Tarjetas que presentan los valores del Manifiesto Ágil.
+   Ocupan la altura disponible, centran el texto y agregan sombra. */
+.valor-card {
+    height: 100%;
+    padding: 20px 14px;
+    border-radius: 22px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el valor que se destaca en cada tarjeta. */
+.valor-mas {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #0875d1;
+}
+
+/* Texto intermedio que indica la comparación entre los dos valores. */
+.valor-sobre {
+    display: block;
+    margin: 8px 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6b7785;
+}
+
+/* Estilo del valor que aparece como segunda parte de la comparación. */
+.valor-menos {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #333333;
+}
+
+/* Texto final del manifiesto, centrado y en cursiva. */
+.manifiesto-cierre {
+    margin: 14px 0 0;
+    text-align: center;
+    font-size: 12.5px;
+    font-style: italic;
+    color: #1d3a52;
+}
+
+/* Botón que permite abrir o cerrar todos los elementos del acordeón.
+   Su apariencia cambia al pasar el cursor por encima. */
+.btn-toggle-all {
+    border: none;
+    border-radius: 8px;
+    background-color: #0875d1;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+/* Oscurece el botón cuando el cursor pasa sobre él. */
+.btn-toggle-all:hover {
+    background-color: #0561ad;
+}
+
+/* Añade un contorno visible al botón cuando recibe el foco del teclado. */
+.btn-toggle-all:focus-visible {
+    outline: 3px solid #0d3a66;
+    outline-offset: 2px;
+}
+
+/* Número circular utilizado para identificar cada principio ágil. */
+.principio-num {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0875d1;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Formato del texto que explica cada principio dentro del acordeón. */
+.agiles-accordion .principio-body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333333;
+}
+
+/* Botón flotante de la tabla de contenidos.
+   Permanece fijo en la pantalla mientras el usuario se desplaza. */
+.toc-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1030;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 999px;
+    background-color: #2877cf;
+    color: #ffffff;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Ajusta el tamaño del icono dentro del botón flotante. */
+.toc-fab i {
+    font-size: 16px;
+}
+
+/* Cambia el color y eleva ligeramente el botón al pasar el cursor. */
+.toc-fab:hover {
+    background-color: #0561ad;
+    transform: translateY(-2px);
+}
+
+/* Muestra un contorno de foco accesible alrededor del botón flotante. */
+.toc-fab:focus-visible {
+    outline: 3px solid #0d3a66;
+    outline-offset: 3px;
+}
+
+/* Define el fondo y la tipografía del panel lateral
+   que contiene la tabla de contenidos. */
+.toc-offcanvas {
+    background-color: #fff8e7;
+    font-family: Quicksand, sans-serif;
+}
+
+/* Estilo del título del panel lateral. */
+.toc-offcanvas .offcanvas-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Cada grupo de la tabla de contenidos tiene un margen inferior
+   y una línea izquierda que permite destacar el grupo activo. */
+.toc-group {
+    margin-bottom: 14px;
+    padding-left: 12px;
+    border-left: 3px solid transparent;
+}
+
+/* Cambia el color de la línea izquierda del grupo seleccionado
+   o activo en la tabla de contenidos. */
+.toc-group.active {
+    border-left-color: #0875d1;
+}
+
+/* Estilo de los enlaces principales de la tabla de contenidos. */
+.toc-group-link {
+    display: block;
+    color: #0062cb;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Quita las viñetas de la lista de subapartados
+   y ajusta sus márgenes y espacios internos. */
+.toc-sublist {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0 0 0 10px;
+}
+
+/* Estilo de los enlaces secundarios de la tabla de contenidos. */
+.toc-sublist a {
+    display: block;
+    padding: 4px 0;
+    color: #333333;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Cambia el color y subraya los enlaces cuando el cursor pasa por encima. */
+.toc-sublist a:hover,
+.toc-group-link:hover {
+    color: #0875d1;
+    text-decoration: underline;
+}
+
+/* Ajustes generales para pantallas pequeñas.
+   Reduce los espacios verticales, reorganiza las tarjetas introductorias
+   y adapta el tamaño de los encabezados del acordeón. */
+@media (max-width: 575px) {
+    .metodologia {
+        padding: 40px 0;
+    }
+
+    .metodologia-intro {
+        /* Coloca el icono encima del texto y centra ambos elementos. */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .agiles-accordion .accordion-button {
+        /* Reduce el tamaño del texto para aprovechar mejor el espacio. */
+        font-size: 14.5px;
+    }
+}
