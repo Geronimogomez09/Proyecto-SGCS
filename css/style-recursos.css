@@ -779,8 +779,12 @@
     transform: translateY(-1px);
 }
 
-/* Material visual: diagramas realizados con HTML y CSS. */
-.recursos-page .visual-card {
+
+/* Ejercicios y casos prácticos. */
+.recursos-page .ejercicio-card {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
     padding: 1.25rem;
     border: 1px solid var(--recursos-border);
     border-radius: var(--recursos-radius-md);
@@ -788,147 +792,135 @@
     box-shadow: var(--recursos-shadow-sm);
 }
 
-.recursos-page .visual-card h3 {
-    margin: 0 0 .45rem;
+.recursos-page .ejercicio-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.recursos-page .ejercicio-header .recurso-tipo {
+    margin: 0;
+}
+
+.recursos-page .ejercicio-nivel {
+    padding: .15rem .6rem;
+    border: 1px solid var(--recursos-border);
+    border-radius: 999px;
+    background: var(--recursos-primary-soft);
+    color: var(--recursos-primary-dark);
+    font-size: .72rem;
+    font-weight: 800;
+}
+
+.recursos-page .ejercicio-card h3 {
+    margin: 0;
     color: var(--recursos-text);
     font-size: 1.12rem;
     font-weight: 800;
     line-height: 1.4;
 }
 
-.recursos-page .visual-card > p {
-    margin: 0 0 1rem;
-    color: var(--recursos-text-soft);
+/* Bloque del enunciado. */
+.recursos-page .ejercicio-enunciado {
+    padding: 1rem;
+    border-left: 4px solid var(--recursos-primary);
+    border-radius: var(--recursos-radius-sm);
+    background: var(--recursos-cream);
+    color: var(--recursos-text);
     font-size: .88rem;
     line-height: 1.65;
 }
 
-.recursos-page .ciclo-visual {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    padding: 1rem;
-    border-radius: var(--recursos-radius-sm);
-    background: var(--recursos-cream);
+.recursos-page .ejercicio-enunciado > :last-child,
+.recursos-page .ejercicio-pauta > :last-child {
+    margin-bottom: 0;
 }
 
-.recursos-page .ciclo-visual span {
-    padding: .55rem .65rem;
-    border: 1px solid var(--recursos-border);
-    border-radius: 8px;
-    background: var(--recursos-white);
+.recursos-page .ejercicio-enunciado p,
+.recursos-page .ejercicio-pauta p {
+    margin: 0 0 .6rem;
+}
+
+.recursos-page .ejercicio-enunciado ol,
+.recursos-page .ejercicio-enunciado ul,
+.recursos-page .ejercicio-pauta ol,
+.recursos-page .ejercicio-pauta ul {
+    margin: 0 0 .6rem;
+    padding-left: 1.25rem;
+}
+
+.recursos-page .ejercicio-datos {
     color: var(--recursos-primary-dark);
-    font-size: .78rem;
-    font-weight: 800;
-    text-align: center;
-}
-
-.recursos-page .ciclo-visual > i {
-    color: var(--recursos-primary);
-    font-size: .9rem;
-}
-
-.recursos-page .testing-visual {
-    display: grid;
-    justify-items: center;
-    gap: .4rem;
-    padding: 1rem;
-    border-radius: var(--recursos-radius-sm);
-    background: var(--recursos-cream);
-}
-
-.recursos-page .test-level {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: .55rem;
-    border: 1px solid var(--recursos-border);
-    border-radius: 7px;
-    background: var(--recursos-blue);
-    color: var(--recursos-text);
-    text-align: center;
-}
-
-.recursos-page .test-level strong {
-    font-size: .82rem;
     font-weight: 800;
 }
 
-.recursos-page .test-level span {
-    font-size: .72rem;
-}
-
-.recursos-page .test-level-1 { width: 34%; }
-.recursos-page .test-level-2 { width: 50%; }
-.recursos-page .test-level-3 { width: 68%; }
-.recursos-page .test-level-4 { width: 86%; }
-
-.recursos-page .quality-visual {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: .6rem;
-}
-
-.recursos-page .quality-visual span {
-    display: flex;
+/* Botón Mostrar/Ocultar solución. */
+.recursos-page .solucion-toggle {
+    display: inline-flex;
     align-items: center;
-    gap: .55rem;
-    min-width: 0;
-    padding: .7rem;
-    border: 1px solid var(--recursos-border-light);
-    border-radius: var(--recursos-radius-sm);
-    background: var(--recursos-cream);
-    color: var(--recursos-text);
-    font-size: .8rem;
-    font-weight: 700;
-}
-
-.recursos-page .quality-visual i {
-    color: var(--recursos-primary);
-    font-size: 1rem;
-}
-
-.recursos-page .qa-visual {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr);
-    align-items: stretch;
+    align-self: flex-start;
     gap: .5rem;
+    min-height: 2.5rem;
+    padding: .45rem 1rem;
+    border: 1px solid var(--recursos-primary);
+    border-radius: 999px;
+    background: var(--recursos-white);
+    color: var(--recursos-primary);
+    font: inherit;
+    font-size: .85rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color .22s ease, color .22s ease;
 }
 
-.recursos-page .qa-visual > div:not(.qa-divider) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .35rem;
-    padding: .95rem .65rem;
+.recursos-page .solucion-toggle:hover,
+.recursos-page .solucion-toggle:focus-visible,
+.recursos-page .solucion-toggle[aria-expanded="true"] {
+    background: var(--recursos-primary);
+    color: var(--recursos-white);
+}
+
+/* Área desplegable: cerrada por defecto desde el CSS. */
+.recursos-page .ejercicio-solucion {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows .3s ease, visibility 0s linear .3s;
+}
+
+.recursos-page .ejercicio-card.solucion-abierta .ejercicio-solucion {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows .3s ease, visibility 0s;
+}
+
+.recursos-page .ejercicio-solucion-inner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.recursos-page .ejercicio-pauta {
+    padding: 1rem;
     border: 1px solid var(--recursos-border);
     border-radius: var(--recursos-radius-sm);
     background: var(--recursos-primary-soft);
-    text-align: center;
-}
-
-.recursos-page .qa-visual > div > i {
-    color: var(--recursos-primary);
-    font-size: 1.4rem;
-}
-
-.recursos-page .qa-visual strong {
     color: var(--recursos-text);
-    font-size: .82rem;
+    font-size: .86rem;
+    line-height: 1.65;
 }
 
-.recursos-page .qa-visual span {
+.recursos-page .ejercicio-pauta > strong {
+    display: block;
+    margin-bottom: .4rem;
+    color: var(--recursos-primary-dark);
+}
+
+.recursos-page .pauta-eval {
+    padding-top: .6rem;
+    border-top: 1px dashed var(--recursos-border);
     color: var(--recursos-text-soft);
-    font-size: .75rem;
-    line-height: 1.5;
-}
-
-.recursos-page .qa-divider {
-    display: grid;
-    place-items: center;
-    color: var(--recursos-primary);
 }
 
 /* Adaptación a tabletas y teléfonos. */

@@ -539,8 +539,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // 6. EJERCICIOS Y CASOS PRÁCTICOS (MOSTRAR / OCULTAR SOLUCIÓN)
 
-    // 6. ESTADO INICIAL DE LA PÁGINA
+    // Botones que controlan la solución de cada ejercicio.
+    const solutionButtons = [...document.querySelectorAll(".solucion-toggle")];
+
+    // Abre o cierra una solución y sincroniza texto, icono y atributos de accesibilidad.
+    function setSolution(button, open) {
+        const panel = document.getElementById(button.getAttribute("aria-controls"));
+        const card = button.closest(".ejercicio-card");
+        const icon = button.querySelector("i");
+        if (!panel || !card) {
+            return;
+        }
+        card.classList.toggle("solucion-abierta", open);
+        button.setAttribute("aria-expanded", String(open));
+        button.querySelector(".solucion-label").textContent =
+            open ? "Ocultar solución" : "Mostrar solución";
+        icon.classList.toggle("bi-eye", !open);
+        icon.classList.toggle("bi-eye-slash", open);
+        panel.setAttribute("aria-hidden", String(!open));
+        // inert evita que el contenido oculto reciba foco o sea leído.
+        panel.inert = !open;
+    }
+
+    // Deja todas las soluciones ocultas.
+    function resetSolutions() {
+        solutionButtons.forEach((button) => setSolution(button, false));
+    }
+
+    // Alterna la solución del ejercicio al hacer clic.
+    solutionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const isOpen = button.getAttribute("aria-expanded") === "true";
+            setSolution(button, !isOpen);
+        });
+    });
+    // 7. ESTADO INICIAL DE LA PÁGINA
     // Cuando termina de cargarse el HTML, deja preparada la página para usarla.
     // Muestra inicialmente la pestaña del glosario.
     showTab("glosario");
@@ -548,5 +583,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateGlossary();
     // Muestra todas las tarjetas de recursos, sin aplicar un filtro específico.
     filterResources("todas");
-
+    updateGlossary();
+    resetSolutions();
 });
