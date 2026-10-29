@@ -69,11 +69,11 @@
                         <span class="recurso-tab-text"><strong>Enlaces de interés</strong><small>Accedé a documentación, libros, guías y organizaciones de referencia.</small></span>
                         <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
                     </button>
-                    <button class="recurso-tab" id="tab-visual" type="button" role="tab" aria-selected="false" aria-controls="panel-visual" data-tab="visual" tabindex="-1">
-                        <i class="bi bi-images" aria-hidden="true"></i>
-                        <span class="recurso-tab-text"><strong>Material visual</strong><small>Repasá ciclos, pruebas y atributos de calidad con esquemas sencillos.</small></span>
-                        <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
-                    </button>
+                    <button class="recurso-tab" id="tab-ejercicios" type="button" role="tab" aria-selected="false" aria-controls="panel-ejercicios" data-tab="ejercicios" tabindex="-1">
+    <i class="bi bi-pencil-square" aria-hidden="true"></i>
+    <span class="recurso-tab-text"><strong>Ejercicios y casos prácticos</strong><small>Reforzá lo aprendido resolviendo ejercicios y consultando la solución.</small></span>
+    <i class="bi bi-arrow-right recurso-tab-arrow" aria-hidden="true"></i>
+</button>
                 </nav>
             </div>
         </section>
@@ -538,79 +538,223 @@
             </div>
         </section>
 
-        <!-- Material visual construido con HTML y CSS, sin imágenes externas obligatorias. -->
-        <!-- Panel de esquemas visuales hechos con elementos HTML; el CSS se encarga de su apariencia. -->
-        <section id="panel-visual" class="recursos-panel" role="tabpanel" aria-labelledby="tab-visual" data-panel="visual" hidden>
-            <div class="panel-band">
-                <div class="container recursos-container text-center">
-                    <span class="panel-kicker">REPASO VISUAL</span>
-                    <h2>Material visual</h2>
-                    <p class="panel-subtitle">Comprendé los conceptos de un vistazo</p>
-                    <p class="panel-intro">Esquemas simples para repasar el ciclo de desarrollo, los niveles de pruebas y las dimensiones de calidad.</p>
-                </div>
+        <section id="panel-ejercicios" class="recursos-panel" role="tabpanel" aria-labelledby="tab-ejercicios" data-panel="ejercicios" hidden>
+    <div class="panel-band">
+        <div class="container recursos-container text-center">
+            <span class="panel-kicker">PRÁCTICA</span>
+            <h2>Ejercicios y casos prácticos</h2>
+            <p class="panel-subtitle">Reforzá tu aprendizaje resolviendo</p>
+            <p class="panel-intro">Intentá resolver cada ejercicio por tu cuenta y después usá el botón para comparar con la solución y la pauta de evaluación.</p>
+        </div>
+    </div>
+
+    <div class="container recursos-container panel-content">
+        <div class="row row-cols-1 row-cols-lg-2 g-3 align-items-start">
+
+            <!-- Ejercicio 1 -->
+            <div class="col">
+                <article class="ejercicio-card">
+                    <header class="ejercicio-header">
+                        <span class="recurso-tipo">EJERCICIO 1 · CICLO DE VIDA</span>
+                        <span class="ejercicio-nivel">Fácil</span>
+                    </header>
+                    <h3>Ordená las etapas</h3>
+                    <div class="ejercicio-enunciado">
+                        <p>Ordená correctamente estas etapas del ciclo de vida de un software:</p>
+                        <p class="ejercicio-datos">Pruebas · Análisis · Mantenimiento · Desarrollo · Despliegue · Diseño</p>
+                    </div>
+                    <button class="solucion-toggle" type="button" aria-expanded="false" aria-controls="sol-1">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                        <span class="solucion-label">Mostrar solución</span>
+                    </button>
+                    <div class="ejercicio-solucion" id="sol-1" aria-hidden="true" inert>
+                        <div class="ejercicio-solucion-inner">
+                            <div class="ejercicio-pauta">
+                                <strong>Solución</strong>
+                                <p>Análisis → Diseño → Desarrollo → Pruebas → Despliegue → Mantenimiento.</p>
+                                <p class="pauta-eval"><strong>Pauta de evaluación:</strong> el orden completo es correcto (1 punto) y podés explicar en una frase qué se hace en cada etapa (1 punto).</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
 
-            <div class="container recursos-container panel-content">
-                <!-- Las tarjetas se muestran en una columna en pantallas pequeñas y en dos columnas en pantallas grandes. -->
-                <div class="row row-cols-1 row-cols-lg-2 g-3">
-                    <div class="col">
-                        <!-- Cada tarjeta resume visualmente un tema distinto de calidad y desarrollo de software. -->
-                        <article class="visual-card h-100">
-                            <span class="recurso-tipo">CICLO DE VIDA</span>
-                            <h3>Del requisito al mantenimiento</h3>
-                            <p>El ciclo puede repetirse o adaptarse según el modelo y las necesidades del proyecto.</p>
-                            <!-- Secuencia de etapas del ciclo de vida; las flechas indican el orden habitual. -->
-                            <div class="ciclo-visual" aria-label="Análisis, diseño, desarrollo, pruebas, despliegue y mantenimiento">
-                                <span>Análisis</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Diseño</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Desarrollo</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Pruebas</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Despliegue</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span>Mantenimiento</span>
-                            </div>
-                        </article>
+            <!-- Ejercicio 2 -->
+            <div class="col">
+                <article class="ejercicio-card">
+                    <header class="ejercicio-header">
+                        <span class="recurso-tipo">EJERCICIO 2 · NIVELES DE PRUEBA</span>
+                        <span class="ejercicio-nivel">Fácil</span>
+                    </header>
+                    <h3>¿Qué nivel de prueba es?</h3>
+                    <div class="ejercicio-enunciado">
+                        <p>Indicá si cada situación corresponde a una prueba unitaria, de integración, de sistema o de aceptación:</p>
+                        <ol>
+                            <li>Verificar que la función que calcula un descuento devuelve el valor correcto.</li>
+                            <li>Comprobar que el módulo del carrito se comunica bien con el módulo de pagos.</li>
+                            <li>Probar la tienda completa, de la búsqueda a la compra, en un entorno similar al real.</li>
+                            <li>El cliente confirma que el sistema cubre lo que había pedido.</li>
+                        </ol>
                     </div>
-                    <div class="col">
-                        <article class="visual-card h-100">
-                            <span class="recurso-tipo">NIVELES DE PRUEBA</span>
-                            <h3>Comprobaciones en diferentes escalas</h3>
-                            <p>Las pruebas se complementan para encontrar fallos desde componentes hasta el producto validado.</p>
-                            <!-- Representa niveles de prueba, desde componentes individuales hasta la aceptación del producto. -->
-                            <div class="testing-visual" aria-label="Pruebas unitarias, de integración, de sistema y de aceptación">
-                                <div class="test-level test-level-1"><strong>Unitarias</strong><span>Un componente</span></div>
-                                <div class="test-level test-level-2"><strong>Integración</strong><span>Interacciones</span></div>
-                                <div class="test-level test-level-3"><strong>Sistema</strong><span>Producto completo</span></div>
-                                <div class="test-level test-level-4"><strong>Aceptación</strong><span>Necesidad del usuario</span></div>
+                    <button class="solucion-toggle" type="button" aria-expanded="false" aria-controls="sol-2">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                        <span class="solucion-label">Mostrar solución</span>
+                    </button>
+                    <div class="ejercicio-solucion" id="sol-2" aria-hidden="true" inert>
+                        <div class="ejercicio-solucion-inner">
+                            <div class="ejercicio-pauta">
+                                <strong>Solución</strong>
+                                <ol>
+                                    <li>Unitaria (un componente).</li>
+                                    <li>De integración (interacción entre módulos).</li>
+                                    <li>De sistema (producto completo).</li>
+                                    <li>De aceptación (necesidad del usuario).</li>
+                                </ol>
+                                <p class="pauta-eval"><strong>Pauta de evaluación:</strong> 1 punto por cada acierto. Si fallás alguno, repasá en qué escala se prueba cada nivel.</p>
                             </div>
-                        </article>
+                        </div>
                     </div>
-                    <div class="col">
-                        <article class="visual-card h-100">
-                            <span class="recurso-tipo">CALIDAD DEL SOFTWARE</span>
-                            <h3>Una visión con varias dimensiones</h3>
-                            <p>La calidad no depende de una sola medida. Los atributos importantes deben seleccionarse según el contexto.</p>
-                            <!-- Lista atributos que pueden evaluarse al analizar la calidad del software. -->
-                            <div class="quality-visual">
-                                <span><i class="bi bi-check2-circle" aria-hidden="true"></i> Funcionalidad</span>
-                                <span><i class="bi bi-speedometer2" aria-hidden="true"></i> Rendimiento</span>
-                                <span><i class="bi bi-shield-lock" aria-hidden="true"></i> Seguridad</span>
-                                <span><i class="bi bi-person-check" aria-hidden="true"></i> Usabilidad</span>
-                                <span><i class="bi bi-wrench-adjustable" aria-hidden="true"></i> Mantenibilidad</span>
-                                <span><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Flexibilidad</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col">
-                        <article class="visual-card h-100">
-                            <span class="recurso-tipo">QA Y CONTROL DE CALIDAD</span>
-                            <h3>Prevenir y detectar</h3>
-                            <p>El aseguramiento se orienta a procesos y prevención; las actividades de control evalúan el producto y detectan defectos.</p>
-                            <!-- Compara el objetivo del aseguramiento de calidad con el del control y las pruebas. -->
-                            <div class="qa-visual">
-                                <div><i class="bi bi-shield-check" aria-hidden="true"></i><strong>Aseguramiento</strong><span>Procesos, estándares y prevención.</span></div>
-                                <div class="qa-divider" aria-hidden="true"><i class="bi bi-plus-lg"></i></div>
-                                <div><i class="bi bi-search" aria-hidden="true"></i><strong>Control y pruebas</strong><span>Verificación, evaluación y detección.</span></div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+                </article>
             </div>
-        </section>
+
+            <!-- Ejercicio 3 -->
+            <div class="col">
+                <article class="ejercicio-card">
+                    <header class="ejercicio-header">
+                        <span class="recurso-tipo">EJERCICIO 3 · QA Y CONTROL DE CALIDAD</span>
+                        <span class="ejercicio-nivel">Medio</span>
+                    </header>
+                    <h3>Aseguramiento o control</h3>
+                    <div class="ejercicio-enunciado">
+                        <p>Clasificá cada actividad como aseguramiento de calidad (QA) o control de calidad (QC):</p>
+                        <ol type="a">
+                            <li>Definir un estándar de código para todo el equipo.</li>
+                            <li>Ejecutar casos de prueba sobre una versión terminada.</li>
+                            <li>Auditar si el equipo sigue el proceso acordado.</li>
+                            <li>Revisar el producto para detectar defectos.</li>
+                        </ol>
+                    </div>
+                    <button class="solucion-toggle" type="button" aria-expanded="false" aria-controls="sol-3">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                        <span class="solucion-label">Mostrar solución</span>
+                    </button>
+                    <div class="ejercicio-solucion" id="sol-3" aria-hidden="true" inert>
+                        <div class="ejercicio-solucion-inner">
+                            <div class="ejercicio-pauta">
+                                <strong>Solución</strong>
+                                <p><b>QA (procesos y prevención):</b> a y c.<br><b>QC (producto y detección):</b> b y d.</p>
+                                <p class="pauta-eval"><strong>Pauta de evaluación:</strong> 1 punto por cada actividad bien clasificada. Pista: QA se orienta a prevenir; QC, a detectar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Ejercicio 4 -->
+            <div class="col">
+                <article class="ejercicio-card">
+                    <header class="ejercicio-header">
+                        <span class="recurso-tipo">EJERCICIO 4 · ATRIBUTOS DE CALIDAD</span>
+                        <span class="ejercicio-nivel">Medio</span>
+                    </header>
+                    <h3>Relacioná problema y atributo</h3>
+                    <div class="ejercicio-enunciado">
+                        <p>¿Qué atributo de calidad se ve afectado en cada caso?</p>
+                        <ol>
+                            <li>La aplicación tarda 8 segundos en cargar la pantalla principal.</li>
+                            <li>Los usuarios no encuentran el botón para pagar.</li>
+                            <li>Las contraseñas se guardan sin cifrar.</li>
+                            <li>Corregir un error simple obliga a modificar 20 archivos.</li>
+                        </ol>
+                        <p class="ejercicio-datos">Opciones: Rendimiento · Usabilidad · Seguridad · Mantenibilidad</p>
+                    </div>
+                    <button class="solucion-toggle" type="button" aria-expanded="false" aria-controls="sol-4">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                        <span class="solucion-label">Mostrar solución</span>
+                    </button>
+                    <div class="ejercicio-solucion" id="sol-4" aria-hidden="true" inert>
+                        <div class="ejercicio-solucion-inner">
+                            <div class="ejercicio-pauta">
+                                <strong>Solución</strong>
+                                <ol>
+                                    <li>Rendimiento.</li>
+                                    <li>Usabilidad.</li>
+                                    <li>Seguridad.</li>
+                                    <li>Mantenibilidad.</li>
+                                </ol>
+                                <p class="pauta-eval"><strong>Pauta de evaluación:</strong> 1 punto por cada relación correcta. Para sumar un punto extra, proponé una mejora para uno de los problemas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Caso práctico 5 -->
+            <div class="col">
+                <article class="ejercicio-card">
+                    <header class="ejercicio-header">
+                        <span class="recurso-tipo">CASO PRÁCTICO 5 · MODELOS DE DESARROLLO</span>
+                        <span class="ejercicio-nivel">Medio</span>
+                    </header>
+                    <h3>Elegí un modelo</h3>
+                    <div class="ejercicio-enunciado">
+                        <p>Una startup de 4 personas desarrolla una aplicación nueva. Los requisitos cambian casi todas las semanas y el cliente puede reunirse con el equipo a menudo.</p>
+                        <p><b>¿Qué modelo de desarrollo elegirías y por qué? ¿Cuál descartarías?</b></p>
+                    </div>
+                    <button class="solucion-toggle" type="button" aria-expanded="false" aria-controls="sol-5">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                        <span class="solucion-label">Mostrar solución</span>
+                    </button>
+                    <div class="ejercicio-solucion" id="sol-5" aria-hidden="true" inert>
+                        <div class="ejercicio-solucion-inner">
+                            <div class="ejercicio-pauta">
+                                <strong>Solución sugerida</strong>
+                                <p>Un modelo ágil como Scrum o XP: trabajan en ciclos cortos, incorporan los cambios en cada iteración y aprovechan la colaboración frecuente con el cliente. Cascada no encaja, porque exige requisitos estables y definidos desde el inicio.</p>
+                                <p class="pauta-eval"><strong>Pauta de evaluación:</strong> elegís un modelo adaptable (1 punto), justificás con al menos dos datos del caso (1 punto) y descartás un modelo con una razón válida (1 punto).</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Caso práctico 6 -->
+            <div class="col">
+                <article class="ejercicio-card">
+                    <header class="ejercicio-header">
+                        <span class="recurso-tipo">CASO PRÁCTICO 6 · DISEÑO DE PRUEBAS</span>
+                        <span class="ejercicio-nivel">Medio</span>
+                    </header>
+                    <h3>Proponé casos de prueba</h3>
+                    <div class="ejercicio-enunciado">
+                        <p>Un formulario de registro acepta cualquier valor en el campo "edad", incluso −5. Suponé que solo deben aceptarse edades de 18 a 120 años.</p>
+                        <p><b>Proponé al menos cinco casos de prueba para este campo e indicá el resultado esperado.</b></p>
+                    </div>
+                    <button class="solucion-toggle" type="button" aria-expanded="false" aria-controls="sol-6">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                        <span class="solucion-label">Mostrar solución</span>
+                    </button>
+                    <div class="ejercicio-solucion" id="sol-6" aria-hidden="true" inert>
+                        <div class="ejercicio-solucion-inner">
+                            <div class="ejercicio-pauta">
+                                <strong>Solución sugerida</strong>
+                                <ul>
+                                    <li>17 → rechazado (justo por debajo del mínimo).</li>
+                                    <li>18 → aceptado (límite inferior).</li>
+                                    <li>120 → aceptado (límite superior).</li>
+                                    <li>121 → rechazado (justo por encima del máximo).</li>
+                                    <li>−5 y 0 → rechazados.</li>
+                                    <li>"abc" o campo vacío → rechazados con un mensaje claro.</li>
+                                </ul>
+                                <p class="pauta-eval"><strong>Pauta de evaluación:</strong> incluís los valores límite (1 punto), valores inválidos como negativos o texto (1 punto) y definís el resultado esperado de cada caso (1 punto).</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
     </main>
 </body>
 </html>
