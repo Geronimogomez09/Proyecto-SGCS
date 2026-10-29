@@ -314,58 +314,60 @@ document.addEventListener("DOMContentLoaded", () => {
         button.setAttribute("aria-expanded", "false");
     }
 
+        // Cuando termina la transición de altura de un elemento abierto,
+    // le quita el límite de altura para que el contenido nunca quede cortado.
+    function liberarAlturaAlAbrir(element, estaAbierto) {
+        const handler = (event) => {
+            // Ignora eventos de hijos y de otras propiedades (por ejemplo, visibility).
+            if (event.target !== element || event.propertyName !== "max-height") {
+                return;
+            }
+            element.removeEventListener("transitionend", handler);
+            if (estaAbierto()) {
+                element.style.maxHeight = "none";
+            }
+        };
+        element.addEventListener("transitionend", handler);
+    }
+
     // Abre una respuesta individual y adapta su altura al contenido.
     function openAnswer(button) {
-        // Obtiene el ID de la respuesta relacionada con la pregunta seleccionada.
         const answerId = button.getAttribute("aria-controls");
-        // Busca el elemento HTML que contiene la respuesta.
         const answer = document.getElementById(answerId);
-        // Si no encuentra la respuesta, termina la función.
         if (!answer) {
             return;
         }
 
-        // Agrega la clase "open", utilizada por el CSS para aplicar los estilos de apertura.
         answer.classList.add("open");
-        // Indica que la respuesta está visible para las tecnologías de asistencia.
         answer.setAttribute("aria-hidden", "false");
-        // Actualiza el botón para indicar que la pregunta está abierta.
         button.setAttribute("aria-expanded", "true");
-        // Ajusta la altura máxima al tamaño real del contenido.
-        // scrollHeight permite calcular cuánto espacio necesita la respuesta.
         answer.style.maxHeight = `${answer.scrollHeight}px`;
-        // Cuando termina la transición de altura, permite que el elemento
-        // use una altura automática. Esto ayuda si el contenido cambia de tamaño.
-        answer.addEventListener("transitionend", (event) => {
-            // Comprueba que terminó la transición de altura del elemento correcto
-            // y que la respuesta sigue abierta.
-            if (
-                event.target === answer &&
-                event.propertyName === "max-height" &&
-                button.getAttribute("aria-expanded") === "true"
-            ) {
-                // "none" evita limitar la respuesta a una altura fija.
-                answer.style.maxHeight = "none";
-            }
-        }, { once: true });
 
-        // Busca el panel del tema al que pertenece esta pregunta.
-        // Es necesario porque al abrir una respuesta también puede aumentar
-        // la altura total del tema que la contiene.
+        liberarAlturaAlAbrir(
+            answer,
+            () => button.getAttribute("aria-expanded") === "true"
+        );
+
+        // El panel del tema no debe limitar la altura mientras haya una respuesta abierta.
         const topicPanel = button.closest(".faq-topic")
             .querySelector(".faq-topic-panel");
-        // Si el panel del tema todavía utiliza una altura calculada,
-        // actualiza esa altura después de abrir la respuesta.
-        if (topicPanel.style.maxHeight !== "none") {
-            requestAnimationFrame(() => {
-                // Comprueba que el panel del tema siga abierto.
-                if (topicPanel.classList.contains("open")) {
-                    // Recalcula la altura para que el panel pueda contener la respuesta.
-                    topicPanel.style.maxHeight =
-                        `${topicPanel.scrollHeight}px`;
-                }
-            });
-        }
+        topicPanel.style.maxHeight = "none";
+    }
+
+    // Abre un tema completo de preguntas frecuentes.
+    function openTopic(topic) {
+        const toggle = topic.querySelector(".faq-topic-toggle");
+        const panel = topic.querySelector(".faq-topic-panel");
+
+        toggle.setAttribute("aria-expanded", "true");
+        panel.classList.add("open");
+        panel.setAttribute("aria-hidden", "false");
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
+
+        liberarAlturaAlAbrir(
+            panel,
+            () => toggle.getAttribute("aria-expanded") === "true"
+        );
     }
 
     // Cierra un tema completo y las respuestas que contiene.
@@ -395,34 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.setAttribute("aria-expanded", "false");
     }
 
-    // Abre un tema completo de preguntas frecuentes.
-    function openTopic(topic) {
-        // Busca el botón que controla el tema.
-        const toggle = topic.querySelector(".faq-topic-toggle");
-        // Busca el panel que contiene las preguntas de ese tema.
-        const panel = topic.querySelector(".faq-topic-panel");
-        // Indica que el tema está abierto.
-        toggle.setAttribute("aria-expanded", "true");
-        // Agrega la clase utilizada por el CSS para mostrar el panel.
-        panel.classList.add("open");
-        // Informa que el panel está visible para las tecnologías de asistencia.
-        panel.setAttribute("aria-hidden", "false");
-        // Ajusta la altura al contenido para que la apertura pueda animarse.
-        panel.style.maxHeight = `${panel.scrollHeight}px`;
-        // Cuando termina la transición, permite que el panel tenga altura natural.
-        panel.addEventListener("transitionend", (event) => {
-            // Comprueba que terminó la transición de altura del panel correcto
-            // y que el tema todavía permanece abierto.
-            if (
-                event.target === panel &&
-                event.propertyName === "max-height" &&
-                toggle.getAttribute("aria-expanded") === "true"
-            ) {
-                // Evita que el contenido quede limitado por una altura fija.
-                panel.style.maxHeight = "none";
-            }
-        }, { once: true });
-    }
+
 
     // Cierra todos los temas de FAQ, excepto el que se pasa como parámetro.
     // Esto permite mantener un único tema abierto a la vez.
