@@ -49,7 +49,7 @@
         </div>
 
         <!-- Zona visual de la presentación. La imagen se establece mediante CSS.
-            aria-label describe su contenido para las tecnologías de asistencia. -->
+             aria-label describe su contenido para las tecnologías de asistencia. -->
         <div class="hero-agiles-img" role="img"
             aria-label="Equipo de trabajo reunido alrededor de una mesa con documentos y café"></div>
     </div>
@@ -241,6 +241,166 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección dedicada a Kanban. Usa un fondo diferente para distinguirla visualmente de Scrum. -->
+        <section class="metodologia metodologia-celeste" id="kanban" data-toc-title="Kanban">
+            <div class="container">
+                <div class="metodologia-wrap">
+
+                    <div class="metodologia-title">
+                        <h2>Metodología <span>Kanban</span></h2>
+                    </div>
+
+                    <!-- Resumen inicial de Kanban. -->
+                    <div class="metodologia-intro">
+                        <span class="metodologia-icon"><i class="bi bi-kanban"></i></span>
+                        <p>Kanban utiliza un tablero visual para mostrar el estado de las tareas
+                            y controlar el flujo de trabajo.</p>
+                    </div>
+
+                    <!-- Acordeón que agrupa los principios, roles y elementos de Kanban. -->
+                    <div class="accordion agiles-accordion" id="acordeon-kanban">
+
+                        <!-- Panel con los principios principales de Kanban. -->
+                        <div class="accordion-item" id="kanban-principios" data-toc-label="Principios">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#kanban-principios-body"
+                                    aria-expanded="true"
+                                    aria-controls="kanban-principios-body">
+                                    <span class="acc-icon"><i class="bi bi-list-check"></i></span>
+                                    Principios
+                                </button>
+                            </h3>
+
+                            <div id="kanban-principios-body" class="accordion-collapse collapse show"
+                                data-bs-parent="#acordeon-kanban">
+                                <div class="accordion-body">
+
+                                    <!-- Tarjetas simples para presentar los principios en una cuadrícula. -->
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-eye"></i></span>
+                                                <h4 class="agiles-card-title">Visualizar el trabajo</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-funnel"></i></span>
+                                                <h4 class="agiles-card-title">Limitar el trabajo en progreso (WIP)</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-arrow-left-right"></i></span>
+                                                <h4 class="agiles-card-title">Gestionar el flujo</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="agiles-card agiles-card-simple">
+                                                <span class="agiles-card-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                                                <h4 class="agiles-card-title">Mejorar continuamente</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel que aclara cómo se manejan los roles y las ceremonias en Kanban. -->
+                        <div class="accordion-item" id="kanban-roles" data-toc-label="Roles y ceremonias">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#kanban-roles-body"
+                                    aria-expanded="false"
+                                    aria-controls="kanban-roles-body">
+                                    <span class="acc-icon"><i class="bi bi-people-fill"></i></span>
+                                    Roles y ceremonias
+                                </button>
+                            </h3>
+
+                            <div id="kanban-roles-body" class="accordion-collapse collapse"
+                                data-bs-parent="#acordeon-kanban">
+                                <div class="accordion-body">
+                                    <div class="agiles-card agiles-card-simple">
+                                        <span class="agiles-card-icon"><i class="bi bi-info-circle"></i></span>
+                                        <p>Kanban no utiliza roles o ceremonias obligatorias como Scrum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel con una representación visual del flujo de trabajo de un tablero Kanban. -->
+                        <div class="accordion-item" id="kanban-elementos" data-toc-label="Elementos">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#kanban-elementos-body"
+                                    aria-expanded="false"
+                                    aria-controls="kanban-elementos-body">
+                                    <span class="acc-icon"><i class="bi bi-columns-gap"></i></span>
+                                    Elementos
+                                </button>
+                            </h3>
+
+                            <div id="kanban-elementos-body" class="accordion-collapse collapse"
+                                data-bs-parent="#acordeon-kanban">
+                                <div class="accordion-body">
+
+                                    <!-- Cada li representa una columna del tablero.
+                                         Las flechas muestran el sentido del flujo y los tickets son elementos visuales.
+                                         aria-hidden evita que los tickets y flechas decorativos se lean como contenido. -->
+                                    <ol class="kanban-flow list-unstyled" aria-label="Columnas del tablero Kanban">
+                                        <li class="kanban-col">
+                                            <h4 class="kanban-col-title">Por hacer</h4>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                        </li>
+
+                                        <li class="kanban-arrow" aria-hidden="true">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </li>
+
+                                        <li class="kanban-col">
+                                            <h4 class="kanban-col-title">En proceso</h4>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                        </li>
+
+                                        <li class="kanban-arrow" aria-hidden="true">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </li>
+
+                                        <li class="kanban-col">
+                                            <h4 class="kanban-col-title">En revisión</h4>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                        </li>
+
+                                        <li class="kanban-arrow" aria-hidden="true">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </li>
+
+                                        <li class="kanban-col">
+                                            <h4 class="kanban-col-title">Terminado</h4>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                            <div class="kanban-ticket" aria-hidden="true"></div>
+                                        </li>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
