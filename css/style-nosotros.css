@@ -1,0 +1,740 @@
+/* Estilos exclusivos de la página Sobre Nosotros. */
+.nosotros-page {
+  --nos-primary: #0875d1;
+  --nos-primary-dark: #0062cb;
+  --nos-primary-soft: #e6f3ff;
+  --nos-blue-bg: #b8d9f5;
+  --nos-cream: #fff8e7;
+  --nos-white: #ffffff;
+  --nos-text: #111111;
+  --nos-muted: #35566f;
+  --nos-border: #b8d9f5;
+  --nos-border-light: #d8e7f1;
+  --nos-shadow-sm: 0 4px 10px rgba(20, 50, 75, 0.07);
+  --nos-shadow-md: 0 7px 16px rgba(20, 50, 75, 0.1);
+  --nos-shadow-lg: 0 12px 28px rgba(20, 50, 75, 0.17);
+  --nos-radius-sm: 12px;
+  --nos-radius-md: 16px;
+  --nos-radius-lg: 22px;
+  --nos-transition: 0.22s ease;
+
+  color: var(--nos-text);
+  background: var(--nos-cream);
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.6;
+}
+
+.nosotros-page * {
+  box-sizing: border-box;
+}
+.nosotros-page button,
+.nosotros-page input,
+.nosotros-page select,
+.nosotros-page textarea {
+  font: inherit;
+}
+.nosotros-page .nosotros-container {
+  max-width: 1120px;
+}
+.container {
+  position: relative;
+  z-index: 2;
+}
+.nosotros-page .section-spacing {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+}
+
+/* Hero con la curva azul de la identidad visual del proyecto. */
+.nosotros-page .nosotros-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 4.5rem);
+  padding-top: 0px;
+  text-align: center;
+  background: var(--nos-cream);
+}
+
+.nosotros-page .nosotros-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--nos-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.nosotros-page .nosotros-title {
+  margin: 0;
+  color: var(--nos-text);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.nosotros-page .nosotros-title span,
+.nosotros-page .section-heading-nosotros h2 span,
+.nosotros-page .intro-card h2 span,
+.nosotros-page .motivation-card h2 span,
+.nosotros-page .cierre-card h2 span {
+  color: var(--nos-primary);
+}
+
+.nosotros-page .nosotros-lead {
+  max-width: 760px;
+  margin: 1.2rem auto 1.5rem;
+  color: var(--nos-muted);
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.8;
+}
+
+.nosotros-page .nosotros-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--nos-border);
+  border-radius: 999px;
+  background: var(--nos-white);
+  color: var(--nos-primary-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    gap var(--nos-transition),
+    transform var(--nos-transition),
+    box-shadow var(--nos-transition);
+}
+
+.nosotros-page .nosotros-scroll-link:hover {
+  gap: 0.8rem;
+  transform: translateY(-2px);
+  box-shadow: var(--nos-shadow-sm);
+}
+
+/* Tarjetas introductorias y motivación. */
+.nosotros-page .intro-card,
+.nosotros-page .motivation-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.1rem;
+  padding: clamp(1.3rem, 3vw, 2rem);
+  border: 1px solid var(--nos-border-light);
+  border-left: 7px solid var(--nos-primary);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .intro-card {
+  margin-bottom: 1.25rem;
+}
+.nosotros-page .intro-icon,
+.nosotros-page .motivation-mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--nos-radius-md);
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 1.55rem;
+}
+
+.nosotros-page .intro-card h2,
+.nosotros-page .motivation-card h2 {
+  margin: 0 0 0.65rem;
+  color: var(--nos-text);
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.nosotros-page .intro-card p,
+.nosotros-page .motivation-card p {
+  margin: 0;
+  color: var(--nos-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* Encabezados compartidos entre secciones. */
+.nosotros-page .section-heading-nosotros {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.nosotros-page .section-heading-nosotros h2,
+.nosotros-page .cierre-card h2 {
+  margin: 0;
+  color: var(--nos-text);
+  font-size: clamp(1.7rem, 3.4vw, 2.45rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.nosotros-page .section-heading-nosotros p {
+  margin: 0.75rem auto 0;
+  color: var(--nos-muted);
+  line-height: 1.7;
+}
+
+.nosotros-page .equipo-section {
+  background: var(--nos-blue-bg);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* ===== AVATAR: la foto se ve completa, sin recortes ===== */
+.nosotros-page .perfil-avatar {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: var(--nos-radius-md);
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 3rem; /* tamaño del ícono de respaldo */
+}
+
+.nosotros-page .perfil-avatar-img {
+  display: block;
+  width: 100%;
+  height: auto;          /* respeta la proporción real de la foto */
+  max-height: 300px;
+  object-fit: contain;   /* nunca recorta */
+}
+
+/* Con foto, el ícono se oculta. Sin foto, el ícono queda en un recuadro 3:4. */
+.nosotros-page .perfil-avatar:has(.perfil-avatar-img) > i {
+  display: none;
+}
+.nosotros-page .perfil-avatar:not(:has(.perfil-avatar-img)) {
+  aspect-ratio: 3 / 4;
+}
+
+/* ===== TARJETA: foto a la izquierda, datos a la derecha ===== */
+.nosotros-page .perfiles-grid {
+  align-items: stretch;
+}
+.nosotros-page .perfiles-grid > .col {
+  display: flex;
+}
+
+.nosotros-page .perfil-card {
+  display: grid;
+  grid-template-columns: clamp(110px, 38%, 170px) minmax(0, 1fr);
+  column-gap: 1.1rem;
+  align-items: start;
+  align-content: start;
+  width: 100%;
+  min-height: 100%;
+  padding: 1.4rem;
+  border: 1px solid rgba(8, 117, 209, 0.22);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  color: var(--nos-text);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--nos-shadow-md);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.nosotros-page .perfil-card:hover,
+.nosotros-page .perfil-card.is-hovered,
+.nosotros-page .perfil-card:focus-visible {
+  border-color: var(--nos-primary);
+  transform: translateY(-7px);
+  box-shadow: var(--nos-shadow-lg);
+}
+
+.nosotros-page .perfil-card:focus-visible {
+  outline: 3px solid var(--nos-primary);
+  outline-offset: 3px;
+}
+
+.nosotros-page .perfil-card .perfil-avatar {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  width: 100%;
+}
+
+.nosotros-page .perfil-card > :not(.perfil-avatar):not(.perfil-open) {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.nosotros-page .perfil-name {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.nosotros-page .perfil-role {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--nos-blue-bg);
+  color: var(--nos-primary-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.nosotros-page .perfil-specialty {
+  margin-bottom: 0.6rem;
+  color: var(--nos-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.nosotros-page .perfil-short {
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--nos-muted);
+  font-size: 0.87rem;
+  line-height: 1.65;
+}
+
+.nosotros-page .perfil-open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--nos-border-light);
+  color: var(--nos-primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+/* ===== PERFIL AMPLIADO: foto grande a la izquierda, texto a la derecha ===== */
+.nosotros-page .perfil-dialog {
+  width: min(860px, calc(100% - 2rem));
+  max-width: 860px;
+  max-height: min(88vh, 850px);
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  overflow-y: auto;
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  color: var(--nos-text);
+  box-shadow: var(--nos-shadow-lg);
+}
+
+.nosotros-page .perfil-dialog::backdrop {
+  background: rgba(12, 36, 58, 0.62);
+  backdrop-filter: blur(4px);
+}
+
+.nosotros-page .perfil-dialog[open] {
+  display: grid;
+  grid-template-columns: minmax(180px, 38%) minmax(0, 1fr);
+  grid-template-rows: repeat(4, auto) 1fr; /* la fila 5 absorbe el alto extra de la foto */
+  column-gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+  animation: perfil-dialog-in 0.25s ease both;
+}
+
+@keyframes perfil-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.nosotros-page .perfil-dialog-header {
+  display: contents; /* avatar y botón pasan a ser items de la grilla */
+}
+
+.nosotros-page .perfil-dialog .perfil-avatar {
+  grid-column: 1;
+  grid-row: 1 / span 5;
+  width: 100%;
+}
+
+.nosotros-page .perfil-dialog .perfil-avatar-img {
+  max-height: 440px;
+}
+
+.nosotros-page .perfil-dialog > :not(.perfil-dialog-header) {
+  grid-column: 2;
+}
+
+.nosotros-page .perfil-dialog .perfil-close {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.nosotros-page .perfil-dialog .perfil-role {
+  justify-self: start;
+}
+
+.nosotros-page .perfil-dialog .perfil-detail-line {
+  grid-column: 1 / -1;
+}
+
+.nosotros-page .perfil-close {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--nos-border);
+  border-radius: 50%;
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  cursor: pointer;
+  transition:
+    background var(--nos-transition),
+    transform var(--nos-transition);
+}
+
+.nosotros-page .perfil-close:hover {
+  background: var(--nos-blue-bg);
+  transform: rotate(90deg);
+}
+.nosotros-page .perfil-dialog h2 {
+  margin: 0.6rem 0;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+}
+.nosotros-page .perfil-dialog h3 {
+  margin: 0 0 1rem;
+  color: var(--nos-primary-dark);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.nosotros-page .perfil-dialog p {
+  color: var(--nos-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.nosotros-page .perfil-detail-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--nos-radius-sm);
+  background: var(--nos-primary-soft);
+  color: var(--nos-muted);
+  font-size: 0.88rem;
+}
+
+.nosotros-page .perfil-detail-line i {
+  color: var(--nos-primary-dark);
+  font-size: 1.1rem;
+}
+
+/* Cierre del equipo. */
+.nosotros-page .cierre-card {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  text-align: center;
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .cierre-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 1.5rem;
+}
+
+.nosotros-page .cierre-card p {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  color: var(--nos-muted);
+  line-height: 1.8;
+}
+
+/* Contacto: formulario elegante y panel informativo. */
+.nosotros-page .contacto-section {
+  background: var(--nos-blue-bg);
+}
+
+.nosotros-page .contacto-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: stretch;
+}
+
+.nosotros-page .contacto-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid rgba(8, 117, 209, 0.2);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-primary);
+  color: var(--nos-white);
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .contacto-aside-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--nos-radius-md);
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1.8rem;
+}
+
+.nosotros-page .contacto-aside h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.nosotros-page .contacto-aside p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.8;
+}
+
+.nosotros-page .contacto-aside-note {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 2rem;
+  font-size: 0.83rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+.nosotros-page .contacto-aside-note i {
+  font-size: 1.1rem;
+}
+
+.nosotros-page .contact-form {
+  padding: clamp(1.3rem, 4vw, 2.5rem);
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-lg);
+  background: var(--nos-white);
+  box-shadow: var(--nos-shadow-md);
+}
+
+.nosotros-page .contact-form-heading {
+  margin-bottom: 1.5rem;
+}
+.nosotros-page .contact-form-heading h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  font-weight: 800;
+}
+.nosotros-page .contact-form-heading p {
+  margin: 0.4rem 0 0;
+  color: var(--nos-muted);
+  font-size: 0.88rem;
+}
+
+.nosotros-page .contact-form .form-label {
+  margin-bottom: 0.4rem;
+  color: var(--nos-text);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+.nosotros-page .contact-form .form-label span {
+  color: var(--nos-primary);
+}
+
+.nosotros-page .contact-form .form-control,
+.nosotros-page .contact-form .form-select {
+  min-height: 46px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #c9d5df;
+  border-radius: var(--nos-radius-sm);
+  background-color: #fff;
+  color: var(--nos-text);
+  font-size: 0.9rem;
+  box-shadow: none;
+  transition:
+    border-color var(--nos-transition),
+    box-shadow var(--nos-transition);
+}
+
+.nosotros-page .contact-form textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+.nosotros-page .contact-form .form-control::placeholder {
+  color: #9aa6b1;
+}
+
+.nosotros-page .contact-form .form-control:focus,
+.nosotros-page .contact-form .form-select:focus {
+  border-color: var(--nos-primary);
+  box-shadow: 0 0 0 3px rgba(8, 117, 209, 0.14);
+}
+
+.nosotros-page .contact-form .form-control.is-invalid,
+.nosotros-page .contact-form .form-select.is-invalid {
+  border-color: #c62828;
+  background-image: none;
+}
+.nosotros-page .contact-form .form-control.is-valid,
+.nosotros-page .contact-form .form-select.is-valid {
+  border-color: var(--nos-primary);
+  background-image: none;
+}
+
+.nosotros-page .field-error {
+  display: block;
+  min-height: 0;
+  margin-top: 0.3rem;
+  color: #b42318;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.nosotros-page .message-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.nosotros-page #message-counter {
+  margin-top: 0.3rem;
+  color: var(--nos-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+.nosotros-page .contacto-submit {
+  width: 100%;
+  margin-top: 0.4rem;
+  background: var(--nos-blue-bg);
+  border: 1px solid var(--nos-muted);
+  border-radius: 15px;
+}
+
+.nosotros-page .contact-feedback {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--nos-border);
+  border-radius: var(--nos-radius-sm);
+  background: var(--nos-primary-soft);
+  color: var(--nos-primary-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.nosotros-page .contact-feedback.error {
+  border-color: #edc2c2;
+  background: #fff4f4;
+  color: #a32929;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Celular: el perfil ampliado apila la foto arriba. */
+@media (max-width: 640px) {
+  .nosotros-page .perfil-dialog[open] {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .nosotros-page .perfil-dialog .perfil-avatar,
+  .nosotros-page .perfil-dialog > :not(.perfil-dialog-header),
+  .nosotros-page .perfil-dialog .perfil-close {
+    grid-column: 1;
+  }
+
+  .nosotros-page .perfil-dialog .perfil-avatar {
+    grid-row: auto;
+    width: min(100%, 280px);
+    justify-self: center;
+  }
+
+  .nosotros-page .perfil-dialog .perfil-close {
+    grid-row: 1;
+  }
+}
+
+/* Celulares muy angostos: la tarjeta también apila la foto. */
+@media (max-width: 420px) {
+  .nosotros-page .perfil-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-page .perfil-card .perfil-avatar,
+  .nosotros-page .perfil-card > :not(.perfil-avatar):not(.perfil-open) {
+    grid-column: 1;
+  }
+
+  .nosotros-page .perfil-card .perfil-avatar {
+    grid-row: auto;
+    margin-bottom: 0.9rem;
+  }
+}
+
+/* Ajustes para dispositivos pequeños. */
+@media (max-width: 767.98px) {
+  .nosotros-page .intro-card,
+  .nosotros-page .motivation-card {
+    grid-template-columns: 1fr;
+  }
+  .nosotros-page .intro-icon,
+  .nosotros-page .motivation-mark {
+    width: 46px;
+    height: 46px;
+  }
+  .nosotros-page .contacto-layout {
+    grid-template-columns: 1fr;
+  }
+  .nosotros-page .contacto-aside-note {
+    margin-top: 1.4rem;
+    padding-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nosotros-page *,
+  .nosotros-page *::before,
+  .nosotros-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Waves decorativas utilizadas para separar visualmente las secciones.
+   Ocupan todo el ancho y no interfieren con clics ni elementos interactivos. */
+.wave,
+.wave2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 340px;
+  pointer-events: none;
+  z-index: 0;
+}

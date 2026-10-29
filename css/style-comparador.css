@@ -518,3 +518,16 @@
   min-width: 100%;
   z-index: 2;
 }
+
+/* Waves decorativas utilizadas para separar visualmente las secciones.
+   Ocupan todo el ancho y no interfieren con clics ni elementos interactivos. */
+.wave,
+.wave2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 340px;
+  pointer-events: none;
+  z-index: 0;
+}
