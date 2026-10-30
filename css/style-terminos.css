@@ -1,0 +1,540 @@
+/* Estilos exclusivos de la página Términos y condiciones. */
+.terminos-page {
+  --tc-primary: #0875d1;
+  --tc-primary-dark: #0062cb;
+  --tc-primary-soft: #e6f3ff;
+  --tc-blue: #bfd8f5;
+  --tc-blue-bg: #b8d9f5;
+  --tc-cream: #fff8e7;
+  --tc-white: #ffffff;
+  --tc-text: #111111;
+  --tc-muted: #35566f;
+  --tc-border: #b8d9f5;
+  --tc-border-light: #d8e7f1;
+  --tc-shadow-sm: 0 4px 10px rgba(20, 50, 75, 0.07);
+  --tc-shadow-md: 0 7px 16px rgba(20, 50, 75, 0.1);
+  --tc-radius-sm: 12px;
+  --tc-radius-md: 16px;
+  --tc-radius-lg: 22px;
+  --tc-transition: 0.22s ease;
+
+  background: var(--tc-cream);
+  color: var(--tc-text);
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.terminos-page *,
+.terminos-page *::before,
+.terminos-page *::after {
+  box-sizing: border-box;
+}
+
+.terminos-page .terminos-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1120px;
+}
+
+/* ===== Hero ===== */
+.terminos-page .terminos-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  background: var(--tc-cream);
+}
+
+.terminos-page .terminos-hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 17px;
+  background: var(--tc-blue);
+  clip-path: ellipse(72% 68% at 45% 0%);
+  content: "";
+}
+
+.terminos-page .terminos-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--tc-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.terminos-page .terminos-title {
+  margin: 0;
+  color: var(--tc-text);
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.terminos-page .terminos-title span {
+  color: var(--tc-primary);
+}
+
+.terminos-page .terminos-lead {
+  max-width: 720px;
+  margin: 1.1rem auto 1.25rem;
+  color: var(--tc-muted);
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  line-height: 1.8;
+}
+
+.terminos-page .terminos-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--tc-border);
+  border-radius: 999px;
+  background: var(--tc-white);
+  color: var(--tc-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/* ===== Resumen en pocas palabras ===== */
+.terminos-page .terminos-summary {
+  padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.terminos-page .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.terminos-page .summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem;
+  border: 1px solid var(--tc-border-light);
+  border-radius: var(--tc-radius-md);
+  background: var(--tc-white);
+  box-shadow: var(--tc-shadow-sm);
+}
+
+.terminos-page .summary-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 0.25rem;
+  border-radius: 12px;
+  background: var(--tc-blue);
+  color: var(--tc-primary-dark);
+  font-size: 1.3rem;
+}
+
+.terminos-page .summary-item strong {
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.terminos-page .summary-item span {
+  color: var(--tc-muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+/* ===== Layout: índice + contenido ===== */
+.terminos-page .terminos-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: start;
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.terminos-page .terminos-aside {
+  position: sticky;
+  top: 1.25rem;
+}
+
+.terminos-page .terminos-index {
+  padding: 1.1rem 1.1rem 1.25rem;
+  border: 1px solid var(--tc-border);
+  border-radius: var(--tc-radius-md);
+  background: var(--tc-white);
+  box-shadow: var(--tc-shadow-sm);
+}
+
+.terminos-page .terminos-index h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.terminos-page .terminos-index ol {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: indice;
+}
+
+.terminos-page .terminos-index a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.4rem 0.55rem;
+  border-radius: 8px;
+  color: var(--tc-muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+  counter-increment: indice;
+  transition:
+    background var(--tc-transition),
+    color var(--tc-transition);
+}
+
+.terminos-page .terminos-index a::before {
+  min-width: 1.4rem;
+  color: var(--tc-primary);
+  font-weight: 800;
+  content: counter(indice) ".";
+}
+
+.terminos-page .terminos-index a:hover,
+.terminos-page .terminos-index a:focus-visible {
+  background: var(--tc-primary-soft);
+  color: var(--tc-primary-dark);
+}
+
+.terminos-page a:focus-visible {
+  outline: 3px solid var(--tc-primary);
+  outline-offset: 3px;
+}
+
+/* ===== Secciones ===== */
+.terminos-page .terminos-content {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.terminos-page .legal-section {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--tc-border-light);
+  border-left: 7px solid var(--tc-primary);
+  border-radius: var(--tc-radius-lg);
+  background: var(--tc-white);
+  box-shadow: var(--tc-shadow-md);
+  scroll-margin-top: 1rem;
+}
+
+.terminos-page .legal-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.9rem;
+}
+
+.terminos-page .legal-num {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--tc-primary-soft);
+  color: var(--tc-primary-dark);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.terminos-page .legal-head h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.terminos-page .legal-section p {
+  margin: 0 0 0.8rem;
+  color: var(--tc-muted);
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+
+.terminos-page .legal-section > :last-child {
+  margin-bottom: 0;
+}
+
+.terminos-page .legal-section strong {
+  color: var(--tc-text);
+}
+
+.terminos-page .legal-list {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0 0 0.9rem;
+  padding: 0;
+  list-style: none;
+}
+
+.terminos-page .legal-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: var(--tc-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.terminos-page .legal-list li::before {
+  position: absolute;
+  top: 0.1rem;
+  left: 0;
+  color: var(--tc-primary);
+  font-family: "bootstrap-icons";
+  content: "\f26a"; /* check-circle-fill */
+}
+
+/* Cuadro destacado dentro de una sección. */
+.terminos-page .legal-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--tc-radius-sm);
+  background: var(--tc-primary-soft);
+  color: var(--tc-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.terminos-page .legal-note i {
+  margin-top: 0.15rem;
+  color: var(--tc-primary-dark);
+  font-size: 1.05rem;
+}
+
+/* Modelos de desarrollo. */
+.terminos-page .modelos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 0.4rem 0 0.9rem;
+}
+
+.terminos-page .modelo-card {
+  padding: 1rem;
+  border: 1px solid var(--tc-border);
+  border-radius: var(--tc-radius-md);
+  background: var(--tc-cream);
+}
+
+.terminos-page .modelo-card h3 {
+  margin: 0 0 0.6rem;
+  color: var(--tc-primary-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.terminos-page .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.terminos-page .chips li {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--tc-border);
+  border-radius: 999px;
+  background: var(--tc-white);
+  color: var(--tc-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+/* Cita sugerida. */
+.terminos-page .cita-ejemplo {
+  margin: 0.4rem 0 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid var(--tc-primary);
+  border-radius: var(--tc-radius-sm);
+  background: var(--tc-cream);
+  color: var(--tc-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+/* Equipo y contacto. */
+.terminos-page .team-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0 0 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.terminos-page .team-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--tc-border-light);
+  border-radius: var(--tc-radius-sm);
+  background: var(--tc-cream);
+}
+
+.terminos-page .team-list strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.terminos-page .team-list span {
+  color: var(--tc-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.terminos-page .contact-list {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.terminos-page .contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--tc-radius-sm);
+  background: var(--tc-primary-soft);
+  color: var(--tc-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.terminos-page .contact-list i {
+  margin-top: 0.1rem;
+  color: var(--tc-primary-dark);
+  font-size: 1.15rem;
+}
+
+.terminos-page .contact-list a {
+  color: var(--tc-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.terminos-page .contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Volver arriba. */
+.terminos-page .volver-arriba {
+  display: inline-flex;
+  align-items: center;
+  justify-self: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--tc-border);
+  border-radius: 999px;
+  background: var(--tc-white);
+  color: var(--tc-primary-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform var(--tc-transition),
+    box-shadow var(--tc-transition);
+}
+
+.terminos-page .volver-arriba:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--tc-shadow-sm);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991.98px) {
+  .terminos-page .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .terminos-page .terminos-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .terminos-page .terminos-aside {
+    position: static;
+  }
+
+  .terminos-page .terminos-index ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .terminos-page .summary-grid,
+  .terminos-page .modelos-grid,
+  .terminos-page .team-list,
+  .terminos-page .terminos-index ol {
+    grid-template-columns: 1fr;
+  }
+
+  .terminos-page .legal-section {
+    border-left-width: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .terminos-page .terminos-index a,
+  .terminos-page .volver-arriba {
+    transition: none;
+  }
+
+  .terminos-page .volver-arriba:hover {
+    transform: none;
+  }
+}
+
+/* Impresión: solo el contenido legal. */
+@media print {
+  .terminos-page .terminos-aside,
+  .terminos-page .volver-arriba {
+    display: none;
+  }
+
+  .terminos-page .terminos-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .terminos-page .legal-section {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
