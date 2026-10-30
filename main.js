@@ -20,3 +20,4 @@ function cargarComponente(idContenedor, archivoHtml) {
 
 // Llamamos a la función para cada componente que necesitemos
 cargarComponente("header-container", "componentes/header.html");
+cargarComponente("footer", "componentes/footer.html");

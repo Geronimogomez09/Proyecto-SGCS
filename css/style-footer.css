@@ -1,0 +1,232 @@
+/* Archivo: style-footer.css
+   Define los estilos del componente componentes/footer.html.
+   Mantiene la misma paleta de colores y tipografía que el header y el index. */
+
+/* FOOTER: establece el fondo, el color del texto, el espacio superior y la tipografía general. */
+#footer {
+    background-color: #1d4d79;
+    color: #e6f0fb;
+    padding: 55px 0 0;
+    font-family: Quicksand, sans-serif;
+}
+
+/* FOOTER PRINCIPAL: ajusta la separación horizontal y vertical entre las columnas y agrega espacio inferior. */
+.footer-main {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 2rem;
+    padding-bottom: 40px;
+}
+
+/* MARCA: configura la apariencia del nombre y logo del proyecto. */
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* RESALTE DEL LOGO: aplica un color más suave a la primera parte del nombre. */
+.footer-logo span {
+    color: #c9e1f8;
+}
+
+/* HOVER DEL LOGO: reduce ligeramente la opacidad cuando el usuario pasa el cursor. */
+.footer-logo:hover {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* DESCRIPCIÓN: limita el ancho del texto y define su tamaño, separación y altura de línea. */
+.footer-brand p {
+    max-width: 340px;
+    margin: 0 0 18px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #d3e4f6;
+}
+
+/* REDES SOCIALES: organiza los íconos en una fila con separación entre ellos. */
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+/* ENLACES SOCIALES: crea botones circulares y centra los íconos dentro de cada uno. */
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* HOVER SOCIAL: cambia el fondo y eleva ligeramente el botón al pasar el cursor. */
+.footer-social a:hover {
+    background-color: #0875d1;
+    transform: translateY(-3px);
+}
+
+/* ACCESIBILIDAD: muestra un contorno visible al navegar con el teclado por los enlaces y el logo. */
+.footer-social a:focus-visible,
+.footer-column a:focus-visible,
+.footer-bottom-links a:focus-visible,
+.footer-logo:focus-visible {
+    outline: 3px solid #c9e1f8;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* CONTORNO SOCIAL: mantiene la forma circular del contorno de los botones de redes sociales. */
+.footer-social a:focus-visible {
+    border-radius: 50%;
+}
+
+/* COLUMNAS DE ENLACES: organiza los enlaces verticalmente y establece el espacio entre ellos. */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* TÍTULOS: define el margen, el tamaño, el grosor y el color de los encabezados de cada columna. */
+.footer-column h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #c9e1f8;
+}
+
+/* ENLACES: ajusta la posición, el ancho, el color, el tamaño y la transición de los enlaces. */
+.footer-column a {
+    position: relative;
+    width: fit-content;
+    color: #e6f0fb;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+/* SUBRAYADO: crea una línea debajo de cada enlace que inicialmente permanece oculta. */
+.footer-column a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #c9e1f8;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+/* HOVER DE ENLACES: aclara el texto cuando el cursor pasa por encima. */
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+/* ANIMACIÓN DEL SUBRAYADO: expande la línea desde la izquierda al pasar el cursor. */
+.footer-column a:hover::after {
+    transform: scaleX(1);
+}
+
+/* DIVISOR: crea una línea horizontal semitransparente entre las columnas y el pie inferior. */
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* PIE INFERIOR: distribuye el texto legal y los enlaces en extremos opuestos y permite que bajen de línea. */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0 24px;
+}
+
+/* TEXTO LEGAL: elimina el margen y define el tamaño y el color del texto inferior. */
+.footer-bottom p {
+    margin: 0;
+    font-size: 12.5px;
+    color: #c9e1f8;
+}
+
+/* NOMBRE DEL PROYECTO: destaca el texto que aparece en negrita dentro del aviso legal. */
+.footer-bottom strong {
+    color: #ffffff;
+}
+
+/* ENLACES LEGALES: organiza los enlaces de privacidad y términos en una fila. */
+.footer-bottom-links {
+    display: flex;
+    gap: 18px;
+}
+
+/* ESTILOS DE ENLACES LEGALES: define el color, el tamaño, el grosor y la transición del texto. */
+.footer-bottom-links a {
+    color: #c9e1f8;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+/* HOVER LEGAL: cambia el color y agrega un subrayado al pasar el cursor. */
+.footer-bottom-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE: adapta el footer para pantallas pequeñas de hasta 575 píxeles de ancho. */
+@media (max-width: 575px) {
+
+    /* Reduce el espacio superior del footer en dispositivos pequeños. */
+    #footer {
+        padding-top: 40px;
+    }
+
+    /* Centra el contenido de la marca. */
+    .footer-brand {
+        text-align: center;
+    }
+
+    /* Centra la descripción aprovechando los márgenes automáticos. */
+    .footer-brand p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Centra los íconos de las redes sociales. */
+    .footer-social {
+        justify-content: center;
+    }
+
+    /* Coloca el texto legal y los enlaces uno debajo del otro y los centra. */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ACCESIBILIDAD: desactiva las transiciones animadas si el usuario prefiere reducir el movimiento. */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Elimina las transiciones de los botones sociales, los enlaces y sus subrayados. */
+    .footer-social a,
+    .footer-column a,
+    .footer-column a::after {
+        transition: none;
+    }
+}

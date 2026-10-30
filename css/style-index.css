@@ -1,65 +1,145 @@
-/* Estilos generales */
+/* ===== Variables de la página de inicio ===== */
+:root {
+  --idx-primary: #0875d1;
+  --idx-primary-dark: #0062cb;
+  --idx-primary-soft: #e6f3ff;
+  --idx-blue-bg: #c9e1f8;
+  --idx-blue-ink: #1d4d79;
+  --idx-cream: #fff8e7;
+  --idx-white: #ffffff;
+  --idx-text: #111111;
+  --idx-text-soft: #35566f;
+  --idx-border: #d8e7f1;
+  --idx-shadow-sm: 0 4px 10px rgba(20, 50, 75, 0.08);
+  --idx-shadow-md: 0 8px 18px rgba(20, 50, 75, 0.14);
+  --idx-shadow-lg: 0 14px 28px rgba(20, 50, 75, 0.2);
+  --idx-radius-md: 16px;
+  --idx-radius-lg: 22px;
+  --idx-transition: 0.25s ease;
+}
+
+/* ===== Estilos generales ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
+  line-height: 1.55;
+  color: var(--idx-text);
 }
-/* Sección de hero */
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: clamp(360px, 58vh, 520px);
+  padding: clamp(1rem, 3vw, 2.5rem) 50% clamp(1rem, 3vw, 2.5rem) clamp(1rem, 4vw, 3rem);
+  background-image: url("../imgs/heroFondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
   padding: 10px;
   text-align: center;
 }
-/* Título principal del hero.
-   Utiliza un tamaño adaptable para diferentes resoluciones. */
+
+/* Título principal: tamaño adaptable a cada resolución. */
 .hero-title {
   margin: 0;
-  color: #111111;
-  font-size: clamp(2.25rem, 4vw, 4rem);
+  color: var(--idx-text);
+  font-size: clamp(2.1rem, 1.2rem + 3vw, 4rem);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
-/* Resalta una parte del título principal. */
 .hero-title span {
-  color: #0875d1;
+  color: var(--idx-primary);
 }
 
-/* Estilo del botón de hero */
-.hero-btn-text {
-  color: #ffffff;
-  font-size: 14px;
+/* Descripción bajo el título del hero. */
+.hero-description {
+  max-width: 34rem;
+  color: var(--idx-text);
+  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.1rem);
   font-weight: 600;
+  line-height: 1.65;
+}
+
+/* El enlace envuelve al botón: el foco por teclado recae en él. */
+.hero-btn {
+  border-radius: 999px;
   text-decoration: none;
-  padding: 4px 7px;
-  border-radius: 8px;
-  background-color: #0875d1;
-  transition: all 0.3s ease-in-out;
 }
 
-/* Estilo del hero */
-.hero {
-  height: 400px;
-  width: 100%;
-  background-image: url("../imgs/heroFondo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  padding: 10px 50% 10px 10px;
+.hero-btn:focus-visible {
+  outline: 3px solid var(--idx-primary);
+  outline-offset: 3px;
 }
 
-/* Sección de tarjetas */
+.hero-btn:focus-visible .hero-btn-text {
+  background-color: var(--idx-white);
+  color: var(--idx-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--idx-shadow-md);
+}
+
+/* Botón del hero. */
+.hero-btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  border: 1px solid var(--idx-primary);
+  border-radius: 999px;
+  background-color: var(--idx-primary);
+  color: var(--idx-white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--idx-shadow-sm);
+  transition:
+    background-color var(--idx-transition),
+    color var(--idx-transition),
+    transform var(--idx-transition),
+    box-shadow var(--idx-transition);
+}
+
+.hero-btn-text:hover,
+.hero-btn-text:focus-visible {
+  background-color: var(--idx-white);
+  color: var(--idx-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--idx-shadow-md);
+}
+
+.hero-btn-text:focus-visible,
+.card-link:focus-visible {
+  outline: 3px solid var(--idx-primary);
+  outline-offset: 3px;
+}
+
+/* ===== Sección de tarjetas ===== */
 .cards-section {
   position: relative;
-  padding: 10px 0 35px;
-  background-color: #fff8e7;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  background-color: var(--idx-cream);
   overflow: hidden;
 }
 
@@ -68,104 +148,204 @@ body {
   z-index: 2;
 }
 
-/* Estilo de las tarjetas */
+/* Encabezado de la sección de tarjetas. */
+.section-heading-index {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto clamp(1.5rem, 3vw, 2.25rem);
+  text-align: center;
+  scroll-margin-top: 1rem;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  color: var(--idx-primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.section-title-index {
+  color: var(--idx-text);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.section-title-index span {
+  color: var(--idx-primary);
+}
+
+.section-lead-index {
+  margin-top: 0.6rem;
+  color: var(--idx-text-soft);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
 .card-container .card {
-  border: none;
-  border-radius: 20px;
-  min-height: 108px;
-  padding: 10px 15px 9px;
-  background-color: #ffffff;
-  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
+  height: 100%;
+  min-height: 190px;
+  padding: 1.25rem 1.25rem 1.1rem;
+  border: 1px solid var(--idx-border);
+  border-radius: var(--idx-radius-lg);
+  background-color: var(--idx-white);
+  box-shadow: var(--idx-shadow-md);
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform var(--idx-transition),
+    box-shadow var(--idx-transition),
+    border-color var(--idx-transition);
 }
 
-.card-container .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+.card-container .card:hover,
+.card-container .card:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--idx-primary);
+  box-shadow: var(--idx-shadow-lg);
 }
 
-/* Icono de cada tarjeta */
+/* Icono de cada tarjeta. */
 .card-icon {
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  background-color: #c9e1f8;
-  color: #1d4d79;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2px;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 0.85rem;
+  border-radius: 14px;
+  background-color: var(--idx-blue-bg);
+  color: var(--idx-blue-ink);
+  transition:
+    background-color var(--idx-transition),
+    color var(--idx-transition),
+    transform var(--idx-transition);
 }
 
 .card-icon i {
-  font-size: 16px;
+  font-size: 1.4rem;
+}
+
+.card-container .card:hover .card-icon {
+  background-color: var(--idx-primary);
+  color: var(--idx-white);
+  transform: scale(1.06);
 }
 
 .cardTitle {
   margin: 0;
-  color: #111111;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.1;
+  color: var(--idx-text);
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 .card-container .text {
-  margin: 4px 0 5px;
-  color: #333333;
-  font-size: 10px;
-  line-height: 1.25;
   flex-grow: 1;
+  margin: 0.5rem 0 1rem;
+  color: var(--idx-text-soft);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
+/* Enlace de cada tarjeta. */
 .card-link {
-  align-self: center;
-  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.4rem;
+  color: var(--idx-primary-dark);
+  font-size: 0.92rem;
+  font-weight: 800;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
-  transition: color 0.2s ease;
+  transition:
+    color var(--idx-transition),
+    gap var(--idx-transition);
 }
 
 .card-link i {
-  font-size: 10px;
-  margin-left: 2px;
+  margin-left: 0;
+  font-size: 0.85rem;
+  transition: transform var(--idx-transition);
 }
 
-.card-link:hover {
-  color: #0875d1;
+.card-link:hover,
+.card-link:focus-visible {
+  color: var(--idx-primary);
+  gap: 0.65rem;
 }
 
+.card-link:hover i {
+  transform: translateX(2px);
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet. */
 @media (max-width: 991px) {
   .card-container .card {
-    min-height: 120px;
+    min-height: 170px;
   }
 }
 
+/* Hero: el contenido pasa a una tarjeta de vidrio centrada. */
 @media (max-width: 850px) {
   .hero {
-    display: flex;
     flex-direction: column;
-    padding: 10% 10%;
+    justify-content: center;
+    padding: 10%;
   }
+
   .hero-container {
-    background-color: #c9e1f87c;
-    padding: 10px;
-    border-radius: 20px;
+    padding: clamp(1rem, 4vw, 1.75rem);
+    border-radius: var(--idx-radius-lg);
+    background-color: rgba(201, 225, 248, 0.55);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
 }
 
+/* Celular. */
 @media (max-width: 575px) {
+  .hero {
+    min-height: 320px;
+    padding: 1rem;
+  }
+
   .cards-section {
-    padding: 15px 20px 40px;
+    padding: 1.25rem 1.25rem 2.5rem;
   }
 
   .card-container .card {
-    min-height: 125px;
+    min-height: 0;
+    padding: 1.1rem;
   }
 }
+
+/* Respeta la preferencia de menos movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-btn-text,
+  .card-container .card,
+  .card-icon,
+  .card-link,
+  .card-link i {
+    transition: none;
+  }
+
+  .hero-btn-text:hover,
+  .card-container .card:hover,
+  .card-container .card:hover .card-icon,
+  .card-link:hover i {
+    transform: none;
+  }
+}
+
