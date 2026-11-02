@@ -1,4 +1,4 @@
-/* Variables generales utilizadas en toda la página.
+/* Variables generales utilizadas en toda la página. Errores raros
    Centralizan colores, sombras, bordes, tamaños y transiciones para mantener un diseño consistente. */
 :root {
   --color-primary: #0875d1;
